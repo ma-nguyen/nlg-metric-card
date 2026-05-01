@@ -1,0 +1,18 @@
+UniEval-overall(sum)
+
+{Table}
+| Summary Type | Score | Change |
+| --- | --- | --- |
+| Gold Summary | 0.864595 | - |
+| Injection 1 | 0.905482 | (0.905482-0.864595)/0.864595*100 = 4.73% |
+| Injection 2 | 0.838244 | (0.838244-0.864595)/0.864595*100 = -2.93% |
+
+1. Sensitivity to the Perturbation
+    a. Yes, a perturbed output scored higher than the gold output. Specifically, Injection 1 scored 0.905482, which is higher than the gold summary score of 0.864595.
+    b. No, the scores were not similar for every injection. Injection 1 had a higher score than the gold summary, while Injection 2 had a lower score.
+
+2. Suitability of UniEval-overall(sum) for Summarization
+    a. Strengths: None of the injections had a high change rate or higher. However, Injection 2 had a low change rate of -2.93%, indicating that the metric was able to penalize the perturbed summary to some extent.
+    b. Weaknesses: Injection 1 had a very low change rate of 4.73%, which is concerning as it indicates that the metric was not able to effectively distinguish between the gold summary and the perturbed summary. Additionally, the fact that Injection 1 scored higher than the gold summary is a significant weakness.
+    c. Recommendation: No, the metric could not detect every injection (non-summary) by having a high change rate or higher.
+    d. Additionally, the metric needs improvements in its ability to distinguish between gold summaries and perturbed summaries, particularly those that are not actual summaries of the source text. The metric should be able to penalize such perturbed summaries with a higher change rate or lower scores. Furthermore, the metric should be able to consistently score perturbed summaries lower than gold summaries, which was not the case in this evaluation.

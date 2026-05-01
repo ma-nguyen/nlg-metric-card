@@ -1,0 +1,35 @@
+**MAUVE-RoBERTa-Base**  
+
+**Table**  
+| Perturbation Type | Location | Gold Set Score | Perturbed Set Score | Change Rate |
+|-------------------|----------|----------------|---------------------|-------------|
+| Shuffling         | Beginning| 0.9621         | 0.9584              | -0.4%       |
+| Shuffling         | Middle  | 0.9621         | 0.9484              | -1.4%       |
+| Shuffling         | End     | 0.9621         | 0.5112              | -46.9%      |
+| Random            | Beginning| 0.9621         | 0.8939              | -7.1%       |
+| Random            | Middle  | 0.9621         | 0.9113              | -5.3%       |
+| Random            | End     | 0.9621         | 0.5097              | -47.0%      |
+
+---
+
+### 1. Sensitivity to the Perturbation  
+**a.** No perturbed output scored higher than the gold output. All perturbations resulted in lower scores.  
+**b.** Scores were not similar across locations. End perturbations showed significantly larger drops (-46.9% to -47.0%) compared to beginning (-0.4% to -7.1%) and middle (-1.4% to -5.3%) perturbations.  
+**c.** Scores were not similar between perturbation types. Random replacements caused larger drops than token shuffling for beginning (-7.1% vs. -0.4%) and middle (-5.3% vs. -1.4%), but both types had nearly identical drops at the end (-47.0% vs. -46.9%).  
+
+---
+
+### 2. Suitability of MAUVE-RoBERTa-Base for Open-Ended Text Generation  
+**a. Strengths**  
+The metric showed **low-to-moderate** sensitivity (46.9–47.0% change rate) for perturbations at the end of texts (both shuffling and random). This aligns with human expectations that nonsensical endings should lower scores.  
+
+**b. Weaknesses**  
+The metric exhibited **very low** sensitivity (0.4–7.1% change rate) for perturbations at the beginning and middle. Token shuffling in these regions had minimal impact (-0.4% to -1.4%), and random replacements showed only marginal drops (-5.3% to -7.1%). This indicates insensitivity to nonsensical early/mid-text content.  
+
+**c. Recommendation**  
+**No**. Only 2/6 variations (end perturbations) achieved a change rate ≥30% (low-to-moderate). The remaining 4 variations fell below 10% (very low).  
+
+**d. Improvements Needed**  
+1. **Positional robustness**: Enhance sensitivity to perturbations at the beginning and middle of texts.  
+2. **Minimal scoring**: Assign near-minimal scores (closer to 0) for outputs with severe semantic disruptions (e.g., random tokens), as the current end-perturbation scores (∼0.51) remain above the theoretical minimum.  
+3. **Perturbation-type consistency**: Address the discrepancy between shuffling and random replacements in early/mid-text regions.

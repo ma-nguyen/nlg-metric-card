@@ -1,0 +1,5 @@
+=== BEGIN OF REPORT for rouge2-f ===
+ref: 0.171150 ref-percentage: 0.000000 noise-ratio: 0.000000 std: 0.000000
+ref_injection-unieval-ayes0: 0.015618 ref-percentage: -90.874489 noise-ratio: 0.977631 std: 0.000000
+ref_injection-unieval-amyes2: 0.014395 ref-percentage: -91.589347 noise-ratio: 0.984898 std: 0.000000
+=== END OF REPORT for rouge2-f ===

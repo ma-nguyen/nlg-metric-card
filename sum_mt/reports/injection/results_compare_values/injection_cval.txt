@@ -1,0 +1,5 @@
+metrics=bartscore-avg-f bert_score_f rouge-2 rouge-L UniEval-coherence(sum)  UniEval-consistency(sum)    UniEval-fluency(sum)    UniEval-overall(sum)    UniEval-relevance(sum)
+ref=-6.063610   0.223645    0.171150    0.286197    0.897558    0.859876    0.919656    0.864595    0.781290
+injection_1=-8.247265   0.000873    0.015618   0.126527    0.903959    0.857523    0.959921    0.905482    0.900527
+injection_2=-9.390858   -0.015646   0.014395   0.098507    0.777603    0.756345    0.962313    0.838244    0.856718
+

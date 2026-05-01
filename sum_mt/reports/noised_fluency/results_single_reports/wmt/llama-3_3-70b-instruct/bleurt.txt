@@ -1,0 +1,108 @@
+# Bleurt
+
+| Perturbation Type | Variation | Bleurt Score | Edit Ratio | Change |
+| --- | --- | --- | --- | --- |
+| Unperturbed | 0 | 0.317 | 0.000 | 0.0% |
+| Verb Lemmatization | 50% | 0.238 | 0.041 | -24.9% |
+| Verb Lemmatization | 100% | 0.164 | 0.081 | -48.0% |
+| Word Removal | 5% | 0.104 | 0.085 | -67.1% |
+| Word Removal | 10% | -0.012 | 0.131 | -103.7% |
+| Word Removal | 15% | -0.145 | 0.185 | -145.7% |
+| Word Removal | 20% | -0.258 | 0.229 | -181.4% |
+| Word Removal | 25% | -0.370 | 0.276 | -216.9% |
+| Word Removal | 30% | -0.498 | 0.333 | -257.3% |
+| Word Removal | 35% | -0.598 | 0.385 | -289.0% |
+| Word Removal | 40% | -0.685 | 0.428 | -316.4% |
+| Word Removal | 45% | -0.789 | 0.486 | -349.4% |
+| Word Removal | 55% | -0.954 | 0.584 | -401.3% |
+| Punctuation Noise | 50% | 0.282 | 0.049 | -11.0% |
+| Punctuation Noise | 100% | 0.251 | 0.099 | -20.8% |
+| Sentence Middle Swap | 1 | -0.072 | 0.474 | -122.9% |
+| Preposition Removal | 40% | 0.211 | 0.058 | -33.3% |
+| Preposition Removal | 70% | 0.128 | 0.102 | -59.7% |
+| Preposition Removal | 100% | 0.042 | 0.145 | -86.9% |
+| Stopword Removal | 10% | 0.246 | 0.052 | -22.4% |
+| Stopword Removal | 20% | 0.167 | 0.104 | -47.2% |
+| Stopword Removal | 30% | 0.088 | 0.158 | -72.3% |
+| Stopword Removal | 40% | 0.014 | 0.212 | -95.6% |
+| Stopword Removal | 50% | -0.059 | 0.264 | -118.7% |
+| Stopword Removal | 60% | -0.127 | 0.316 | -140.2% |
+| Word Swap | 5% | 0.035 | 0.083 | -89.0% |
+| Word Swap | 15% | -0.168 | 0.138 | -153.0% |
+| Word Swap | 30% | -0.317 | 0.179 | -200.3% |
+| Word Swap | 60% | -0.468 | 0.224 | -247.8% |
+| Truncation | 10% | 0.082 | 0.120 | -74.2% |
+| Truncation | 20% | -0.076 | 0.241 | -123.9% |
+| Truncation | 30% | -0.188 | 0.340 | -159.4% |
+| Truncation | 40% | -0.301 | 0.442 | -195.0% |
+| Truncation | 50% | -0.474 | 0.555 | -249.8% |
+| Article Removal | 50% | 0.275 | 0.062 | -13.0% |
+| Article Removal | 100% | 0.230 | 0.126 | -27.2% |
+| Word Repeat | 5% | 0.185 | 0.085 | -41.5% |
+| Word Repeat | 10% | 0.119 | 0.131 | -62.3% |
+| Word Repeat | 15% | 0.048 | 0.185 | -84.7% |
+| Word Repeat | 20% | -0.008 | 0.229 | -102.4% |
+| Word Repeat | 25% | -0.067 | 0.276 | -121.0% |
+| Word Repeat | 30% | -0.126 | 0.333 | -139.9% |
+| Word Repeat | 35% | -0.173 | 0.385 | -154.6% |
+| Word Repeat | 40% | -0.213 | 0.428 | -167.2% |
+| Word Repeat | 45% | -0.263 | 0.486 | -183.1% |
+| Word Repeat | 55% | -0.341 | 0.584 | -207.6% |
+
+## 1. Sensitivity to the Perturbation
+
+The following analysis is based on the provided results:
+
+- Verb Lemmatization: 
+  - monotonous decrease: yes
+  - superlinear decrease: yes
+  - change rate: moderate
+
+- Word Removal: 
+  - monotonous decrease: yes
+  - superlinear decrease: yes
+  - change rate: high
+
+- Punctuation Noise: 
+  - monotonous decrease: yes
+  - superlinear decrease: no
+  - change rate: low
+
+- Sentence Middle Swap: 
+  - monotonous decrease: yes
+  - superlinear decrease: no
+  - change rate: high
+
+- Preposition Removal: 
+  - monotonous decrease: yes
+  - superlinear decrease: yes
+  - change rate: moderate
+
+- Stopword Removal: 
+  - monotonous decrease: yes
+  - superlinear decrease: yes
+  - change rate: high
+
+- Word Swap: 
+  - monotonous decrease: yes
+  - superlinear decrease: yes
+  - change rate: high
+
+- Truncation: 
+  - monotonous decrease: yes
+  - superlinear decrease: yes
+  - change rate: high
+
+- Article Removal: 
+  - monotonous decrease: yes
+  - superlinear decrease: no
+  - change rate: low
+
+- Word Repeat: 
+  - monotonous decrease: yes
+  - superlinear decrease: yes
+  - change rate: high
+
+## 2. Suitability of Bleurt for Machine Translation
+
+Based on the analysis, Bleurt shows a high change rate and superlinear decrease for most perturbation tests (8 out of 11 tests have a high change rate). Therefore, Bleurt is recommended for the evaluation of machine translation.

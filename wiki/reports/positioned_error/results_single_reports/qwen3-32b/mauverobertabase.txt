@@ -1,0 +1,45 @@
+# MAUVE-RoBERTa-Base Evaluation on Open-Ended Text Generation  
+
+## Table  
+
+| Perturbation Type | Location | Perturbed Score | Gold Score | Score Change (%) | Change Rate Category |  
+|--------------------|----------|------------------|------------|------------------|----------------------|  
+| Shuffling          | Beginning | 0.9583875436782763 | 0.9621003998012043 | -0.4% | Very low |  
+| Shuffling          | Middle    | 0.9483634909996623 | 0.9621003998012043 | -1.4% | Very low |  
+| Shuffling          | End       | 0.5112034589711176 | 0.9621003998012043 | -46.9% | Low to moderate |  
+| Random             | Beginning | 0.8939011214880506 | 0.9621003998012043 | -7.1% | Low |  
+| Random             | Middle    | 0.9112935263380316 | 0.9621003998012043 | -5.3% | Low |  
+| Random             | End       | 0.5096985847373063 | 0.9621003998012043 | -47.0% | Low to moderate |  
+
+---
+
+## 1. Sensitivity to the Perturbation  
+
+**a. Did a perturbed output score higher than the gold output? If yes, which one.**  
+No perturbed output scored higher than the gold output in any variation.  
+
+**b. Were the scores similar for every location, meaning the scores of beginning, middle and end were similar?**  
+No. The scores for perturbations at the **end** showed significantly larger drops (46.9% and 47.0%) compared to the **beginning** (0.4%–7.1%) and **middle** (1.4%–5.3%).  
+
+**c. Were the scores similar for shuffling and random-test?**  
+No. While both perturbation types showed minimal changes for beginning and middle perturbations, the **end perturbations** had nearly identical score drops (46.9% vs. 47.0%) across shuffling and random-test.  
+
+---
+
+## 2. Suitability of MAUVE-RoBERTa-Base for Open-Ended Text Generation  
+
+### a. Strengths  
+- **High sensitivity to end perturbations**: Both shuffling and random-test at the end resulted in "low to moderate" score changes (46.9%–47.0%), aligning with human expectations for semantically disrupted text.  
+
+### b. Weaknesses  
+- **Low sensitivity to beginning/middle perturbations**: Score changes for beginning (0.4%–7.1%) and middle (1.4%–5.3%) perturbations were "very low" to "low," failing to reflect human perception of disrupted coherence.  
+- **Inability to detect minimal human scores**: For end perturbations with 10 consecutive nonsensical tokens, the metric did not assign a minimal score (e.g., 0.51 vs. 0.96), indicating a gap in aligning with human judgment.  
+
+### c. Recommendation  
+**No**, the metric does not meet the threshold of >5 variants with high change rate or higher. Only 2 variants (end shuffling and end random) achieved "low to moderate" change rates.  
+
+### d. What Needs Improvements  
+- Enhance sensitivity to perturbations in the **beginning and middle** of texts.  
+- Improve alignment with human evaluation for semantically nonsensical sequences (e.g., assigning minimal scores for end perturbations).  
+
+**Note**: The best metric can still fail to fully substitute human evaluation. MAUVE-RoBERTa-Base requires refinement to better capture human-like judgments of coherence and semantic validity.

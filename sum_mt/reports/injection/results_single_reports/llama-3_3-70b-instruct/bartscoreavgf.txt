@@ -1,0 +1,18 @@
+bartscore-avg-f
+
+{Table}
+| Summary Type | Score | Change |
+| --- | --- | --- |
+| Gold Summary | -6.063610 | - |
+| Injection 1 | -8.247265 | (-8.247265 - (-6.063610)) / |(-6.063610)| * 100 = -36.19% |
+| Injection 2 | -9.390858 | (-9.390858 - (-6.063610)) / |(-6.063610)| * 100 = -55.51% |
+
+1. Sensitivity to the Perturbation
+    a. No, none of the perturbed outputs scored higher than the gold output. Both injections had lower scores than the gold summary.
+    b. No, the scores were not similar for every injection. The score for Injection 1 was -8.247265, and the score for Injection 2 was -9.390858, resulting in different change rates.
+
+2. Suitability of bartscore-avg-f for summarization
+    a. Strengths: The metric had a moderate to high change rate for Injection 2 (-55.51%) and a low to moderate change rate for Injection 1 (-36.19%). This indicates that the metric is sensitive to certain types of perturbations.
+    b. Weaknesses: The change rate for Injection 1 was relatively low, which may indicate that the metric is not effective in detecting all types of non-summaries.
+    c. Recommendation: No, the metric could not detect every injection with a high change rate or higher. While it performed well on Injection 2, it had a lower change rate for Injection 1.
+    d. Additionally, the metric needs improvement in detecting non-summaries with low change rates. The metric should be able to penalize non-summaries with a minimal score or a very high change rate to effectively substitute human evaluation.

@@ -1,0 +1,12 @@
+metric=MAUVE-GPT2-base
+Additional Information=The Metric scores from 0 (Minimum) to 1 (Maximum)
+
+ref=0.9480894878377178
+
+result_shuffling_beginning=0.5458866525778288
+result_shuffling_middle=0.8210416722020353
+result_shuffling_end=0.018346033521835968
+
+result_random_beginning=0.6381284352221405
+result_random_middle=0.3447188428759942
+result_random_end=0.007417251763595107

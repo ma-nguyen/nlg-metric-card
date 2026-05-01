@@ -1,0 +1,108 @@
+# bleu
+
+| Perturbation Type | Variation | Score | Edit Ratio | Change |
+| --- | --- | --- | --- | --- |
+| Unperturbed | 0 | 27.948 | 0.000 | 0.0% |
+| Verb Lemmatization | 50% | 26.416 | 0.041 | -5.5% |
+| Verb Lemmatization | 100% | 24.846 | 0.081 | -11.1% |
+| Word Removal | 5% | 23.900 | 0.085 | -14.5% |
+| Word Removal | 10% | 21.429 | 0.131 | -23.3% |
+| Word Removal | 15% | 18.973 | 0.185 | -32.1% |
+| Word Removal | 20% | 16.923 | 0.229 | -39.4% |
+| Word Removal | 25% | 14.811 | 0.276 | -47.0% |
+| Word Removal | 30% | 12.498 | 0.333 | -55.3% |
+| Word Removal | 35% | 10.750 | 0.385 | -61.5% |
+| Word Removal | 40% | 9.332 | 0.428 | -66.6% |
+| Word Removal | 45% | 7.296 | 0.486 | -73.9% |
+| Word Removal | 55% | 4.599 | 0.584 | -83.5% |
+| Punctuation Noise | 50% | 25.973 | 0.049 | -7.1% |
+| Punctuation Noise | 100% | 24.105 | 0.099 | -13.8% |
+| Sentence Middle Swap | 1 | 22.035 | 0.474 | -21.2% |
+| Preposition Removal | 40% | 24.943 | 0.058 | -10.8% |
+| Preposition Removal | 70% | 22.595 | 0.102 | -19.2% |
+| Preposition Removal | 100% | 20.299 | 0.145 | -27.4% |
+| Stopword Removal | 10% | 25.730 | 0.052 | -7.9% |
+| Stopword Removal | 20% | 23.482 | 0.104 | -16.0% |
+| Stopword Removal | 30% | 21.309 | 0.158 | -23.8% |
+| Stopword Removal | 40% | 19.168 | 0.212 | -31.4% |
+| Stopword Removal | 50% | 17.227 | 0.264 | -38.4% |
+| Stopword Removal | 60% | 15.349 | 0.316 | -45.1% |
+| Word Swap | 5% | 22.419 | 0.083 | -19.8% |
+| Word Swap | 15% | 18.243 | 0.138 | -34.7% |
+| Word Swap | 30% | 15.208 | 0.179 | -45.6% |
+| Word Swap | 60% | 12.539 | 0.224 | -55.1% |
+| Truncation | 10% | 25.168 | 0.120 | -9.9% |
+| Truncation | 20% | 22.299 | 0.241 | -20.2% |
+| Truncation | 30% | 19.408 | 0.340 | -30.6% |
+| Truncation | 40% | 16.166 | 0.442 | -42.2% |
+| Truncation | 50% | 12.162 | 0.555 | -56.5% |
+| Article Removal | 50% | 25.109 | 0.062 | -10.2% |
+| Article Removal | 100% | 21.904 | 0.126 | -21.6% |
+| Word Repeat | 5% | 25.264 | 0.085 | -9.6% |
+| Word Repeat | 10% | 23.799 | 0.131 | -14.8% |
+| Word Repeat | 15% | 22.181 | 0.185 | -20.6% |
+| Word Repeat | 20% | 20.914 | 0.229 | -25.2% |
+| Word Repeat | 25% | 19.879 | 0.276 | -28.9% |
+| Word Repeat | 30% | 18.553 | 0.333 | -33.6% |
+| Word Repeat | 35% | 17.489 | 0.385 | -37.4% |
+| Word Repeat | 40% | 16.704 | 0.428 | -40.2% |
+| Word Repeat | 45% | 15.770 | 0.486 | -43.6% |
+| Word Repeat | 55% | 14.384 | 0.584 | -48.5% |
+
+## 1. Sensitivity to the Perturbation
+
+The following analysis is based on the provided results:
+
+- Verb Lemmatization: 
+  - Monotonous decrease: yes
+  - Superlinear decrease: no
+  - Change rate: moderate
+
+- Word Removal: 
+  - Monotonous decrease: yes
+  - Superlinear decrease: yes
+  - Change rate: high
+
+- Punctuation Noise: 
+  - Monotonous decrease: yes
+  - Superlinear decrease: no
+  - Change rate: low
+
+- Sentence Middle Swap: 
+  - Monotonous decrease: yes
+  - Superlinear decrease: no
+  - Change rate: moderate
+
+- Preposition Removal: 
+  - Monotonous decrease: yes
+  - Superlinear decrease: no
+  - Change rate: moderate
+
+- Stopword Removal: 
+  - Monotonous decrease: yes
+  - Superlinear decrease: yes
+  - Change rate: moderate
+
+- Word Swap: 
+  - Monotonous decrease: yes
+  - Superlinear decrease: yes
+  - Change rate: moderate
+
+- Truncation: 
+  - Monotonous decrease: yes
+  - Superlinear decrease: yes
+  - Change rate: high
+
+- Article Removal: 
+  - Monotonous decrease: yes
+  - Superlinear decrease: no
+  - Change rate: moderate
+
+- Word Repeat: 
+  - Monotonous decrease: yes
+  - Superlinear decrease: no
+  - Change rate: moderate
+
+## 2. Suitability of bleu for machine translation
+
+Based on the analysis, bleu does not meet the criteria for recommendation as most perturbation tests do not exhibit both a high change rate and a superlinear decrease. Therefore, bleu is not recommended for the evaluation of machine translation.

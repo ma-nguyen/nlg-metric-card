@@ -1,0 +1,29 @@
+=== BEGIN OF REPORT for unieval_coherence ===
+ref: 0.897558 ref-percentage: 0.000000 noise-ratio: 0.000000 std: 0.000000
+ref_injection-unieval-ayes0: 0.903959 ref-percentage: 0.713196 noise-ratio: 0.977631 std: 0.000000
+ref_injection-unieval-amyes2: 0.777603 ref-percentage: -13.364604 noise-ratio: 0.984898 std: 0.000000
+=== END OF REPORT for unieval_coherence ===
+
+=== BEGIN OF REPORT for unieval_consistency ===
+ref: 0.859876 ref-percentage: 0.000000 noise-ratio: 0.000000 std: 0.000000
+ref_injection-unieval-ayes0: 0.857523 ref-percentage: -0.273641 noise-ratio: 0.977631 std: 0.000000
+ref_injection-unieval-amyes2: 0.756345 ref-percentage: -12.040236 noise-ratio: 0.984898 std: 0.000000
+=== END OF REPORT for unieval_consistency ===
+
+=== BEGIN OF REPORT for unieval_fluency ===
+ref: 0.919656 ref-percentage: 0.000000 noise-ratio: 0.000000 std: 0.000000
+ref_injection-unieval-ayes0: 0.959921 ref-percentage: 4.378225 noise-ratio: 0.977631 std: 0.000000
+ref_injection-unieval-amyes2: 0.962313 ref-percentage: 4.638283 noise-ratio: 0.984898 std: 0.000000
+=== END OF REPORT for unieval_fluency ===
+
+=== BEGIN OF REPORT for unieval_relevance ===
+ref: 0.781290 ref-percentage: 0.000000 noise-ratio: 0.000000 std: 0.000000
+ref_injection-unieval-ayes0: 0.900527 ref-percentage: 15.261546 noise-ratio: 0.977631 std: 0.000000
+ref_injection-unieval-amyes2: 0.856718 ref-percentage: 9.654264 noise-ratio: 0.984898 std: 0.000000
+=== END OF REPORT for unieval_relevance ===
+
+=== BEGIN OF REPORT for unieval_overall ===
+ref: 0.864595 ref-percentage: 0.000000 noise-ratio: 0.000000 std: 0.000000
+ref_injection-unieval-ayes0: 0.905482 ref-percentage: 4.729091 noise-ratio: 0.977631 std: 0.000000
+ref_injection-unieval-amyes2: 0.838244 ref-percentage: -3.047729 noise-ratio: 0.984898 std: 0.000000
+=== END OF REPORT for unieval_overall ===

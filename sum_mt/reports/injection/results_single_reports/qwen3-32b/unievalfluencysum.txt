@@ -1,0 +1,30 @@
+# UniEval-fluency(sum)  
+
+| Metric Type       | Score (Gold Summary) | Score (Perturbed Summary 1) | Score (Perturbed Summary 2) | Change (Perturbed 1) | Change (Perturbed 2) |  
+|--------------------|----------------------|-----------------------------|-----------------------------|----------------------|----------------------|  
+| UniEval-fluency(sum) | 0.919656            | 0.959921                    | 0.962313                    | 4.38%                | 4.64%                |  
+
+## 1. Sensitivity to the Perturbation  
+a. **Did a perturbed output score higher than the gold output? If yes, which one.**  
+Yes, both perturbed summaries scored higher than the gold summary. The first injection scored 0.959921 (4.38% higher than gold), and the second injection scored 0.962313 (4.64% higher than gold).  
+
+b. **Were the scores similar for every injection?**  
+Yes, the scores for the two perturbed summaries were very similar (0.959921 vs. 0.962313), with a negligible difference in their change rates (4.38% vs. 4.64%).  
+
+## 2. Suitability of UniEval-fluency(sum) for Summarization  
+### a. Strengths  
+- **None.** The metric did not demonstrate high sensitivity to the perturbations. Both injections received scores close to the gold summary, indicating no significant strength in distinguishing non-summaries.  
+
+### b. Weaknesses  
+- **Low sensitivity to non-summaries:** The metric failed to penalize the injections (e.g., "Answer:Yes,this is a really good summary") with minimal scores. Instead, it assigned scores 4.38–4.64% higher than the gold summary, which violates the human evaluation criteria.  
+- **Inability to detect injection types:** The metric did not detect the injections as invalid summaries, as their scores were not significantly lower than the gold.  
+
+### c. Recommendation  
+**No.** The metric could not detect the injections as non-summaries, as the change rates (4.38–4.64%) fall in the "very low" category. A high change rate (≥30%) is required to flag such perturbations effectively.  
+
+### d. What Needs Improvements  
+1. **Enhanced detection of non-summaries:** The metric must assign minimal scores to injections that do not summarize the source text (e.g., affirmations like "Yes, this is a good summary").  
+2. **Improved sensitivity to perturbations:** The metric should reduce the similarity in scores between gold summaries and injections to avoid rewarding invalid outputs.  
+3. **Alignment with human evaluation criteria:** The metric must prioritize penalizing outputs that fail to meet the task requirements, even if they are grammatically fluent.  
+
+**Note:** While UniEval-fluency(sum) may perform well in fluency-specific tasks, it is not suitable for summarization evaluation due to its inability to distinguish valid summaries from non-summaries. Human evaluation remains critical for comprehensive quality assessment.

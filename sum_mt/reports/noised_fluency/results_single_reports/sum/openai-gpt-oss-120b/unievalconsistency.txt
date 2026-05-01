@@ -1,0 +1,102 @@
+**unieval_consistency**
+
+---
+
+### Table of Results  
+
+| Perturbation Type | Variation | Metric Score | Edit Ratio | Change % |
+|-------------------|-----------|--------------|------------|----------|
+| **Verb Lemmatization** | 0 % (gold) | 0.860 | 0.000 | 0.0 % |
+| | 50 % verbs lemmatized | 0.842 | 0.052 | –2.1 % |
+| | 100 % verbs lemmatized | 0.823 | 0.102 | –4.3 % |
+| **Word Removal** | 0 % (gold) | 0.860 | 0.000 | 0.0 % |
+| | 5 % words removed | 0.764 | 0.061 | –11.2 % |
+| | 10 % words removed | 0.699 | 0.111 | –18.7 % |
+| | 15 % words removed | 0.648 | 0.163 | –24.6 % |
+| | 20 % words removed | 0.571 | 0.210 | –33.6 % |
+| | 25 % words removed | 0.531 | 0.260 | –38.2 % |
+| | 30 % words removed | 0.471 | 0.311 | –45.2 % |
+| | 35 % words removed | 0.424 | 0.361 | –50.7 % |
+| | 40 % words removed | 0.375 | 0.408 | –56.3 % |
+| | 45 % words removed | 0.349 | 0.461 | –59.5 % |
+| | 50 % words removed | 0.322 | 0.507 | –62.5 % |
+| **Punctuation Noise** | 0 % (gold) | 0.860 | 0.000 | 0.0 % |
+| | 50 % punctuation noised | 0.798 | 0.052 | –7.2 % |
+| | 100 % punctuation noised | 0.746 | 0.105 | –13.2 % |
+| **Sentence‑Middle‑Swap** | 0 % (gold) | 0.860 | 0.000 | 0.0 % |
+| | 1 sentence swapped | 0.762 | 0.145 | –11.4 % |
+| | 2 sentences swapped | 0.665 | 0.255 | –22.7 % |
+| | 3 sentences swapped | 0.592 | 0.321 | –31.2 % |
+| **Preposition Removal** | 0 % (gold) | 0.860 | 0.000 | 0.0 % |
+| | 40 % prepositions removed | 0.802 | 0.054 | –6.7 % |
+| | 70 % prepositions removed | 0.763 | 0.093 | –11.2 % |
+| | 100 % prepositions removed | 0.728 | 0.135 | –15.3 % |
+| **Stop‑Word Removal** | 0 % (gold) | 0.860 | 0.000 | 0.0 % |
+| | 10 % stop‑words removed | 0.834 | 0.044 | –3.1 % |
+| | 20 % stop‑words removed | 0.806 | 0.088 | –6.3 % |
+| | 30 % stop‑words removed | 0.783 | 0.130 | –8.9 % |
+| | 40 % stop‑words removed | 0.756 | 0.175 | –12.1 % |
+| | 50 % stop‑words removed | 0.732 | 0.219 | –14.8 % |
+| | 60 % stop‑words removed | 0.709 | 0.263 | –17.5 % |
+| **Word‑Swap** | 0 % (gold) | 0.860 | 0.000 | 0.0 % |
+| | 5 % words swapped | 0.731 | 0.056 | –15.0 % |
+| | 15 % words swapped | 0.626 | 0.117 | –27.2 % |
+| | 30 % words swapped | 0.536 | 0.169 | –37.7 % |
+| | 60 % words swapped | 0.450 | 0.222 | –47.7 % |
+| **Truncate‑End** | 0 % (gold) | 0.860 | 0.000 | 0.0 % |
+| | 10 % words removed (end) | 0.811 | 0.114 | –5.7 % |
+| | 20 % words removed (end) | 0.811 | 0.215 | –5.7 % |
+| | 30 % words removed (end) | 0.806 | 0.312 | –6.3 % |
+| | 40 % words removed (end) | 0.789 | 0.413 | –8.2 % |
+| | 50 % words removed (end) | 0.812 | 0.515 | –5.6 % |
+| **Article Removal** | 0 % (gold) | 0.860 | 0.000 | 0.0 % |
+| | 50 % articles removed | 0.857 | 0.039 | –0.3 % |
+| | 100 % articles removed | 0.854 | 0.081 | –0.7 % |
+| **Word‑Repetition** | 0 % (gold) | 0.860 | 0.000 | 0.0 % |
+| | 5 % words repeated | 0.796 | 0.061 | –7.4 % |
+| | 10 % words repeated | 0.760 | 0.111 | –11.6 % |
+| | 15 % words repeated | 0.721 | 0.163 | –16.2 % |
+| | 20 % words repeated | 0.704 | 0.210 | –18.1 % |
+| | 25 % words repeated | 0.681 | 0.260 | –20.8 % |
+| | 30 % words repeated | 0.664 | 0.311 | –22.7 % |
+| | 35 % words repeated | 0.646 | 0.361 | –24.8 % |
+| | 40 % words repeated | 0.643 | 0.408 | –25.2 % |
+| | 45 % words repeated | 0.627 | 0.461 | –27.1 % |
+| | 50 % words repeated | 0.618 | 0.507 | –28.2 % |
+
+---
+
+## 1. Sensitivity to the Perturbation  
+
+| Perturbation Type | Monotonous Decrease | Superlinear Decrease | Change Rate |
+|-------------------|---------------------|----------------------|--------------|
+| Verb Lemmatization | **yes** | **no** | **low** |
+| Word Removal | **yes** | **no** | **high** |
+| Punctuation Noise | **yes** | **no** | **low** |
+| Sentence‑Middle‑Swap | **yes** | **no** | **moderate** |
+| Preposition Removal | **yes** | **no** | **low** |
+| Stop‑Word Removal | **yes** | **no** | **low** |
+| Word‑Swap | **yes** | **no** | **moderate** |
+| Truncate‑End | **no** (score does not consistently drop) | **no** | **low** |
+| Article Removal | **yes** | **no** | **low** |
+| Word‑Repetition | **yes** | **no** | **moderate** |
+
+**Explanation of flags**
+
+* **Monotonous decrease** – All listed perturbations (except Truncate‑End) show a non‑increasing sequence of scores as the variation level grows.  
+* **Superlinear decrease** – None of the perturbations exhibit an accelerating (super‑linear) drop; the absolute change between successive levels is either constant or diminishes.  
+* **Change rate** – Determined by the largest absolute percentage drop within each test:  
+  * *Low* ≤ 25 % (e.g., verb lemmatization, punctuation noise, preposition removal, stop‑word removal, article removal).  
+  * *Moderate* > 25 % and ≤ 60 % (sentence‑middle‑swap, word‑swap, word‑repetition).  
+  * *High* > 60 % (word removal, whose maximum drop reaches –62.5 %).  
+
+---
+
+## 2. Suitability of **unieval_consistency** for **summarization**
+
+A metric is deemed suitable when **most (> 7) perturbation tests** display **high change rate** **and** **superlinear decrease**.  
+
+* Only **one** perturbation (Word Removal) reaches a high change rate, and **none** show superlinear behavior.  
+* The majority of tests are low or moderate in change rate, and all are non‑superlinear.
+
+**Conclusion:** **unieval_consistency is *not* recommended** as a reliable automatic metric for summarization quality assessment. It reacts to many perturbations, but the magnitude of its response is generally modest and lacks the super‑linear sensitivity that aligns with human judgments of severe fluency degradations.

@@ -1,0 +1,6 @@
+metric=UniEval-fluency(sum)
+Additional Information=The Metric scores from 0 (Minimum) to 1 (Maximum)
+
+ref=0.919656
+injection_1=0.959921
+injection_2=0.962313

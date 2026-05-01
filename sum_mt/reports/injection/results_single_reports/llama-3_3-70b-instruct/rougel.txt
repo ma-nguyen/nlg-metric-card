@@ -1,0 +1,18 @@
+Rouge-L
+
+{Table}
+| Summary Type | Score | Change |
+| --- | --- | --- |
+| Gold Summary | 0.286197 | - |
+| Injection 1 | 0.126527 | (0.126527-0.286197)/abs(0.286197)*100 = -55.83% |
+| Injection 2 | 0.098507 | (0.098507-0.286197)/abs(0.286197)*100 = -65.59% |
+
+1. Sensitivity to the Perturbation
+    a. No, none of the perturbed outputs scored higher than the gold output. Both injections had lower scores than the gold summary.
+    b. No, the scores were not similar for every injection. The scores for Injection 1 and Injection 2 were different, with Injection 2 having a lower score.
+
+2. Suitability of Rouge-L for Summarization
+    a. Strengths: The metric had a high change rate for both injections, with a change of -55.83% for Injection 1 and -65.59% for Injection 2. This indicates that the metric is able to detect perturbations and penalize non-summary inputs.
+    b. Weaknesses: None of the injections had a very low or low change rate, but the metric could still be improved to detect more subtle perturbations.
+    c. Recommendation: Yes, the metric could detect every injection (non-summary) by having a high change rate or higher.
+    d. Additionally, the metric needs improvements in handling more complex and subtle perturbations, as well as evaluating the quality of summaries in terms of coherence, consistency, and relevance. The metric's ability to detect non-summary inputs is a strength, but it may still benefit from further refinement to better approximate human evaluation.

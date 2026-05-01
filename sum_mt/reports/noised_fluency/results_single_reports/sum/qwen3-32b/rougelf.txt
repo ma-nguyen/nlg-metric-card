@@ -1,0 +1,82 @@
+# rougeL-f
+
+## Table
+
+| Perturbation Type | Monotonous Decrease | Superlinear Decrease | Change Rate |
+|-------------------|---------------------|----------------------|-------------|
+| Verb Lemmatization | Yes                 | No                   | Low         |
+| Word Removal       | Yes                 | Yes                  | Moderate    |
+| Punctuation Noise  | No                  | No                   | Low         |
+| Sentence Swap      | Yes                 | No                   | Low         |
+| Preposition Removal| Yes                 | No                   | Low         |
+| Stop-word Removal  | Yes                 | No                   | Moderate    |
+| Word Swap          | Yes                 | No                   | Moderate    |
+| Truncation         | No                  | No                   | N/A         |
+| Article Removal    | Yes                 | No                   | Moderate    |
+| Word Repetition    | Yes                 | No                   | Moderate    |
+
+## 1. Sensitivity to the Perturbation
+
+**Verb Lemmatization**  
+- **Monotonous decrease**: Yes  
+- **Superlinear decrease**: No  
+- **Change rate**: Low (max drop: -0.8%)  
+
+**Word Removal**  
+- **Monotonous decrease**: Yes  
+- **Superlinear decrease**: Yes (drops accelerate from -1.6% to -17.3%)  
+- **Change rate**: Moderate (max drop: -17.3%)  
+
+**Punctuation Noise**  
+- **Monotonous decrease**: No (score unchanged at 0.286)  
+- **Superlinear decrease**: No  
+- **Change rate**: Low (no drop)  
+
+**Sentence Swap**  
+- **Monotonous decrease**: Yes  
+- **Superlinear decrease**: No (drops increase linearly: -3.3% → -6.7% → -9.5%)  
+- **Change rate**: Low (max drop: -9.5%)  
+
+**Preposition Removal**  
+- **Monotonous decrease**: Yes  
+- **Superlinear decrease**: No (drops increase linearly: -1.2% → -2.5% → -4.2%)  
+- **Change rate**: Low (max drop: -4.2%)  
+
+**Stop-word Removal**  
+- **Monotonous decrease**: Yes  
+- **Superlinear decrease**: No (drops increase linearly: -1.1% → -6.3%)  
+- **Change rate**: Moderate (max drop: -6.3%)  
+
+**Word Swap**  
+- **Monotonous decrease**: Yes  
+- **Superlinear decrease**: No (drops increase linearly: -2.2% → -10.3%)  
+- **Change rate**: Moderate (max drop: -10.3%)  
+
+**Truncation**  
+- **Monotonous decrease**: No (score increases with perturbation)  
+- **Superlinear decrease**: No  
+- **Change rate**: N/A (score increases, not a valid decrease test)  
+
+**Article Removal**  
+- **Monotonous decrease**: Yes  
+- **Superlinear decrease**: No (drops increase linearly: -2.3% → -5.4%)  
+- **Change rate**: Moderate (max drop: -5.4%)  
+
+**Word Repetition**  
+- **Monotonous decrease**: Yes  
+- **Superlinear decrease**: No (drops increase linearly: -3.0% → -20.0%)  
+- **Change rate**: Moderate (max drop: -20.0%)  
+
+---
+
+## 2. Suitability of rougeL-f for summarization
+
+**Recommendation**: **Not recommended**  
+
+**Analysis**:  
+- Only **1/10 perturbation tests** (Word Removal) exhibit a **superlinear decrease**, while the remaining 9 tests show **linear or no decrease**.  
+- **7/10 tests** have **moderate or low change rates** (max drop ≤ -20.0%), falling short of the threshold for "high" sensitivity (≥ -60%).  
+- The **Truncation test** fails to align with human expectations (score increases with perturbation).  
+- Human evaluation expects **superlinear sensitivity** to severe perturbations, which rougeL-f does not consistently demonstrate.  
+
+**Conclusion**: rougeL-f fails to meet the criteria for a suitable summarization evaluation metric under the given perturbation tests.

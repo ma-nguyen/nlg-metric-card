@@ -1,0 +1,33 @@
+# BARTScore-avg-f, BERTScore-f, ROUGE-2, ROUGE-L, UniEval-coherence, UniEval-consistency, UniEval-fluency, UniEval-overall, UniEval-relevance - Evaluation Metrics for Summarization  
+
+## Table  
+
+| Metric                          | Ref     | Inj-1   | ΔInj-1 (%) | Inj-2   | ΔInj-2 (%) |  
+|---------------------------------|---------|---------|------------|---------|------------|  
+| **bartscore-avg-f**             | -6.064  | -8.247  | -36.0      | -9.391  | -54.9      |  
+| **bert_score_f**                | 0.224   | 0.001   | -99.6      | -0.016  | -107.0     |  
+| **rouge-2**                     | 0.171   | 0.016   | -90.9      | 0.014   | -91.6      |  
+| **rouge-L**                     | 0.286   | 0.127   | -55.8      | 0.099   | -65.6      |  
+| **UniEval-coherence(sum)**      | 0.898   | 0.904   | +0.7       | 0.778   | -13.4      |  
+| **UniEval-consistency(sum)**    | 0.860   | 0.858   | -0.3       | 0.756   | -12.0      |  
+| **UniEval-fluency(sum)**        | 0.920   | 0.960   | +4.4       | 0.962   | +4.6       |  
+| **UniEval-overall(sum)**        | 0.865   | 0.905   | +4.7       | 0.838   | -3.0       |  
+| **UniEval-relevance(sum)**      | 0.781   | 0.901   | +15.3      | 0.857   | +9.7       |  
+
+## Recommendation  
+
+**Recommended metrics with high change rates (≥50%):**  
+1. **BERTScore-f** (ΔInj-1: -99.6%, ΔInj-2: -107.0%)  
+2. **ROUGE-2** (ΔInj-1: -90.9%, ΔInj-2: -91.6%)  
+3. **ROUGE-L** (ΔInj-2: -65.6%)  
+4. **BARTScore-avg-f** (ΔInj-2: -54.9%)  
+
+**Metrics to avoid:**  
+- **UniEval-fluency(sum)** and **UniEval-relevance(sum)**: Both assign **higher scores to injections** (ΔInj-1: +4.4% and +15.3%, respectively), violating the human evaluation criterion that perturbed summaries should score lower.  
+- **UniEval-overall(sum)**: While ΔInj-2 is moderate (-3.0%), ΔInj-1 is +4.7%, indicating inconsistent performance.  
+
+**Key observations:**  
+- **BERTScore-f** and **ROUGE-2** demonstrate the most robust discrimination between gold summaries and injections, with **>90% score drops** for perturbed inputs.  
+- **UniEval metrics** (e.g., coherence, fluency) often fail to penalize injections effectively, particularly for injection_1, which is a non-summary text. This suggests poor alignment with human judgment criteria.  
+
+**Note:** While BERTScore-f and ROUGE-2 show strong performance, they may still fail to fully capture human-like evaluation (e.g., coherence, relevance) in complex cases.

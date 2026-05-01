@@ -1,0 +1,100 @@
+**bleurt**
+
+---
+
+### Table  
+
+| Perturbation Type | Variation (percentage) | BLEURT Score | Edit Ratio | Change % |
+|-------------------|------------------------|--------------|------------|----------|
+| **Verb Lemmatization** | 0 % (gold) | –0.104 | 0.000 | 0.0 % |
+| | 50 % verbs randomized | –0.156 | 0.034 | –49.9 % |
+| | 100 % verbs randomized | –0.205 | 0.065 | –96.2 % |
+| **Word Removal** | 0 % (gold) | –0.104 | 0.000 | 0.0 % |
+| | 5 % words removed | –0.213 | 0.056 | –104.6 % |
+| | 10 % words removed | –0.309 | 0.105 | –196.6 % |
+| | 15 % words removed | –0.415 | 0.156 | –297.5 % |
+| | 20 % words removed | –0.493 | 0.205 | –372.8 % |
+| | 25 % words removed | –0.591 | 0.254 | –466.9 % |
+| | 30 % words removed | –0.692 | 0.306 | –563.4 % |
+| | 35 % words removed | –0.767 | 0.356 | –635.8 % |
+| | 40 % words removed | –0.851 | 0.405 | –716.4 % |
+| | 45 % words removed | –0.924 | 0.456 | –785.8 % |
+| | 55 % words removed | –1.069 | 0.556 | –925.0 % |
+| **Punctuation Noise** | 0 % (gold) | –0.104 | 0.000 | 0.0 % |
+| | 50 % punctuation noised | –0.144 | 0.073 | –37.7 % |
+| | 100 % punctuation noised | –0.174 | 0.145 | –67.1 % |
+| **Sentence‑Middle Swap** | 0 % (gold) | –0.104 | 0.000 | 0.0 % |
+| | SVO order swapped (single sentence) | –0.156 | 0.073 | –49.2 % |
+| **Preposition Removal** | 0 % (gold) | –0.104 | 0.000 | 0.0 % |
+| | 40 % prepositions removed | –0.167 | 0.041 | –60.3 % |
+| | 70 % prepositions removed | –0.215 | 0.072 | –106.6 % |
+| | 100 % prepositions removed | –0.275 | 0.104 | –163.5 % |
+| **Stop‑Word Removal** | 0 % (gold) | –0.104 | 0.000 | 0.0 % |
+| | 10 % stop‑words removed | –0.187 | 0.069 | –79.7 % |
+| | 20 % stop‑words removed | –0.269 | 0.139 | –157.9 % |
+| | 30 % stop‑words removed | –0.356 | 0.208 | –241.6 % |
+| | 40 % stop‑words removed | –0.444 | 0.278 | –326.2 % |
+| | 50 % stop‑words removed | –0.525 | 0.346 | –403.1 % |
+| | 60 % stop‑words removed | –0.595 | 0.412 | –470.3 % |
+| **Random Local Swap** | 0 % (gold) | –0.104 | 0.000 | 0.0 % |
+| | 5 % words swapped | –0.295 | 0.050 | –182.8 % |
+| | 15 % words swapped | –0.509 | 0.111 | –388.1 % |
+| | 30 % words swapped | –0.691 | 0.165 | –562.8 % |
+| | 60 % words swapped | –0.833 | 0.217 | –698.4 % |
+| **Truncate (end‑word removal)** | 0 % (gold) | –0.104 | 0.000 | 0.0 % |
+| | 10 % words removed | –0.159 | 0.105 | –52.1 % |
+| | 20 % words removed | –0.179 | 0.206 | –71.8 % |
+| | 30 % words removed | –0.212 | 0.305 | –103.4 % |
+| | 40 % words removed | –0.289 | 0.406 | –177.5 % |
+| | 50 % words removed | –0.357 | 0.508 | –242.2 % |
+| **Article Removal** | 0 % (gold) | –0.104 | 0.000 | 0.0 % |
+| | 50 % articles removed | –0.132 | 0.040 | –26.6 % |
+| | 100 % articles removed | –0.167 | 0.080 | –60.3 % |
+| **Random Token Repetition** | 0 % (gold) | –0.104 | 0.000 | 0.0 % |
+| | 5 % words repeated | –0.191 | 0.056 | –83.1 % |
+| | 10 % words repeated | –0.255 | 0.105 | –145.0 % |
+| | 15 % words repeated | –0.317 | 0.156 | –203.5 % |
+| | 20 % words repeated | –0.371 | 0.205 | –256.0 % |
+| | 25 % words repeated | –0.426 | 0.254 | –308.4 % |
+| | 30 % words repeated | –0.474 | 0.306 | –354.4 % |
+| | 35 % words repeated | –0.526 | 0.356 | –404.8 % |
+| | 40 % words repeated | –0.566 | 0.405 | –442.9 % |
+| | 45 % words repeated | –0.612 | 0.456 | –486.5 % |
+| | 55 % words repeated | –0.677 | 0.556 | –548.9 % |
+
+---
+
+## 1. Sensitivity to the Perturbation  
+
+| Perturbation Type | Monotonous Decrease | Superlinear Decrease | Change‑Rate |
+|-------------------|---------------------|----------------------|-------------|
+| Verb Lemmatization | yes | no | high |
+| Word Removal | yes | no | high |
+| Punctuation Noise | yes | no | high |
+| Sentence‑Middle Swap | yes | no | moderate |
+| Preposition Removal | yes | no | high |
+| Stop‑Word Removal | yes | no | high |
+| Random Local Swap | yes | no | high |
+| Truncate (end‑word removal) | yes | **yes** | high |
+| Article Removal | yes | no | high |
+| Random Token Repetition | yes | no | high |
+
+*Monotonous decrease* is marked “yes” when the reported change becomes increasingly negative as the variation level grows.  
+*Superlinear decrease* is marked “yes” only for the truncate test, where the magnitude of the score drop accelerates with larger deletions.  
+*Change‑Rate* follows the defined thresholds:  
+- **low** ≤ 25 % drop,  
+- **moderate** ≤ 60 % drop,  
+- **high** > 60 % drop (or approaching the metric’s minimum).  
+
+All perturbations exhibit a monotonic decline; only the truncate perturbation shows a super‑linear pattern. Every test except the sentence‑middle swap reaches a high change‑rate, with the swap test being moderate.
+
+---
+
+## 2. Suitability of **bleurt** for **machine translation**
+
+A metric is recommended when **most > 7** perturbation tests display a **high change‑rate** **and** a **superlinear decrease**.  
+
+- High change‑rate: 9 out of 10 perturbation families (all except the sentence‑middle swap) achieve a high change‑rate.  
+- Superlinear decrease: only the truncate test shows superlinearity; the majority do **not**.
+
+Because the superlinear criterion is not met for the majority of perturbations, **bleurt is *not* recommended** as a standalone metric for machine‑translation quality assessment, despite its strong sensitivity to many types of noise.

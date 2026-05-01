@@ -1,0 +1,15 @@
+**MAUVE-GPT2-base MAUVE-RoBERTa-Base MAUVE-RoBERTa-Large**  
+
+**Table**  
+| Metric               | Ref   | Shuff_Beg | ΔShuff_Beg(%) | Shuff_Mid | ΔShuff_Mid(%) | Shuff_End | ΔShuff_End(%) | Rand_Beg | ΔRand_Beg(%) | Rand_Mid | ΔRand_Mid(%) | Rand_End | ΔRand_End(%) |  
+|----------------------|-------|-----------|---------------|-----------|---------------|-----------|---------------|----------|--------------|----------|--------------|----------|--------------|  
+| MAUVE-GPT2-base      | 0.948 | 0.546     | -42.4         | 0.821     | -13.4         | 0.018     | -98.1         | 0.638    | -32.7        | 0.345    | -63.6        | 0.007    | -99.2        |  
+| MAUVE-RoBERTa-Base   | 0.962 | 0.958     | -0.4          | 0.948     | -1.4          | 0.511     | -46.9         | 0.894    | -7.1         | 0.911    | -5.3         | 0.510    | -47.0        |  
+| MAUVE-RoBERTa-Large  | 0.979 | 0.354     | -63.8         | 0.619     | -36.7         | 0.255     | -73.9         | 0.032    | -96.8        | 0.121    | -87.6        | 0.039    | -96.0        |  
+
+**Recommendation**  
+The metrics with the most high or very high change rates (≥70%) are **MAUVE-RoBERTa-Large** and **MAUVE-GPT2-base**, as they exhibit significant drops in scores for perturbed texts (e.g., ΔShuff_End: -98.1% and -73.9%, ΔRand_End: -99.2% and -96.0%). These metrics align well with human evaluation criteria, particularly for detecting semantically meaningless perturbations.  
+
+**MAUVE-RoBERTa-Base** is not recommended due to its very low change rate for beginning shuffling (ΔShuff_Beg: -0.4%) and low-to-moderate changes in other perturbations (e.g., ΔShuff_Mid: -1.4%, ΔRand_Mid: -5.3%). These minimal changes fail to reflect the expected human perception of degraded text quality, violating the core principle that perturbed texts should score lower than gold texts.  
+
+Note: While MAUVE-RoBERTa-Large and MAUVE-GPT2-base show strong performance, they may still fall short of fully capturing human judgment in nuanced cases.

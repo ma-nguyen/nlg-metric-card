@@ -1,0 +1,74 @@
+## mauve-roberta
+## Table
+
+| Perturbation Type         | Variation | Monotonous Decrease | Superlinear Decrease | Change Rate |
+|---------------------------|-----------|---------------------|----------------------|-------------|
+| Verb Lemmatization        | 0.5, 1.0  | yes                 | no                   | moderate    |
+| Word Removal              | 0.05-0.5  | yes                 | yes                  | high        |
+| Punctuation Noise         | 0.5, 1.0  | yes                 | no                   | high        |
+| Sentence Middle Swap      | 1-3       | yes                 | no                   | moderate    |
+| Preposition Removal       | 0.4-1.0   | yes                 | no                   | moderate    |
+| Stop-word Removal         | 0.1-0.6   | yes                 | yes                  | high        |
+| Word Swap                 | 0.05-0.6  | yes                 | yes                  | high        |
+| Truncate (End Words)      | 0.1-0.5   | yes                 | no                   | moderate    |
+| Article Removal           | 0.5, 1.0  | yes                 | no                   | low         |
+| Word Repetition           | 0.05-0.5  | yes                 | yes                  | high        |
+
+## 1. Sensitivity to the Perturbation
+
+**Verb Lemmatization**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: no  
+- **Change rate**: moderate (-35.5% at 100% variation)  
+
+**Word Removal**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes  
+- **Change rate**: high (-99.5% at 50% variation)  
+
+**Punctuation Noise**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: no  
+- **Change rate**: high (-97.3% at 100% variation)  
+
+**Sentence Middle Swap**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: no  
+- **Change rate**: moderate (-36.0% at 3 sentences)  
+
+**Preposition Removal**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: no  
+- **Change rate**: moderate (-48.4% at 100% variation)  
+
+**Stop-word Removal**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes  
+- **Change rate**: high (-97.6% at 60% variation)  
+
+**Word Swap**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes  
+- **Change rate**: high (-99.6% at 60% variation)  
+
+**Truncate (End Words)**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: no  
+- **Change rate**: moderate (-70.2% at 50% variation)  
+
+**Article Removal**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: no  
+- **Change rate**: low (-8.8% at 100% variation)  
+
+**Word Repetition**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes  
+- **Change rate**: high (-99.5% at 50% variation)  
+
+---
+
+## 2. Suitability of mauve-roberta for open-ended text generation
+
+**Not recommended.**  
+Only **4 out of 10 perturbation tests** (Word Removal, Stop-word Removal, Word Swap, Word Repetition) exhibit both **high change rate** and **superlinear decrease**, falling short of the threshold (>7 tests). While the metric shows sensitivity to severe perturbations (e.g., -99.5% for 50% word removal), its failure to consistently reflect superlinear human-like penalization for most perturbations limits its suitability for evaluating open-ended text generation.

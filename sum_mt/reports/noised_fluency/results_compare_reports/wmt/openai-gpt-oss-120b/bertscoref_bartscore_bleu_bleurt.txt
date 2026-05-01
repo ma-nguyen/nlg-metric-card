@@ -1,0 +1,104 @@
+# Evaluation Metrics for Machine Translation
+## Table
+
+The following table contains the results of the tested evaluation metrics:
+
+| Metric | Perturbation Type | Variation | Score | Edit Ratio | Change |
+| --- | --- | --- | --- | --- | --- |
+| bert_score_f | Unperturbed | 0% | 0.687 | 0.000 | 0.0% |
+| bert_score_f | Verb Lemmatization | 50% | 0.664 | 0.041 | -3.3% |
+| bert_score_f | Verb Lemmatization | 100% | 0.644 | 0.081 | -6.3% |
+| ... | ... | ... | ... | ... | ... |
+| bart_score | Unperturbed | 0% | -3.812 | 0.000 | 0.0% |
+| bart_score | Word Removal | 5% | -4.261 | 0.085 | -11.8% |
+| bart_score | Word Removal | 10% | -4.492 | 0.131 | -17.9% |
+| ... | ... | ... | ... | ... | ... |
+| bleu | Unperturbed | 0% | 27.948 | 0.000 | 0.0% |
+| bleu | Word Removal | 5% | 23.900 | 0.085 | -14.5% |
+| bleu | Word Removal | 10% | 21.429 | 0.131 | -23.3% |
+| ... | ... | ... | ... | ... | ... |
+| bleurt | Unperturbed | 0% | 0.317 | 0.000 | 0.0% |
+| bleurt | Word Removal | 5% | 0.104 | 0.085 | -67.1% |
+| bleurt | Word Removal | 10% | -0.012 | 0.131 | -103.7% |
+| ... | ... | ... | ... | ... | ... |
+
+## Sensitivity to the Perturbation
+
+The following tables analyze the sensitivity of each metric to each perturbation type:
+
+**bert_score_f**
+
+| Variation | Monotonous Decrease | Superlinear Decrease | Change Rate |
+| --- | --- | --- | --- |
+| Verb Lemmatization | yes | no | low |
+| Word Removal | yes | yes | high |
+| Punctuation Noise | yes | no | low |
+| Sentence Middle Swap | yes | no | low |
+| Preposition Removal | yes | no | low |
+| Stopword Removal | yes | yes | moderate |
+| Word Swap | yes | no | moderate |
+| Truncation | yes | yes | low |
+| Article Removal | yes | no | low |
+| Word Repetition | yes | no | moderate |
+
+**bart_score**
+
+| Variation | Monotonous Decrease | Superlinear Decrease | Change Rate |
+| --- | --- | --- | --- |
+| Verb Lemmatization | yes | yes | moderate |
+| Word Removal | yes | yes | high |
+| Punctuation Noise | yes | yes | high |
+| Sentence Middle Swap | yes | no | low |
+| Preposition Removal | yes | no | low |
+| Stopword Removal | yes | yes | high |
+| Word Swap | yes | no | high |
+| Truncation | yes | yes | moderate |
+| Article Removal | yes | no | low |
+| Word Repetition | yes | no | moderate |
+
+**bleu**
+
+| Variation | Monotonous Decrease | Superlinear Decrease | Change Rate |
+| --- | --- | --- | --- |
+| Verb Lemmatization | yes | no | low |
+| Word Removal | yes | yes | high |
+| Punctuation Noise | yes | no | low |
+| Sentence Middle Swap | yes | no | low |
+| Preposition Removal | yes | no | low |
+| Stopword Removal | yes | yes | high |
+| Word Swap | yes | no | moderate |
+| Truncation | yes | yes | low |
+| Article Removal | yes | no | low |
+| Word Repetition | yes | no | moderate |
+
+**bleurt**
+
+| Variation | Monotonous Decrease | Superlinear Decrease | Change Rate |
+| --- | --- | --- | --- |
+| Verb Lemmatization | yes | yes | low |
+| Word Removal | yes | yes | high |
+| Punctuation Noise | yes | no | low |
+| Sentence Middle Swap | yes | no | low |
+| Preposition Removal | yes | no | low |
+| Stopword Removal | yes | yes | high |
+| Word Swap | yes | no | moderate |
+| Truncation | yes | yes | low |
+| Article Removal | yes | no | low |
+| Word Repetition | yes | no | moderate |
+
+## Recommendation
+
+The following table recommends metrics for each perturbation type based on high change rate and superlinear decrease:
+
+| Perturbation Type | Recommended Metric |
+| --- | --- |
+| Verb Lemmatization | none |
+| Word Removal | bart_score |
+| Punctuation Noise | bart_score |
+| Sentence Middle Swap | bart_score |
+| Preposition Removal | bart_score |
+| Stopword Removal | bart_score |
+| Word Swap | none |
+| Truncation | bart_score |
+| Article Removal | none |
+| Word Repetition | none |

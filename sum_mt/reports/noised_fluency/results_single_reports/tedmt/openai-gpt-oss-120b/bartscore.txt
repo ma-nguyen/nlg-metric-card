@@ -1,0 +1,102 @@
+**bart_score**
+
+---
+
+### Table  
+
+| Perturbation Type | Variation (percentage) | bart_score | edit ratio | Change % |
+|-------------------|------------------------|------------|------------|----------|
+| Verb lemmatization | 0 % (gold) | –3.734 | 0.000 | 0.0 % |
+| Verb lemmatization | 50 % of verbs randomized | –3.826 | 0.034 | –2.4 % |
+| Verb lemmatization | 100 % of verbs randomized | –3.914 | 0.065 | –4.8 % |
+| Random word drop (word removal) | 5 % of words removed | –3.956 | 0.056 | –5.9 % |
+| Random word drop (word removal) | 10 % of words removed | –4.171 | 0.105 | –11.7 % |
+| Random word drop (word removal) | 15 % of words removed | –4.413 | 0.156 | –18.2 % |
+| Random word drop (word removal) | 20 % of words removed | –4.657 | 0.205 | –24.7 % |
+| Random word drop (word removal) | 25 % of words removed | –4.925 | 0.254 | –31.9 % |
+| Random word drop (word removal) | 30 % of words removed | –5.253 | 0.306 | –40.7 % |
+| Random word drop (word removal) | 35 % of words removed | –5.572 | 0.356 | –49.2 % |
+| Random word drop (word removal) | 40 % of words removed | –5.923 | 0.405 | –58.6 % |
+| Random word drop (word removal) | 45 % of words removed | –6.316 | 0.456 | –69.1 % |
+| Random word drop (word removal) | 55 % of words removed | –7.084 | 0.556 | –89.7 % |
+| Punctuation noise | 0 % (gold) | –3.734 | 0.000 | 0.0 % |
+| Punctuation noise | 50 % of punctuation noised | –4.052 | 0.073 | –8.5 % |
+| Punctuation noise | 100 % of punctuation noised | –4.299 | 0.145 | –15.1 % |
+| Sentence‑middle swap | 0 % (gold) | –3.734 | 0.000 | 0.0 % |
+| Sentence‑middle swap | 1 sentence swapped (≈7 % edit ratio) | –3.857 | 0.073 | –3.3 % |
+| Preposition removal | 0 % (gold) | –3.734 | 0.000 | 0.0 % |
+| Preposition removal | 40 % of prepositions removed | –3.892 | 0.041 | –4.2 % |
+| Preposition removal | 70 % of prepositions removed | –4.036 | 0.072 | –8.1 % |
+| Preposition removal | 100 % of prepositions removed | –4.203 | 0.104 | –12.6 % |
+| Stop‑word removal | 0 % (gold) | –3.734 | 0.000 | 0.0 % |
+| Stop‑word removal | 10 % of stop‑words removed | –3.944 | 0.069 | –5.6 % |
+| Stop‑word removal | 20 % of stop‑words removed | –4.183 | 0.139 | –12.0 % |
+| Stop‑word removal | 30 % of stop‑words removed | –4.445 | 0.208 | –19.0 % |
+| Stop‑word removal | 40 % of stop‑words removed | –4.752 | 0.278 | –27.2 % |
+| Stop‑word removal | 50 % of stop‑words removed | –5.083 | 0.346 | –36.1 % |
+| Stop‑word removal | 60 % of stop‑words removed | –5.453 | 0.412 | –46.0 % |
+| Random local swap (word swap) | 0 % (gold) | –3.734 | 0.000 | 0.0 % |
+| Random local swap (word swap) | 5 % of words swapped | –4.126 | 0.050 | –10.5 % |
+| Random local swap (word swap) | 15 % of words swapped | –4.641 | 0.111 | –24.3 % |
+| Random local swap (word swap) | 30 % of words swapped | –5.153 | 0.165 | –38.0 % |
+| Random local swap (word swap) | 60 % of words swapped | –5.624 | 0.217 | –50.6 % |
+| Truncate (end‑word removal) | 0 % (gold) | –3.734 | 0.000 | 0.0 % |
+| Truncate (end‑word removal) | 10 % of end words removed | –3.843 | 0.105 | –2.9 % |
+| Truncate (end‑word removal) | 20 % of end words removed | –4.048 | 0.206 | –8.4 % |
+| Truncate (end‑word removal) | 30 % of end words removed | –4.413 | 0.305 | –18.2 % |
+| Truncate (end‑word removal) | 40 % of end words removed | –4.987 | 0.406 | –33.5 % |
+| Truncate (end‑word removal) | 50 % of end words removed | –5.779 | 0.508 | –54.7 % |
+| Article removal | 0 % (gold) | –3.734 | 0.000 | 0.0 % |
+| Article removal | 50 % of articles removed | –3.869 | 0.040 | –3.6 % |
+| Article removal | 100 % of articles removed | –4.036 | 0.080 | –8.1 % |
+| Random token repetition | 0 % (gold) | –3.734 | 0.000 | 0.0 % |
+| Random token repetition | 5 % of words repeated | –3.921 | 0.056 | –5.0 % |
+| Random token repetition | 10 % of words repeated | –4.106 | 0.105 | –9.9 % |
+| Random token repetition | 15 % of words repeated | –4.295 | 0.156 | –15.0 % |
+| Random token repetition | 20 % of words repeated | –4.477 | 0.205 | –19.9 % |
+| Random token repetition | 25 % of words repeated | –4.643 | 0.254 | –24.3 % |
+| Random token repetition | 30 % of words repeated | –4.845 | 0.306 | –29.7 % |
+| Random token repetition | 35 % of words repeated | –4.999 | 0.356 | –33.9 % |
+| Random token repetition | 40 % of words repeated | –5.160 | 0.405 | –38.2 % |
+| Random token repetition | 45 % of words repeated | –5.349 | 0.456 | –43.2 % |
+| Random token repetition | 55 % of words repeated | –5.660 | 0.556 | –51.6 % |
+
+*All “Change %” values are taken directly from the provided results.*
+
+---
+
+## 1. Sensitivity to the Perturbation  
+
+For each perturbation test the following attributes are reported:
+
+| Perturbation | monotonous decrease | superlinear decrease | change‑rate |
+|--------------|--------------------|----------------------|-------------|
+| Verb lemmatization | **yes** | **no** | **low** |
+| Random word drop (word removal) | **yes** | **yes** | **high** |
+| Punctuation noise | **yes** | **no** | **low** |
+| Sentence‑middle swap | **yes** | **no** (only one perturbed point) | **low** |
+| Preposition removal | **yes** | **yes** | **low** |
+| Stop‑word removal | **yes** | **yes** | **moderate** |
+| Random local swap (word swap) | **yes** | **no** | **moderate** |
+| Truncate (end‑word removal) | **yes** | **yes** | **moderate** |
+| Article removal | **yes** | **yes** | **low** |
+| Random token repetition | **yes** | **no** | **moderate** |
+
+**Explanation of the attributes**
+
+* **Monotonous decrease** – the reported “Change %” becomes increasingly negative as the perturbation level grows. All tests satisfy this condition.
+* **Superlinear decrease** – the absolute magnitude of the change grows faster in successive steps. This is observed for random word drop, preposition removal, stop‑word removal, truncate, and article removal. The other tests either show roughly constant increments or a single perturbed point, thus are not superlinear.
+* **Change‑rate** – determined by the largest absolute change in the series:  
+  * *low* ≤ 25 % (verb lemmatization, punctuation, sentence‑middle swap, preposition removal, article removal)  
+  * *moderate* ≤ 60 % (stop‑word removal, random local swap, truncate, random token repetition)  
+  * *high* > 60 % (random word drop).
+
+---
+
+## 2. Suitability of **bart_score** for **machine translation**
+
+A metric is deemed suitable when **most > 7 perturbation tests** exhibit both a **high change‑rate** *and* a **superlinear decrease**.  
+
+*Only one test* (random word drop) meets the “high change‑rate” criterion, and only five tests show superlinear behaviour. Consequently, the required condition is not satisfied.
+
+**Recommendation:** **bart_score is *not* recommended** as a primary evaluation metric for machine‑translation quality, because its sensitivity is generally low to many perturbations and it lacks the strong, superlinear response that aligns with human judgments of fluency degradation.

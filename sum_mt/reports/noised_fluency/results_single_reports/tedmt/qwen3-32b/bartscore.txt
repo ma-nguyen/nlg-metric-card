@@ -1,0 +1,80 @@
+# BARTScore
+
+## Table
+
+| Perturbation Type         | Monotonous Decrease | Superlinear Decrease | Change Rate |
+|---------------------------|---------------------|----------------------|-------------|
+| Verb Lemmatization        | yes                 | no                   | low         |
+| Word Removal              | yes                 | yes                  | high        |
+| Punctuation Noise         | yes                 | no                   | low         |
+| Sentence Middle Swap      | yes                 | no                   | low         |
+| Preposition Removal       | yes                 | no                   | low         |
+| Stop-word Removal         | yes                 | yes                  | moderate    |
+| Word Swap                 | yes                 | yes                  | moderate    |
+| Truncation (End Removal)  | yes                 | yes                  | moderate    |
+| Article Removal           | yes                 | no                   | low         |
+| Word Repetition           | yes                 | yes                  | moderate    |
+
+## 1. Sensitivity to the Perturbation
+
+**Verb Lemmatization**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: no  
+- **Change rate**: low (max change: -4.8%)  
+
+**Word Removal**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes  
+- **Change rate**: high (max change: -89.7%)  
+
+**Punctuation Noise**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: no  
+- **Change rate**: low (max change: -15.1%)  
+
+**Sentence Middle Swap**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: no  
+- **Change rate**: low (max change: -3.3%)  
+
+**Preposition Removal**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: no  
+- **Change rate**: low (max change: -12.6%)  
+
+**Stop-word Removal**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes  
+- **Change rate**: moderate (max change: -46.0%)  
+
+**Word Swap**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes  
+- **Change rate**: moderate (max change: -50.6%)  
+
+**Truncation (End Removal)**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes  
+- **Change rate**: moderate (max change: -54.7%)  
+
+**Article Removal**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: no  
+- **Change rate**: low (max change: -8.1%)  
+
+**Word Repetition**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes  
+- **Change rate**: moderate (max change: -51.6%)  
+
+---
+
+## 2. Suitability of BARTScore for Machine Translation
+
+**Recommendation**: **Not recommended**.  
+
+**Analysis**:  
+- **High change rate** (≥ -60%): 1 test (Word Removal).  
+- **Superlinear decrease**: 5 tests (Word Removal, Stop-word Removal, Word Swap, Truncation, Word Repetition).  
+- **Threshold for recommendation**: >7 tests with high change rate and superlinear decrease.  
+- **Result**: Only 1 test meets the high change rate threshold, and 5 tests meet the superlinear decrease threshold. The metric fails to align with human evaluation expectations, as it does not consistently reflect the disproportionately strong penalties for severe fluency errors.

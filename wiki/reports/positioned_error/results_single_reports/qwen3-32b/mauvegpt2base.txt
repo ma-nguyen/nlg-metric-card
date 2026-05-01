@@ -1,0 +1,49 @@
+# MAUVE-GPT2-base Evaluation on Open-Ended Text Generation  
+
+## Table  
+
+| Perturbation Type | Location     | Gold Score | Perturbed Score | Score Change (%) | Change Rate Category       |  
+|--------------------|--------------|------------|------------------|------------------|----------------------------|  
+| Shuffling          | Beginning    | 0.9481     | 0.5459           | -42.4            | Low to moderate            |  
+| Shuffling          | Middle       | 0.9481     | 0.8210           | -13.4            | Very low                   |  
+| Shuffling          | End          | 0.9481     | 0.0183           | -98.1            | Very high                  |  
+| Random             | Beginning    | 0.9481     | 0.6381           | -32.7            | Low to moderate            |  
+| Random             | Middle       | 0.9481     | 0.3447           | -63.6            | Moderate to high           |  
+| Random             | End          | 0.9481     | 0.0074           | -99.2            | Very high                  |  
+
+---
+
+## 1. Sensitivity to the Perturbation  
+
+**a. Did a perturbed output score higher than the gold output? If yes, which one.**  
+No perturbed output scored higher than the gold output in any variation.  
+
+**b. Were the scores similar for every location, meaning the scores of beginning, middle and end were similar?**  
+No. The score changes varied significantly across locations:  
+- **Shuffling-test**: End perturbations caused a drastic drop (-98.1%), while middle perturbations had minimal impact (-13.4%).  
+- **Random-test**: End perturbations caused the most severe drop (-99.2%), whereas middle perturbations had a moderate decline (-63.6%).  
+
+**c. Were the scores similar for shuffling and random-test?**  
+No. The **random-test** showed more severe score drops in the middle (-63.6% vs. -13.4% in shuffling-test) and end (-99.2% vs. -98.1% in shuffling-test). The **shuffling-test** had a larger drop in the beginning (-42.4% vs. -32.7% in random-test).  
+
+---
+
+## 2. Suitability of MAUVE-GPT2-base for Open-Ended Text Generation  
+
+### a. Strengths  
+- **High sensitivity to end perturbations**: Both shuffling (-98.1%) and random-test (-99.2%) at the end caused very high score drops, aligning with human expectations for semantically meaningless text.  
+- **Moderate sensitivity to middle perturbations in random-test**: The -63.6% drop in the middle for random-test reflects human perception of disrupted coherence.  
+
+### b. Weaknesses  
+- **Low sensitivity to middle perturbations in shuffling-test**: Only a -13.4% drop, which is inconsistent with human expectations for semantically disrupted text.  
+- **Moderate sensitivity to beginning perturbations**: Both shuffling (-42.4%) and random-test (-32.7%) showed low-to-moderate changes, suggesting limited detection of perturbations in the text’s opening.  
+
+### c. Recommendation  
+**No**, the metric does not meet the threshold for recommendation. Only **3 out of 6 variants** (end shuffling, end random, middle random) achieved high or very high change rates (≥70%).  
+
+### d. What Needs Improvements  
+- **Enhanced sensitivity to middle perturbations**: The metric underperforms in detecting disruptions in the middle of texts, where semantic coherence is critical.  
+- **Consistent detection of beginning perturbations**: The current sensitivity to beginning perturbations (32.7–42.4%) is insufficient to reflect human judgment.  
+- **Differentiation between shuffling and random perturbations**: The metric should better distinguish between perturbation types, as random-test perturbations (e.g., middle) caused more severe drops than shuffling.  
+
+**Note**: While MAUVE-GPT2-base demonstrates strong performance in detecting end perturbations, it cannot fully substitute human evaluation due to inconsistencies in sensitivity across text regions and perturbation types.

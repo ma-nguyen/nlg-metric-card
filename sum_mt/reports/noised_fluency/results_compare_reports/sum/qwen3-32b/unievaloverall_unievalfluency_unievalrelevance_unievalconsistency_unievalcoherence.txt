@@ -1,0 +1,143 @@
+# UniEval
+
+## Table
+
+| Perturbation Type | Metric | Monotonous Decrease | Superlinear Decrease | Change Rate |
+|-------------------|--------|---------------------|----------------------|-------------|
+| Verb Lemmatization | unieval_overall | yes | no | low |
+| Verb Lemmatization | unieval_fluency | yes | no | low |
+| Verb Lemmatization | unieval_relevance | yes | no | low |
+| Verb Lemmatization | unieval_consistency | yes | no | low |
+| Verb Lemmatization | unieval_coherence | yes | no | low |
+| Word Removal | unieval_overall | yes | yes | high |
+| Word Removal | unieval_fluency | yes | yes | high |
+| Word Removal | unieval_relevance | yes | yes | high |
+| Word Removal | unieval_consistency | yes | yes | high |
+| Word Removal | unieval_coherence | yes | yes | high |
+| Punctuation Noise | unieval_overall | yes | no | low |
+| Punctuation Noise | unieval_fluency | yes | no | moderate |
+| Punctuation Noise | unieval_relevance | yes | no | moderate |
+| Punctuation Noise | unieval_consistency | yes | no | low |
+| Punctuation Noise | unieval_coherence | yes | no | low |
+| Sentence Middle Swap | unieval_overall | yes | no | moderate |
+| Sentence Middle Swap | unieval_fluency | yes | no | high |
+| Sentence Middle Swap | unieval_relevance | yes | yes | high |
+| Sentence Middle Swap | unieval_consistency | yes | no | moderate |
+| Sentence Middle Swap | unieval_coherence | yes | yes | high |
+| Preposition Removal | unieval_overall | yes | no | moderate |
+| Preposition Removal | unieval_fluency | yes | no | moderate |
+| Preposition Removal | unieval_relevance | yes | no | moderate |
+| Preposition Removal | unieval_consistency | yes | no | low |
+| Preposition Removal | unieval_coherence | yes | no | moderate |
+| Stop-Word Removal | unieval_overall | yes | yes | high |
+| Stop-Word Removal | unieval_fluency | yes | yes | high |
+| Stop-Word Removal | unieval_relevance | yes | yes | high |
+| Stop-Word Removal | unieval_consistency | yes | yes | moderate |
+| Stop-Word Removal | unieval_coherence | yes | yes | moderate |
+| Word Swap | unieval_overall | yes | yes | high |
+| Word Swap | unieval_fluency | yes | yes | high |
+| Word Swap | unieval_relevance | yes | yes | high |
+| Word Swap | unieval_consistency | yes | yes | moderate |
+| Word Swap | unieval_coherence | yes | yes | high |
+| Truncation | unieval_overall | yes | yes | moderate |
+| Truncation | unieval_fluency | yes | no | low |
+| Truncation | unieval_relevance | yes | yes | moderate |
+| Truncation | unieval_consistency | yes | no | low |
+| Truncation | unieval_coherence | yes | yes | moderate |
+| Article Removal | unieval_overall | yes | no | low |
+| Article Removal | unieval_fluency | yes | no | low |
+| Article Removal | unieval_relevance | yes | no | low |
+| Article Removal | unieval_consistency | yes | no | low |
+| Article Removal | unieval_coherence | yes | no | low |
+| Word Repetition | unieval_overall | yes | no | high |
+| Word Repetition | unieval_fluency | yes | no | high |
+| Word Repetition | unieval_relevance | yes | no | high |
+| Word Repetition | unieval_consistency | yes | no | moderate |
+| Word Repetition | unieval_coherence | yes | no | high |
+
+## Sensitivity to the Perturbation
+
+### Verb Lemmatization
+- **unieval_overall**: Monotonous decrease (yes), superlinear decrease (no), change rate (low)
+- **unieval_fluency**: Monotonous decrease (yes), superlinear decrease (no), change rate (low)
+- **unieval_relevance**: Monotonous decrease (yes), superlinear decrease (no), change rate (low)
+- **unieval_consistency**: Monotonous decrease (yes), superlinear decrease (no), change rate (low)
+- **unieval_coherence**: Monotonous decrease (yes), superlinear decrease (no), change rate (low)
+
+### Word Removal
+- **unieval_overall**: Monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+- **unieval_fluency**: Monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+- **unieval_relevance**: Monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+- **unieval_consistency**: Monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+- **unieval_coherence**: Monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+
+### Punctuation Noise
+- **unieval_overall**: Monotonous decrease (yes), superlinear decrease (no), change rate (low)
+- **unieval_fluency**: Monotonous decrease (yes), superlinear decrease (no), change rate (moderate)
+- **unieval_relevance**: Monotonous decrease (yes), superlinear decrease (no), change rate (moderate)
+- **unieval_consistency**: Monotonous decrease (yes), superlinear decrease (no), change rate (low)
+- **unieval_coherence**: Monotonous decrease (yes), superlinear decrease (no), change rate (low)
+
+### Sentence Middle Swap
+- **unieval_overall**: Monotonous decrease (yes), superlinear decrease (no), change rate (moderate)
+- **unieval_fluency**: Monotonous decrease (yes), superlinear decrease (no), change rate (high)
+- **unieval_relevance**: Monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+- **unieval_consistency**: Monotonous decrease (yes), superlinear decrease (no), change rate (moderate)
+- **unieval_coherence**: Monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+
+### Preposition Removal
+- **unieval_overall**: Monotonous decrease (yes), superlinear decrease (no), change rate (moderate)
+- **unieval_fluency**: Monotonous decrease (yes), superlinear decrease (no), change rate (moderate)
+- **unieval_relevance**: Monotonous decrease (yes), superlinear decrease (no), change rate (moderate)
+- **unieval_consistency**: Monotonous decrease (yes), superlinear decrease (no), change rate (low)
+- **unieval_coherence**: Monotonous decrease (yes), superlinear decrease (no), change rate (moderate)
+
+### Stop-Word Removal
+- **unieval_overall**: Monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+- **unieval_fluency**: Monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+- **unieval_relevance**: Monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+- **unieval_consistency**: Monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)
+- **unieval_coherence**: Monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)
+
+### Word Swap
+- **unieval_overall**: Monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+- **unieval_fluency**: Monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+- **unieval_relevance**: Monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+- **unieval_consistency**: Monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)
+- **unieval_coherence**: Monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+
+### Truncation
+- **unieval_overall**: Monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)
+- **unieval_fluency**: Monotonous decrease (yes), superlinear decrease (no), change rate (low)
+- **unieval_relevance**: Monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)
+- **unieval_consistency**: Monotonous decrease (yes), superlinear decrease (no), change rate (low)
+- **unieval_coherence**: Monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)
+
+### Article Removal
+- **unieval_overall**: Monotonous decrease (yes), superlinear decrease (no), change rate (low)
+- **unieval_fluency**: Monotonous decrease (yes), superlinear decrease (no), change rate (low)
+- **unieval_relevance**: Monotonous decrease (yes), superlinear decrease (no), change rate (low)
+- **unieval_consistency**: Monotonous decrease (yes), superlinear decrease (no), change rate (low)
+- **unieval_coherence**: Monotonous decrease (yes), superlinear decrease (no), change rate (low)
+
+### Word Repetition
+- **unieval_overall**: Monotonous decrease (yes), superlinear decrease (no), change rate (high)
+- **unieval_fluency**: Monotonous decrease (yes), superlinear decrease (no), change rate (high)
+- **unieval_relevance**: Monotonous decrease (yes), superlinear decrease (no), change rate (high)
+- **unieval_consistency**: Monotonous decrease (yes), superlinear decrease (no), change rate (moderate)
+- **unieval_coherence**: Monotonous decrease (yes), superlinear decrease (no), change rate (high)
+
+## Recommendation
+
+| Perturbation Type | Recommended Metric(s) |
+|-------------------|----------------------|
+| Verb Lemmatization | none |
+| Word Removal | unieval_overall, unieval_fluency, unieval_relevance, unieval_consistency, unieval_coherence |
+| Punctuation Noise | none |
+| Sentence Middle Swap | unieval_relevance, unieval_coherence |
+| Preposition Removal | none |
+| Stop-Word Removal | unieval_overall, unieval_fluency, unieval_relevance, unieval_consistency, unieval_coherence |
+| Word Swap | unieval_overall, unieval_fluency, unieval_relevance, unieval_consistency, unieval_coherence |
+| Truncation | unieval_overall, unieval_relevance, unieval_coherence |
+| Article Removal | none |
+| Word Repetition | none |

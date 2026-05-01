@@ -1,0 +1,78 @@
+# BLEU
+
+| Perturbation Type | Variation | BLEU Score | Edit Ratio | Change (%) |
+|-------------------|-----------|------------|------------|------------|
+| Verb Lemmatization | 0.0       | 27.948     | 0.000      | 0.0        |
+|                   | 0.5       | 26.416     | 0.041      | -5.5       |
+|                   | 1.0       | 24.846     | 0.081      | -11.1      |
+| Word Removal      | 0.0       | 27.948     | 0.000      | 0.0        |
+|                   | 0.05      | 23.900     | 0.085      | -14.5      |
+|                   | 0.10      | 21.429     | 0.131      | -23.3      |
+|                   | 0.15      | 18.973     | 0.185      | -32.1      |
+|                   | 0.20      | 16.923     | 0.229      | -39.4      |
+|                   | 0.25      | 14.811     | 0.276      | -47.0      |
+|                   | 0.30      | 12.498     | 0.333      | -55.3      |
+|                   | 0.35      | 10.750     | 0.385      | -61.5      |
+|                   | 0.40      | 9.332      | 0.428      | -66.6      |
+|                   | 0.45      | 7.296      | 0.486      | -73.9      |
+|                   | 0.55      | 4.599      | 0.584      | -83.5      |
+| Punctuation Noise | 0.0       | 27.948     | 0.000      | 0.0        |
+|                   | 0.5       | 25.973     | 0.049      | -7.1       |
+|                   | 1.0       | 24.105     | 0.099      | -13.8      |
+| Sentence Middle Swap | 0.0    | 27.948     | 0.000      | 0.0        |
+|                   | 1.0       | 22.035     | 0.474      | -21.2      |
+| Preposition Removal | 0.0     | 27.948     | 0.000      | 0.0        |
+|                   | 0.4       | 24.943     | 0.058      | -10.8      |
+|                   | 0.7       | 22.595     | 0.102      | -19.2      |
+|                   | 1.0       | 20.299     | 0.145      | -27.4      |
+| Stop-word Removal | 0.0       | 27.948     | 0.000      | 0.0        |
+|                   | 0.10      | 25.730     | 0.052      | -7.9       |
+|                   | 0.20      | 23.482     | 0.104      | -16.0      |
+|                   | 0.30      | 21.309     | 0.158      | -23.8      |
+|                   | 0.40      | 19.168     | 0.212      | -31.4      |
+|                   | 0.50      | 17.227     | 0.264      | -38.4      |
+|                   | 0.60      | 15.349     | 0.316      | -45.1      |
+| Word Swap         | 0.0       | 27.948     | 0.000      | 0.0        |
+|                   | 0.05      | 22.419     | 0.083      | -19.8      |
+|                   | 0.15      | 18.243     | 0.138      | -34.7      |
+|                   | 0.30      | 15.208     | 0.179      | -45.6      |
+|                   | 0.60      | 12.539     | 0.224      | -55.1      |
+| Truncation        | 0.0       | 27.948     | 0.000      | 0.0        |
+|                   | 0.10      | 25.168     | 0.120      | -9.9       |
+|                   | 0.20      | 22.299     | 0.241      | -20.2      |
+|                   | 0.30      | 19.408     | 0.340      | -30.6      |
+|                   | 0.40      | 16.166     | 0.442      | -42.2      |
+|                   | 0.50      | 12.162     | 0.555      | -56.5      |
+| Article Removal   | 0.0       | 27.948     | 0.000      | 0.0        |
+|                   | 0.5       | 25.109     | 0.062      | -10.2      |
+|                   | 1.0       | 21.904     | 0.126      | -21.6      |
+| Word Repetition   | 0.0       | 27.948     | 0.000      | 0.0        |
+|                   | 0.05      | 25.264     | 0.085      | -9.6       |
+|                   | 0.10      | 23.799     | 0.131      | -14.8      |
+|                   | 0.15      | 22.181     | 0.185      | -20.6      |
+|                   | 0.20      | 20.914     | 0.229      | -25.2      |
+|                   | 0.25      | 19.879     | 0.276      | -28.9      |
+|                   | 0.30      | 18.553     | 0.333      | -33.6      |
+|                   | 0.35      | 17.489     | 0.385      | -37.4      |
+|                   | 0.40      | 16.704     | 0.428      | -40.2      |
+|                   | 0.45      | 15.770     | 0.486      | -43.6      |
+|                   | 0.55      | 14.384     | 0.584      | -48.5      |
+
+## 1. Sensitivity to the Perturbation
+
+| Perturbation Type       | Monotonous Decrease | Superlinear Decrease | Change Rate |
+|-------------------------|---------------------|----------------------|-------------|
+| Verb Lemmatization      | yes                 | no                   | low         |
+| Word Removal            | yes                 | yes                  | high        |
+| Punctuation Noise       | yes                 | no                   | low         |
+| Sentence Middle Swap    | yes                 | no                   | moderate    |
+| Preposition Removal     | yes                 | no                   | moderate    |
+| Stop-word Removal       | yes                 | yes                  | moderate    |
+| Word Swap               | yes                 | yes                  | moderate    |
+| Truncation              | yes                 | yes                  | moderate    |
+| Article Removal         | yes                 | no                   | moderate    |
+| Word Repetition         | yes                 | yes                  | moderate    |
+
+## 2. Suitability of BLEU for Machine Translation
+
+The BLEU metric is **not recommended** for the evaluation of machine translation based on the test results. While 5 out of 10 perturbation tests (Word Removal, Stop-word Removal, Word Swap, Truncation, and Word Repetition) show a superlinear decrease and moderate/high change rates, this does not meet the threshold of >7 tests required for recommendation. Additionally, several critical perturbations (e.g., Verb Lemmatization, Punctuation Noise) exhibit only low sensitivity, failing to align with human evaluation patterns that penalize severe fluency errors disproportionately. The metric's linear response to some perturbations and insufficient sensitivity to others indicates it does not fully capture human judgment of translation quality.

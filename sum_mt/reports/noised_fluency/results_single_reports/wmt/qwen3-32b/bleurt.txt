@@ -1,0 +1,97 @@
+# BLEURT
+
+## Table
+
+| Perturbation Type | Variation | BLEURT Score | Edit Ratio | Change (%) |
+|-------------------|-----------|--------------|------------|------------|
+| Verb Lemmatization | 0.0 (unperturbed) | 0.317 | 0.000 | 0.0% |
+| Verb Lemmatization | 0.5 | 0.238 | 0.041 | -24.9% |
+| Verb Lemmatization | 1.0 | 0.164 | 0.081 | -48.0% |
+| Remove Words | 0.0 (unperturbed) | 0.317 | 0.000 | 0.0% |
+| Remove Words | 0.05 | 0.104 | 0.085 | -67.1% |
+| Remove Words | 0.10 | -0.012 | 0.131 | -103.7% |
+| Remove Words | 0.15 | -0.145 | 0.185 | -145.7% |
+| Remove Words | 0.20 | -0.258 | 0.229 | -181.4% |
+| Remove Words | 0.25 | -0.370 | 0.276 | -216.9% |
+| Remove Words | 0.30 | -0.498 | 0.333 | -257.3% |
+| Remove Words | 0.35 | -0.598 | 0.385 | -289.0% |
+| Remove Words | 0.40 | -0.685 | 0.428 | -316.4% |
+| Remove Words | 0.45 | -0.789 | 0.486 | -349.4% |
+| Remove Words | 0.55 | -0.954 | 0.584 | -401.3% |
+| Noise Punctuation | 0.0 (unperturbed) | 0.317 | 0.000 | 0.0% |
+| Noise Punctuation | 0.50 | 0.282 | 0.049 | -11.0% |
+| Noise Punctuation | 1.00 | 0.251 | 0.099 | -20.8% |
+| Sentence Middle Swap | 0.0 (unperturbed) | 0.317 | 0.000 | 0.0% |
+| Sentence Middle Swap | 1.0 | -0.072 | 0.474 | -122.9% |
+| Remove Prepositions | 0.0 (unperturbed) | 0.317 | 0.000 | 0.0% |
+| Remove Prepositions | 0.40 | 0.211 | 0.058 | -33.3% |
+| Remove Prepositions | 0.70 | 0.128 | 0.102 | -59.7% |
+| Remove Prepositions | 1.00 | 0.042 | 0.145 | -86.9% |
+| Remove Stop-words | 0.0 (unperturbed) | 0.317 | 0.000 | 0.0% |
+| Remove Stop-words | 0.10 | 0.246 | 0.052 | -22.4% |
+| Remove Stop-words | 0.20 | 0.167 | 0.104 | -47.2% |
+| Remove Stop-words | 0.30 | 0.088 | 0.158 | -72.3% |
+| Remove Stop-words | 0.40 | 0.014 | 0.212 | -95.6% |
+| Remove Stop-words | 0.50 | -0.059 | 0.264 | -118.7% |
+| Remove Stop-words | 0.60 | -0.127 | 0.316 | -140.2% |
+| Swap Words | 0.0 (unperturbed) | 0.317 | 0.000 | 0.0% |
+| Swap Words | 0.05 | 0.035 | 0.083 | -89.0% |
+| Swap Words | 0.15 | -0.168 | 0.138 | -153.0% |
+| Swap Words | 0.30 | -0.317 | 0.179 | -200.3% |
+| Swap Words | 0.60 | -0.468 | 0.224 | -247.8% |
+| Truncate End Words | 0.0 (unperturbed) | 0.317 | 0.000 | 0.0% |
+| Truncate End Words | 0.10 | 0.082 | 0.120 | -74.2% |
+| Truncate End Words | 0.20 | -0.076 | 0.241 | -123.9% |
+| Truncate End Words | 0.30 | -0.188 | 0.340 | -159.4% |
+| Truncate End Words | 0.40 | -0.301 | 0.442 | -195.0% |
+| Truncate End Words | 0.50 | -0.474 | 0.555 | -249.8% |
+| Remove Articles | 0.0 (unperturbed) | 0.317 | 0.000 | 0.0% |
+| Remove Articles | 0.50 | 0.275 | 0.062 | -13.0% |
+| Remove Articles | 1.00 | 0.230 | 0.126 | -27.2% |
+| Repeat Words | 0.0 (unperturbed) | 0.317 | 0.000 | 0.0% |
+| Repeat Words | 0.05 | 0.185 | 0.085 | -41.5% |
+| Repeat Words | 0.10 | 0.119 | 0.131 | -62.3% |
+| Repeat Words | 0.15 | 0.048 | 0.185 | -84.7% |
+| Repeat Words | 0.20 | -0.008 | 0.229 | -102.4% |
+| Repeat Words | 0.25 | -0.067 | 0.276 | -121.0% |
+| Repeat Words | 0.30 | -0.126 | 0.333 | -139.9% |
+| Repeat Words | 0.35 | -0.173 | 0.385 | -154.6% |
+| Repeat Words | 0.40 | -0.213 | 0.428 | -167.2% |
+| Repeat Words | 0.45 | -0.263 | 0.486 | -183.1% |
+| Repeat Words | 0.55 | -0.341 | 0.584 | -207.6% |
+
+## 1. Sensitivity to the Perturbation
+
+| Perturbation Type | Monotonous Decrease | Superlinear Decrease | Change Rate |
+|-------------------|---------------------|----------------------|-------------|
+| Verb Lemmatization | Yes | No | Low |
+| Remove Words | Yes | Yes | High |
+| Noise Punctuation | Yes | No | Low |
+| Sentence Middle Swap | Yes | No | Low |
+| Remove Prepositions | Yes | No | Low |
+| Remove Stop-words | Yes | No | Moderate |
+| Swap Words | Yes | No | Moderate |
+| Truncate End Words | Yes | Yes | Moderate |
+| Remove Articles | Yes | No | Low |
+| Repeat Words | Yes | No | Moderate |
+
+**Analysis:**
+- **Verb Lemmatization**: Scores decrease monotonically with increasing variation, but the decrease is linear (not superlinear). The maximum change is -48.0% (low).
+- **Remove Words**: Scores decrease monotonically and superlinearly. The maximum change is -401.3% (high).
+- **Noise Punctuation**: Scores decrease monotonically but linearly. The maximum change is -20.8% (low).
+- **Sentence Middle Swap**: Scores decrease monotonically but linearly. The maximum change is -122.9% (low).
+- **Remove Prepositions**: Scores decrease monotonically but linearly. The maximum change is -86.9% (low).
+- **Remove Stop-words**: Scores decrease monotonically but linearly. The maximum change is -140.2% (moderate).
+- **Swap Words**: Scores decrease monotonically but linearly. The maximum change is -247.8% (moderate).
+- **Truncate End Words**: Scores decrease monotonically and superlinearly. The maximum change is -249.8% (moderate).
+- **Remove Articles**: Scores decrease monotonically but linearly. The maximum change is -27.2% (low).
+- **Repeat Words**: Scores decrease monotonically but linearly. The maximum change is -207.6% (moderate).
+
+## 2. Suitability of BLEURT for Machine Translation
+
+**Recommendation: Not recommended.**
+
+**Rationale:**
+- Only **2 out of 10 perturbation tests** (Remove Words and Truncate End Words) exhibit both high change rates and superlinear decreases.
+- The majority of perturbation tests (8/10) show **linear decreases** or **moderate/high change rates without superlinearity**, which fails to align with human evaluation patterns (superlinear penalization of severe errors).
+- While BLEURT demonstrates sensitivity to some perturbations (e.g., word removal), its inability to consistently reflect superlinear human-like penalization limits its suitability for machine translation evaluation.

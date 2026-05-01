@@ -1,0 +1,102 @@
+**bert_score_f**
+
+---
+
+## Table  
+
+| Perturbation Type | Variation (percentage) | Score | Edit Ratio | Change (%) |
+|-------------------|------------------------|-------|------------|------------|
+| **Verb lemmatization** | 0 % (gold) | 0.687 | 0.000 | 0.0 |
+| | 50 % verbs randomized | 0.664 | 0.041 | –3.3 |
+| | 100 % verbs randomized | 0.644 | 0.081 | –6.3 |
+| **Random word drop** | 0 % (gold) | 0.687 | 0.000 | 0.0 |
+| | 5 % words removed | 0.607 | 0.085 | –11.7 |
+| | 10 % words removed | 0.562 | 0.131 | –18.2 |
+| | 15 % words removed | 0.514 | 0.185 | –25.2 |
+| | 20 % words removed | 0.471 | 0.229 | –31.4 |
+| | 25 % words removed | 0.432 | 0.276 | –37.2 |
+| | 30 % words removed | 0.379 | 0.333 | –44.9 |
+| | 35 % words removed | 0.341 | 0.385 | –50.4 |
+| | 40 % words removed | 0.302 | 0.428 | –56.1 |
+| | 45 % words removed | 0.253 | 0.486 | –63.1 |
+| | 55 % words removed | 0.177 | 0.584 | –74.2 |
+| **Punctuation noise** | 0 % (gold) | 0.687 | 0.000 | 0.0 |
+| | 50 % punctuation noised | 0.658 | 0.049 | –4.2 |
+| | 100 % punctuation noised | 0.631 | 0.099 | –8.2 |
+| **Sentence‑middle swap** (SVO order) | 0 % (gold) | 0.687 | 0.000 | 0.0 |
+| | swap halves (1 sentence) | 0.489 | 0.474 | –28.8 |
+| **Preposition removal** | 0 % (gold) | 0.687 | 0.000 | 0.0 |
+| | 40 % prepositions removed | 0.644 | 0.058 | –6.3 |
+| | 70 % prepositions removed | 0.610 | 0.102 | –11.2 |
+| | 100 % prepositions removed | 0.577 | 0.145 | –16.0 |
+| **Stop‑word removal** | 0 % (gold) | 0.687 | 0.000 | 0.0 |
+| | 10 % stop‑words removed | 0.656 | 0.052 | –4.5 |
+| | 20 % stop‑words removed | 0.624 | 0.104 | –9.1 |
+| | 30 % stop‑words removed | 0.592 | 0.158 | –13.8 |
+| | 40 % stop‑words removed | 0.561 | 0.212 | –18.3 |
+| | 50 % stop‑words removed | 0.532 | 0.264 | –22.6 |
+| | 60 % stop‑words removed | 0.505 | 0.316 | –26.5 |
+| **Random local swap** | 0 % (gold) | 0.687 | 0.000 | 0.0 |
+| | 5 % words swapped | 0.590 | 0.083 | –14.1 |
+| | 15 % words swapped | 0.519 | 0.138 | –24.4 |
+| | 30 % words swapped | 0.464 | 0.179 | –32.5 |
+| | 60 % words swapped | 0.399 | 0.224 | –42.0 |
+| **Truncate (end‑word removal)** | 0 % (gold) | 0.687 | 0.000 | 0.0 |
+| | 10 % words removed (end) | 0.617 | 0.120 | –10.2 |
+| | 20 % words removed (end) | 0.562 | 0.241 | –18.1 |
+| | 30 % words removed (end) | 0.519 | 0.340 | –24.4 |
+| | 40 % words removed (end) | 0.477 | 0.442 | –30.6 |
+| | 50 % words removed (end) | 0.417 | 0.555 | –39.3 |
+| **Article removal** | 0 % (gold) | 0.687 | 0.000 | 0.0 |
+| | 50 % articles removed | 0.662 | 0.062 | –3.6 |
+| | 100 % articles removed | 0.638 | 0.126 | –7.1 |
+| **Random token repetition** | 0 % (gold) | 0.687 | 0.000 | 0.0 |
+| | 5 % words repeated | 0.639 | 0.085 | –7.0 |
+| | 10 % words repeated | 0.613 | 0.131 | –10.7 |
+| | 15 % words repeated | 0.587 | 0.185 | –14.5 |
+| | 20 % words repeated | 0.566 | 0.229 | –17.6 |
+| | 25 % words repeated | 0.544 | 0.276 | –20.8 |
+| | 30 % words repeated | 0.520 | 0.333 | –24.3 |
+| | 35 % words repeated | 0.498 | 0.385 | –27.5 |
+| | 40 % words repeated | 0.482 | 0.428 | –29.9 |
+| | 45 % words repeated | 0.460 | 0.486 | –33.0 |
+| | 55 % words repeated | 0.424 | 0.584 | –38.2 |
+
+*All “Change (%)” values are relative to the gold‑score (0 % variation). No additional data are available beyond the ratios listed above.*
+
+---
+
+## 1. Sensitivity to the Perturbation  
+
+| Perturbation Type | Monotonous decrease | Superlinear decrease | Change rate |
+|-------------------|---------------------|----------------------|-------------|
+| Verb lemmatization | **yes** | **no** | low |
+| Random word drop | **yes** | **no** | high |
+| Punctuation noise | **yes** | **yes** | low |
+| Sentence‑middle swap | **yes** | **no** (single perturbed point) | low |
+| Preposition removal | **yes** | **no** | low |
+| Stop‑word removal | **yes** | **no** | moderate |
+| Random local swap | **yes** | **no** | low |
+| Truncate (end‑word removal) | **yes** | **no** | low |
+| Article removal | **yes** | **yes** | low |
+| Random token repetition | **yes** | **no** | low |
+
+*Definitions applied:*  
+
+* **Monotonous decrease** – the score never rises as the variation level grows.  
+* **Superlinear decrease** – the absolute drop between successive variation levels grows (i.e., later drops are larger than earlier ones).  
+* **Change rate** – determined by the largest absolute percentage drop observed for the test:  
+  * low ≤ 25 % drop,  
+  * moderate ≤ 60 % drop,  
+  * high > 60 % drop.  
+
+---
+
+## 2. Suitability of **bert_score_f** for **machine translation**
+
+A metric is deemed suitable when **most (> 7) perturbation tests** exhibit **both a high change rate and a super‑linear decrease**.  
+
+- Only the *Random word drop* test reaches a high change rate, but it does **not** show a super‑linear pattern.  
+- All other tests either have low/moderate change rates or lack super‑linear behaviour (or both).  
+
+**Result:** **bert_score_f is *not* recommended** as a primary evaluation metric for machine translation, because it fails to satisfy the required combination of high sensitivity and super‑linear penalisation across the majority of perturbation types.

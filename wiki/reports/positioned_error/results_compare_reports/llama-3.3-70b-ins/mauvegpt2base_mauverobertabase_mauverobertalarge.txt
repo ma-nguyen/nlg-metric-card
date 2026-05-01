@@ -1,0 +1,29 @@
+**MAUVE-GPT2-base, MAUVE-RoBERTa-Base, MAUVE-RoBERTa-Large Evaluation Report**  
+
+**Table: Metric Performance on Perturbation Tests**  
+| Metric                 | Ref   | Shuff_Beg | ΔShuff_Beg (%) | Shuff_Mid | ΔShuff_Mid (%) | Shuff_End | ΔShuff_End (%) | Rand_Beg | ΔRand_Beg (%) | Rand_Mid | ΔRand_Mid (%) | Rand_End | ΔRand_End (%) |  
+|------------------------|-------|-----------|----------------|-----------|----------------|-----------|----------------|----------|---------------|----------|---------------|----------|---------------|  
+| MAUVE-GPT2-base        | 0.948 | 0.546     | -42.4          | 0.821     | -13.4          | 0.018     | -98.1          | 0.638    | -32.7         | 0.345    | -63.6         | 0.007    | -99.2         |  
+| MAUVE-RoBERTa-Base     | 0.962 | 0.958     | -0.4           | 0.948     | -1.4           | 0.511     | -46.9          | 0.894    | -7.1          | 0.911    | -5.3          | 0.510    | -47.0         |  
+| MAUVE-RoBERTa-Large    | 0.979 | 0.354     | -63.8          | 0.619     | -36.7          | 0.255     | -73.9          | 0.032    | -96.8         | 0.121    | -87.6         | 0.039    | -96.0         |  
+
+*Change-rate terminology (absolute values):*  
+- **0–9%**: Very low  
+- **10–29%**: Low  
+- **30–49%**: Low to moderate  
+- **50–69%**: Moderate to high  
+- **70–89%**: High  
+- **90–100%**: Very high  
+
+**Recommendation**  
+**Recommended metric: MAUVE-RoBERTa-Large**  
+- **Rationale**: This metric exhibits the highest sensitivity to perturbations, with **5/6 tests** showing **moderate-to-high or higher change rates** (Δ ≥ 36.7%). It achieves:  
+  - **Very high** change rates (≥90%) in 2/6 tests (Rand_Beg: -96.8%, Rand_End: -96.0%).  
+  - **High** change rates (≥70%) in 2/6 tests (Shuff_End: -73.9%, Rand_Mid: -87.6%).  
+  - **Moderate-to-high** change rates in 1/6 tests (Shuff_Beg: -63.8%).  
+  This aligns best with human expectations, where severe semantic disruptions (e.g., random token replacement) should cause maximal score degradation.  
+
+**Not recommended: MAUVE-RoBERTa-Base**  
+- **Rationale**: This metric shows **very low change rates** (Δ ≤ 7.1%) in **4/6 tests** (Shuff_Beg: -0.4%, Shuff_Mid: -1.4%, Rand_Beg: -7.1%, Rand_Mid: -5.3%). Such minimal degradation fails to reflect human judgment, as perturbations (e.g., shuffled/random tokens) should significantly reduce scores. Its highest change rate (-47.0%) is only *low-to-moderate*, indicating insufficient sensitivity to semantic corruption.  
+
+**Note**: While MAUVE-RoBERTa-Large demonstrates the strongest alignment with human criteria, no metric fully substitutes human evaluation. MAUVE-GPT2-base shows high sensitivity to end-position perturbations (e.g., Shuff_End: -98.1%) but inconsistent performance elsewhere (e.g., Shuff_Mid: -13.4% [low]).

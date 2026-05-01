@@ -1,0 +1,101 @@
+**unieval_relevance**
+
+---
+
+### Table of Results  
+
+| Perturbation Type | Variation (percentage) | Score | Edit Ratio | Change vs. Gold |
+|-------------------|------------------------|-------|------------|-----------------|
+| **Verb Lemmatization** (randomized verbs) | 0 % (gold) | 0.781 | 0.000 | 0.0 % |
+| | 50 % | 0.726 | 0.052 | –7.0 % |
+| | 100 % | 0.695 | 0.102 | –11.0 % |
+| **Word Removal** (random word drop) | 0 % (gold) | 0.781 | 0.000 | 0.0 % |
+| | 5 % | 0.457 | 0.061 | –41.5 % |
+| | 10 % | 0.277 | 0.111 | –64.5 % |
+| | 15 % | 0.196 | 0.163 | –74.9 % |
+| | 20 % | 0.123 | 0.210 | –84.2 % |
+| | 25 % | 0.078 | 0.260 | –90.0 % |
+| | 30 % | 0.050 | 0.311 | –93.6 % |
+| | 35 % | 0.035 | 0.361 | –95.5 % |
+| | 40 % | 0.030 | 0.408 | –96.2 % |
+| | 45 % | 0.019 | 0.461 | –97.6 % |
+| | 50 % | 0.015 | 0.507 | –98.0 % |
+| **Punctuation Noise** | 0 % (gold) | 0.781 | 0.000 | 0.0 % |
+| | 50 % | 0.648 | 0.052 | –17.1 % |
+| | 100 % | 0.573 | 0.105 | –26.6 % |
+| **Sentence‑Middle‑Swap** (SVO order) | 0 % (gold) | 0.781 | 0.000 | 0.0 % |
+| | 1 sentence | 0.303 | 0.145 | –61.2 % |
+| | 2 sentences | 0.185 | 0.255 | –76.4 % |
+| | 3 sentences | 0.118 | 0.321 | –84.9 % |
+| **Preposition Removal** | 0 % (gold) | 0.781 | 0.000 | 0.0 % |
+| | 40 % | 0.625 | 0.054 | –20.0 % |
+| | 70 % | 0.526 | 0.093 | –32.7 % |
+| | 100 % | 0.437 | 0.135 | –44.1 % |
+| **Stop‑Word Removal** | 0 % (gold) | 0.781 | 0.000 | 0.0 % |
+| | 10 % | 0.695 | 0.044 | –11.1 % |
+| | 20 % | 0.623 | 0.088 | –20.2 % |
+| | 30 % | 0.551 | 0.130 | –29.4 % |
+| | 40 % | 0.492 | 0.175 | –37.1 % |
+| | 50 % | 0.431 | 0.219 | –44.8 % |
+| | 60 % | 0.372 | 0.263 | –52.4 % |
+| **Word‑Swap** (random local swap) | 0 % (gold) | 0.781 | 0.000 | 0.0 % |
+| | 5 % | 0.319 | 0.056 | –59.2 % |
+| | 15 % | 0.115 | 0.117 | –85.3 % |
+| | 30 % | 0.038 | 0.169 | –95.1 % |
+| | 60 % | 0.018 | 0.222 | –97.7 % |
+| **Truncate** (remove words at end) | 0 % (gold) | 0.781 | 0.000 | 0.0 % |
+| | 10 % | 0.479 | 0.114 | –38.7 % |
+| | 20 % | 0.374 | 0.215 | –52.1 % |
+| | 30 % | 0.450 | 0.312 | –42.4 % |
+| | 40 % | 0.394 | 0.413 | –49.5 % |
+| | 50 % | 0.394 | 0.515 | –49.5 % |
+| **Article Removal** | 0 % (gold) | 0.781 | 0.000 | 0.0 % |
+| | 50 % | 0.770 | 0.039 | –1.4 % |
+| | 100 % | 0.764 | 0.081 | –2.2 % |
+| **Word Repetition** | 0 % (gold) | 0.781 | 0.000 | 0.0 % |
+| | 5 % | 0.481 | 0.061 | –38.5 % |
+| | 10 % | 0.359 | 0.111 | –54.1 % |
+| | 15 % | 0.249 | 0.163 | –68.2 % |
+| | 20 % | 0.208 | 0.210 | –73.3 % |
+| | 25 % | 0.169 | 0.260 | –78.3 % |
+| | 30 % | 0.142 | 0.311 | –81.8 % |
+| | 35 % | 0.128 | 0.361 | –83.7 % |
+| | 40 % | 0.125 | 0.408 | –83.9 % |
+| | 45 % | 0.119 | 0.461 | –84.8 % |
+| | 50 % | 0.103 | 0.507 | –86.8 % |
+
+---
+
+## 1. Sensitivity to the Perturbation  
+
+| Perturbation Type | Monotonous Decrease | Superlinear Decrease | Change‑Rate |
+|-------------------|---------------------|----------------------|-------------|
+| Verb Lemmatization | **yes** | **no** | low |
+| Word Removal | **yes** | **no** | high |
+| Punctuation Noise | **yes** | **no** | moderate |
+| Sentence‑Middle‑Swap | **yes** | **no** | high |
+| Preposition Removal | **yes** | **no** | moderate |
+| Stop‑Word Removal | **yes** | **no** | moderate |
+| Word‑Swap | **yes** | **no** | high |
+| Truncate (end removal) | **no** (score rises at 30 %) | **no** | moderate |
+| Article Removal | **yes** | **no** | low |
+| Word Repetition | **yes** | **no** | high |
+
+*Explanation of attributes*  
+
+- **Monotonous decrease**: the metric’s score never increases as the perturbation level grows.  
+- **Superlinear decrease**: the absolute drop between successive perturbation levels grows monotonically; none of the tested perturbations exhibit this behaviour.  
+- **Change‑Rate**: determined by the largest absolute change relative to the gold score (low ≤ 25 %, moderate ≤ 60 %, high > 60 %).  
+
+---
+
+## 2. Suitability of **unieval_relevance** for **summarization**
+
+A metric is deemed suitable when **most (> 7) perturbation tests** show a **high change‑rate** **and** a **superlinear decrease**.  
+
+- High change‑rate is observed for 6 perturbations (Word Removal, Sentence‑Middle‑Swap, Word‑Swap, Word Repetition, and two others).  
+- **No** perturbation exhibits a superlinear decrease.  
+
+Because the required combination (high change‑rate **and** superlinear) is not met for the majority of tests, **unieval_relevance is *not* recommended as a reliable automatic metric for summarization**.  
+
+---

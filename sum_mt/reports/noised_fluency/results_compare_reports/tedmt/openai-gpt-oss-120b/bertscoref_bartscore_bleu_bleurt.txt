@@ -1,0 +1,274 @@
+**bert_score_f, bart_score, bleu, bleurt – Evaluation Report**
+
+---
+
+### Table of Results  
+
+| Metric | Perturbation Type | Variation | Score | Edit Ratio | % Change vs. Gold |
+|--------|-------------------|-----------|-------|------------|-------------------|
+| **bert_score_f** | Verb Lemmatization | 0 % (gold) | 0.545 | 0.000 | 0.0 % |
+|  |  | 50 % verbs randomised | 0.527 | 0.034 | –3.3 % |
+|  |  | 100 % verbs randomised | 0.511 | 0.065 | –6.3 % |
+|  | Word‑Removal | 5 % | 0.494 | 0.056 | –9.4 % |
+|  |  | 10 % | 0.451 | 0.105 | –17.3 % |
+|  |  | 15 % | 0.404 | 0.156 | –25.9 % |
+|  |  | 20 % | 0.364 | 0.205 | –33.3 % |
+|  |  | 25 % | 0.321 | 0.254 | –41.0 % |
+|  |  | 30 % | 0.274 | 0.306 | –49.7 % |
+|  |  | 35 % | 0.235 | 0.356 | –56.8 % |
+|  |  | 40 % | 0.195 | 0.405 | –64.3 % |
+|  |  | 45 % | 0.154 | 0.456 | –71.8 % |
+|  |  | 55 % | 0.078 | 0.556 | –85.6 % |
+|  | Punct‑Noise | 50 % | 0.491 | 0.073 | –9.9 % |
+|  |  | 100 % | 0.441 | 0.145 | –19.2 % |
+|  | Sentence‑Middle‑Swap | 1 sentence | 0.508 | 0.073 | –6.8 % |
+|  | Preposition‑Removal | 40 % | 0.518 | 0.041 | –4.9 % |
+|  |  | 70 % | 0.499 | 0.072 | –8.5 % |
+|  |  | 100 % | 0.477 | 0.104 | –12.4 % |
+|  | Stop‑Word‑Removal | 10 % | 0.506 | 0.069 | –7.1 % |
+|  |  | 20 % | 0.471 | 0.139 | –13.6 % |
+|  |  | 30 % | 0.435 | 0.208 | –20.1 % |
+|  |  | 40 % | 0.399 | 0.278 | –26.9 % |
+|  |  | 50 % | 0.362 | 0.346 | –33.6 % |
+|  |  | 60 % | 0.329 | 0.412 | –39.7 % |
+|  | Random‑Local‑Swap | 5 % | 0.473 | 0.050 | –13.2 % |
+|  |  | 15 % | 0.390 | 0.111 | –28.4 % |
+|  |  | 30 % | 0.311 | 0.165 | –42.9 % |
+|  |  | 60 % | 0.223 | 0.217 | –59.1 % |
+|  | Truncate (end) | 10 % | 0.513 | 0.105 | –5.9 % |
+|  |  | 20 % | 0.488 | 0.206 | –10.5 % |
+|  |  | 30 % | 0.464 | 0.305 | –14.9 % |
+|  |  | 40 % | 0.434 | 0.406 | –20.4 % |
+|  |  | 50 % | 0.399 | 0.508 | –26.8 % |
+|  | Article‑Removal | 50 % | 0.529 | 0.040 | –2.9 % |
+|  |  | 100 % | 0.513 | 0.080 | –5.8 % |
+|  | Token‑Repetition | 5 % | 0.504 | 0.056 | –7.5 % |
+|  |  | 10 % | 0.472 | 0.105 | –13.5 % |
+|  |  | 15 % | 0.439 | 0.156 | –19.5 % |
+|  |  | 20 % | 0.409 | 0.205 | –25.0 % |
+|  |  | 25 % | 0.378 | 0.254 | –30.7 % |
+|  |  | 30 % | 0.350 | 0.306 | –35.8 % |
+|  |  | 35 % | 0.324 | 0.356 | –40.6 % |
+|  |  | 40 % | 0.298 | 0.405 | –45.3 % |
+|  |  | 45 % | 0.274 | 0.456 | –49.7 % |
+|  |  | 55 % | 0.229 | 0.556 | –58.0 % |
+| **bart_score** | Verb Lemmatization | 0 % | –3.734 | 0.000 | 0.0 % |
+|  |  | 50 % | –3.826 | 0.034 | –2.4 % |
+|  |  | 100 % | –3.914 | 0.065 | –4.8 % |
+|  | Word‑Removal | 5 % | –3.956 | 0.056 | –5.9 % |
+|  |  | 10 % | –4.171 | 0.105 | –11.7 % |
+|  |  | 15 % | –4.413 | 0.156 | –18.2 % |
+|  |  | 20 % | –4.657 | 0.205 | –24.7 % |
+|  |  | 25 % | –4.925 | 0.254 | –31.9 % |
+|  |  | 30 % | –5.253 | 0.306 | –40.7 % |
+|  |  | 35 % | –5.572 | 0.356 | –49.2 % |
+|  |  | 40 % | –5.923 | 0.405 | –58.6 % |
+|  |  | 45 % | –6.316 | 0.456 | –69.1 % |
+|  |  | 55 % | –7.084 | 0.556 | –89.7 % |
+|  | Punct‑Noise | 50 % | –4.052 | 0.073 | –8.5 % |
+|  |  | 100 % | –4.299 | 0.145 | –15.1 % |
+|  | Sentence‑Middle‑Swap | 1 sentence | –3.857 | 0.073 | –3.3 % |
+|  | Preposition‑Removal | 40 % | –3.892 | 0.041 | –4.2 % |
+|  |  | 70 % | –4.036 | 0.072 | –8.1 % |
+|  |  | 100 % | –4.203 | 0.104 | –12.6 % |
+|  | Stop‑Word‑Removal | 10 % | –3.944 | 0.069 | –5.6 % |
+|  |  | 20 % | –4.183 | 0.139 | –12.0 % |
+|  |  | 30 % | –4.445 | 0.208 | –19.0 % |
+|  |  | 40 % | –4.752 | 0.278 | –27.2 % |
+|  |  | 50 % | –5.083 | 0.346 | –36.1 % |
+|  |  | 60 % | –5.453 | 0.412 | –46.0 % |
+|  | Random‑Local‑Swap | 5 % | –4.126 | 0.050 | –10.5 % |
+|  |  | 15 % | –4.641 | 0.111 | –24.3 % |
+|  |  | 30 % | –5.153 | 0.165 | –38.0 % |
+|  |  | 60 % | –5.624 | 0.217 | –50.6 % |
+|  | Truncate (end) | 10 % | –3.843 | 0.105 | –2.9 % |
+|  |  | 20 % | –4.048 | 0.206 | –8.4 % |
+|  |  | 30 % | –4.413 | 0.305 | –18.2 % |
+|  |  | 40 % | –4.987 | 0.406 | –33.5 % |
+|  |  | 50 % | –5.779 | 0.508 | –54.7 % |
+|  | Article‑Removal | 50 % | –3.869 | 0.040 | –3.6 % |
+|  |  | 100 % | –4.036 | 0.080 | –8.1 % |
+|  | Token‑Repetition | 5 % | –3.921 | 0.056 | –5.0 % |
+|  |  | 10 % | –4.106 | 0.105 | –9.9 % |
+|  |  | 15 % | –4.295 | 0.156 | –15.0 % |
+|  |  | 20 % | –4.477 | 0.205 | –19.9 % |
+|  |  | 25 % | –4.643 | 0.254 | –24.3 % |
+|  |  | 30 % | –4.845 | 0.306 | –29.7 % |
+|  |  | 35 % | –4.999 | 0.356 | –33.9 % |
+|  |  | 40 % | –5.160 | 0.405 | –38.2 % |
+|  |  | 45 % | –5.349 | 0.456 | –43.2 % |
+|  |  | 55 % | –5.660 | 0.556 | –51.6 % |
+| **bleu** | Verb Lemmatization | 0 % | 23.819 | 0.000 | 0.0 % |
+|  |  | 50 % | 22.931 | 0.034 | –3.7 % |
+|  |  | 100 % | 22.109 | 0.065 | –7.2 % |
+|  | Word‑Removal | 5 % | 22.030 | 0.056 | –7.5 % |
+|  |  | 10 % | 20.464 | 0.105 | –14.1 % |
+|  |  | 15 % | 18.516 | 0.156 | –22.3 % |
+|  |  | 20 % | 16.363 | 0.205 | –31.3 % |
+|  |  | 25 % | 14.576 | 0.254 | –38.8 % |
+|  |  | 30 % | 12.514 | 0.306 | –47.5 % |
+|  |  | 35 % | 10.695 | 0.356 | –55.1 % |
+|  |  | 40 % | 8.852  | 0.405 | –62.8 % |
+|  |  | 45 % | 7.237  | 0.456 | –69.6 % |
+|  |  | 55 % | 4.490  | 0.556 | –81.1 % |
+|  | Punct‑Noise | 50 % | 20.301 | 0.073 | –14.8 % |
+|  |  | 100 % | 16.707 | 0.145 | –29.9 % |
+|  | Sentence‑Middle‑Swap | 1 sentence | 22.652 | 0.073 | –4.9 % |
+|  | Preposition‑Removal | 40 % | 22.719 | 0.041 | –4.6 % |
+|  |  | 70 % | 21.570 | 0.072 | –9.4 % |
+|  |  | 100 % | 20.436 | 0.104 | –14.2 % |
+|  | Stop‑Word‑Removal | 10 % | 22.147 | 0.069 | –7.0 % |
+|  |  | 20 % | 20.180 | 0.139 | –15.3 % |
+|  |  | 30 % | 17.984 | 0.208 | –24.5 % |
+|  |  | 40 % | 15.478 | 0.278 | –35.0 % |
+|  |  | 50 % | 13.032 | 0.346 | –45.3 % |
+|  |  | 60 % | 10.837 | 0.412 | –54.5 % |
+|  | Random‑Local‑Swap | 5 % | 21.053 | 0.050 | –11.6 % |
+|  |  | 15 % | 17.473 | 0.111 | –26.6 % |
+|  |  | 30 % | 14.252 | 0.165 | –40.2 % |
+|  |  | 60 % | 10.748 | 0.217 | –54.9 % |
+|  | Truncate (end) | 10 % | 23.151 | 0.105 | –2.8 % |
+|  |  | 20 % | 20.975 | 0.206 | –11.9 % |
+|  |  | 30 % | 18.239 | 0.305 | –23.4 % |
+|  |  | 40 % | 14.770 | 0.406 | –38.0 % |
+|  |  | 50 % | 10.536 | 0.508 | –55.8 % |
+|  | Article‑Removal | 50 % | 22.288 | 0.040 | –6.4 % |
+|  |  | 100 % | 20.621 | 0.080 | –13.4 % |
+|  | Token‑Repetition | 5 % | 22.217 | 0.056 | –6.7 % |
+|  |  | 10 % | 20.915 | 0.105 | –12.2 % |
+|  |  | 15 % | 19.675 | 0.156 | –17.4 % |
+|  |  | 20 % | 18.590 | 0.205 | –22.0 % |
+|  |  | 25 % | 17.599 | 0.254 | –26.1 % |
+|  |  | 30 % | 16.537 | 0.306 | –30.6 % |
+|  |  | 35 % | 15.827 | 0.356 | –33.6 % |
+|  |  | 40 % | 14.962 | 0.405 | –37.2 % |
+|  |  | 45 % | 14.360 | 0.456 | –39.7 % |
+|  |  | 55 % | 13.131 | 0.556 | –44.9 % |
+| **bleurt** | Verb Lemmatization | 0 % | –0.104 | 0.000 | 0.0 % |
+|  |  | 50 % | –0.156 | 0.034 | –49.9 % |
+|  |  | 100 % | –0.205 | 0.065 | –96.2 % |
+|  | Word‑Removal | 5 % | –0.213 | 0.056 | –104.6 % |
+|  |  | 10 % | –0.309 | 0.105 | –196.6 % |
+|  |  | 15 % | –0.415 | 0.156 | –297.5 % |
+|  |  | 20 % | –0.493 | 0.205 | –372.8 % |
+|  |  | 25 % | –0.591 | 0.254 | –466.9 % |
+|  |  | 30 % | –0.692 | 0.306 | –563.4 % |
+|  |  | 35 % | –0.767 | 0.356 | –635.8 % |
+|  |  | 40 % | –0.851 | 0.405 | –716.4 % |
+|  |  | 45 % | –0.924 | 0.456 | –785.8 % |
+|  |  | 55 % | –1.069 | 0.556 | –925.0 % |
+|  | Punct‑Noise | 50 % | –0.144 | 0.073 | –37.7 % |
+|  |  | 100 % | –0.174 | 0.145 | –67.1 % |
+|  | Sentence‑Middle‑Swap | 1 sentence | –0.156 | 0.073 | –49.2 % |
+|  | Preposition‑Removal | 40 % | –0.167 | 0.041 | –60.3 % |
+|  |  | 70 % | –0.215 | 0.072 | –106.6 % |
+|  |  | 100 % | –0.275 | 0.104 | –163.5 % |
+|  | Stop‑Word‑Removal | 10 % | –0.187 | 0.069 | –79.7 % |
+|  |  | 20 % | –0.269 | 0.139 | –157.9 % |
+|  |  | 30 % | –0.356 | 0.208 | –241.6 % |
+|  |  | 40 % | –0.444 | 0.278 | –326.2 % |
+|  |  | 50 % | –0.525 | 0.346 | –403.1 % |
+|  |  | 60 % | –0.595 | 0.412 | –470.3 % |
+|  | Random‑Local‑Swap | 5 % | –0.295 | 0.050 | –182.8 % |
+|  |  | 15 % | –0.509 | 0.111 | –388.1 % |
+|  |  | 30 % | –0.691 | 0.165 | –562.8 % |
+|  |  | 60 % | –0.833 | 0.217 | –698.4 % |
+|  | Truncate (end) | 10 % | –0.159 | 0.105 | –52.1 % |
+|  |  | 20 % | –0.179 | 0.206 | –71.8 % |
+|  |  | 30 % | –0.212 | 0.305 | –103.4 % |
+|  |  | 40 % | –0.289 | 0.406 | –177.5 % |
+|  |  | 50 % | –0.357 | 0.508 | –242.2 % |
+|  | Article‑Removal | 50 % | –0.132 | 0.040 | –26.6 % |
+|  |  | 100 % | –0.167 | 0.080 | –60.3 % |
+|  | Token‑Repetition | 5 % | –0.191 | 0.056 | –83.1 % |
+|  |  | 10 % | –0.255 | 0.105 | –145.0 % |
+|  |  | 15 % | –0.317 | 0.156 | –203.5 % |
+|  |  | 20 % | –0.371 | 0.205 | –256.0 % |
+|  |  | 25 % | –0.426 | 0.254 | –308.4 % |
+|  |  | 30 % | –0.474 | 0.306 | –354.4 % |
+|  |  | 35 % | –0.526 | 0.356 | –404.8 % |
+|  |  | 40 % | –0.566 | 0.405 | –442.9 % |
+|  |  | 45 % | –0.612 | 0.456 | –486.5 % |
+|  |  | 55 % | –0.677 | 0.556 | –548.9 % |
+
+*All % Changes are computed as*  
+\[
+\frac{\text{score}_{\text{perturbed}}-\text{score}_{\text{gold}}}{\text{score}_{\text{gold}}}\times100 .
+\]
+
+---
+
+## 1. Sensitivity to the Perturbation  
+
+For each metric and perturbation type we assess:
+
+* **Monotonous decrease** – does the score strictly fall as the variation grows?  
+* **Super‑linear decrease** – does the magnitude of the drop accelerate with higher variation?  
+* **Change‑rate** – based on the largest absolute % change observed:
+
+| Metric | Perturbation | Monotonous ↓ | Super‑linear ↓ | Change‑rate |
+|--------|--------------|--------------|----------------|-------------|
+| **bert_score_f** | Verb Lemmatization | yes | no | low |
+|  | Word‑Removal | yes | yes | **high** |
+|  | Punct‑Noise | yes | yes | low |
+|  | Sentence‑Middle‑Swap | yes | no | low |
+|  | Preposition‑Removal | yes | no | low |
+|  | Stop‑Word‑Removal | yes | yes | moderate |
+|  | Random‑Local‑Swap | yes | yes | moderate |
+|  | Truncate (end) | yes | yes | moderate |
+|  | Article‑Removal | yes | no | low |
+|  | Token‑Repetition | yes | yes | moderate |
+| **bart_score** | Verb Lemmatization | yes | no | low |
+|  | Word‑Removal | yes | yes | **high** |
+|  | Punct‑Noise | yes | yes | low |
+|  | Sentence‑Middle‑Swap | yes | no | low |
+|  | Preposition‑Removal | yes | no | low |
+|  | Stop‑Word‑Removal | yes | yes | moderate |
+|  | Random‑Local‑Swap | yes | yes | moderate |
+|  | Truncate (end) | yes | yes | moderate |
+|  | Article‑Removal | yes | no | low |
+|  | Token‑Repetition | yes | yes | moderate |
+| **bleu** | Verb Lemmatization | yes | no | low |
+|  | Word‑Removal | yes | yes | **high** |
+|  | Punct‑Noise | yes | yes | moderate |
+|  | Sentence‑Middle‑Swap | yes | no | low |
+|  | Preposition‑Removal | yes | no | low |
+|  | Stop‑Word‑Removal | yes | yes | moderate |
+|  | Random‑Local‑Swap | yes | yes | moderate |
+|  | Truncate (end) | yes | yes | moderate |
+|  | Article‑Removal | yes | no | low |
+|  | Token‑Repetition | yes | yes | moderate |
+| **bleurt** | Verb Lemmatization | yes | yes | **high** |
+|  | Word‑Removal | yes | yes | **high** |
+|  | Punct‑Noise | yes | yes | **high** |
+|  | Sentence‑Middle‑Swap | yes | yes | moderate |
+|  | Preposition‑Removal | yes | yes | **high** |
+|  | Stop‑Word‑Removal | yes | yes | **high** |
+|  | Random‑Local‑Swap | yes | yes | **high** |
+|  | Truncate (end) | yes | yes | **high** |
+|  | Article‑Removal | yes | yes | **high** |
+|  | Token‑Repetition | yes | yes | **high** |
+
+*“yes” indicates the property holds for the whole series of variations.  
+If a perturbation provides only a single non‑gold point (e.g., sentence‑middle‑swap), super‑linear is marked **no** because acceleration cannot be observed.*
+
+---
+
+## Recommendation  
+
+A metric is recommended for a perturbation type when it shows **high** change‑rate **and** a **super‑linear** decrease.
+
+| Perturbation | Recommended Metric(s) |
+|--------------|----------------------|
+| Verb Lemmatization | **bleurt** |
+| Word‑Removal | **bert_score_f**, **bart_score**, **bleu**, **bleurt** |
+| Punct‑Noise | **bleurt** |
+| Sentence‑Middle‑Swap | none |
+| Preposition‑Removal | **bleurt** |
+| Stop‑Word‑Removal | **bleurt** |
+| Random‑Local‑Swap | **bleurt** |
+| Truncate (end) | **bleurt** |
+| Article‑Removal | none |
+| Token‑Repetition | **bleurt** |
+
+*Only the metrics meeting both criteria are listed; “none” indicates that no evaluated metric satisfies the high‑change + super‑linear condition for that perturbation.*

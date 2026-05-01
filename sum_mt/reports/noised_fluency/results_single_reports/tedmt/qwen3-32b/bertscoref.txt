@@ -1,0 +1,82 @@
+# bert_score_f
+
+## Table
+
+| Perturbation Type         | Variation | Monotonous Decrease | Superlinear Decrease | Change Rate |
+|---------------------------|-----------|---------------------|----------------------|-------------|
+| Verb Lemmatization        | 50%, 100% | yes                 | no                   | low         |
+| Word Removal              | 5%-55%    | yes                 | yes                  | high        |
+| Punctuation Noise         | 50%, 100% | yes                 | no                   | low         |
+| Sentence Middle Swap      | 50%       | yes                 | no                   | low         |
+| Preposition Removal       | 40%-100%  | yes                 | no                   | low         |
+| Stop-word Removal         | 10%-60%   | yes                 | yes                  | moderate    |
+| Word Swap                 | 5%-60%    | yes                 | yes                  | moderate    |
+| Truncation (End Removal)  | 10%-50%   | yes                 | no                   | moderate    |
+| Article Removal           | 50%, 100% | yes                 | no                   | low         |
+| Word Repetition           | 5%-55%    | yes                 | yes                  | moderate    |
+
+## 1. Sensitivity to the Perturbation
+
+**Verb Lemmatization**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: no  
+- **Change rate**: low (max change: -6.3%)  
+
+**Word Removal**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes (e.g., -9.4% → -17.3% → -25.9% → -33.3% → -41.0% → -49.7% → -56.8% → -64.3% → -71.8% → -85.6%)  
+- **Change rate**: high (max change: -85.6%)  
+
+**Punctuation Noise**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: no  
+- **Change rate**: low (max change: -19.2%)  
+
+**Sentence Middle Swap**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: no (only one variation tested)  
+- **Change rate**: low (max change: -6.8%)  
+
+**Preposition Removal**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: no  
+- **Change rate**: low (max change: -12.4%)  
+
+**Stop-word Removal**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes (e.g., -7.1% → -13.6% → -20.1% → -26.9% → -33.6% → -39.7%)  
+- **Change rate**: moderate (max change: -39.7%)  
+
+**Word Swap**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes (e.g., -13.2% → -28.4% → -42.9% → -59.1%)  
+- **Change rate**: moderate (max change: -59.1%)  
+
+**Truncation (End Removal)**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: no  
+- **Change rate**: moderate (max change: -26.8%)  
+
+**Article Removal**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: no  
+- **Change rate**: low (max change: -5.8%)  
+
+**Word Repetition**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes (e.g., -7.5% → -13.5% → -19.5% → -25.0% → -30.7% → -35.8% → -40.6% → -45.3% → -49.7% → -58.0%)  
+- **Change rate**: moderate (max change: -58.0%)  
+
+---
+
+## 2. Suitability of bert_score_f for machine translation
+
+**Recommendation**: **Not recommended**  
+
+**Rationale**:  
+- Only **2/10 perturbation tests** (Word Removal, Word Swap) exhibit **high change rates** and **superlinear decreases**, which align with human evaluation expectations.  
+- **5/10 tests** (Verb Lemmatization, Punctuation Noise, Sentence Middle Swap, Preposition Removal, Article Removal) show **low sensitivity** (change rate: low).  
+- **3/10 tests** (Stop-word Removal, Word Swap, Word Repetition) show **moderate sensitivity** but lack **superlinear decreases** in 2/3 cases.  
+- The metric fails to consistently reflect the **disproportionately strong human penalty** for severe fluency errors (superlinear decrease) across most perturbation types.  
+
+**Conclusion**: While bert_score_f shows some sensitivity to perturbations, it does not robustly align with human evaluation patterns for machine translation.

@@ -1,0 +1,12 @@
+metric=MAUVE-RoBERTa-Large
+Additional Information=The Metric scores from 0 (Minimum) to 1 (Maximum)
+
+ref=0.9789943578848388
+
+result_shuffling_beginning=0.3539626916996145
+result_shuffling_middle=0.619430492536104
+result_shuffling_end=0.2553780042912964
+
+result_random_beginning=0.03175612231429859
+result_random_middle=0.12097274174229167
+result_random_end=0.039423205904459094

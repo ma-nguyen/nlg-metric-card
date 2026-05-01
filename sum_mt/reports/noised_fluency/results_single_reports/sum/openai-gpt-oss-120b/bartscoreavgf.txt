@@ -1,0 +1,107 @@
+**bart_score_avg_f**
+
+---
+
+## Table of Results  
+
+| Perturbation Type | Variation (percentage) | Score (bart_score_avg_f) | edit_ratio | Change vs. gold (%) |
+|-------------------|------------------------|--------------------------|------------|----------------------|
+| **Verb lemmatization** | 0 % (gold) | –6.064 | 0.000 | 0.0 % |
+| | 50 % verbs randomized | –6.140 | 0.052 | –1.3 % |
+| | 100 % verbs randomized | –6.217 | 0.102 | –2.5 % |
+| **Word removal** | 0 % (gold) | –6.064 | 0.000 | 0.0 % |
+| | 5 % words removed | –6.159 | 0.061 | –1.6 % |
+| | 10 % words removed | –6.251 | 0.111 | –3.1 % |
+| | 15 % words removed | –6.339 | 0.163 | –4.5 % |
+| | 20 % words removed | –6.472 | 0.210 | –6.7 % |
+| | 25 % words removed | –6.583 | 0.260 | –8.6 % |
+| | 30 % words removed | –6.734 | 0.311 | –11.1 % |
+| | 35 % words removed | –6.900 | 0.361 | –13.8 % |
+| | 40 % words removed | –7.103 | 0.408 | –17.1 % |
+| | 45 % words removed | –7.305 | 0.461 | –20.5 % |
+| | 50 % words removed | –7.507 | 0.507 | –23.8 % |
+| **Punctuation noise** | 0 % (gold) | –6.064 | 0.000 | 0.0 % |
+| | 50 % punctuation noised | –6.156 | 0.052 | –1.5 % |
+| | 100 % punctuation noised | –6.263 | 0.105 | –3.3 % |
+| **Sentence‑middle swap** | 0 % (gold) | –6.064 | 0.000 | 0.0 % |
+| | 1 sentence swapped | –6.211 | 0.145 | –2.4 % |
+| | 2 sentences swapped | –6.365 | 0.255 | –5.0 % |
+| | 3 sentences swapped | –6.498 | 0.321 | –7.2 % |
+| **Preposition removal** | 0 % (gold) | –6.064 | 0.000 | 0.0 % |
+| | 40 % prepositions removed | –6.174 | 0.054 | –1.8 % |
+| | 70 % prepositions removed | –6.278 | 0.093 | –3.5 % |
+| | 100 % prepositions removed | –6.393 | 0.135 | –5.4 % |
+| **Stop‑word removal** | 0 % (gold) | –6.064 | 0.000 | 0.0 % |
+| | 10 % stop‑words removed | –6.121 | 0.044 | –0.9 % |
+| | 20 % stop‑words removed | –6.178 | 0.088 | –1.9 % |
+| | 30 % stop‑words removed | –6.251 | 0.130 | –3.1 % |
+| | 40 % stop‑words removed | –6.344 | 0.175 | –4.6 % |
+| | 50 % stop‑words removed | –6.441 | 0.219 | –6.2 % |
+| | 60 % stop‑words removed | –6.554 | 0.263 | –8.1 % |
+| **Word swap** | 0 % (gold) | –6.064 | 0.000 | 0.0 % |
+| | 5 % words swapped | –6.306 | 0.056 | –4.0 % |
+| | 15 % words swapped | –6.564 | 0.117 | –8.3 % |
+| | 30 % words swapped | –6.789 | 0.169 | –12.0 % |
+| | 60 % words swapped | –7.010 | 0.222 | –15.6 % |
+| **Truncate (end removal)** | 0 % (gold) | –6.064 | 0.000 | 0.0 % |
+| | 10 % words removed (end) | –5.984 | 0.114 | +1.3 % |
+| | 20 % words removed (end) | –5.953 | 0.215 | +1.8 % |
+| | 30 % words removed (end) | –6.009 | 0.312 | +0.9 % |
+| | 40 % words removed (end) | –6.189 | 0.413 | –2.1 % |
+| | 50 % words removed (end) | –6.501 | 0.515 | –7.2 % |
+| **Article removal** | 0 % (gold) | –6.064 | 0.000 | 0.0 % |
+| | 50 % articles removed | –6.117 | 0.039 | –0.9 % |
+| | 100 % articles removed | –6.198 | 0.081 | –2.2 % |
+| **Token repetition** | 0 % (gold) | –6.064 | 0.000 | 0.0 % |
+| | 5 % words repeated | –6.172 | 0.061 | –1.8 % |
+| | 10 % words repeated | –6.261 | 0.111 | –3.2 % |
+| | 15 % words repeated | –6.359 | 0.163 | –4.9 % |
+| | 20 % words repeated | –6.440 | 0.210 | –6.2 % |
+| | 25 % words repeated | –6.530 | 0.260 | –7.7 % |
+| | 30 % words repeated | –6.620 | 0.311 | –9.2 % |
+| | 35 % words repeated | –6.714 | 0.361 | –10.7 % |
+| | 40 % words repeated | –6.785 | 0.408 | –11.9 % |
+| | 45 % words repeated | –6.861 | 0.461 | –13.2 % |
+| | 50 % words repeated | –6.933 | 0.507 | –14.3 % |
+
+*All percentages are relative to the gold‑score (‑6.064).*
+
+---
+
+## 1. Sensitivity to the Perturbation  
+
+For each perturbation type we assess:
+
+* **Monotonous decrease** – does the score consistently drop as the variation grows?  
+* **Superlinear decrease** – does the magnitude of the drop accelerate with larger variations?  
+* **Change rate** – based on the largest observed percentage change (low ≤ ‑25 %, moderate ≤ ‑60 %, otherwise high).
+
+| Perturbation | Monotonous decrease | Superlinear decrease | Change rate |
+|--------------|---------------------|----------------------|-------------|
+| Verb lemmatization | yes | no | low |
+| Word removal | yes | no | low |
+| Punctuation noise | yes | **yes** | low |
+| Sentence‑middle swap | yes | no | low |
+| Preposition removal | yes | **yes** | low |
+| Stop‑word removal | yes | no | low |
+| Word swap | yes | no | low |
+| Truncate (end removal) | **no** (score first improves) | no | low |
+| Article removal | yes | **yes** | low |
+| Token repetition | yes | no | low |
+
+*Explanation of superlinear decisions*  
+- **Punctuation noise**: the second step (‑3.3 %) is a larger drop than the first (‑1.5 %).  
+- **Preposition removal**: the second step (‑3.5 %) exceeds the first (‑1.8 %).  
+- **Article removal**: the second step (‑2.2 %) exceeds the first (‑0.9 %).  
+All other perturbations show either constant or decreasing incremental drops, thus are not superlinear.
+
+---
+
+## 2. Suitability of **bart_score_avg_f** for **summarization**
+
+A metric is deemed suitable when **most (> 7) perturbation tests** exhibit **high change rate** *and* **superlinear decrease**.  
+
+- The present analysis shows **all** perturbation types have a **low** change rate.  
+- Only three tests (punctuation noise, preposition removal, article removal) display superlinear behaviour, and none reach a high change rate.
+
+**Conclusion:** *bart_score_avg_f is **not** a reasonable metric for evaluating summarization quality under the considered perturbations.* It reacts only weakly to increasingly severe degradations and fails to capture the superlinear penalisation that human judges apply to major fluency errors.

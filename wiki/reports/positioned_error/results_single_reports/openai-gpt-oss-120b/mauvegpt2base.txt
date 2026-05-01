@@ -1,0 +1,62 @@
+**MAUVE‑GPT2‑base**  
+
+---
+
+## Table  
+
+| Test Type | Perturbation Location | Gold Score | Perturbed Score | % Change vs. Gold | Change‑Rate Category |
+|-----------|----------------------|------------|----------------|-------------------|----------------------|
+| **Shuffling‑test** | Beginning | 0.9481 | 0.5459 | **‑42.4 %** | low to moderate (30‑49 %) |
+|  | Middle | 0.9481 | 0.8210 | **‑13.4 %** | low (10‑29 %) |
+|  | End | 0.9481 | 0.0183 | **‑98.1 %** | very high (90‑100 %) |
+| **Random‑test** | Beginning | 0.9481 | 0.6381 | **‑32.7 %** | low to moderate (30‑49 %) |
+|  | Middle | 0.9481 | 0.3447 | **‑63.6 %** | moderate to high (50‑69 %) |
+|  | End | 0.9481 | 0.0074 | **‑99.2 %** | very high (90‑100 %) |
+
+*All scores are averages over 1 000 texts (≈256 tokens each).*
+
+---
+
+## 1. Sensitivity to the Perturbation  
+
+**a. Did a perturbed output score higher than the gold output?**  
+No. Every perturbed variant received a lower MAUVE‑GPT2‑base score than its corresponding gold (reference) text.
+
+**b. Were the scores similar for every location (beginning, middle, end)?**  
+No. The metric exhibited a strong dependence on where the perturbation was applied:  
+- End‑perturbations caused a **very high** drop (≈‑98 % to ‑99 %).  
+- Beginning and middle perturbations produced modest to moderate declines (‑13 % to ‑63 %).  
+
+Thus, scores were not uniform across locations.
+
+**c. Were the scores similar for shuffling and random‑test?**  
+No. While both test types showed the largest degradation at the end, their behaviour elsewhere differed:  
+- Shuffling‑middle yielded only a **low** drop (‑13 %), whereas random‑middle produced a **moderate‑to‑high** drop (‑63 %).  
+- Beginning perturbations were also less severe for shuffling (‑42 %) than for random (‑33 %).  
+
+The metric distinguishes between the two perturbation strategies.
+
+---
+
+## 2. Suitability of **MAUVE‑GPT2‑base** for **open‑ended text generation**
+
+### a. Strengths  
+- **End‑perturbations** (both shuffling and random) trigger a **very high** change‑rate (‑98 % to ‑99 %).  
+  This indicates that the metric is highly sensitive when semantic coherence is destroyed at the tail of a passage, aligning with human intuition that such outputs are almost nonsensical.
+
+### b. Weaknesses  
+- **Beginning perturbations** (‑42 % and ‑33 %) fall into the *low‑to‑moderate* range, suggesting limited sensitivity to disruptions at the start of a text.  
+- **Middle shuffling** shows only a *low* change (‑13 %), implying the metric may overlook substantial semantic damage occurring mid‑sentence.  
+- **Middle random** yields a *moderate‑to‑high* drop (‑63 %) but still far from the very high degradation seen at the end, indicating inconsistent responsiveness across locations.  
+- Overall, the metric’s scores vary considerably with the perturbation position, which may not reflect the uniform severity perceived by human judges.
+
+### c. Recommendation  
+**No.** The metric exhibits high/very‑high change‑rate in only **2** out of the 6 evaluated variants (both end‑perturbations). The threshold for a positive recommendation (> 5 variants with high or very‑high change) is not met.
+
+### d. Needed Improvements  
+1. **Enhanced sensitivity to early and mid‑sentence disruptions** – the metric should penalize incoherent beginnings and middle sections more strongly, matching human judgments that any loss of meaning, regardless of position, degrades quality.  
+2. **Reduced location bias** – calibrate the scoring function so that comparable semantic damage yields comparable score drops, independent of where the perturbation occurs.  
+3. **Broader perturbation coverage** – incorporate additional perturbation types (e.g., lexical substitution, syntactic reordering) during calibration to ensure the metric captures a wider spectrum of quality degradations.  
+4. **Alignment with human rating scales** – perform a correlation study between MAUVE‑GPT2‑base scores and human Likert ratings on the same perturbed set to quantify residual gaps and guide further tuning.
+
+*Even with these enhancements, MAUVE‑GPT2‑base should be used as a complementary signal rather than a full replacement for human evaluation in open‑ended text generation.*

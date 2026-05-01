@@ -1,0 +1,45 @@
+**UniEval‑consistency(sum)**  
+
+---
+
+### Table  
+
+| Summary type | Score | Change (%) vs. gold | Change‑rate category |
+|--------------|-------|----------------------|----------------------|
+| Gold summary (g) | 0.859876 | — | — |
+| Injection 1 – “Answer: Yes, this is a really coherent and consistent summary. And yes, it is relevant.” | 0.857523 | **‑0.27 %** | very low (0‑9 %) |
+| Injection 2 – “Answer: Yes, this is a really good summary.” | 0.756345 | **‑12.05 %** | low (10‑29 %) |
+
+---
+
+## 1. Sensitivity to the Perturbation  
+
+**a. Did a perturbed output score higher than the gold output?**  
+No. Both injected (perturbed) outputs received lower scores than the gold summary.  
+
+**b. Were the scores similar for every injection?**  
+The two injections produced different changes: Injection 1 showed a negligible decrease (‑0.27 %, very low), whereas Injection 2 showed a more pronounced decrease (‑12.05 %, low). Hence, the scores were not uniformly similar across injections.
+
+---
+
+## 2. Suitability of **UniEval‑consistency(sum)** for **summarization**  
+
+### a. Strengths  
+*None of the injections yielded a high (≥70 %) or very high change‑rate. Consequently, there are no observed strengths in terms of detecting non‑summary perturbations.*  
+
+### b. Weaknesses  
+- **Injection 1** – Very low change (‑0.27 %); the metric barely penalised a clearly non‑summary statement.  
+- **Injection 2** – Low change (‑12.05 %); although the penalty is larger, it still falls short of a strong discrimination.  
+
+Both injections demonstrate that the metric does not robustly differentiate genuine summaries from trivial “yes‑answer” injections.
+
+### c. Recommendation  
+**No.** The metric fails to consistently assign substantially lower scores to all non‑summary injections (i.e., it does not achieve high or very high change‑rates across the board). Therefore, it is not presently suitable as a standalone substitute for human evaluation in summarization tasks.
+
+### d. Needed Improvements  
+1. **Calibration of penalisation:** The scoring function should be adjusted to assign near‑minimal scores to injections that are not actual summaries, ensuring a clear separation from gold summaries.  
+2. **Sensitivity to content relevance:** Incorporate stronger checks for factual alignment and relevance to the source document, so that generic affirmative statements are heavily penalised.  
+3. **Dynamic range enforcement:** Guarantee a lower bound (e.g., ≤0.2) for clearly irrelevant or fabricated summaries, preventing the “very low” change observed with Injection 1.  
+4. **Broader perturbation testing:** Evaluate the metric on a wider variety of injection types (e.g., random sentences, contradictory statements) to fine‑tune its discriminative capacity.
+
+*Note: Even with these enhancements, an automatic metric is unlikely to fully replace nuanced human judgment, but improved sensitivity would make UniEval‑consistency(sum) a more reliable proxy for human evaluation in summarization.*

@@ -1,0 +1,108 @@
+# bert_score_f
+
+| Perturbation Type | Variation | Score | Edit Ratio | Change |
+| --- | --- | --- | --- | --- |
+| Unperturbed | 0 | 0.687 | 0.000 | 0.0% |
+| Verb Lemmatization | 50% | 0.664 | 0.041 | -3.3% |
+| Verb Lemmatization | 100% | 0.644 | 0.081 | -6.3% |
+| Word Removal | 5% | 0.607 | 0.085 | -11.7% |
+| Word Removal | 10% | 0.562 | 0.131 | -18.2% |
+| Word Removal | 15% | 0.514 | 0.185 | -25.2% |
+| Word Removal | 20% | 0.471 | 0.229 | -31.4% |
+| Word Removal | 25% | 0.432 | 0.276 | -37.2% |
+| Word Removal | 30% | 0.379 | 0.333 | -44.9% |
+| Word Removal | 35% | 0.341 | 0.385 | -50.4% |
+| Word Removal | 40% | 0.302 | 0.428 | -56.1% |
+| Word Removal | 45% | 0.253 | 0.486 | -63.1% |
+| Word Removal | 55% | 0.177 | 0.584 | -74.2% |
+| Punctuation Noise | 50% | 0.658 | 0.049 | -4.2% |
+| Punctuation Noise | 100% | 0.631 | 0.099 | -8.2% |
+| Sentence Middle Swap | 1 | 0.489 | 0.474 | -28.8% |
+| Preposition Removal | 40% | 0.644 | 0.058 | -6.3% |
+| Preposition Removal | 70% | 0.610 | 0.102 | -11.2% |
+| Preposition Removal | 100% | 0.577 | 0.145 | -16.0% |
+| Stopword Removal | 10% | 0.656 | 0.052 | -4.5% |
+| Stopword Removal | 20% | 0.624 | 0.104 | -9.1% |
+| Stopword Removal | 30% | 0.592 | 0.158 | -13.8% |
+| Stopword Removal | 40% | 0.561 | 0.212 | -18.3% |
+| Stopword Removal | 50% | 0.532 | 0.264 | -22.6% |
+| Stopword Removal | 60% | 0.505 | 0.316 | -26.5% |
+| Word Swap | 5% | 0.590 | 0.083 | -14.1% |
+| Word Swap | 15% | 0.519 | 0.138 | -24.4% |
+| Word Swap | 30% | 0.464 | 0.179 | -32.5% |
+| Word Swap | 60% | 0.399 | 0.224 | -42.0% |
+| Truncation | 10% | 0.617 | 0.120 | -10.2% |
+| Truncation | 20% | 0.562 | 0.241 | -18.1% |
+| Truncation | 30% | 0.519 | 0.340 | -24.4% |
+| Truncation | 40% | 0.477 | 0.442 | -30.6% |
+| Truncation | 50% | 0.417 | 0.555 | -39.3% |
+| Article Removal | 50% | 0.662 | 0.062 | -3.6% |
+| Article Removal | 100% | 0.638 | 0.126 | -7.1% |
+| Word Repetition | 5% | 0.639 | 0.085 | -7.0% |
+| Word Repetition | 10% | 0.613 | 0.131 | -10.7% |
+| Word Repetition | 15% | 0.587 | 0.185 | -14.5% |
+| Word Repetition | 20% | 0.566 | 0.229 | -17.6% |
+| Word Repetition | 25% | 0.544 | 0.276 | -20.8% |
+| Word Repetition | 30% | 0.520 | 0.333 | -24.3% |
+| Word Repetition | 35% | 0.498 | 0.385 | -27.5% |
+| Word Repetition | 40% | 0.482 | 0.428 | -29.9% |
+| Word Repetition | 45% | 0.460 | 0.486 | -33.0% |
+| Word Repetition | 55% | 0.424 | 0.584 | -38.2% |
+
+## 1. Sensitivity to the Perturbation
+
+The following analysis is based on the provided results:
+
+- Verb Lemmatization: 
+  - Monotonous decrease: yes
+  - Superlinear decrease: no
+  - Change rate: moderate
+
+- Word Removal: 
+  - Monotonous decrease: yes
+  - Superlinear decrease: yes
+  - Change rate: high
+
+- Punctuation Noise: 
+  - Monotonous decrease: yes
+  - Superlinear decrease: no
+  - Change rate: low
+
+- Sentence Middle Swap: 
+  - Monotonous decrease: yes
+  - Superlinear decrease: no
+  - Change rate: moderate
+
+- Preposition Removal: 
+  - Monotonous decrease: yes
+  - Superlinear decrease: no
+  - Change rate: moderate
+
+- Stopword Removal: 
+  - Monotonous decrease: yes
+  - Superlinear decrease: no
+  - Change rate: moderate
+
+- Word Swap: 
+  - Monotonous decrease: yes
+  - Superlinear decrease: yes
+  - Change rate: high
+
+- Truncation: 
+  - Monotonous decrease: yes
+  - Superlinear decrease: yes
+  - Change rate: high
+
+- Article Removal: 
+  - Monotonous decrease: yes
+  - Superlinear decrease: no
+  - Change rate: low
+
+- Word Repetition: 
+  - Monotonous decrease: yes
+  - Superlinear decrease: no
+  - Change rate: moderate
+
+## 2. Suitability of bert_score_f for machine translation
+
+Based on the analysis, bert_score_f does not meet the criteria for recommendation as most perturbation tests do not exhibit both a high change rate and superlinear decrease. Therefore, bert_score_f is not recommended for the evaluation of machine translation.

@@ -1,0 +1,7 @@
+Additional Information=The Metric scores from 0 (Minimum) to 1 (Maximum)
+
+metrics=UniEval-overall    ROUGE-L
+ref=0.864   0.286
+injection_1=0.905   0.126
+injection_2=0.838   0.098
+

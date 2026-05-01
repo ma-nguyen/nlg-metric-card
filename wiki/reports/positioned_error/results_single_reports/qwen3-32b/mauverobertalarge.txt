@@ -1,0 +1,49 @@
+# MAUVE-RoBERTa-Large Evaluation on Open-Ended Text Generation  
+
+## Table  
+
+| Perturbation Type | Location     | Metric Score (Perturbed) | Metric Score (Gold) | Score Change (%) |  
+|--------------------|--------------|--------------------------|---------------------|------------------|  
+| Shuffling          | Beginning    | 0.35396                  | 0.97899             | -63.8% (moderate to high) |  
+| Shuffling          | Middle       | 0.61943                  | 0.97899             | -36.7% (low to moderate) |  
+| Shuffling          | End          | 0.25538                  | 0.97899             | -73.9% (high) |  
+| Random             | Beginning    | 0.03176                  | 0.97899             | -96.8% (very high) |  
+| Random             | Middle       | 0.12097                  | 0.97899             | -87.6% (high) |  
+| Random             | End          | 0.03942                  | 0.97899             | -96.0% (very high) |  
+
+---
+
+## 1. Sensitivity to the Perturbation  
+
+**a. Did a perturbed output score higher than the gold output? If yes, which one.**  
+No perturbed output scored higher than the gold output in any variation.  
+
+**b. Were the scores similar for every location, meaning the scores of beginning, middle and end were similar?**  
+No. The score changes varied significantly across locations:  
+- **Shuffling-test**: End perturbations (-73.9%) had the largest drop, while middle perturbations (-36.7%) had the smallest.  
+- **Random-test**: Beginning and end perturbations (-96.8% and -96.0%) had nearly identical drops, while middle perturbations (-87.6%) had a smaller but still substantial drop.  
+
+**c. Were the scores similar for shuffling and random-test?**  
+No. The **random-test** consistently showed higher score drops (very high to high) compared to the **shuffling-test** (moderate to high to low to moderate).  
+
+---
+
+## 2. Suitability of MAUVE-RoBERTa-Large for Open-Ended Text Generation  
+
+### a. Strengths  
+- **High sensitivity to random perturbations**: All random-test variations (beginning, middle, end) showed **high to very high** score drops (≥70% change).  
+- **Strong detection of end perturbations**: Shuffling at the end (-73.9%) and random perturbations at the end (-96.0%) demonstrated **high to very high** sensitivity.  
+
+### b. Weaknesses  
+- **Low sensitivity to middle shuffling**: Middle shuffling (-36.7%) showed only **low to moderate** sensitivity, failing to align with human expectations of significant degradation.  
+- **Inconsistent sensitivity to beginning shuffling**: Beginning shuffling (-63.8%) showed **moderate to high** sensitivity, but this was lower than the **very high** sensitivity observed in random perturbations.  
+
+### c. Recommendation  
+**No**. The metric achieved **high or higher sensitivity in 4 out of 6 variants** (shuffling-end, random-beginning, random-middle, random-end), falling short of the threshold (>5 variants).  
+
+### d. What Needs Improvements  
+- **Enhanced sensitivity to middle perturbations**: The metric underperforms in detecting semantic degradation when perturbations occur in the middle of texts.  
+- **Enforcement of minimal scores**: While random-test perturbations achieved near-zero scores, the metric may not consistently enforce minimal scores for semantically nonsensical outputs (e.g., middle shuffling).  
+
+---  
+**Note**: While MAUVE-RoBERTa-Large demonstrates strong performance in many scenarios, it cannot fully substitute human evaluation, particularly for nuanced perturbations in central text regions.

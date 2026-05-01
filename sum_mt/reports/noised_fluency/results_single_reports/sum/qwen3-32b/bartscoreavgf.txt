@@ -1,0 +1,82 @@
+# bart_score_avg_f
+
+## Table
+
+| Perturbation Type | Monotonous Decrease | Superlinear Decrease | Change Rate |
+|-------------------|---------------------|----------------------|-------------|
+| Verb Lemmatization | Yes                 | No                   | Low         |
+| Word Removal       | Yes                 | Yes                  | High        |
+| Punctuation Noise  | Yes                 | No                   | Low         |
+| Sentence Middle Swap | Yes              | Yes                  | Moderate    |
+| Remove Prepositions | Yes               | No                   | Low         |
+| Remove Stop Words  | Yes                 | Yes                  | Moderate    |
+| Random Word Swap   | Yes                 | Yes                  | Moderate    |
+| Truncate End Words | No                  | No                   | High        |
+| Remove Articles    | Yes                 | No                   | Low         |
+| Random Token Repetition | Yes           | Yes                  | High        |
+
+## 1. Sensitivity to the Perturbation
+
+**Verb Lemmatization**  
+- **Monotonous decrease**: Yes  
+- **Superlinear decrease**: No  
+- **Change rate**: Low (max change -2.5%)  
+
+**Word Removal**  
+- **Monotonous decrease**: Yes  
+- **Superlinear decrease**: Yes  
+- **Change rate**: High (max change -23.8%)  
+
+**Punctuation Noise**  
+- **Monotonous decrease**: Yes  
+- **Superlinear decrease**: No  
+- **Change rate**: Low (max change -3.3%)  
+
+**Sentence Middle Swap**  
+- **Monotonous decrease**: Yes  
+- **Superlinear decrease**: Yes  
+- **Change rate**: Moderate (max change -7.2%)  
+
+**Remove Prepositions**  
+- **Monotonous decrease**: Yes  
+- **Superlinear decrease**: No  
+- **Change rate**: Low (max change -5.4%)  
+
+**Remove Stop Words**  
+- **Monotonous decrease**: Yes  
+- **Superlinear decrease**: Yes  
+- **Change rate**: Moderate (max change -8.1%)  
+
+**Random Word Swap**  
+- **Monotonous decrease**: Yes  
+- **Superlinear decrease**: Yes  
+- **Change rate**: Moderate (max change -15.6%)  
+
+**Truncate End Words**  
+- **Monotonous decrease**: No  
+- **Superlinear decrease**: No  
+- **Change rate**: High (max change -7.2%)  
+
+**Remove Articles**  
+- **Monotonous decrease**: Yes  
+- **Superlinear decrease**: No  
+- **Change rate**: Low (max change -2.2%)  
+
+**Random Token Repetition**  
+- **Monotonous decrease**: Yes  
+- **Superlinear decrease**: Yes  
+- **Change rate**: High (max change -14.3%)  
+
+---
+
+## 2. Suitability of bart_score_avg_f for summarization
+
+**Recommendation**: **Not recommended**  
+
+**Analysis**:  
+- **High change rate with superlinear decrease**: 2 tests (Word Removal, Random Token Repetition)  
+- **Moderate change rate with superlinear decrease**: 4 tests (Sentence Middle Swap, Remove Stop Words, Random Word Swap, Random Token Repetition)  
+- **Low change rate**: 4 tests (Verb Lemmatization, Punctuation Noise, Remove Prepositions, Remove Articles)  
+- **Truncate End Words**: Fails monotonous decrease and superlinear decrease criteria  
+
+Only 2 out of 10 perturbation tests meet the criteria of **high change rate and superlinear decrease**, and 4 meet **moderate change rate and superlinear decrease**. Since the majority (>7) of tests do not achieve high sensitivity and superlinearity, the metric does not align sufficiently with human evaluation expectations for summarization tasks.

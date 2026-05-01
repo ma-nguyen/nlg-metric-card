@@ -1,0 +1,90 @@
+**mauve‑gpt2**
+
+---
+
+### Table  
+
+| Perturbation Type | Variation (percent / description) | MAUVE‑gpt2 Score | Edit Ratio | Change % |
+|-------------------|-----------------------------------|------------------|------------|----------|
+| **Verb lemmatization** | 0 % (unperturbed) | 0.955 | 0.000 | 0.0 % |
+| | 50 % of verbs randomized | 0.856 | 0.045 | –10.3 % |
+| | 100 % of verbs randomized | 0.499 | 0.090 | –47.8 % |
+| **Word removal** | 5 % of words removed | 0.626 | 0.053 | –34.5 % |
+| | 10 % of words removed | 0.267 | 0.103 | –72.0 % |
+| | 15 % of words removed | 0.098 | 0.153 | –89.7 % |
+| | 20 % of words removed | 0.048 | 0.202 | –95.0 % |
+| | 25 % of words removed | 0.027 | 0.252 | –97.1 % |
+| | 30 % of words removed | 0.019 | 0.303 | –98.0 % |
+| | 35 % of words removed | 0.014 | 0.353 | –98.6 % |
+| | 40 % of words removed | 0.011 | 0.402 | –98.9 % |
+| | 45 % of words removed | 0.010 | 0.453 | –99.0 % |
+| | 50 % of words removed | 0.009 | 0.501 | –99.1 % |
+| **Punctuation noise** | 0 % (unperturbed) | 0.955 | 0.000 | 0.0 % |
+| | 50 % punctuation noised | 0.014 | 0.056 | –98.6 % |
+| | 100 % punctuation noised | 0.006 | 0.111 | –99.4 % |
+| **Sentence‑middle swap** | 1 sentence swapped | 0.835 | 0.072 | –12.5 % |
+| | 2 sentences swapped | 0.528 | 0.134 | –44.7 % |
+| | 3 sentences swapped | 0.318 | 0.191 | –66.7 % |
+| **Preposition removal** | 40 % prepositions removed | 0.831 | 0.057 | –13.0 % |
+| | 70 % prepositions removed | 0.558 | 0.100 | –41.6 % |
+| | 100 % prepositions removed | 0.267 | 0.142 | –72.0 % |
+| **Stop‑word removal** | 10 % stop‑words removed | 0.887 | 0.049 | –7.1 % |
+| | 20 % stop‑words removed | 0.637 | 0.097 | –33.3 % |
+| | 30 % stop‑words removed | 0.308 | 0.146 | –67.7 % |
+| | 40 % stop‑words removed | 0.140 | 0.194 | –85.4 % |
+| | 50 % stop‑words removed | 0.064 | 0.242 | –93.3 % |
+| | 60 % stop‑words removed | 0.035 | 0.290 | –96.4 % |
+| **Random local swap** | 5 % of words swapped | 0.257 | 0.047 | –73.1 % |
+| | 15 % of words swapped | 0.026 | 0.109 | –97.2 % |
+| | 30 % of words swapped | 0.010 | 0.164 | –99.0 % |
+| | 60 % of words swapped | 0.007 | 0.216 | –99.3 % |
+| **Truncate (end‑word removal)** | 10 % words removed from end | 0.164 | 0.103 | –82.8 % |
+| | 20 % words removed from end | 0.171 | 0.203 | –82.1 % |
+| | 30 % words removed from end | 0.179 | 0.303 | –81.3 % |
+| | 40 % words removed from end | 0.162 | 0.403 | –83.0 % |
+| | 50 % words removed from end | 0.146 | 0.504 | –84.7 % |
+| **Article removal** | 50 % articles removed | 0.850 | 0.053 | –11.0 % |
+| | 100 % articles removed | 0.518 | 0.105 | –45.7 % |
+| **Random token repetition** | 5 % words repeated once | 0.657 | 0.053 | –31.2 % |
+| | 10 % words repeated once | 0.321 | 0.103 | –66.4 % |
+| | 15 % words repeated once | 0.140 | 0.153 | –85.3 % |
+| | 20 % words repeated once | 0.070 | 0.202 | –92.6 % |
+| | 25 % words repeated once | 0.036 | 0.252 | –96.2 % |
+| | 30 % words repeated once | 0.023 | 0.303 | –97.6 % |
+| | 35 % words repeated once | 0.018 | 0.353 | –98.1 % |
+| | 40 % words repeated once | 0.013 | 0.402 | –98.6 % |
+| | 45 % words repeated once | 0.011 | 0.453 | –98.8 % |
+| | 50 % words repeated once | 0.010 | 0.501 | –99.0 % |
+
+---
+
+## 1. Sensitivity to the Perturbation  
+
+| Perturbation Type | Monotonous decrease | Superlinear decrease | Change rate |
+|-------------------|---------------------|----------------------|--------------|
+| Verb lemmatization | yes | yes | moderate |
+| Word removal | yes | yes | high |
+| Punctuation noise | yes | yes | high |
+| Sentence‑middle swap | yes | no | high |
+| Preposition removal | yes | yes | high |
+| Stop‑word removal | yes | no | high |
+| Random local swap | yes | no | high |
+| Truncate (end‑word removal) | no | no | high |
+| Article removal | yes | yes | moderate |
+| Random token repetition | yes | no | high |
+
+*Definitions used:*  
+- **Monotonous decrease** – scores strictly decline as the variation level grows.  
+- **Superlinear decrease** – the magnitude of score loss grows faster with each step (i.e., successive drops become larger).  
+- **Change rate** – classified as *low* (max drop ≤ ‑25 %), *moderate* (max drop ≤ ‑60 %), otherwise *high* (max drop approaches ‑100 %).
+
+---
+
+## 2. Suitability of mauve‑gpt2 for open‑ended text generation  
+
+A metric is recommended only when **most (> 7) perturbation tests** exhibit both a **high change rate** *and* a **superlinear decrease**.  
+
+- Perturbations with high change rate: word removal, punctuation noise, sentence‑middle swap, preposition removal, stop‑word removal, random local swap, truncate, random token repetition (8 tests).  
+- Among these, only **word removal**, **punctuation noise**, and **preposition removal** also show superlinear decrease (3 tests).  
+
+Since fewer than 7 tests satisfy both conditions, **mauve‑gpt2 is *not* recommended** as a reliable metric for evaluating open‑ended text generation.

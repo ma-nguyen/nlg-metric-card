@@ -1,0 +1,75 @@
+# GPT-PPL
+
+## Table
+
+| Perturbation Type | Variation | GPT-PPL Score | Edit Ratio | Change |
+| --- | --- | --- | --- | --- |
+| Unperturbed | 0.0 | 35.061 | 0.000 | 0.0% |
+| Verb Lemmatization | 0.5 | 45.070 | 0.045 | 28.5% |
+| Verb Lemmatization | 1.0 | 54.162 | 0.090 | 54.5% |
+| Word Removal | 0.05 | 49.705 | 0.053 | 41.8% |
+| Word Removal | 0.10 | 67.718 | 0.103 | 93.1% |
+| Word Removal | 0.15 | 90.429 | 0.153 | 157.9% |
+| Word Removal | 0.20 | 118.294 | 0.202 | 237.4% |
+| Word Removal | 0.25 | 151.725 | 0.252 | 332.7% |
+| Word Removal | 0.30 | 193.484 | 0.303 | 451.9% |
+| Word Removal | 0.35 | 242.347 | 0.353 | 591.2% |
+| Word Removal | 0.40 | 298.804 | 0.402 | 752.2% |
+| Word Removal | 0.45 | 368.450 | 0.453 | 950.9% |
+| Word Removal | 0.50 | 449.392 | 0.501 | 1181.8% |
+| Punctuation Noise | 0.5 | 47.126 | 0.056 | 34.4% |
+| Punctuation Noise | 1.0 | 53.763 | 0.111 | 53.3% |
+| Sentence Middle Swap | 1 sentence | 40.336 | 0.072 | 15.0% |
+| Sentence Middle Swap | 2 sentences | 45.783 | 0.134 | 30.6% |
+| Sentence Middle Swap | 3 sentences | 51.513 | 0.191 | 46.9% |
+| Preposition Removal | 0.4 | 54.507 | 0.057 | 55.5% |
+| Preposition Removal | 0.7 | 75.026 | 0.100 | 114.0% |
+| Preposition Removal | 1.0 | 101.970 | 0.142 | 190.8% |
+| Stopword Removal | 0.1 | 48.132 | 0.049 | 37.3% |
+| Stopword Removal | 0.2 | 64.839 | 0.097 | 84.9% |
+| Stopword Removal | 0.3 | 85.984 | 0.146 | 145.2% |
+| Stopword Removal | 0.4 | 112.432 | 0.194 | 220.7% |
+| Stopword Removal | 0.5 | 145.318 | 0.242 | 314.5% |
+| Stopword Removal | 0.6 | 185.419 | 0.290 | 428.9% |
+| Word Swap | 0.05 | 62.121 | 0.047 | 77.2% |
+| Word Swap | 0.15 | 124.144 | 0.109 | 254.1% |
+| Word Swap | 0.3 | 217.731 | 0.164 | 521.0% |
+| Word Swap | 0.6 | 348.935 | 0.216 | 895.2% |
+| Truncation | 0.1 | 37.092 | 0.103 | 5.8% |
+| Truncation | 0.2 | 38.284 | 0.203 | 9.2% |
+| Truncation | 0.3 | 39.707 | 0.303 | 13.3% |
+| Truncation | 0.4 | 41.669 | 0.403 | 18.8% |
+| Truncation | 0.5 | 44.405 | 0.504 | 26.7% |
+| Article Removal | 0.5 | 46.498 | 0.053 | 32.6% |
+| Article Removal | 1.0 | 58.569 | 0.105 | 67.1% |
+| Word Repeat | 0.05 | 44.139 | 0.053 | 25.9% |
+| Word Repeat | 0.1 | 52.832 | 0.103 | 50.7% |
+| Word Repeat | 0.15 | 61.100 | 0.153 | 74.3% |
+| Word Repeat | 0.2 | 68.776 | 0.202 | 96.2% |
+| Word Repeat | 0.25 | 75.442 | 0.252 | 115.2% |
+| Word Repeat | 0.3 | 80.975 | 0.303 | 131.0% |
+| Word Repeat | 0.35 | 85.598 | 0.353 | 144.1% |
+| Word Repeat | 0.4 | 88.707 | 0.402 | 153.0% |
+| Word Repeat | 0.45 | 91.154 | 0.453 | 160.0% |
+| Word Repeat | 0.5 | 92.151 | 0.501 | 162.8% |
+
+## 1. Sensitivity to the Perturbation
+
+The following table summarizes the sensitivity of GPT-PPL to each perturbation type:
+
+| Perturbation Type | Monotonous Decrease | Superlinear Decrease | Change Rate |
+| --- | --- | --- | --- |
+| Verb Lemmatization | yes | no | moderate |
+| Word Removal | yes | yes | high |
+| Punctuation Noise | yes | no | low |
+| Sentence Middle Swap | yes | no | moderate |
+| Preposition Removal | yes | no | high |
+| Stopword Removal | yes | yes | high |
+| Word Swap | yes | yes | high |
+| Truncation | yes | no | low |
+| Article Removal | yes | no | moderate |
+| Word Repeat | yes | no | moderate |
+
+## 2. Suitability of GPT-PPL for Open-Ended Text Generation
+
+Based on the results, GPT-PPL is not recommended for the evaluation of open-ended text generation. Although some perturbation tests have a high change rate, not most of the tests have a high change rate and superlinear decrease. Therefore, GPT-PPL may not be a reasonable metric for this task.

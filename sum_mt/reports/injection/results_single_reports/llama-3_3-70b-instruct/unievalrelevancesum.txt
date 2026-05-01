@@ -1,0 +1,19 @@
+UniEval-relevance(sum)
+
+{Table}
+
+| Summary Type | Score | Change |
+| --- | --- | --- |
+| Gold Summary | 0.781290 | - |
+| Injection 1 | 0.900527 | (0.900527-0.781290)/0.781290*100 = 15.31% |
+| Injection 2 | 0.856718 | (0.856718-0.781290)/0.781290*100 = 9.64% |
+
+1. Sensitivity to the Perturbation
+    a. Yes, the perturbed outputs scored higher than the gold output. Specifically, both Injection 1 and Injection 2 scored higher than the gold summary.
+    b. No, the scores were not similar for every injection. The change rate for Injection 1 was 15.31%, while the change rate for Injection 2 was 9.64%, indicating a difference in the metric's response to the two injections.
+
+2. Suitability of UniEval-relevance(sum) for Summarization
+    a. Strengths: None of the injections had a high change rate or higher. However, Injection 1 had a moderate to high change rate of 15.31%, which could be considered a relative strength.
+    b. Weaknesses: Both Injection 1 and Injection 2 had change rates that were not high or very high, with Injection 2 having a low change rate of 9.64%. This suggests that the metric may not be effectively penalizing perturbed summaries.
+    c. Recommendation: No, the metric could not detect every injection (non-summary) by having a high change rate or higher. Neither injection had a high or very high change rate.
+    d. Additionally, the metric needs improvements in detecting and penalizing perturbed summaries, particularly those that are not actual summaries of the source text. The metric's inability to assign a minimal score to non-summary injections is a significant weakness that needs to be addressed.

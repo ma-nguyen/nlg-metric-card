@@ -1,0 +1,108 @@
+**rougeL‑f**
+
+---
+
+### Table of Results  
+
+| Perturbation Type | Variation (percentage) | rougeL‑f score | edit‑ratio | Change vs. gold |
+|-------------------|------------------------|----------------|------------|-----------------|
+| **Verb lemmatization / randomisation** | 0 % (gold) | 0.286 | 0.000 | 0.0 % |
+| | 50 % verbs randomised | 0.285 | 0.052 | –0.5 % |
+| | 100 % verbs randomised | 0.284 | 0.102 | –0.8 % |
+| **Word removal** | 0 % (gold) | 0.286 | 0.000 | 0.0 % |
+| | 5 % words removed | 0.282 | 0.061 | –1.6 % |
+| | 10 % words removed | 0.280 | 0.111 | –2.1 % |
+| | 15 % words removed | 0.274 | 0.163 | –4.1 % |
+| | 20 % words removed | 0.271 | 0.210 | –5.3 % |
+| | 25 % words removed | 0.267 | 0.260 | –6.8 % |
+| | 30 % words removed | 0.262 | 0.311 | –8.4 % |
+| | 35 % words removed | 0.258 | 0.361 | –10.0 % |
+| | 40 % words removed | 0.251 | 0.408 | –12.2 % |
+| | 45 % words removed | 0.243 | 0.461 | –14.9 % |
+| | 50 % words removed | 0.237 | 0.507 | –17.3 % |
+| **Punctuation noise** | 0 % (gold) | 0.286 | 0.000 | 0.0 % |
+| | 50 % punctuation noised | 0.286 | 0.052 | 0.0 % |
+| | 100 % punctuation noised | 0.286 | 0.105 | 0.0 % |
+| **Sentence‑middle swap** | 0 % (gold) | 0.286 | 0.000 | 0.0 % |
+| | 1 sentence swapped | 0.277 | 0.145 | –3.3 % |
+| | 2 sentences swapped | 0.267 | 0.255 | –6.7 % |
+| | 3 sentences swapped | 0.259 | 0.321 | –9.5 % |
+| **Preposition removal** | 0 % (gold) | 0.286 | 0.000 | 0.0 % |
+| | 40 % preps removed | 0.283 | 0.054 | –1.2 % |
+| | 70 % preps removed | 0.279 | 0.093 | –2.5 % |
+| | 100 % preps removed | 0.274 | 0.135 | –4.2 % |
+| **Stop‑word removal** | 0 % (gold) | 0.286 | 0.000 | 0.0 % |
+| | 10 % stop‑words removed | 0.283 | 0.044 | –1.1 % |
+| | 20 % stop‑words removed | 0.281 | 0.088 | –1.8 % |
+| | 30 % stop‑words removed | 0.278 | 0.130 | –2.9 % |
+| | 40 % stop‑words removed | 0.276 | 0.175 | –3.6 % |
+| | 50 % stop‑words removed | 0.272 | 0.219 | –5.0 % |
+| | 60 % stop‑words removed | 0.268 | 0.263 | –6.3 % |
+| **Local word swap** | 0 % (gold) | 0.286 | 0.000 | 0.0 % |
+| | 5 % words swapped | 0.280 | 0.056 | –2.2 % |
+| | 15 % words swapped | 0.273 | 0.117 | –4.7 % |
+| | 30 % words swapped | 0.266 | 0.169 | –7.2 % |
+| | 60 % words swapped | 0.257 | 0.222 | –10.3 % |
+| **Truncate (remove suffix)** | 0 % (gold) | 0.286 | 0.000 | 0.0 % |
+| | 10 % words removed (end) | 0.290 | 0.114 | +1.3 % |
+| | 20 % words removed (end) | 0.295 | 0.215 | +3.2 % |
+| | 30 % words removed (end) | 0.298 | 0.312 | +4.1 % |
+| | 40 % words removed (end) | 0.300 | 0.413 | +4.7 % |
+| | 50 % words removed (end) | 0.302 | 0.515 | +5.4 % |
+| **Article removal** | 0 % (gold) | 0.286 | 0.000 | 0.0 % |
+| | 50 % articles removed | 0.280 | 0.039 | –2.3 % |
+| | 100 % articles removed | 0.271 | 0.081 | –5.4 % |
+| **Token repetition** | 0 % (gold) | 0.286 | 0.000 | 0.0 % |
+| | 5 % words repeated | 0.277 | 0.061 | –3.0 % |
+| | 10 % words repeated | 0.272 | 0.111 | –5.1 % |
+| | 15 % words repeated | 0.265 | 0.163 | –7.4 % |
+| | 20 % words repeated | 0.259 | 0.210 | –9.4 % |
+| | 25 % words repeated | 0.254 | 0.260 | –11.2 % |
+| | 30 % words repeated | 0.248 | 0.311 | –13.4 % |
+| | 35 % words repeated | 0.243 | 0.361 | –15.0 % |
+| | 40 % words repeated | 0.239 | 0.408 | –16.5 % |
+| | 45 % words repeated | 0.234 | 0.461 | –18.2 % |
+| | 50 % words repeated | 0.229 | 0.507 | –20.0 % |
+
+*All “Change vs. gold” values are taken directly from the provided data.*
+
+---
+
+## 1. Sensitivity to the Perturbation  
+
+For each perturbation type we assess three attributes:
+
+* **Monotonous decrease** – the score never rises when the variation level increases.  
+* **Super‑linear decrease** – the absolute drop between successive variation levels grows (i.e., the penalty accelerates).  
+* **Change rate** – based on the largest absolute score change observed (‑25 % → *low*, ≤ ‑60 % → *moderate*, otherwise *high*).
+
+| Perturbation | Monotonous decrease | Super‑linear decrease | Change rate |
+|--------------|---------------------|-----------------------|-------------|
+| lemmatize (verb randomisation) | yes | no | low |
+| randomworddrop (word removal) | yes | no | low |
+| noisepunct (punctuation noise) | yes | no | low |
+| sentencemiddleswap (sentence‑middle swap) | yes | no | low |
+| removepreposition (preposition removal) | yes | **yes** | low |
+| removestopwords (stop‑word removal) | yes | no | low |
+| randomlocalswap (local word swap) | yes | no | low |
+| truncate (suffix removal) | **no** (scores increase) | no | low |
+| removearticle (article removal) | yes | **yes** | low |
+| randomtokenrep (token repetition) | yes | no | low |
+
+**Explanation of the flags**
+
+* All perturbations except *truncate* show a non‑increasing score as the variation grows, therefore “monotonous decrease = yes”.  
+* Only the preposition‑removal and article‑removal tests exhibit an accelerating penalty (the absolute drop from the first to the second variation is larger than the first drop), thus “super‑linear decrease = yes” for those two.  
+* The greatest absolute score change in any test never exceeds ‑20 % (the largest observed is –20 % for 50 % token repetition). Consequently every test falls into the **low** change‑rate category (‑25 % threshold not crossed).  
+
+---
+
+## 2. Suitability of rougeL‑f for Summarisation  
+
+A metric is deemed **reasonable** for the task when the majority ( > 7 out of the 10 perturbation tests ) display a **high** change rate **and** a **super‑linear** decrease.  
+
+* rougeL‑f shows a **low** change rate for **all** perturbation types.  
+* Only **two** tests (preposition removal, article removal) exhibit super‑linear behaviour, far fewer than the required seven.  
+
+**Conclusion:**  
+rougeL‑f is **not recommended** as a reliable automatic metric for summarisation, because it reacts only weakly to increasingly severe perturbations and fails to capture the super‑linear penalty that human judges apply to major fluency degradations.

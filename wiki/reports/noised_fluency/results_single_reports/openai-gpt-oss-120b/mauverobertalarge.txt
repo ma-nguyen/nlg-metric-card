@@ -1,0 +1,91 @@
+**mauve‑roberta‑large**
+
+---
+
+## Table  
+
+| Perturbation type | Variation(s) (percentage) | MAUVE‑roberta‑large score | Edit ratio | Reported change |
+|-------------------|---------------------------|---------------------------|------------|-----------------|
+| **Verb lemmatization (randomized verbs)** | 50 % | 0.865 | 0.045 | –10.9 % |
+| | 100 % | 0.244 | 0.090 | –74.9 % |
+| **Word removal** | 5 % | 0.710 | 0.053 | –26.9 % |
+| | 10 % | 0.231 | 0.103 | –76.2 % |
+| | 15 % | 0.052 | 0.153 | –94.7 % |
+| | 20 % | 0.021 | 0.202 | –97.8 % |
+| | 25 % | 0.011 | 0.252 | –98.9 % |
+| | 30 % | 0.007 | 0.303 | –99.2 % |
+| | 35 % | 0.006 | 0.353 | –99.3 % |
+| | 40 % | 0.006 | 0.402 | –99.4 % |
+| | 45 % | 0.005 | 0.453 | –99.5 % |
+| | 50 % | 0.005 | 0.501 | –99.5 % |
+| **Punctuation noise** | 50 % | 0.089 | 0.056 | –90.8 % |
+| | 100 % | 0.009 | 0.111 | –99.0 % |
+| **Sentence‑middle swap** (swap left/right part) | 1 sentence | 0.693 | 0.072 | –28.6 % |
+| | 2 sentences | 0.292 | 0.134 | –69.9 % |
+| | 3 sentences | 0.106 | 0.191 | –89.1 % |
+| **Preposition removal** | 40 % | 0.868 | 0.057 | –10.6 % |
+| | 70 % | 0.446 | 0.100 | –54.1 % |
+| | 100 % | 0.085 | 0.142 | –91.2 % |
+| **Stop‑word removal** | 10 % | 0.905 | 0.049 | –6.7 % |
+| | 20 % | 0.601 | 0.097 | –38.1 % |
+| | 30 % | 0.192 | 0.146 | –80.2 % |
+| | 40 % | 0.060 | 0.194 | –93.9 % |
+| | 50 % | 0.027 | 0.242 | –97.2 % |
+| | 60 % | 0.020 | 0.290 | –98.0 % |
+| **Random word swap** | 5 % | 0.343 | 0.047 | –64.7 % |
+| | 15 % | 0.012 | 0.109 | –98.7 % |
+| | 30 % | 0.005 | 0.164 | –99.4 % |
+| | 60 % | 0.005 | 0.216 | –99.5 % |
+| **Truncate (remove words at end)** | 10 % | 0.795 | 0.103 | –18.1 % |
+| | 20 % | 0.701 | 0.203 | –27.8 % |
+| | 30 % | 0.526 | 0.303 | –45.8 % |
+| | 40 % | 0.349 | 0.403 | –64.1 % |
+| | 50 % | 0.170 | 0.504 | –82.5 % |
+| **Article removal** | 50 % | 0.910 | 0.053 | –6.2 % |
+| | 100 % | 0.444 | 0.105 | –54.3 % |
+| **Random token repetition** | 5 % | 0.761 | 0.053 | –21.6 % |
+| | 10 % | 0.186 | 0.103 | –80.8 % |
+| | 15 % | 0.032 | 0.153 | –96.7 % |
+| | 20 % | 0.011 | 0.202 | –98.9 % |
+| | 25 % | 0.007 | 0.252 | –99.2 % |
+| | 30 % | 0.006 | 0.303 | –99.4 % |
+| | 35 % | 0.006 | 0.353 | –99.4 % |
+| | 40 % | 0.005 | 0.402 | –99.5 % |
+| | 45 % | 0.005 | 0.453 | –99.5 % |
+| | 50 % | 0.005 | 0.501 | –99.5 % |
+
+*Gold (unperturbed) score for all tests: 0.971 (change 0 %).*  
+
+---
+
+## 1. Sensitivity to the Perturbation  
+
+| Perturbation type | Monotonous decrease | Superlinear decrease | Change‑rate |
+|-------------------|---------------------|----------------------|-------------|
+| Verb lemmatization | yes | yes | high |
+| Word removal | yes | no | high |
+| Punctuation noise | yes | no | high |
+| Sentence‑middle swap | yes | no | high |
+| Preposition removal | yes | no | high |
+| Stop‑word removal | yes | no | high |
+| Random word swap | yes | no | high |
+| Truncate (end‑word removal) | yes | no | high |
+| Article removal | yes | yes | low |
+| Random token repetition | yes | no | high |
+
+*Explanation of attributes*  
+
+- **Monotonous decrease**: the MAUVE score consistently falls as the variation level rises.  
+- **Superlinear decrease**: the magnitude of the score drop grows with each successive increase in variation. Only verb lemmatization and article removal show this pattern.  
+- **Change‑rate**: determined by the largest absolute percentage drop within the test. All tests except article removal exhibit drops ≥ ‑74 % (classified as **high**); article removal’s largest drop (‑54 %) falls into the **low** category per the given thresholds.  
+
+---
+
+## 2. Suitability of mauve‑roberta‑large for open‑ended text generation  
+
+A metric is recommended only when **most (> 7) perturbation tests** display both a **high change‑rate** *and* a **superlinear decrease**.  
+
+- Tests with high change‑rate: 9 out of 10.  
+- Tests with superlinear decrease: only 2 (verb lemmatization, article removal).  
+
+Since fewer than 7 tests satisfy **both** conditions, **mauve‑roberta‑large is *not* recommended** as a reliable substitute for human evaluation of open‑ended text generation.

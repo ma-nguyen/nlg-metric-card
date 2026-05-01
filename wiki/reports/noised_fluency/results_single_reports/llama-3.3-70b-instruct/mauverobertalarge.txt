@@ -1,0 +1,69 @@
+# mauve-roberta-large
+
+## Table
+| Perturbation Type | Variation | MAUVE Score | Edit Ratio | Change |
+| --- | --- | --- | --- | --- |
+| Unperturbed | 0 | 0.971 | 0.000 | 0.0% |
+| Verb Lemmatization | 50% | 0.865 | 0.045 | -10.9% |
+| Verb Lemmatization | 100% | 0.244 | 0.090 | -74.9% |
+| Word Removal | 5% | 0.710 | 0.053 | -26.9% |
+| Word Removal | 10% | 0.231 | 0.103 | -76.2% |
+| Word Removal | 15% | 0.052 | 0.153 | -94.7% |
+| Word Removal | 20% | 0.021 | 0.202 | -97.8% |
+| Word Removal | 25% | 0.011 | 0.252 | -98.9% |
+| Word Removal | 30% | 0.007 | 0.303 | -99.2% |
+| Word Removal | 35% | 0.006 | 0.353 | -99.3% |
+| Word Removal | 40% | 0.006 | 0.402 | -99.4% |
+| Word Removal | 45% | 0.005 | 0.453 | -99.5% |
+| Word Removal | 50% | 0.005 | 0.501 | -99.5% |
+| Punctuation Noise | 50% | 0.089 | 0.056 | -90.8% |
+| Punctuation Noise | 100% | 0.009 | 0.111 | -99.0% |
+| Sentence Middle Swap | 1 sentence | 0.693 | 0.072 | -28.6% |
+| Sentence Middle Swap | 2 sentences | 0.292 | 0.134 | -69.9% |
+| Sentence Middle Swap | 3 sentences | 0.106 | 0.191 | -89.1% |
+| Preposition Removal | 40% | 0.868 | 0.057 | -10.6% |
+| Preposition Removal | 70% | 0.446 | 0.100 | -54.1% |
+| Preposition Removal | 100% | 0.085 | 0.142 | -91.2% |
+| Stopword Removal | 10% | 0.905 | 0.049 | -6.7% |
+| Stopword Removal | 20% | 0.601 | 0.097 | -38.1% |
+| Stopword Removal | 30% | 0.192 | 0.146 | -80.2% |
+| Stopword Removal | 40% | 0.060 | 0.194 | -93.9% |
+| Stopword Removal | 50% | 0.027 | 0.242 | -97.2% |
+| Stopword Removal | 60% | 0.020 | 0.290 | -98.0% |
+| Word Swap | 5% | 0.343 | 0.047 | -64.7% |
+| Word Swap | 15% | 0.012 | 0.109 | -98.7% |
+| Word Swap | 30% | 0.005 | 0.164 | -99.4% |
+| Word Swap | 60% | 0.005 | 0.216 | -99.5% |
+| Truncation | 10% | 0.795 | 0.103 | -18.1% |
+| Truncation | 20% | 0.701 | 0.203 | -27.8% |
+| Truncation | 30% | 0.526 | 0.303 | -45.8% |
+| Truncation | 40% | 0.349 | 0.403 | -64.1% |
+| Truncation | 50% | 0.170 | 0.504 | -82.5% |
+| Article Removal | 50% | 0.910 | 0.053 | -6.2% |
+| Article Removal | 100% | 0.444 | 0.105 | -54.3% |
+| Word Repeat | 5% | 0.761 | 0.053 | -21.6% |
+| Word Repeat | 10% | 0.186 | 0.103 | -80.8% |
+| Word Repeat | 15% | 0.032 | 0.153 | -96.7% |
+| Word Repeat | 20% | 0.011 | 0.202 | -98.9% |
+| Word Repeat | 25% | 0.007 | 0.252 | -99.2% |
+| Word Repeat | 30% | 0.006 | 0.303 | -99.4% |
+| Word Repeat | 35% | 0.006 | 0.353 | -99.4% |
+| Word Repeat | 40% | 0.005 | 0.402 | -99.5% |
+| Word Repeat | 45% | 0.005 | 0.453 | -99.5% |
+| Word Repeat | 50% | 0.005 | 0.501 | -99.5% |
+
+## 1. Sensitivity to the Perturbation
+The sensitivity of mauve-roberta-large to each perturbation type is analyzed as follows:
+- Verb Lemmatization: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+- Word Removal: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+- Punctuation Noise: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+- Sentence Middle Swap: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+- Preposition Removal: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+- Stopword Removal: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+- Word Swap: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+- Truncation: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+- Article Removal: monotonous decrease - yes, superlinear decrease - yes, change rate - moderate
+- Word Repeat: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+
+## 2. Suitability of mauve-roberta-large for open-ended text generation
+Based on the analysis, mauve-roberta-large is recommended for the evaluation of open-ended text generation, as most perturbation tests have a high change rate and superlinear decrease.

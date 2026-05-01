@@ -1,0 +1,18 @@
+Bertscore-f
+
+{Table}
+| Summary Type | Score | Change |
+| --- | --- | --- |
+| Gold Summary | 0.223645 | - |
+| Injection 1 | 0.000873 | (0.000873-0.223645)/abs(0.223645)*100 = -99.61% |
+| Injection 2 | -0.015646 | (-0.015646-0.223645)/abs(0.223645)*100 = -107.01% |
+
+1. Sensitivity to the Perturbation
+    a. No, none of the perturbed outputs scored higher than the gold output. Both injections had lower scores than the gold summary.
+    b. No, the scores were not similar for every injection. The scores for Injection 1 and Injection 2 were significantly different, with Injection 1 having a score close to 0 and Injection 2 having a negative score.
+
+2. Suitability of Bertscore-f for Summarization
+    a. Strengths: The metric had a very high change rate for both injections, with a change of -99.61% for Injection 1 and -107.01% for Injection 2. This indicates that the metric is effective in detecting non-summary injections.
+    b. Weaknesses: None of the injections had a low change rate, but the metric's behavior for Injection 2, which had a negative score, may be considered unusual.
+    c. Recommendation: Yes, the metric could detect every injection (non-summary) by having a high change rate or higher.
+    d. Additionally, the metric's ability to handle different types of injections and its sensitivity to perturbations are strengths. However, the metric's behavior for certain types of inputs, such as Injection 2, may need further investigation to ensure that it is consistent and reliable. Overall, the results suggest that Bertscore-f is a suitable metric for evaluating summarization tasks, but as with any metric, it is not perfect and may still fail to fully substitute human evaluation in certain cases.

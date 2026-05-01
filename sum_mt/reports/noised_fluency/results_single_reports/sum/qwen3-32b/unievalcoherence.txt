@@ -1,0 +1,82 @@
+# unieval_coherence
+
+## Table
+
+| Perturbation Type         | Monotonous Decrease | Superlinear Decrease | Change Rate |
+|---------------------------|---------------------|----------------------|-------------|
+| Verb Lemmatization        | yes                 | no                   | low         |
+| Word Removal              | yes                 | yes                  | high        |
+| Punctuation Noise         | yes                 | no                   | low         |
+| Sentence Swap (SVO)       | yes                 | yes                  | high        |
+| Preposition Removal       | yes                 | yes                  | low         |
+| Stop-word Removal         | yes                 | yes                  | moderate    |
+| Word Swap                 | yes                 | yes                  | high        |
+| Truncation (End Words)    | yes                 | no                   | moderate    |
+| Article Removal           | yes                 | no                   | low         |
+| Word Repetition           | yes                 | yes                  | high        |
+
+## 1. Sensitivity to the Perturbation
+
+**Verb Lemmatization**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: no  
+- **Change rate**: low  
+
+**Word Removal**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes  
+- **Change rate**: high  
+
+**Punctuation Noise**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: no  
+- **Change rate**: low  
+
+**Sentence Swap (SVO)**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes  
+- **Change rate**: high  
+
+**Preposition Removal**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes  
+- **Change rate**: low  
+
+**Stop-word Removal**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes  
+- **Change rate**: moderate  
+
+**Word Swap**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes  
+- **Change rate**: high  
+
+**Truncation (End Words)**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: no  
+- **Change rate**: moderate  
+
+**Article Removal**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: no  
+- **Change rate**: low  
+
+**Word Repetition**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes  
+- **Change rate**: high  
+
+---
+
+## 2. Suitability of unieval_coherence for summarization
+
+**Recommendation**: **Not recommended**  
+
+**Analysis**:  
+- **High change rate and superlinear decrease**: 4/10 perturbation tests (Word Removal, Sentence Swap, Word Swap, Word Repetition).  
+- **Moderate change rate and superlinear decrease**: 1/10 (Stop-word Removal).  
+- **Low change rate and superlinear decrease**: 1/10 (Preposition Removal).  
+- **No superlinear decrease**: 4/10 (Verb Lemmatization, Punctuation Noise, Truncation, Article Removal).  
+
+The metric fails to meet the threshold of >7 perturbation tests with high change rate and superlinear decrease. While it shows sensitivity in some critical perturbations (e.g., Word Removal, Sentence Swap), its inconsistent response to others (e.g., minimal penalty for article removal) and lack of superlinear behavior in most cases indicate it does not fully align with human evaluation expectations.

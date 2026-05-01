@@ -1,0 +1,365 @@
+# bert_score_f  
+
+| Perturbation Type | Variation | Score | Change (%) |  
+|--------------------|-----------|-------|------------|  
+| Verb Lemmatization | 0.000     | 0.545 | 0.0%       |  
+|                    | 0.500     | 0.527 | -3.3%      |  
+|                    | 1.000     | 0.511 | -6.3%      |  
+| Random Word Drop   | 0.000     | 0.545 | 0.0%       |  
+|                    | 0.050     | 0.494 | -9.4%      |  
+|                    | 0.100     | 0.451 | -17.3%     |  
+|                    | 0.150     | 0.404 | -25.9%     |  
+|                    | 0.200     | 0.364 | -33.3%     |  
+|                    | 0.250     | 0.321 | -41.0%     |  
+|                    | 0.300     | 0.274 | -49.7%     |  
+|                    | 0.350     | 0.235 | -56.8%     |  
+|                    | 0.400     | 0.195 | -64.3%     |  
+|                    | 0.450     | 0.154 | -71.8%     |  
+|                    | 0.550     | 0.078 | -85.6%     |  
+| Noise Punctuation  | 0.000     | 0.545 | 0.0%       |  
+|                    | 0.500     | 0.491 | -9.9%      |  
+|                    | 1.000     | 0.441 | -19.2%     |  
+| Sentence Middle Swap | 0.000  | 0.545 | 0.0%       |  
+|                    | 0.500     | 0.508 | -6.8%      |  
+| Remove Prepositions | 0.000    | 0.545 | 0.0%       |  
+|                    | 0.400     | 0.518 | -4.9%      |  
+|                    | 0.700     | 0.499 | -8.5%      |  
+|                    | 1.000     | 0.477 | -12.4%     |  
+| Remove Stop Words  | 0.000     | 0.545 | 0.0%       |  
+|                    | 0.100     | 0.506 | -7.1%      |  
+|                    | 0.200     | 0.471 | -13.6%     |  
+|                    | 0.300     | 0.435 | -20.1%     |  
+|                    | 0.400     | 0.399 | -26.9%     |  
+|                    | 0.500     | 0.362 | -33.6%     |  
+|                    | 0.600     | 0.329 | -39.7%     |  
+| Random Word Swap   | 0.000     | 0.545 | 0.0%       |  
+|                    | 0.050     | 0.473 | -13.2%     |  
+|                    | 0.150     | 0.390 | -28.4%     |  
+|                    | 0.300     | 0.311 | -42.9%     |  
+|                    | 0.600     | 0.223 | -59.1%     |  
+| Truncate (End)     | 0.000     | 0.545 | 0.0%       |  
+|                    | 0.100     | 0.513 | -5.9%      |  
+|                    | 0.200     | 0.488 | -10.5%     |  
+|                    | 0.300     | 0.464 | -14.9%     |  
+|                    | 0.400     | 0.434 | -20.4%     |  
+|                    | 0.500     | 0.399 | -26.8%     |  
+| Remove Articles    | 0.000     | 0.545 | 0.0%       |  
+|                    | 0.500     | 0.529 | -2.9%      |  
+|                    | 1.000     | 0.513 | -5.8%      |  
+| Random Token Repetition | 0.000 | 0.545 | 0.0%       |  
+|                    | 0.050     | 0.504 | -7.5%      |  
+|                    | 0.100     | 0.472 | -13.5%     |  
+|                    | 0.150     | 0.439 | -19.5%     |  
+|                    | 0.200     | 0.409 | -25.0%     |  
+|                    | 0.250     | 0.378 | -30.7%     |  
+|                    | 0.300     | 0.350 | -35.8%     |  
+|                    | 0.350     | 0.324 | -40.6%     |  
+|                    | 0.400     | 0.298 | -45.3%     |  
+|                    | 0.450     | 0.274 | -49.7%     |  
+|                    | 0.550     | 0.229 | -58.0%     |  
+
+## Sensitivity to the Perturbation  
+
+| Perturbation Type       | Monotonous Decrease | Superlinear Decrease | Change Rate |  
+|-------------------------|---------------------|----------------------|-------------|  
+| Verb Lemmatization      | yes                 | no                   | moderate    |  
+| Random Word Drop        | yes                 | yes                  | high        |  
+| Noise Punctuation       | yes                 | no                   | moderate    |  
+| Sentence Middle Swap    | yes                 | no                   | low         |  
+| Remove Prepositions     | yes                 | no                   | low         |  
+| Remove Stop Words       | yes                 | no                   | moderate    |  
+| Random Word Swap        | yes                 | yes                  | high        |  
+| Truncate (End)          | yes                 | no                   | low         |  
+| Remove Articles         | yes                 | no                   | low         |  
+| Random Token Repetition | yes                 | no                   | moderate    |  
+
+## Recommendation  
+
+| Perturbation Type       | Recommended Metric |  
+|-------------------------|--------------------|  
+| Verb Lemmatization      | none               |  
+| Random Word Drop        | bert_score_f       |  
+| Noise Punctuation       | none               |  
+| Sentence Middle Swap    | none               |  
+| Remove Prepositions     | none               |  
+| Remove Stop Words       | none               |  
+| Random Word Swap        | bert_score_f       |  
+| Truncate (End)          | none               |  
+| Remove Articles         | none               |  
+| Random Token Repetition | none               |  
+
+---  
+
+# bart_score  
+
+| Perturbation Type | Variation | Score | Change (%) |  
+|--------------------|-----------|-------|------------|  
+| Verb Lemmatization | 0.000     | -3.734 | 0.0%       |  
+|                    | 0.500     | -3.826 | -2.4%      |  
+|                    | 1.000     | -3.914 | -4.8%      |  
+| Random Word Drop   | 0.000     | -3.734 | 0.0%       |  
+|                    | 0.050     | -3.956 | -5.9%      |  
+|                    | 0.100     | -4.171 | -11.7%     |  
+|                    | 0.150     | -4.413 | -18.2%     |  
+|                    | 0.200     | -4.657 | -24.7%     |  
+|                    | 0.250     | -4.925 | -31.9%     |  
+|                    | 0.300     | -5.253 | -40.7%     |  
+|                    | 0.350     | -5.572 | -49.2%     |  
+|                    | 0.400     | -5.923 | -58.6%     |  
+|                    | 0.450     | -6.316 | -69.1%     |  
+|                    | 0.550     | -7.084 | -89.7%     |  
+| Noise Punctuation  | 0.000     | -3.734 | 0.0%       |  
+|                    | 0.500     | -4.052 | -8.5%      |  
+|                    | 1.000     | -4.299 | -15.1%     |  
+| Sentence Middle Swap | 0.000    | -3.734 | 0.0%       |  
+|                    | 0.500     | -3.857 | -3.3%      |  
+| Remove Prepositions | 0.000    | -3.734 | 0.0%       |  
+|                    | 0.400     | -3.892 | -4.2%      |  
+|                    | 0.700     | -4.036 | -8.1%      |  
+|                    | 1.000     | -4.203 | -12.6%     |  
+| Remove Stop Words  | 0.000     | -3.734 | 0.0%       |  
+|                    | 0.100     | -3.944 | -5.6%      |  
+|                    | 0.200     | -4.183 | -12.0%     |  
+|                    | 0.300     | -4.445 | -19.0%     |  
+|                    | 0.400     | -4.752 | -27.2%     |  
+|                    | 0.500     | -5.083 | -36.1%     |  
+|                    | 0.600     | -5.453 | -46.0%     |  
+| Random Word Swap   | 0.000     | -3.734 | 0.0%       |  
+|                    | 0.050     | -4.126 | -10.5%     |  
+|                    | 0.150     | -4.641 | -24.3%     |  
+|                    | 0.300     | -5.153 | -38.0%     |  
+|                    | 0.600     | -5.624 | -50.6%     |  
+| Truncate (End)     | 0.000     | -3.734 | 0.0%       |  
+|                    | 0.100     | -3.843 | -2.9%      |  
+|                    | 0.200     | -4.048 | -8.4%      |  
+|                    | 0.300     | -4.413 | -18.2%     |  
+|                    | 0.400     | -4.987 | -33.5%     |  
+|                    | 0.500     | -5.779 | -54.7%     |  
+| Remove Articles    | 0.000     | -3.734 | 0.0%       |  
+|                    | 0.500     | -3.869 | -3.6%      |  
+|                    | 1.000     | -4.036 | -8.1%      |  
+| Random Token Repetition | 0.000 | -3.734 | 0.0%       |  
+|                    | 0.050     | -3.921 | -5.0%      |  
+|                    | 0.100     | -4.106 | -9.9%      |  
+|                    | 0.150     | -4.295 | -15.0%     |  
+|                    | 0.200     | -4.477 | -19.9%     |  
+|                    | 0.250     | -4.643 | -24.3%     |  
+|                    | 0.300     | -4.845 | -29.7%     |  
+|                    | 0.350     | -4.999 | -33.9%     |  
+|                    | 0.400     | -5.160 | -38.2%     |  
+|                    | 0.450     | -5.349 | -43.2%     |  
+|                    | 0.550     | -5.660 | -51.6%     |  
+
+## Sensitivity to the Perturbation  
+
+| Perturbation Type       | Monotonous Decrease | Superlinear Decrease | Change Rate |  
+|-------------------------|---------------------|----------------------|-------------|  
+| Verb Lemmatization      | yes                 | no                   | low         |  
+| Random Word Drop        | yes                 | yes                  | high        |  
+| Noise Punctuation       | yes                 | no                   | moderate    |  
+| Sentence Middle Swap    | yes                 | no                   | low         |  
+| Remove Prepositions     | yes                 | no                   | low         |  
+| Remove Stop Words       | yes                 | yes                  | high        |  
+| Random Word Swap        | yes                 | yes                  | high        |  
+| Truncate (End)          | yes                 | yes                  | high        |  
+| Remove Articles         | yes                 | no                   | low         |  
+| Random Token Repetition | yes                 | no                   | moderate    |  
+
+## Recommendation  
+
+| Perturbation Type       | Recommended Metric |  
+|-------------------------|--------------------|  
+| Verb Lemmatization      | none               |  
+| Random Word Drop        | bart_score         |  
+| Noise Punctuation       | none               |  
+| Sentence Middle Swap    | none               |  
+| Remove Prepositions     | none               |  
+| Remove Stop Words       | bart_score         |  
+| Random Word Swap        | bart_score         |  
+| Truncate (End)          | bart_score         |  
+| Remove Articles         | none               |  
+| Random Token Repetition | none               |  
+
+---  
+
+# bleu  
+
+| Perturbation Type | Variation | Score | Change (%) |  
+|--------------------|-----------|-------|------------|  
+| Verb Lemmatization | 0.000     | 23.819 | 0.0%       |  
+|                    | 0.500     | 22.931 | -3.7%      |  
+|                    | 1.000     | 22.109 | -7.2%      |  
+| Random Word Drop   | 0.000     | 23.819 | 0.0%       |  
+|                    | 0.050     | 22.030 | -7.5%      |  
+|                    | 0.100     | 20.464 | -14.1%     |  
+|                    | 0.150     | 18.516 | -22.3%     |  
+|                    | 0.200     | 16.363 | -31.3%     |  
+|                    | 0.250     | 14.576 | -38.8%     |  
+|                    | 0.300     | 12.514 | -47.5%     |  
+|                    | 0.350     | 10.695 | -55.1%     |  
+|                    | 0.400     | 8.852  | -62.8%     |  
+|                    | 0.450     | 7.237  | -69.6%     |  
+|                    | 0.550     | 4.490  | -81.1%     |  
+| Noise Punctuation  | 0.000     | 23.819 | 0.0%       |  
+|                    | 0.500     | 20.301 | -14.8%     |  
+|                    | 1.000     | 16.707 | -29.9%     |  
+| Sentence Middle Swap | 0.000    | 23.819 | 0.0%       |  
+|                    | 0.500     | 22.652 | -4.9%      |  
+| Remove Prepositions | 0.000    | 23.819 | 0.0%       |  
+|                    | 0.400     | 22.719 | -4.6%      |  
+|                    | 0.700     | 21.570 | -9.4%      |  
+|                    | 1.000     | 20.436 | -14.2%     |  
+| Remove Stop Words  | 0.000     | 23.819 | 0.0%       |  
+|                    | 0.100     | 22.147 | -7.0%      |  
+|                    | 0.200     | 20.180 | -15.3%     |  
+|                    | 0.300     | 17.984 | -24.5%     |  
+|                    | 0.400     | 15.478 | -35.0%     |  
+|                    | 0.500     | 13.032 | -45.3%     |  
+|                    | 0.600     | 10.837 | -54.5%     |  
+| Random Word Swap   | 0.000     | 23.819 | 0.0%       |  
+|                    | 0.050     | 21.053 | -11.6%     |  
+|                    | 0.150     | 17.473 | -26.6%     |  
+|                    | 0.300     | 14.252 | -40.2%     |  
+|                    | 0.600     | 10.748 | -54.9%     |  
+| Truncate (End)     | 0.000     | 23.819 | 0.0%       |  
+|                    | 0.100     | 23.151 | -2.8%      |  
+|                    | 0.200     | 20.975 | -11.9%     |  
+|                    | 0.300     | 18.239 | -23.4%     |  
+|                    | 0.400     | 14.770 | -38.0%     |  
+|                    | 0.500     | 10.536 | -55.8%     |  
+| Remove Articles    | 0.000     | 23.819 | 0.0%       |  
+|                    | 0.500     | 22.288 | -6.4%      |  
+|                    | 1.000     | 20.621 | -13.4%     |  
+| Random Token Repetition | 0.000 | 23.819 | 0.0%       |  
+|                    | 0.050     | 22.217 | -6.7%      |  
+|                    | 0.100     | 20.915 | -12.2%     |  
+|                    | 0.150     | 19.675 | -17.4%     |  
+|                    | 0.200     | 18.590 | -22.0%     |  
+|                    | 0.250     | 17.599 | -26.1%     |  
+|                    | 0.300     | 16.537 | -30.6%     |  
+|                    | 0.350     | 15.827 | -33.6%     |  
+|                    | 0.400     | 14.962 | -37.2%     |  
+|                    | 0.450     | 14.360 | -39.7%     |  
+|                    | 0.550     | 13.131 | -44.9%     |  
+
+## Sensitivity to the Perturbation  
+
+| Perturbation Type       | Monotonous Decrease | Superlinear Decrease | Change Rate |  
+|-------------------------|---------------------|----------------------|-------------|  
+| Verb Lemmatization      | yes                 | no                   | low         |  
+| Random Word Drop        | yes                 | yes                  | high        |  
+| Noise Punctuation       | yes                 | yes                  | high        |  
+| Sentence Middle Swap    | yes                 | no                   | low         |  
+| Remove Prepositions     | yes                 | no                   | low         |  
+| Remove Stop Words       | yes                 | yes                  | high        |  
+| Random Word Swap        | yes                 | yes                  | high        |  
+| Truncate (End)          | yes                 | yes                  | high        |  
+| Remove Articles         | yes                 | no                   | low         |  
+| Random Token Repetition | yes                 | no                   | moderate    |  
+
+## Recommendation  
+
+| Perturbation Type       | Recommended Metric |  
+|-------------------------|--------------------|  
+| Verb Lemmatization      | none               |  
+| Random Word Drop        | bleu               |  
+| Noise Punctuation       | bleu               |  
+| Sentence Middle Swap    | none               |  
+| Remove Prepositions     | none               |  
+| Remove Stop Words       | bleu               |  
+| Random Word Swap        | bleu               |  
+| Truncate (End)          | bleu               |  
+| Remove Articles         | none               |  
+| Random Token Repetition | none               |  
+
+---  
+
+# bleurt  
+
+| Perturbation Type | Variation | Score | Change (%) |  
+|--------------------|-----------|-------|------------|  
+| Verb Lemmatization | 0.000     | -0.104 | 0.0%       |  
+|                    | 0.500     | -0.156 | -49.9%     |  
+|                    | 1.000     | -0.205 | -96.2%     |  
+| Random Word Drop   | 0.000     | -0.104 | 0.0%       |  
+|                    | 0.050     | -0.213 | -104.6%    |  
+|                    | 0.100     | -0.309 | -196.6%    |  
+|                    | 0.150     | -0.415 | -297.5%    |  
+|                    | 0.200     | -0.493 | -372.8%    |  
+|                    | 0.250     | -0.591 | -466.9%    |  
+|                    | 0.300     | -0.692 | -563.4%    |  
+|                    | 0.350     | -0.767 | -635.8%    |  
+|                    | 0.400     | -0.851 | -716.4%    |  
+|                    | 0.450     | -0.924 | -785.8%    |  
+|                    | 0.550     | -1.069 | -925.0%    |  
+| Noise Punctuation  | 0.000     | -0.104 | 0.0%       |  
+|                    | 0.500     | -0.144 | -37.7%     |  
+|                    | 1.000     | -0.174 | -67.1%     |  
+| Sentence Middle Swap | 0.000    | -0.104 | 0.0%       |  
+|                    | 0.500     | -0.156 | -49.2%     |  
+| Remove Prepositions | 0.000    | -0.104 | 0.0%       |  
+|                    | 0.400     | -0.167 | -60.3%     |  
+|                    | 0.700     | -0.215 | -106.6%    |  
+|                    | 1.000     | -0.275 | -163.5%    |  
+| Remove Stop Words  | 0.000     | -0.104 | 0.0%       |  
+|                    | 0.100     | -0.187 | -79.7%     |  
+|                    | 0.200     | -0.269 | -157.9%    |  
+|                    | 0.300     | -0.356 | -241.6%    |  
+|                    | 0.400     | -0.444 | -326.2%    |  
+|                    | 0.500     | -0.525 | -403.1%    |  
+|                    | 0.600     | -0.595 | -470.3%    |  
+| Random Word Swap   | 0.000     | -0.104 | 0.0%       |  
+|                    | 0.050     | -0.295 | -182.8%    |  
+|                    | 0.150     | -0.509 | -388.1%    |  
+|                    | 0.300     | -0.691 | -562.8%    |  
+|                    | 0.600     | -0.833 | -698.4%    |  
+| Truncate (End)     | 0.000     | -0.104 | 0.0%       |  
+|                    | 0.100     | -0.159 | -52.1%     |  
+|                    | 0.200     | -0.179 | -71.8%     |  
+|                    | 0.300     | -0.212 | -103.4%    |  
+|                    | 0.400     | -0.289 | -177.5%    |  
+|                    | 0.500     | -0.357 | -242.2%    |  
+| Remove Articles    | 0.000     | -0.104 | 0.0%       |  
+|                    | 0.500     | -0.132 | -26.6%     |  
+|                    | 1.000     | -0.167 | -60.3%     |  
+| Random Token Repetition | 0.000 | -0.104 | 0.0%       |  
+|                    | 0.050     | -0.191 | -83.1%     |  
+|                    | 0.100     | -0.255 | -145.0%    |  
+|                    | 0.150     | -0.317 | -203.5%    |  
+|                    | 0.200     | -0.371 | -256.0%    |  
+|                    | 0.250     | -0.426 | -308.4%    |  
+|                    | 0.300     | -0.474 | -354.4%    |  
+|                    | 0.350     | -0.526 | -404.8%    |  
+|                    | 0.400     | -0.566 | -442.9%    |  
+|                    | 0.450     | -0.612 | -486.5%    |  
+|                    | 0.550     | -0.677 | -548.9%    |  
+
+## Sensitivity to the Perturbation  
+
+| Perturbation Type       | Monotonous Decrease | Superlinear Decrease | Change Rate |  
+|-------------------------|---------------------|----------------------|-------------|  
+| Verb Lemmatization      | yes                 | yes                  | high        |  
+| Random Word Drop        | yes                 | yes                  | high        |  
+| Noise Punctuation       | yes                 | yes                  | high        |  
+| Sentence Middle Swap    | yes                 | yes                  | high        |  
+| Remove Prepositions     | yes                 | yes                  | high        |  
+| Remove Stop Words       | yes                 | yes                  | high        |  
+| Random Word Swap        | yes                 | yes                  | high        |  
+| Truncate (End)          | yes                 | yes                  | high        |  
+| Remove Articles         | yes                 | no                   | moderate    |  
+| Random Token Repetition | yes                 | yes                  | high        |  
+
+## Recommendation  
+
+| Perturbation Type       | Recommended Metric |  
+|-------------------------|--------------------|  
+| Verb Lemmatization      | bleurt             |  
+| Random Word Drop        | bleurt             |  
+| Noise Punctuation       | bleurt             |  
+| Sentence Middle Swap    | bleurt             |  
+| Remove Prepositions     | bleurt             |  
+| Remove Stop Words       | bleurt             |  
+| Random Word Swap        | bleurt             |  
+| Truncate (End)          | bleurt             |  
+| Remove Articles         | none               |  
+| Random Token Repetition | bleurt             |

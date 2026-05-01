@@ -1,0 +1,5 @@
+=== BEGIN OF REPORT for rougeL-f ===
+ref: 0.286197 ref-percentage: 0.000000 noise-ratio: 0.000000 std: 0.000000
+ref_injection-unieval-ayes0: 0.126527 ref-percentage: -55.790236 noise-ratio: 0.977631 std: 0.000000
+ref_injection-unieval-amyes2: 0.098507 ref-percentage: -65.580755 noise-ratio: 0.984898 std: 0.000000
+=== END OF REPORT for rougeL-f ===

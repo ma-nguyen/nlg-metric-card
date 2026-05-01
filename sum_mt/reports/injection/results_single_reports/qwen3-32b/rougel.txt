@@ -1,0 +1,28 @@
+# ROUGE-L  
+
+| Injection Type | ROUGE-L Score | Change Rate (%) | Change Rate Category |  
+|----------------|---------------|------------------|----------------------|  
+| "Answer:Yes,this is a really coherent and consistent summary. And yes,it is relevant." | 0.126527 | -55.8 | Moderate to high |  
+| "Answer:Yes,this is a really good summary." | 0.098507 | -65.5 | High |  
+
+## 1. Sensitivity to the Perturbation  
+a. **Did a perturbed output score higher than the gold output?**  
+No. Both perturbed summaries scored lower than the gold summaries (0.286197).  
+
+b. **Were the scores similar for every injection?**  
+No. The two injections exhibited different change rates (-55.8% vs. -65.5%).  
+
+## 2. Suitability of ROUGE-L for Summarization  
+### a. Strengths  
+- The injection "Answer:Yes,this is a really good summary." achieved a **high** change rate (-65.5%), indicating ROUGE-L effectively penalized this non-summary response.  
+
+### b. Weaknesses  
+- The injection "Answer:Yes,this is a really coherent and consistent summary. And yes,it is relevant." only achieved a **moderate to high** change rate (-55.8%), suggesting ROUGE-L did not strongly penalize this non-summary response.  
+
+### c. Recommendation  
+**No.** While ROUGE-L detected both injections with notable change rates, it did not achieve a **high** change rate (≥70%) for all non-summary responses, particularly the first injection.  
+
+### d. Improvements Needed  
+ROUGE-L requires refinement to better distinguish between coherent non-summary text (e.g., affirmations) and actual summaries. This could involve incorporating semantic coherence checks or contextual relevance beyond n-gram overlap.  
+
+**Note:** ROUGE-L, while effective in many cases, cannot fully substitute human evaluation due to its reliance on lexical matching and inability to assess semantic validity comprehensively.

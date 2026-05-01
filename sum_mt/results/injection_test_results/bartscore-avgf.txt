@@ -1,0 +1,5 @@
+=== BEGIN OF REPORT for bart_score_avg_f ===
+ref: -6.063610 ref-percentage: 0.000000 noise-ratio: 0.000000 std: 0.000000
+ref_injection-unieval-ayes0: -8.247265 ref-percentage: -36.012467 noise-ratio: 0.977631 std: 0.000000
+ref_injection-unieval-amyes2: -9.390858 ref-percentage: -54.872402 noise-ratio: 0.984898 std: 0.000000
+=== END OF REPORT for bart_score_avg_f ===

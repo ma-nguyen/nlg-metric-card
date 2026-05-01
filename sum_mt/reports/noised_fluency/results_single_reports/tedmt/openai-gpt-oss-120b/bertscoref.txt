@@ -1,0 +1,99 @@
+**bert_score_f**
+
+---
+
+### Table of Results  
+
+| Perturbation Type | Variation (%) | Score | Edit Ratio | Change % |
+|-------------------|---------------|-------|------------|----------|
+| **Verb lemmatization** | 0 (gold) | 0.545 | 0.000 | 0.0 % |
+| | 50 | 0.527 | 0.034 | –3.3 % |
+| | 100 | 0.511 | 0.065 | –6.3 % |
+| **Random word removal** | 0 (gold) | 0.545 | 0.000 | 0.0 % |
+| | 5 | 0.494 | 0.056 | –9.4 % |
+| | 10 | 0.451 | 0.105 | –17.3 % |
+| | 15 | 0.404 | 0.156 | –25.9 % |
+| | 20 | 0.364 | 0.205 | –33.3 % |
+| | 25 | 0.321 | 0.254 | –41.0 % |
+| | 30 | 0.274 | 0.306 | –49.7 % |
+| | 35 | 0.235 | 0.356 | –56.8 % |
+| | 40 | 0.195 | 0.405 | –64.3 % |
+| | 45 | 0.154 | 0.456 | –71.8 % |
+| | 55 | 0.078 | 0.556 | –85.6 % |
+| **Punctuation noise** | 0 (gold) | 0.545 | 0.000 | 0.0 % |
+| | 50 | 0.491 | 0.073 | –9.9 % |
+| | 100 | 0.441 | 0.145 | –19.2 % |
+| **Sentence‑middle swap** | 0 (gold) | 0.545 | 0.000 | 0.0 % |
+| | swap (1) | 0.508 | 0.073 | –6.8 % |
+| **Preposition removal** | 0 (gold) | 0.545 | 0.000 | 0.0 % |
+| | 40 | 0.518 | 0.041 | –4.9 % |
+| | 70 | 0.499 | 0.072 | –8.5 % |
+| | 100 | 0.477 | 0.104 | –12.4 % |
+| **Stop‑word removal** | 0 (gold) | 0.545 | 0.000 | 0.0 % |
+| | 10 | 0.506 | 0.069 | –7.1 % |
+| | 20 | 0.471 | 0.139 | –13.6 % |
+| | 30 | 0.435 | 0.208 | –20.1 % |
+| | 40 | 0.399 | 0.278 | –26.9 % |
+| | 50 | 0.362 | 0.346 | –33.6 % |
+| | 60 | 0.329 | 0.412 | –39.7 % |
+| **Local word swap** | 0 (gold) | 0.545 | 0.000 | 0.0 % |
+| | 5 | 0.473 | 0.050 | –13.2 % |
+| | 15 | 0.390 | 0.111 | –28.4 % |
+| | 30 | 0.311 | 0.165 | –42.9 % |
+| | 60 | 0.223 | 0.217 | –59.1 % |
+| **Truncate (end‑word removal)** | 0 (gold) | 0.545 | 0.000 | 0.0 % |
+| | 10 | 0.513 | 0.105 | –5.9 % |
+| | 20 | 0.488 | 0.206 | –10.5 % |
+| | 30 | 0.464 | 0.305 | –14.9 % |
+| | 40 | 0.434 | 0.406 | –20.4 % |
+| | 50 | 0.399 | 0.508 | –26.8 % |
+| **Article removal** | 0 (gold) | 0.545 | 0.000 | 0.0 % |
+| | 50 | 0.529 | 0.040 | –2.9 % |
+| | 100 | 0.513 | 0.080 | –5.8 % |
+| **Random token repetition** | 0 (gold) | 0.545 | 0.000 | 0.0 % |
+| | 5 | 0.504 | 0.056 | –7.5 % |
+| | 10 | 0.472 | 0.105 | –13.5 % |
+| | 15 | 0.439 | 0.156 | –19.5 % |
+| | 20 | 0.409 | 0.205 | –25.0 % |
+| | 25 | 0.378 | 0.254 | –30.7 % |
+| | 30 | 0.350 | 0.306 | –35.8 % |
+| | 35 | 0.324 | 0.356 | –40.6 % |
+| | 40 | 0.298 | 0.405 | –45.3 % |
+| | 45 | 0.274 | 0.456 | –49.7 % |
+| | 55 | 0.229 | 0.556 | –58.0 % |
+
+---
+
+## 1. Sensitivity to the Perturbation  
+
+| Perturbation | Monotonous decrease | Superlinear decrease | Change rate |
+|--------------|---------------------|----------------------|-------------|
+| Verb lemmatization | yes | no | low |
+| Random word removal | yes | no | high |
+| Punctuation noise | yes | no | low |
+| Sentence‑middle swap | yes | no | low |
+| Preposition removal | yes | no | low |
+| Stop‑word removal | yes | no | moderate |
+| Local word swap | yes | no | moderate |
+| Truncate (end‑word removal) | yes | **yes** | moderate |
+| Article removal | yes | no | low |
+| Random token repetition | yes | no | moderate |
+
+*Notes*  
+- “Monotonous decrease” is **yes** when every higher variation yields a lower score than the preceding one.  
+- “Superlinear decrease” is **yes** only for the truncate test, where the magnitude of score loss grows increasingly with larger truncation.  
+- “Change rate” is classified according to the largest absolute score drop observed for the test:  
+  - **low** ≤ 25 % (e.g., verb lemmatization, punctuation noise)  
+  - **moderate** > 25 % and ≤ 60 % (e.g., stop‑word removal, truncate)  
+  - **high** > 60 % (random word removal).
+
+---
+
+## 2. Suitability of **bert_score_f** for **Machine Translation**
+
+A metric is deemed suitable when **most (> 7) perturbation tests** exhibit a **high change rate** *and* a **superlinear decrease**.  
+
+- Only **one** test (random word removal) shows a high change rate.  
+- Only **one** test (truncate) shows a superlinear decrease.  
+
+Therefore, **bert_score_f is *not* recommended** as a reliable automatic metric for machine‑translation quality assessment.

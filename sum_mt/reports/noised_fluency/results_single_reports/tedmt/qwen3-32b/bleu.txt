@@ -1,0 +1,98 @@
+# BLEU  
+
+| Perturbation Type | Variation | BLEU Score | Edit Ratio | Change (%) |  
+|--------------------|-----------|------------|------------|------------|  
+| Verb Lemmatization | 0.0       | 23.819     | 0.000      | 0.0        |  
+| Verb Lemmatization | 0.5       | 22.931     | 0.034      | -3.7       |  
+| Verb Lemmatization | 1.0       | 22.109     | 0.065      | -7.2       |  
+| Word Removal       | 0.0       | 23.819     | 0.000      | 0.0        |  
+| Word Removal       | 0.05      | 22.030     | 0.056      | -7.5       |  
+| Word Removal       | 0.10      | 20.464     | 0.105      | -14.1      |  
+| Word Removal       | 0.15      | 18.516     | 0.156      | -22.3      |  
+| Word Removal       | 0.20      | 16.363     | 0.205      | -31.3      |  
+| Word Removal       | 0.25      | 14.576     | 0.254      | -38.8      |  
+| Word Removal       | 0.30      | 12.514     | 0.306      | -47.5      |  
+| Word Removal       | 0.35      | 10.695     | 0.356      | -55.1      |  
+| Word Removal       | 0.40      | 8.852      | 0.405      | -62.8      |  
+| Word Removal       | 0.45      | 7.237      | 0.456      | -69.6      |  
+| Word Removal       | 0.55      | 4.490      | 0.556      | -81.1      |  
+| Punctuation Noise  | 0.0       | 23.819     | 0.000      | 0.0        |  
+| Punctuation Noise  | 0.5       | 20.301     | 0.073      | -14.8      |  
+| Punctuation Noise  | 1.0       | 16.707     | 0.145      | -29.9      |  
+| Sentence Middle Swap | 0.0    | 23.819     | 0.000      | 0.0        |  
+| Sentence Middle Swap | 1.0    | 22.652     | 0.073      | -4.9       |  
+| Preposition Removal | 0.0     | 23.819     | 0.000      | 0.0        |  
+| Preposition Removal | 0.4      | 22.719     | 0.041      | -4.6       |  
+| Preposition Removal | 0.7      | 21.570     | 0.072      | -9.4       |  
+| Preposition Removal | 1.0      | 20.436     | 0.104      | -14.2      |  
+| Stop-Word Removal  | 0.0       | 23.819     | 0.000      | 0.0        |  
+| Stop-Word Removal  | 0.10      | 22.147     | 0.069      | -7.0       |  
+| Stop-Word Removal  | 0.20      | 20.180     | 0.139      | -15.3      |  
+| Stop-Word Removal  | 0.30      | 17.984     | 0.208      | -24.5      |  
+| Stop-Word Removal  | 0.40      | 15.478     | 0.278      | -35.0      |  
+| Stop-Word Removal  | 0.50      | 13.032     | 0.346      | -45.3      |  
+| Stop-Word Removal  | 0.60      | 10.837     | 0.412      | -54.5      |  
+| Word Swap          | 0.0       | 23.819     | 0.000      | 0.0        |  
+| Word Swap          | 0.05      | 21.053     | 0.050      | -11.6      |  
+| Word Swap          | 0.15      | 17.473     | 0.111      | -26.6      |  
+| Word Swap          | 0.30      | 14.252     | 0.165      | -40.2      |  
+| Word Swap          | 0.60      | 10.748     | 0.217      | -54.9      |  
+| Truncate End Words | 0.0       | 23.819     | 0.000      | 0.0        |  
+| Truncate End Words | 0.10      | 23.151     | 0.105      | -2.8       |  
+| Truncate End Words | 0.20      | 20.975     | 0.206      | -11.9      |  
+| Truncate End Words | 0.30      | 18.239     | 0.305      | -23.4      |  
+| Truncate End Words | 0.40      | 14.770     | 0.406      | -38.0      |  
+| Truncate End Words | 0.50      | 10.536     | 0.508      | -55.8      |  
+| Article Removal    | 0.0       | 23.819     | 0.000      | 0.0        |  
+| Article Removal    | 0.5       | 22.288     | 0.040      | -6.4       |  
+| Article Removal    | 1.0       | 20.621     | 0.080      | -13.4      |  
+| Word Repetition    | 0.0       | 23.819     | 0.000      | 0.0        |  
+| Word Repetition    | 0.05      | 22.217     | 0.056      | -6.7       |  
+| Word Repetition    | 0.10      | 20.915     | 0.105      | -12.2      |  
+| Word Repetition    | 0.15      | 19.675     | 0.156      | -17.4      |  
+| Word Repetition    | 0.20      | 18.590     | 0.205      | -22.0      |  
+| Word Repetition    | 0.25      | 17.599     | 0.254      | -26.1      |  
+| Word Repetition    | 0.30      | 16.537     | 0.306      | -30.6      |  
+| Word Repetition    | 0.35      | 15.827     | 0.356      | -33.6      |  
+| Word Repetition    | 0.40      | 14.962     | 0.405      | -37.2      |  
+| Word Repetition    | 0.45      | 14.360     | 0.456      | -39.7      |  
+| Word Repetition    | 0.55      | 13.131     | 0.556      | -44.9      |  
+
+---
+
+## 1. Sensitivity to the Perturbation  
+
+| Perturbation Type       | Monotonous Decrease | Superlinear Decrease | Change Rate |  
+|-------------------------|---------------------|----------------------|-------------|  
+| Verb Lemmatization      | yes                 | no                   | low         |  
+| Word Removal            | yes                 | yes                  | high        |  
+| Punctuation Noise       | yes                 | no                   | moderate    |  
+| Sentence Middle Swap    | yes                 | no                   | low         |  
+| Preposition Removal     | yes                 | no                   | low         |  
+| Stop-Word Removal       | yes                 | no                   | moderate    |  
+| Word Swap               | yes                 | no                   | moderate    |  
+| Truncate End Words      | yes                 | yes                  | moderate    |  
+| Article Removal         | yes                 | no                   | low         |  
+| Word Repetition         | yes                 | no                   | moderate    |  
+
+**Analysis**:  
+- **Monotonous Decrease**: All perturbations show a consistent decrease in BLEU scores as variation increases.  
+- **Superlinear Decrease**: Only **Word Removal** and **Truncate End Words** exhibit superlinear decreases (accelerating score drops with higher variation).  
+- **Change Rate**:  
+  - **High**: Word Removal (max drop: -81.1%).  
+  - **Moderate**: Punctuation Noise (-29.9%), Stop-Word Removal (-54.5%), Word Swap (-54.9%), Truncate End Words (-55.8%), Word Repetition (-44.9%).  
+  - **Low**: Verb Lemmatization (-7.2%), Sentence Middle Swap (-4.9%), Preposition Removal (-14.2%), Article Removal (-13.4%).  
+
+---
+
+## 2. Suitability of BLEU for Machine Translation  
+
+**Recommendation**: **Not recommended**.  
+
+**Rationale**:  
+- Only **2/10 perturbations** (Word Removal, Truncate End Words) show **superlinear decreases**, which aligns with human evaluation's disproportionate penalty for severe errors.  
+- **6/10 perturbations** (e.g., Punctuation Noise, Stop-Word Removal) exhibit **moderate change rates**, but lack superlinearity.  
+- **2/10 perturbations** (Verb Lemmatization, Sentence Middle Swap) show **low sensitivity**, failing to reflect human perception of fluency degradation.  
+- While BLEU detects degradation in most cases, its **limited superlinearity** and **inconsistent sensitivity** to critical fluency errors (e.g., word removal, truncation) make it **insufficient as a standalone metric** for machine translation evaluation.  
+
+**Conclusion**: BLEU partially aligns with human evaluation but fails to meet the criteria for robustness and sensitivity required for reliable machine translation assessment.

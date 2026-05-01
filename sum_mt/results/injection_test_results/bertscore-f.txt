@@ -1,0 +1,5 @@
+=== BEGIN OF REPORT for bert_score_f ===
+ref: 0.223645 ref-percentage: 0.000000 noise-ratio: 0.000000 std: 0.000000
+ref_injection-unieval-ayes0: 0.000873 ref-percentage: -99.609527 noise-ratio: 0.977631 std: 0.000000
+ref_injection-unieval-amyes2: -0.015646 ref-percentage: -106.995879 noise-ratio: 0.984898 std: 0.000000
+=== END OF REPORT for bert_score_f ===

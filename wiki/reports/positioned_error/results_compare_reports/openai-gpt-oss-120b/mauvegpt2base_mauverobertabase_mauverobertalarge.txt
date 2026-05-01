@@ -1,0 +1,33 @@
+**MAUVE‑GPT2‑base  MAUVE‑RoBERTa‑Base  MAUVE‑RoBERTa‑Large**  
+
+---
+
+### Table  
+
+| Metric | Ref. Score | Shuff Beg. | Δ Shuff Beg. (%) | Shuff Mid. | Δ Shuff Mid. (%) | Shuff End. | Δ Shuff End. (%) | Rand Beg. | Δ Rand Beg. (%) | Rand Mid. | Δ Rand Mid. (%) | Rand End. | Δ Rand End. (%) |
+|--------|------------|------------|------------------|------------|------------------|------------|------------------|-----------|------------------|-----------|------------------|-----------|------------------|
+| **MAUVE‑GPT2‑base** | 0.948 | 0.546 | **‑42.4 %** (low‑to‑moderate) | 0.821 | **‑13.4 %** (low) | 0.018 | **‑98.1 %** (very high) | 0.638 | **‑32.7 %** (low‑to‑moderate) | 0.345 | **‑63.6 %** (moderate‑to‑high) | 0.007 | **‑99.2 %** (very high) |
+| **MAUVE‑RoBERTa‑Base** | 0.962 | 0.958 | **‑0.4 %** (very low) | 0.948 | **‑1.4 %** (very low) | 0.511 | **‑46.9 %** (low‑to‑moderate) | 0.894 | **‑7.1 %** (very low) | 0.911 | **‑5.3 %** (very low) | 0.510 | **‑47.0 %** (low‑to‑moderate) |
+| **MAUVE‑RoBERTa‑Large** | 0.979 | 0.354 | **‑63.8 %** (moderate‑to‑high) | 0.619 | **‑36.7 %** (low‑to‑moderate) | 0.255 | **‑73.9 %** (high) | 0.032 | **‑96.8 %** (very high) | 0.121 | **‑87.6 %** (high) | 0.039 | **‑96.0 %** (very high) |
+
+*Change‑rate terminology*  
+- 0‑9 %  : **very low**  
+- 10‑29 % : **low**  
+- 30‑49 % : **low‑to‑moderate**  
+- 50‑69 % : **moderate‑to‑high**  
+- 70‑89 % : **high**  
+- 90‑100 % : **very high**  
+
+---
+
+### Recommendation  
+
+**Recommended metric:** **MAUVE‑RoBERTa‑Large**  
+
+*Rationale:* This metric exhibits the greatest number of large degradations when the gold texts are perturbed. Four out of the six perturbation conditions (Shuff End, Rand Beg, Rand Mid, Rand End) show **high** or **very high** drops (≥ 70 % change), indicating strong sensitivity to the semantic disruptions that humans would penalise heavily. The remaining conditions also display moderate‑to‑high declines, reinforcing its overall discriminative power.
+
+**Metric not recommended:** **MAUVE‑RoBERTa‑Base**  
+
+*Why:* Across all perturbation types the observed changes are predominantly **very low** to **low‑to‑moderate** (maximum ≈ ‑47 %). The metric fails to produce substantial score reductions for clearly degraded texts, which contradicts the human expectation that perturbed outputs should receive markedly lower ratings. Consequently, it lacks the necessary responsiveness to serve as a reliable proxy for human judgment in this open‑ended generation setting.  
+
+*Note:* Even the best‑performing metric (MAUVE‑RoBERTa‑Large) does not perfectly emulate human evaluation; it should be used in conjunction with other analyses rather than as a sole substitute.

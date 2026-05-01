@@ -1,0 +1,73 @@
+# unieval_consistency
+
+## Table
+
+| Perturbation Type         | Variation | Score | edit_ratio | Change (%) | Monotonous Decrease | Superlinear Decrease | Change Rate |
+|---------------------------|-----------|-------|------------|------------|---------------------|----------------------|-------------|
+| Verb Lemmatization        | 0%        | 0.860 | 0.000      | 0.0%       | Yes                 | No                   | Low         |
+|                           | 50%       | 0.842 | 0.052      | -2.1%      |                     |                      |             |
+|                           | 100%      | 0.823 | 0.102      | -4.3%      |                     |                      |             |
+| Word Removal              | 5%        | 0.764 | 0.061      | -11.2%     | Yes                 | Yes                  | High        |
+|                           | 10%       | 0.699 | 0.111      | -18.7%     |                     |                      |             |
+|                           | 15%       | 0.648 | 0.163      | -24.6%     |                     |                      |             |
+|                           | 20%       | 0.571 | 0.210      | -33.6%     |                     |                      |             |
+|                           | 25%       | 0.531 | 0.260      | -38.2%     |                     |                      |             |
+|                           | 30%       | 0.471 | 0.311      | -45.2%     |                     |                      |             |
+|                           | 35%       | 0.424 | 0.361      | -50.7%     |                     |                      |             |
+|                           | 40%       | 0.375 | 0.408      | -56.3%     |                     |                      |             |
+|                           | 45%       | 0.349 | 0.461      | -59.5%     |                     |                      |             |
+|                           | 50%       | 0.322 | 0.507      | -62.5%     |                     |                      |             |
+| Punctuation Noise         | 50%       | 0.798 | 0.052      | -7.2%      | Yes                 | No                   | Low         |
+|                           | 100%      | 0.746 | 0.105      | -13.2%     |                     |                      |             |
+| Sentence Swap (SVO)       | 1         | 0.762 | 0.145      | -11.4%     | Yes                 | No                   | Moderate    |
+|                           | 2         | 0.665 | 0.255      | -22.7%     |                     |                      |             |
+|                           | 3         | 0.592 | 0.321      | -31.2%     |                     |                      |             |
+| Preposition Removal       | 40%       | 0.802 | 0.054      | -6.7%      | Yes                 | No                   | Low         |
+|                           | 70%       | 0.763 | 0.093      | -11.2%     |                     |                      |             |
+|                           | 100%      | 0.728 | 0.135      | -15.3%     |                     |                      |             |
+| Stop-word Removal         | 10%       | 0.834 | 0.044      | -3.1%      | Yes                 | Yes                  | Moderate    |
+|                           | 20%       | 0.806 | 0.088      | -6.3%      |                     |                      |             |
+|                           | 30%       | 0.783 | 0.130      | -8.9%      |                     |                      |             |
+|                           | 40%       | 0.756 | 0.175      | -12.1%     |                     |                      |             |
+|                           | 50%       | 0.732 | 0.219      | -14.8%     |                     |                      |             |
+|                           | 60%       | 0.709 | 0.263      | -17.5%     |                     |                      |             |
+| Word Swap                 | 5%        | 0.731 | 0.056      | -15.0%     | Yes                 | Yes                  | High        |
+|                           | 15%       | 0.626 | 0.117      | -27.2%     |                     |                      |             |
+|                           | 30%       | 0.536 | 0.169      | -37.7%     |                     |                      |             |
+|                           | 60%       | 0.450 | 0.222      | -47.7%     |                     |                      |             |
+| Truncate (End Words)      | 10%       | 0.811 | 0.114      | -5.7%      | Yes                 | No                   | Low         |
+|                           | 20%       | 0.811 | 0.215      | -5.7%      |                     |                      |             |
+|                           | 30%       | 0.806 | 0.312      | -6.3%      |                     |                      |             |
+|                           | 40%       | 0.789 | 0.413      | -8.2%      |                     |                      |             |
+|                           | 50%       | 0.812 | 0.515      | -5.6%      |                     |                      |             |
+| Article Removal           | 50%       | 0.857 | 0.039      | -0.3%      | Yes                 | No                   | Low         |
+|                           | 100%      | 0.854 | 0.081      | -0.7%      |                     |                      |             |
+| Word Repetition           | 5%        | 0.796 | 0.061      | -7.4%      | Yes                 | Yes                  | Moderate    |
+|                           | 10%       | 0.760 | 0.111      | -11.6%     |                     |                      |             |
+|                           | 15%       | 0.721 | 0.163      | -16.2%     |                     |                      |             |
+|                           | 20%       | 0.704 | 0.210      | -18.1%     |                     |                      |             |
+|                           | 25%       | 0.681 | 0.260      | -20.8%     |                     |                      |             |
+|                           | 30%       | 0.664 | 0.311      | -22.7%     |                     |                      |             |
+|                           | 35%       | 0.646 | 0.361      | -24.8%     |                     |                      |             |
+|                           | 40%       | 0.643 | 0.408      | -25.2%     |                     |                      |             |
+|                           | 45%       | 0.627 | 0.461      | -27.1%     |                     |                      |             |
+|                           | 50%       | 0.618 | 0.507      | -28.2%     |                     |                      |             |
+
+## 1. Sensitivity to the Perturbation
+
+| Perturbation Type         | Monotonous Decrease | Superlinear Decrease | Change Rate |
+|---------------------------|---------------------|----------------------|-------------|
+| Verb Lemmatization        | Yes                 | No                   | Low         |
+| Word Removal              | Yes                 | Yes                  | High        |
+| Punctuation Noise         | Yes                 | No                   | Low         |
+| Sentence Swap (SVO)       | Yes                 | No                   | Moderate    |
+| Preposition Removal       | Yes                 | No                   | Low         |
+| Stop-word Removal         | Yes                 | Yes                  | Moderate    |
+| Word Swap                 | Yes                 | Yes                  | High        |
+| Truncate (End Words)      | Yes                 | No                   | Low         |
+| Article Removal           | Yes                 | No                   | Low         |
+| Word Repetition           | Yes                 | Yes                  | Moderate    |
+
+## 2. Suitability of unieval_consistency for summarization
+
+The unieval_consistency metric is **not recommended** for summarization evaluation. Only 2 out of 10 perturbation tests (Word Removal and Word Swap) demonstrate a high change rate, and 4 tests (Word Removal, Stop-word Removal, Word Swap, and Word Repetition) show superlinear decrease. The majority of perturbation tests exhibit low or moderate sensitivity, failing to meet the criteria of >7 tests with high change rate and superlinear decrease.

@@ -1,0 +1,79 @@
+# bert_score_f, rougeL-f, rouge2-f, bart_score_avg_f
+
+| Perturbation Type | bert_score_f | rougeL-f | rouge2-f | bart_score_avg_f |
+|-------------------|--------------|----------|----------|------------------|
+| Verb Lemmatization | monotonous decrease: yes, superlinear decrease: no, change rate: low | monotonous decrease: yes, superlinear decrease: no, change rate: low | monotonous decrease: yes, superlinear decrease: no, change rate: low | monotonous decrease: yes, superlinear decrease: no, change rate: low |
+| Word Removal | monotonous decrease: yes, superlinear decrease: yes, change rate: high | monotonous decrease: yes, superlinear decrease: yes, change rate: moderate | monotonous decrease: yes, superlinear decrease: yes, change rate: high | monotonous decrease: yes, superlinear decrease: yes, change rate: moderate |
+| Punctuation Noise | monotonous decrease: yes, superlinear decrease: no, change rate: low | monotonous decrease: no, superlinear decrease: no, change rate: low | monotonous decrease: no, superlinear decrease: no, change rate: low | monotonous decrease: yes, superlinear decrease: yes, change rate: low |
+| SVO Swap | monotonous decrease: yes, superlinear decrease: no, change rate: moderate | monotonous decrease: yes, superlinear decrease: yes, change rate: moderate | monotonous decrease: yes, superlinear decrease: yes, change rate: moderate | monotonous decrease: yes, superlinear decrease: yes, change rate: moderate |
+| Preposition Removal | monotonous decrease: yes, superlinear decrease: no, change rate: moderate | monotonous decrease: yes, superlinear decrease: no, change rate: low | monotonous decrease: yes, superlinear decrease: yes, change rate: moderate | monotonous decrease: yes, superlinear decrease: yes, change rate: low |
+| Stop-word Removal | monotonous decrease: yes, superlinear decrease: no, change rate: moderate | monotonous decrease: yes, superlinear decrease: yes, change rate: moderate | monotonous decrease: yes, superlinear decrease: yes, change rate: moderate | monotonous decrease: yes, superlinear decrease: yes, change rate: moderate |
+| Word Swap | monotonous decrease: yes, superlinear decrease: yes, change rate: high | monotonous decrease: yes, superlinear decrease: yes, change rate: moderate | monotonous decrease: yes, superlinear decrease: yes, change rate: high | monotonous decrease: yes, superlinear decrease: yes, change rate: moderate |
+| Truncate End Words | monotonous decrease: no, superlinear decrease: no, change rate: low | monotonous decrease: no, superlinear decrease: no, change rate: low | monotonous decrease: no, superlinear decrease: no, change rate: low | monotonous decrease: no, superlinear decrease: no, change rate: low |
+| Article Removal | monotonous decrease: yes, superlinear decrease: no, change rate: low | monotonous decrease: yes, superlinear decrease: no, change rate: low | monotonous decrease: yes, superlinear decrease: yes, change rate: moderate | monotonous decrease: yes, superlinear decrease: no, change rate: low |
+| Word Repetition | monotonous decrease: yes, superlinear decrease: yes, change rate: high | monotonous decrease: yes, superlinear decrease: yes, change rate: moderate | monotonous decrease: yes, superlinear decrease: yes, change rate: moderate | monotonous decrease: yes, superlinear decrease: yes, change rate: moderate |
+
+## Sensitivity to the Perturbation
+
+**bert_score_f**  
+- **Verb Lemmatization**: Monotonous decrease (yes), superlinear decrease (no), change rate (low)  
+- **Word Removal**: Monotonous decrease (yes), superlinear decrease (yes), change rate (high)  
+- **Punctuation Noise**: Monotonous decrease (yes), superlinear decrease (no), change rate (low)  
+- **SVO Swap**: Monotonous decrease (yes), superlinear decrease (no), change rate (moderate)  
+- **Preposition Removal**: Monotonous decrease (yes), superlinear decrease (no), change rate (moderate)  
+- **Stop-word Removal**: Monotonous decrease (yes), superlinear decrease (no), change rate (moderate)  
+- **Word Swap**: Monotonous decrease (yes), superlinear decrease (yes), change rate (high)  
+- **Truncate End Words**: Monotonous decrease (no), superlinear decrease (no), change rate (low)  
+- **Article Removal**: Monotonous decrease (yes), superlinear decrease (no), change rate (low)  
+- **Word Repetition**: Monotonous decrease (yes), superlinear decrease (yes), change rate (high)  
+
+**rougeL-f**  
+- **Verb Lemmatization**: Monotonous decrease (yes), superlinear decrease (no), change rate (low)  
+- **Word Removal**: Monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)  
+- **Punctuation Noise**: Monotonous decrease (no), superlinear decrease (no), change rate (low)  
+- **SVO Swap**: Monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)  
+- **Preposition Removal**: Monotonous decrease (yes), superlinear decrease (no), change rate (low)  
+- **Stop-word Removal**: Monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)  
+- **Word Swap**: Monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)  
+- **Truncate End Words**: Monotonous decrease (no), superlinear decrease (no), change rate (low)  
+- **Article Removal**: Monotonous decrease (yes), superlinear decrease (no), change rate (low)  
+- **Word Repetition**: Monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)  
+
+**rouge2-f**  
+- **Verb Lemmatization**: Monotonous decrease (yes), superlinear decrease (no), change rate (low)  
+- **Word Removal**: Monotonous decrease (yes), superlinear decrease (yes), change rate (high)  
+- **Punctuation Noise**: Monotonous decrease (no), superlinear decrease (no), change rate (low)  
+- **SVO Swap**: Monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)  
+- **Preposition Removal**: Monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)  
+- **Stop-word Removal**: Monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)  
+- **Word Swap**: Monotonous decrease (yes), superlinear decrease (yes), change rate (high)  
+- **Truncate End Words**: Monotonous decrease (no), superlinear decrease (no), change rate (low)  
+- **Article Removal**: Monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)  
+- **Word Repetition**: Monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)  
+
+**bart_score_avg_f**  
+- **Verb Lemmatization**: Monotonous decrease (yes), superlinear decrease (no), change rate (low)  
+- **Word Removal**: Monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)  
+- **Punctuation Noise**: Monotonous decrease (yes), superlinear decrease (yes), change rate (low)  
+- **SVO Swap**: Monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)  
+- **Preposition Removal**: Monotonous decrease (yes), superlinear decrease (yes), change rate (low)  
+- **Stop-word Removal**: Monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)  
+- **Word Swap**: Monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)  
+- **Truncate End Words**: Monotonous decrease (no), superlinear decrease (no), change rate (low)  
+- **Article Removal**: Monotonous decrease (yes), superlinear decrease (no), change rate (low)  
+- **Word Repetition**: Monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)  
+
+## Recommendation
+
+| Perturbation Type | Recommended Metric(s) |
+|-------------------|----------------------|
+| Verb Lemmatization | none |
+| Word Removal | bert_score_f, rouge2-f |
+| Punctuation Noise | none |
+| SVO Swap | rougeL-f, rouge2-f, bart_score_avg_f |
+| Preposition Removal | rouge2-f |
+| Stop-word Removal | rougeL-f, rouge2-f, bart_score_avg_f |
+| Word Swap | bert_score_f, rouge2-f |
+| Truncate End Words | none |
+| Article Removal | rouge2-f |
+| Word Repetition | bert_score_f, rouge2-f, bart_score_avg_f |

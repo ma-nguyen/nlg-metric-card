@@ -1,0 +1,60 @@
+**MAUVE‑RoBERTa‑Large**  
+*Evaluation of Sensitivity to Perturbations on WikiText‑103 (Open‑ended Text Generation)*  
+
+---
+
+## Table  
+
+| Test Type | Perturbation Location | Gold Score | Perturbed Score | % Change vs. Gold | Change‑Rate Category |
+|-----------|----------------------|------------|----------------|-------------------|----------------------|
+| **Shuffling** | Beginning | 0.9789943579 | 0.3539626917 | **‑63.8 %** | moderate to high |
+|  | Middle | 0.9789943579 | 0.6194304925 | **‑36.7 %** | low to moderate |
+|  | End | 0.9789943579 | 0.2553780043 | **‑73.9 %** | high |
+| **Random** | Beginning | 0.9789943579 | 0.0317561223 | **‑96.8 %** | very high |
+|  | Middle | 0.9789943579 | 0.1209727417 | **‑87.6 %** | high |
+|  | End | 0.9789943579 | 0.0394232059 | **‑96.0 %** | very high |
+
+*All scores are on the 0 – 1 scale; higher values indicate closer alignment with the gold distribution.*
+
+---
+
+## 1. Sensitivity to the Perturbation  
+
+**a. Did a perturbed output score higher than the gold output?**  
+No. Every perturbed variant (both shuffling and random) received a lower score than the corresponding gold (reference) texts.
+
+**b. Were the scores similar for every location (beginning, middle, end)?**  
+No. The magnitude of the score drop varied considerably across locations:  
+- For shuffling, the drop was smallest in the middle (‑36.7 %) and largest at the end (‑73.9 %).  
+- For random perturbations, the drops were uniformly severe (‑87.6 % to ‑96.8 %) but still differed between middle (‑87.6 %) and the two extremes (‑96 %‑‑96.8 %).  
+
+Thus, location influences the metric’s sensitivity.
+
+**c. Were the scores similar for shuffling and random‑test?**  
+No. Random perturbations produced far larger degradations (‑87 % to ‑96 %) than shuffling (‑36 % to ‑74 %). The metric is markedly more sensitive to the insertion of completely random tokens than to token reordering.
+
+---
+
+## 2. Suitability of **MAUVE‑RoBERTa‑Large** for **open‑ended text generation**
+
+### a. Strengths  
+- **High/Very‑high sensitivity** to severe semantic disruptions: random replacements at any position caused very high (‑87 % to ‑96 %) score reductions, indicating the metric can detect nonsensical token insertions.  
+- **Consistent detection of end‑position perturbations**: shuffling at the end yielded a high drop (‑73.9 %), showing the metric is responsive when coherence is broken near the conclusion of a passage.  
+
+### b. Weaknesses  
+- **Moderate to low sensitivity to mild perturbations**: shuffling in the middle only reduced the score by 36.7 % (low to moderate), suggesting the metric may under‑penalize subtle reordering that still harms readability.  
+- **Location‑dependent variability**: the metric penalizes beginning and end shuffles more than middle shuffles, which does not align with the human expectation that any incoherent segment should be equally detrimental.  
+- **Insufficient granularity**: the metric does not reach a minimal floor (e.g., 0) even for completely random token blocks, limiting its ability to reflect the “minimal score” behavior observed in human judgments.  
+
+### c. Recommendation  
+**No.** The metric exhibits high or very‑high change rates in only **four** of the six perturbation variants (random‑beginning, random‑middle, random‑end, shuffling‑end). The threshold of > 5 high‑change variants required for a positive recommendation is not met.
+
+### d. Needed Improvements  
+1. **Increase sensitivity to mid‑sentence disruptions** – adjust the underlying distribution comparison to capture local coherence breaks, ensuring that shuffling anywhere in the text yields comparable penalties.  
+2. **Introduce a lower bound** that approaches zero for completely meaningless token sequences, better mirroring the human “minimal score” scenario.  
+3. **Normalize across positions** so that the metric’s response is less dependent on where the perturbation occurs, aligning more closely with human judgments that any incoherent segment is equally detrimental.  
+4. **Validate against a broader set of perturbations** (e.g., lexical substitution, syntactic errors) to confirm that the observed patterns generalize beyond the specific shuffling/random tests.  
+
+---
+
+*While MAUVE‑RoBERTa‑Large demonstrates promising ability to flag gross semantic violations, its uneven sensitivity across perturbation types and locations limits its suitability as a full replacement for human evaluation in open‑ended text generation.*

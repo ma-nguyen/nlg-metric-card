@@ -1,0 +1,80 @@
+mauve-roberta-large, mauve-gpt2, mauve-roberta, gpt-ppl
+
+{Table}
+
+| Metric | Perturbation Type | Variation | Score | Edit Ratio | Change |
+| --- | --- | --- | --- | --- | --- |
+| mauve-roberta-large | lemmatize | 0% | 0.971 | 0.000 | 0.0% |
+| mauve-roberta-large | lemmatize | 50% | 0.865 | 0.045 | -10.9% |
+| mauve-roberta-large | lemmatize | 100% | 0.244 | 0.090 | -74.9% |
+| ... | ... | ... | ... | ... | ... |
+| gpt-ppl | lemmatize | 0% | 35.061 | 0.000 | 0.0% |
+| gpt-ppl | lemmatize | 50% | 45.070 | 0.045 | 28.5% |
+| gpt-ppl | lemmatize | 100% | 54.162 | 0.090 | 54.5% |
+
+1. Sensitivity to the Perturbation
+
+mauve-roberta-large
+variation   monotonous decrease superlinear decrease    changes
+lemmatize   yes yes  high
+randomworddrop	yes	yes	high
+noisepunct	yes	yes	high
+sentencemiddleswap	yes	yes	high
+removepreposition	yes	yes	high
+removestopwords	yes	yes	high
+randomlocalswap	yes	yes	high
+truncate	yes	yes	high
+removearticle	yes	yes	high
+randomtokenrep	yes	yes	high
+
+mauve-gpt2
+variation   monotonous decrease superlinear decrease    changes
+lemmatize   yes yes  moderate
+randomworddrop	yes	yes	high
+noisepunct	yes	yes	high
+sentencemiddleswap	yes	yes	moderate
+removepreposition	yes	yes	moderate
+removestopwords	yes	yes	high
+randomlocalswap	yes	yes	high
+truncate	yes	yes	high
+removearticle	yes	yes	moderate
+randomtokenrep	yes	yes	high
+
+mauve-roberta
+variation   monotonous decrease superlinear decrease    changes
+lemmatize   yes yes  moderate
+randomworddrop	yes	yes	high
+noisepunct	yes	yes	high
+sentencemiddleswap	yes	yes	moderate
+removepreposition	yes	yes	moderate
+removestopwords	yes	yes	high
+randomlocalswap	yes	yes	high
+truncate	yes	yes	high
+removearticle	yes	yes	moderate
+randomtokenrep	yes	yes	high
+
+gpt-ppl
+variation   monotonous decrease superlinear decrease    changes
+lemmatize   yes no  high
+randomworddrop	yes	no	high
+noisepunct	yes	no	high
+sentencemiddleswap	yes	no	moderate
+removepreposition	yes	no	high
+removestopwords	yes	no	high
+randomlocalswap	yes	no	high
+truncate	yes	no	low
+removearticle	yes	no	moderate
+randomtokenrep	yes	no	high
+
+{Recommendation}
+
+lemmatize   mauve-roberta-large
+randomworddrop  mauve-roberta-large
+noisepunct  mauve-roberta-large
+sentencemiddleswap  mauve-roberta-large
+removepreposition   mauve-roberta-large
+removestopwords mauve-roberta-large
+randomlocalswap none
+truncate    mauve-roberta-large
+removearticle   none
+randomtokenrep  none

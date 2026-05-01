@@ -1,0 +1,5 @@
+metric=bartscore-avg-f
+
+ref=-6.063610
+injection_1=-8.247265
+injection_2=-9.390858

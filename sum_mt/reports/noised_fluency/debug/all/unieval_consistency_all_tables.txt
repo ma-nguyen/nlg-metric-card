@@ -1,0 +1,86 @@
+Table for ref_flu-lemmatizeverb:
+Variation	Score	Edit_Ratio
+gold	0.860	0.000
+50	0.842	0.052
+100	0.823	0.102
+
+Table for ref_flu-randomworddrop:
+Variation	Score	Edit_Ratio
+gold	0.860	0.000
+5	0.764	0.061
+10	0.699	0.111
+15	0.648	0.163
+20	0.571	0.210
+25	0.531	0.260
+30	0.471	0.311
+35	0.424	0.361
+40	0.375	0.408
+45	0.349	0.461
+50	0.322	0.507
+
+Table for ref_flu-noisepunct:
+Variation	Score	Edit_Ratio
+gold	0.860	0.000
+50	0.798	0.052
+100	0.746	0.105
+
+Table for ref_flu-sentencemiddleswap:
+Variation	Score	Edit_Ratio
+gold	0.860	0.000
+1	0.762	0.145
+2	0.665	0.255
+3	0.592	0.321
+
+Table for ref_flu-removepreposition:
+Variation	Score	Edit_Ratio
+gold	0.860	0.000
+40	0.802	0.054
+70	0.763	0.093
+100	0.728	0.135
+
+Table for ref_flu-removestopwords:
+Variation	Score	Edit_Ratio
+gold	0.860	0.000
+10	0.834	0.044
+20	0.806	0.088
+30	0.783	0.130
+40	0.756	0.175
+50	0.732	0.219
+60	0.709	0.263
+
+Table for ref_flu-randomlocalswap:
+Variation	Score	Edit_Ratio
+gold	0.860	0.000
+5	0.731	0.056
+15	0.626	0.117
+30	0.536	0.169
+60	0.450	0.222
+
+Table for ref_flu-truncate:
+Variation	Score	Edit_Ratio
+gold	0.860	0.000
+10	0.811	0.114
+20	0.811	0.215
+30	0.806	0.312
+40	0.789	0.413
+50	0.812	0.515
+
+Table for ref_flu-removearticle:
+Variation	Score	Edit_Ratio
+gold	0.860	0.000
+50	0.857	0.039
+100	0.854	0.081
+
+Table for ref_flu-randomtokenrep:
+Variation	Score	Edit_Ratio
+gold	0.860	0.000
+5	0.796	0.061
+10	0.760	0.111
+15	0.721	0.163
+20	0.704	0.210
+25	0.681	0.260
+30	0.664	0.311
+35	0.646	0.361
+40	0.643	0.408
+45	0.627	0.461
+50	0.618	0.507

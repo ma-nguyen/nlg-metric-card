@@ -1,0 +1,45 @@
+{metrics} - Evaluation Report
+{Table}
+
+| Metric | Variation | Score | Edit Ratio | Change |
+| --- | --- | --- | --- | --- |
+|  | Gold | 0.954734 | 0.000 | 0.0% |
+|  | 50% Lemmatization | 0.855997 | 0.049 | -10.34% |
+|  | 100% Lemmatization | 0.498533 | 0.097 | -47.78% |
+|  | ... | ... | ... | ... |
+
+1. Sensitivity to the Perturbation
+
+The following analysis is based on the provided results.
+
+| Metric | Variation | Monotonous Decrease | Superlinear Decrease | Change Rate |
+| --- | --- | --- | --- | --- |
+|  | Lemmatize | yes | no | low |
+|  | Random Word Drop | yes | yes | high |
+|  | Noise Punct | yes | no | low |
+|  | Sentence Middle Swap | yes | no | low |
+|  | Remove Preposition | yes | no | low |
+|  | Remove Stopwords | yes | no | low |
+|  | Random Local Swap | yes | no | moderate |
+|  | Truncate | yes | yes | low |
+|  | Remove Article | yes | no | low |
+|  | Random Token Rep | yes | no | moderate |
+
+{Recommendation}
+
+Based on the analysis, the recommended metrics for each perturbation type are:
+
+| Variation | Recommended Metric |
+| --- | --- |
+| Lemmatize | none |
+| Random Word Drop | Metric 1 |
+| Noise Punct | Metric 2 |
+| Sentence Middle Swap | Metric 3 |
+| Remove Preposition | Metric 3 |
+| Remove Stopwords | Metric 2 |
+| Random Local Swap | none |
+| Truncate | Metric 3 |
+| Remove Article | none |
+| Random Token Rep | none |
+
+Note: The recommended metrics are based on the criteria of high change rate and superlinear decrease. If no metric meets these criteria for a particular perturbation type, "none" is recommended.

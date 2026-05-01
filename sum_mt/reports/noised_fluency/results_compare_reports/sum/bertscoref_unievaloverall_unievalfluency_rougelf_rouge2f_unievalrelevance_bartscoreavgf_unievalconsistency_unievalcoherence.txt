@@ -1,0 +1,168 @@
+# Evaluation Metrics: [bert_score_f, unieval_overall, unieval_fluency, rougeL-f, rouge2-f, unieval_relevance, bart_score_avg_f, unieval_consistency, unieval_coherence]
+
+## Table
+
+The table contains all results and their change with relation to the gold output score.
+
+| Metric | Perturbation | Score | Edit Ratio | Change |
+| --- | --- | --- | --- | --- |
+| bert_score_f | Unperturbed | 0.224 | 0.000 | 0.0% |
+| bert_score_f | 50% Verb Lemmatization | 0.209 | 0.052 | -6.4% |
+| bert_score_f | 100% Verb Lemmatization | 0.197 | 0.102 | -12.1% |
+| ... | ... | ... | ... | ... |
+
+## Sensitivity to the Perturbation
+
+The following tables analyze the sensitivity of each metric to each perturbation type:
+
+### bert_score_f
+
+| Variation | Monotonous Decrease | Superlinear Decrease | Change Rate |
+| --- | --- | --- | --- |
+| Verb Lemmatization | yes | no | low |
+| Word Removal | yes | no | moderate |
+| Punctuation Noise | yes | no | low |
+| Sentence Middle Swap | yes | no | low |
+| Preposition Removal | yes | no | low |
+| Stopword Removal | yes | no | moderate |
+| Word Swap | yes | no | moderate |
+| Truncation | yes | no | low |
+| Article Removal | yes | no | low |
+| Word Repeat | yes | no | moderate |
+
+### unieval_overall
+
+| Variation | Monotonous Decrease | Superlinear Decrease | Change Rate |
+| --- | --- | --- | --- |
+| Verb Lemmatization | yes | no | low |
+| Word Removal | yes | yes | high |
+| Punctuation Noise | yes | no | low |
+| Sentence Middle Swap | yes | yes | high |
+| Preposition Removal | yes | yes | high |
+| Stopword Removal | yes | yes | high |
+| Word Swap | yes | yes | high |
+| Truncation | yes | no | moderate |
+| Article Removal | yes | no | low |
+| Word Repeat | yes | yes | high |
+
+### unieval_fluency
+
+| Variation | Monotonous Decrease | Superlinear Decrease | Change Rate |
+| --- | --- | --- | --- |
+| Verb Lemmatization | yes | no | low |
+| Word Removal | yes | yes | high |
+| Punctuation Noise | yes | no | low |
+| Sentence Middle Swap | yes | yes | high |
+| Preposition Removal | yes | yes | high |
+| Stopword Removal | yes | yes | high |
+| Word Swap | yes | yes | high |
+| Truncation | yes | no | moderate |
+| Article Removal | yes | no | low |
+| Word Repeat | yes | yes | high |
+
+### rougeL-f
+
+| Variation | Monotonous Decrease | Superlinear Decrease | Change Rate |
+| --- | --- | --- | --- |
+| Verb Lemmatization | yes | no | low |
+| Word Removal | yes | no | moderate |
+| Punctuation Noise | yes | no | low |
+| Sentence Middle Swap | yes | no | low |
+| Preposition Removal | yes | no | low |
+| Stopword Removal | yes | no | moderate |
+| Word Swap | yes | no | moderate |
+| Truncation | yes | no | low |
+| Article Removal | yes | no | low |
+| Word Repeat | yes | no | moderate |
+
+### rouge2-f
+
+| Variation | Monotonous Decrease | Superlinear Decrease | Change Rate |
+| --- | --- | --- | --- |
+| Verb Lemmatization | yes | no | low |
+| Word Removal | yes | no | moderate |
+| Punctuation Noise | yes | no | low |
+| Sentence Middle Swap | yes | no | low |
+| Preposition Removal | yes | no | low |
+| Stopword Removal | yes | no | moderate |
+| Word Swap | yes | no | moderate |
+| Truncation | yes | no | low |
+| Article Removal | yes | no | low |
+| Word Repeat | yes | no | moderate |
+
+### unieval_relevance
+
+| Variation | Monotonous Decrease | Superlinear Decrease | Change Rate |
+| --- | --- | --- | --- |
+| Verb Lemmatization | yes | no | low |
+| Word Removal | yes | yes | high |
+| Punctuation Noise | yes | no | low |
+| Sentence Middle Swap | yes | yes | high |
+| Preposition Removal | yes | yes | high |
+| Stopword Removal | yes | yes | high |
+| Word Swap | yes | yes | high |
+| Truncation | yes | no | moderate |
+| Article Removal | yes | no | low |
+| Word Repeat | yes | yes | high |
+
+### bart_score_avg_f
+
+| Variation | Monotonous Decrease | Superlinear Decrease | Change Rate |
+| --- | --- | --- | --- |
+| Verb Lemmatization | yes | no | low |
+| Word Removal | yes | no | moderate |
+| Punctuation Noise | yes | no | low |
+| Sentence Middle Swap | yes | no | low |
+| Preposition Removal | yes | no | low |
+| Stopword Removal | yes | no | moderate |
+| Word Swap | yes | no | moderate |
+| Truncation | yes | no | low |
+| Article Removal | yes | no | low |
+| Word Repeat | yes | no | moderate |
+
+### unieval_consistency
+
+| Variation | Monotonous Decrease | Superlinear Decrease | Change Rate |
+| --- | --- | --- | --- |
+| Verb Lemmatization | yes | no | low |
+| Word Removal | yes | yes | high |
+| Punctuation Noise | yes | no | low |
+| Sentence Middle Swap | yes | yes | high |
+| Preposition Removal | yes | yes | high |
+| Stopword Removal | yes | yes | high |
+| Word Swap | yes | yes | high |
+| Truncation | yes | no | moderate |
+| Article Removal | yes | no | low |
+| Word Repeat | yes | yes | high |
+
+### unieval_coherence
+
+| Variation | Monotonous Decrease | Superlinear Decrease | Change Rate |
+| --- | --- | --- | --- |
+| Verb Lemmatization | yes | no | low |
+| Word Removal | yes | yes | high |
+| Punctuation Noise | yes | no | low |
+| Sentence Middle Swap | yes | yes | high |
+| Preposition Removal | yes | yes | high |
+| Stopword Removal | yes | yes | high |
+| Word Swap | yes | yes | high |
+| Truncation | yes | no | moderate |
+| Article Removal | yes | no | low |
+| Word Repeat | yes | yes | high |
+
+## Recommendation
+
+The following table presents the recommended metrics for each perturbation type:
+
+| Variation | Recommended Metric |
+| --- | --- |
+| Verb Lemmatization | none |
+| Word Removal | unieval_overall, unieval_fluency, unieval_relevance, unieval_consistency, unieval_coherence |
+| Punctuation Noise | none |
+| Sentence Middle Swap | unieval_overall, unieval_fluency, unieval_relevance, unieval_consistency, unieval_coherence |
+| Preposition Removal | unieval_overall, unieval_fluency, unieval_relevance, unieval_consistency, unieval_coherence |
+| Stopword Removal | unieval_overall, unieval_fluency, unieval_relevance, unieval_consistency, unieval_coherence |
+| Word Swap | none |
+| Truncation | unieval_overall, unieval_fluency, unieval_relevance, unieval_consistency, unieval_coherence |
+| Article Removal | none |
+| Word Repeat | none |

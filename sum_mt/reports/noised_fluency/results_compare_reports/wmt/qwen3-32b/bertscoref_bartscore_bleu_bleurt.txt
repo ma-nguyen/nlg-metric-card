@@ -1,0 +1,29 @@
+# bert_score_f, bart_score, bleu, bleurt
+
+| variation         | bert_score_f_monotonous decrease | bert_score_f_superlinear decrease | bert_score_f_changes | bart_score_monotonous decrease | bart_score_superlinear decrease | bart_score_changes | bleu_monotonous decrease | bleu_superlinear decrease | bleu_changes | bleurt_monotonous decrease | bleurt_superlinear decrease | bleurt_changes |
+|-------------------|----------------------------------|-----------------------------------|----------------------|-------------------------------|--------------------------------|--------------------|--------------------------|--------------------------|--------------|----------------------------|-----------------------------|----------------|
+| lemmatize         | yes                              | no                                | moderate             | yes                           | no                             | moderate           | yes                      | no                       | moderate     | yes                        | yes                         | high         |
+| randomworddrop    | yes                              | yes                               | high                 | yes                           | yes                            | high               | yes                      | yes                      | high         | yes                        | yes                         | high         |
+| noisepunct        | yes                              | no                                | low                  | yes                           | no                             | moderate           | yes                      | no                       | moderate     | yes                        | no                          | moderate     |
+| sentencemiddleswap| yes                              | no                                | moderate             | yes                           | no                             | moderate           | yes                      | no                       | moderate     | yes                        | no                          | high         |
+| removepreposition | yes                              | no                                | moderate             | yes                           | no                             | moderate           | yes                      | no                       | moderate     | yes                        | yes                         | high         |
+| removestopwords   | yes                              | no                                | moderate             | yes                           | no                             | moderate           | yes                      | no                       | moderate     | yes                        | yes                         | high         |
+| randomlocalswap   | yes                              | no                                | moderate             | yes                           | no                             | moderate           | yes                      | no                       | moderate     | yes                        | yes                         | high         |
+| truncate          | yes                              | no                                | moderate             | yes                           | no                             | moderate           | yes                      | yes                      | high         | yes                        | yes                         | high         |
+| removearticle     | yes                              | no                                | low                  | yes                           | no                             | moderate           | yes                      | no                       | moderate     | yes                        | no                          | moderate     |
+| randomtokenrep    | yes                              | no                                | moderate             | yes                           | no                             | moderate           | yes                      | no                       | moderate     | yes                        | yes                         | high         |
+
+# Recommendation
+
+| variation         | recommended metric(s) |
+|-------------------|-----------------------|
+| lemmatize         | bleurt                |
+| randomworddrop    | bert_score_f, bart_score, bleu, bleurt |
+| noisepunct        | none                  |
+| sentencemiddleswap| none                  |
+| removepreposition | bleurt                |
+| removestopwords   | bleurt                |
+| randomlocalswap   | bleurt                |
+| truncate          | bleu, bleurt          |
+| removearticle     | none                  |
+| randomtokenrep    | bleurt                |

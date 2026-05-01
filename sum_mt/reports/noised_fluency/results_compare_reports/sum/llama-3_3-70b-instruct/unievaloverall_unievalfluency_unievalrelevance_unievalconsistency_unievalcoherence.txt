@@ -1,0 +1,115 @@
+{unieval_overall, unieval_fluency, unieval_relevance, unieval_consistency, unieval_coherence} 
+
+| Metric | Variation | Score | Edit Ratio | Change |
+| --- | --- | --- | --- | --- |
+| unieval_overall | Gold | 0.865 | 0.000 | 0.0% |
+| unieval_overall | 50% Verb Lemmatization | 0.820 | 0.052 | -5.1% |
+| unieval_overall | 100% Verb Lemmatization | 0.786 | 0.102 | -9.1% |
+| unieval_overall | 5% Word Removal | 0.633 | 0.061 | -26.7% |
+| unieval_overall | 10% Word Removal | 0.500 | 0.111 | -42.2% |
+| ... | ... | ... | ... | ... |
+| unieval_fluency | Gold | 0.920 | 0.000 | 0.0% |
+| unieval_fluency | 50% Verb Lemmatization | 0.842 | 0.052 | -8.4% |
+| unieval_fluency | 100% Verb Lemmatization | 0.776 | 0.102 | -15.6% |
+| unieval_fluency | 5% Word Removal | 0.661 | 0.061 | -28.1% |
+| unieval_fluency | 10% Word Removal | 0.511 | 0.111 | -44.5% |
+| ... | ... | ... | ... | ... |
+| unieval_relevance | Gold | 0.781 | 0.000 | 0.0% |
+| unieval_relevance | 50% Verb Lemmatization | 0.726 | 0.052 | -7.0% |
+| unieval_relevance | 100% Verb Lemmatization | 0.695 | 0.102 | -11.0% |
+| unieval_relevance | 5% Word Removal | 0.457 | 0.061 | -41.5% |
+| unieval_relevance | 10% Word Removal | 0.277 | 0.111 | -64.5% |
+| ... | ... | ... | ... | ... |
+| unieval_consistency | Gold | 0.860 | 0.000 | 0.0% |
+| unieval_consistency | 50% Verb Lemmatization | 0.842 | 0.052 | -2.1% |
+| unieval_consistency | 100% Verb Lemmatization | 0.823 | 0.102 | -4.3% |
+| unieval_consistency | 5% Word Removal | 0.764 | 0.061 | -11.2% |
+| unieval_consistency | 10% Word Removal | 0.699 | 0.111 | -18.7% |
+| ... | ... | ... | ... | ... |
+| unieval_coherence | Gold | 0.898 | 0.000 | 0.0% |
+| unieval_coherence | 50% Verb Lemmatization | 0.869 | 0.052 | -3.1% |
+| unieval_coherence | 100% Verb Lemmatization | 0.848 | 0.102 | -5.5% |
+| unieval_coherence | 5% Word Removal | 0.651 | 0.061 | -27.4% |
+| unieval_coherence | 10% Word Removal | 0.513 | 0.111 | -42.9% |
+| ... | ... | ... | ... | ... |
+
+## 1. Sensitivity to the Perturbation
+
+The sensitivity of each metric to each perturbation type is analyzed as follows:
+
+- unieval_overall:
+  - Verb Lemmatization: monotonous decrease - yes, superlinear decrease - no, change rate - moderate
+  - Word Removal: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+  - Punctuation Noise: monotonous decrease - yes, superlinear decrease - no, change rate - moderate
+  - Sentence Middle Swap: monotonous decrease - yes, superlinear decrease - no, change rate - high
+  - Preposition Removal: monotonous decrease - yes, superlinear decrease - no, change rate - moderate
+  - Stopword Removal: monotonous decrease - yes, superlinear decrease - no, change rate - high
+  - Word Swap: monotonous decrease - yes, superlinear decrease - no, change rate - high
+  - Truncation: monotonous decrease - yes, superlinear decrease - no, change rate - high
+  - Article Removal: monotonous decrease - yes, superlinear decrease - no, change rate - low
+  - Word Repeat: monotonous decrease - yes, superlinear decrease - no, change rate - high
+
+- unieval_fluency:
+  - Verb Lemmatization: monotonous decrease - yes, superlinear decrease - no, change rate - moderate
+  - Word Removal: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+  - Punctuation Noise: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+  - Sentence Middle Swap: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+  - Preposition Removal: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+  - Stopword Removal: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+  - Word Swap: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+  - Truncation: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+  - Article Removal: monotonous decrease - yes, superlinear decrease - no, change rate - low
+  - Word Repeat: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+
+- unieval_relevance:
+  - Verb Lemmatization: monotonous decrease - yes, superlinear decrease - no, change rate - moderate
+  - Word Removal: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+  - Punctuation Noise: monotonous decrease - yes, superlinear decrease - no, change rate - moderate
+  - Sentence Middle Swap: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+  - Preposition Removal: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+  - Stopword Removal: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+  - Word Swap: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+  - Truncation: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+  - Article Removal: monotonous decrease - yes, superlinear decrease - no, change rate - low
+  - Word Repeat: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+
+- unieval_consistency:
+  - Verb Lemmatization: monotonous decrease - yes, superlinear decrease - no, change rate - low
+  - Word Removal: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+  - Punctuation Noise: monotonous decrease - yes, superlinear decrease - no, change rate - moderate
+  - Sentence Middle Swap: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+  - Preposition Removal: monotonous decrease - yes, superlinear decrease - no, change rate - moderate
+  - Stopword Removal: monotonous decrease - yes, superlinear decrease - no, change rate - moderate
+  - Word Swap: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+  - Truncation: monotonous decrease - yes, superlinear decrease - no, change rate - high
+  - Article Removal: monotonous decrease - yes, superlinear decrease - no, change rate - low
+  - Word Repeat: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+
+- unieval_coherence:
+  - Verb Lemmatization: monotonous decrease - yes, superlinear decrease - no, change rate - moderate
+  - Word Removal: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+  - Punctuation Noise: monotonous decrease - yes, superlinear decrease - no, change rate - moderate
+  - Sentence Middle Swap: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+  - Preposition Removal: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+  - Stopword Removal: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+  - Word Swap: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+  - Truncation: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+  - Article Removal: monotonous decrease - yes, superlinear decrease - no, change rate - low
+  - Word Repeat: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+
+## 2. Recommendation
+
+Based on the analysis, the recommended metrics for each perturbation type are:
+
+- Verb Lemmatization: none
+- Word Removal: unieval_fluency, unieval_relevance, unieval_coherence
+- Punctuation Noise: unieval_fluency
+- Sentence Middle Swap: unieval_fluency, unieval_relevance, unieval_coherence
+- Preposition Removal: unieval_fluency, unieval_relevance, unieval_coherence
+- Stopword Removal: unieval_fluency, unieval_relevance, unieval_coherence
+- Word Swap: none
+- Truncation: unieval_fluency, unieval_relevance, unieval_coherence
+- Article Removal: none
+- Word Repeat: none
+
+Note that a metric is recommended for a perturbation type if it has a high change rate and a superlinear decrease.

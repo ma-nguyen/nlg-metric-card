@@ -1,0 +1,36 @@
+**MAUVE-RoBERTa-Large**  
+
+**Table: Perturbation Test Results**  
+| Perturbation Type | Location | Perturbed Score | Gold Score | Change Rate |
+|-------------------|----------|-----------------|------------|-------------|
+| Shuffling         | Beginning| 0.3540          | 0.9790     | -63.8%      |
+| Shuffling         | Middle   | 0.6194          | 0.9790     | -36.7%      |
+| Shuffling         | End      | 0.2554          | 0.9790     | -73.9%      |
+| Random            | Beginning| 0.0318          | 0.9790     | -96.8%      |
+| Random            | Middle   | 0.1210          | 0.9790     | -87.6%      |
+| Random            | End      | 0.0394          | 0.9790     | -96.0%      |
+
+### 1. Sensitivity to the Perturbation  
+**a.** No perturbed output scored higher than the gold output. All perturbations resulted in lower scores.  
+**b.** Scores varied significantly by location:  
+- **Shuffling**: Largest drop at the end (-73.9%, high), smallest in the middle (-36.7%, low to moderate).  
+- **Random**: Largest drops at beginning/end (very high: -96.8%/-96.0%), smaller in the middle (-87.6%, high).  
+**c.** Scores differed substantially between perturbation types. Random-test consistently caused larger drops (very high/high: -87.6% to -96.8%) than shuffling (moderate/low: -36.7% to -73.9%).  
+
+### 2. Suitability of MAUVE-RoBERTa-Large for Open-Ended Text Generation  
+**a. Strengths**  
+- Detected **random-test perturbations** with **very high sensitivity** (≥87.6% drop), especially at text boundaries (beginning/end: ≥96.0%).  
+- Showed **strong sensitivity** to end-shuffling (-73.9%, high).  
+- Consistently assigned lower scores to perturbations than gold texts.  
+
+**b. Weaknesses**  
+- **Inconsistent sensitivity to shuffling**: Middle-shuffling drop was **low to moderate** (-36.7%), failing to reflect severe semantic disruption.  
+- **Location bias**: Sensitivity varied by position (e.g., middle perturbations were penalized less than boundaries).  
+
+**c. Recommendation**  
+**No**. Only 4/6 variants (random-test: all locations; shuffling: end) achieved **high or very high** change rates (≥70%). Middle-shuffling (-36.7%) and beginning-shuffling (-63.8%) fell below this threshold.  
+
+**d. Improvements Needed**  
+- Enhance sensitivity to **mid-text disruptions** (e.g., shuffling in middle).  
+- Reduce **positional bias** to ensure uniform detection of perturbations across locations.  
+- Investigate why shuffling (which destroys local coherence) is penalized less severely than random replacements.

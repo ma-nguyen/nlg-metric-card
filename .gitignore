@@ -1,0 +1,31 @@
+# Models (downloaded automatically at runtime)
+**/models/
+**/m39v1/
+**/cnndm_saves/
+**/*.save
+**/*.pt
+**/*.ckpt
+
+# Preprocessed / cached data
+**/spacy_saves/
+**/__pycache__/
+**/*.pyc
+
+# Virtual environments
+**/venv/
+
+.DS_Store
+.idea/
+*.exe
+
+wiki/data/
+**/wikitext-103-raw/
+**/*.arrow
+
+# Archives & tarballs
+*.tar
+*.tar.gz
+*.zip
+
+# Cache
+**/cache/

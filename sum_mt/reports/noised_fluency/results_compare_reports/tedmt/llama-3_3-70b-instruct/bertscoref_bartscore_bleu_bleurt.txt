@@ -1,0 +1,95 @@
+**Evaluation Metrics for Machine Translation: bert_score_f, bart_score, bleu, and bleurt**
+
+**Table**
+
+The table below contains the results of the tested evaluation metrics, including their scores and changes with relation to the gold output score.
+
+| Metric | Perturbation Type | Variation | Score | Edit Ratio | Change |
+| --- | --- | --- | --- | --- | --- |
+| bert_score_f | lemmatize | 0% | 0.545 | 0.000 | 0.0% |
+| bert_score_f | lemmatize | 50% | 0.527 | 0.034 | -3.3% |
+| bert_score_f | lemmatize | 100% | 0.511 | 0.065 | -6.3% |
+| ... | ... | ... | ... | ... | ... |
+
+**Sensitivity to the Perturbation**
+
+The following tables analyze the sensitivity of each metric to each perturbation type.
+
+**bert_score_f**
+
+| Variation | Monotonous Decrease | Superlinear Decrease | Change Rate |
+| --- | --- | --- | --- |
+| lemmatize | yes | no | low |
+| randomworddrop | yes | yes | high |
+| noisepunct | yes | no | low |
+| sentencemiddleswap | yes | no | low |
+| removepreposition | yes | no | low |
+| removestopwords | yes | no | moderate |
+| randomlocalswap | yes | no | moderate |
+| truncate | yes | yes | low |
+| removearticle | yes | no | low |
+| randomtokenrep | yes | no | moderate |
+
+**bart_score**
+
+| Variation | Monotonous Decrease | Superlinear Decrease | Change Rate |
+| --- | --- | --- | --- |
+| lemmatize | yes | yes | moderate |
+| randomworddrop | yes | yes | low |
+| noisepunct | yes | yes | high |
+| sentencemiddleswap | yes | no | low |
+| removepreposition | yes | no | low |
+| removestopwords | yes | yes | high |
+| randomlocalswap | yes | no | high |
+| truncate | yes | yes | moderate |
+| removearticle | yes | no | low |
+| randomtokenrep | yes | no | moderate |
+
+**bleu**
+
+| Variation | Monotonous Decrease | Superlinear Decrease | Change Rate |
+| --- | --- | --- | --- |
+| lemmatize | yes | yes | low |
+| randomworddrop | yes | yes | moderate |
+| noisepunct | yes | yes | low |
+| sentencemiddleswap | yes | yes | high |
+| removepreposition | yes | yes | high |
+| removestopwords | yes | yes | low |
+| randomlocalswap | yes | no | low |
+| truncate | yes | yes | high |
+| removearticle | yes | no | low |
+| randomtokenrep | yes | no | moderate |
+
+**bleurt**
+
+| Variation | Monotonous Decrease | Superlinear Decrease | Change Rate |
+| --- | --- | --- | --- |
+| lemmatize | yes | yes | low |
+| randomworddrop | yes | yes | moderate |
+| noisepunct | yes | yes | low |
+| sentencemiddleswap | yes | yes | high |
+| removepreposition | yes | yes | high |
+| removestopwords | yes | yes | low |
+| randomlocalswap | yes | no | low |
+| truncate | yes | yes | high |
+| removearticle | yes | no | low |
+| randomtokenrep | yes | no | moderate |
+
+**Recommendation**
+
+The following table presents the recommended metrics for each perturbation type.
+
+| Perturbation Type | Recommended Metric |
+| --- | --- |
+| lemmatize | none |
+| randomworddrop | bart_score |
+| noisepunct | bart_score |
+| sentencemiddleswap | bleu |
+| removepreposition | bleu |
+| removestopwords | bart_score |
+| randomlocalswap | none |
+| truncate | bleu |
+| removearticle | none |
+| randomtokenrep | none |
+
+Note that the best metric can still fail to fully substitute human evaluation. The recommended metrics are based on the analysis of the given noise ratios and may not generalize to other noise levels.

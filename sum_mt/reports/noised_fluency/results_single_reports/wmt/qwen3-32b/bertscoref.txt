@@ -1,0 +1,75 @@
+# bert_score_f
+
+## Table
+
+| Perturbation Type         | Monotonous Decrease | Superlinear Decrease | Change Rate |
+|---------------------------|---------------------|----------------------|-------------|
+| Verb Lemmatization        | yes                 | no                   | low         |
+| Word Removal              | yes                 | yes                  | high        |
+| Punctuation Noise         | yes                 | yes                  | low         |
+| Sentence Middle Swap      | yes                 | no                   | moderate    |
+| Preposition Removal       | yes                 | no                   | low         |
+| Stop-Word Removal         | yes                 | yes                  | moderate    |
+| Word Swapping             | yes                 | yes                  | moderate    |
+| Truncation (End Words)    | yes                 | yes                  | moderate    |
+| Article Removal           | yes                 | no                   | low         |
+| Word Repetition           | yes                 | yes                  | moderate    |
+
+## 1. Sensitivity to the Perturbation
+
+**Verb Lemmatization**  
+- Monotonous decrease: yes  
+- Superlinear decrease: no  
+- Change rate: low  
+
+**Word Removal**  
+- Monotonous decrease: yes  
+- Superlinear decrease: yes  
+- Change rate: high  
+
+**Punctuation Noise**  
+- Monotonous decrease: yes  
+- Superlinear decrease: yes  
+- Change rate: low  
+
+**Sentence Middle Swap**  
+- Monotonous decrease: yes  
+- Superlinear decrease: no  
+- Change rate: moderate  
+
+**Preposition Removal**  
+- Monotonous decrease: yes  
+- Superlinear decrease: no  
+- Change rate: low  
+
+**Stop-Word Removal**  
+- Monotonous decrease: yes  
+- Superlinear decrease: yes  
+- Change rate: moderate  
+
+**Word Swapping**  
+- Monotonous decrease: yes  
+- Superlinear decrease: yes  
+- Change rate: moderate  
+
+**Truncation (End Words)**  
+- Monotonous decrease: yes  
+- Superlinear decrease: yes  
+- Change rate: moderate  
+
+**Article Removal**  
+- Monotonous decrease: yes  
+- Superlinear decrease: no  
+- Change rate: low  
+
+**Word Repetition**  
+- Monotonous decrease: yes  
+- Superlinear decrease: yes  
+- Change rate: moderate  
+
+---
+
+## 2. Suitability of bert_score_f for machine translation
+
+**Not recommended.**  
+Only **1 perturbation test** (Word Removal) achieves a **high change rate** (>-60%), and **5 perturbation tests** (Word Removal, Stop-Word Removal, Word Swapping, Truncation, Word Repetition) exhibit **superlinear decrease**. This falls short of the threshold (>7 tests) required for strong alignment with human evaluation criteria, which emphasizes disproportionately strong penalties for severe perturbations.

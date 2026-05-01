@@ -1,0 +1,52 @@
+**MAUVE‑RoBERTa‑Base**  
+
+---
+
+## Table  
+
+| Test Type | Perturbation Location | Gold Score | Perturbed Score | % Change vs. Gold | Change‑Rate Category |
+|-----------|----------------------|-----------|----------------|-------------------|----------------------|
+| **Shuffling‑test** | Beginning | 0.9621003998012043 | 0.9583875436782763 | **‑0.4 %** | very low |
+|  | Middle | 0.9621003998012043 | 0.9483634909996623 | **‑1.4 %** | very low |
+|  | End | 0.9621003998012043 | 0.5112034589711176 | **‑46.9 %** | low to moderate |
+| **Random‑test** | Beginning | 0.9621003998012043 | 0.8939011214880506 | **‑7.1 %** | very low |
+|  | Middle | 0.9621003998012043 | 0.9112935263380316 | **‑5.3 %** | very low |
+|  | End | 0.9621003998012043 | 0.5096985847373063 | **‑47.0 %** | low to moderate |
+
+*All scores are on the 0 – 1 scale; a negative % change indicates a lower score for the perturbed set.*
+
+---
+
+## 1. Sensitivity to the Perturbation  
+
+**a. Did a perturbed output score higher than the gold output?**  
+No. Every perturbed set received a lower score than the corresponding gold set.
+
+**b. Were the scores similar for every location, meaning the scores of beginning, middle and end were similar?**  
+No. Scores for perturbations at the **end** of the text dropped dramatically (≈ ‑47 %), whereas perturbations at the **beginning** and **middle** produced only marginal declines (‑0.4 % to ‑7.1 %). Thus, the metric is not uniformly sensitive across locations.
+
+**c. Were the scores similar for shuffling and random‑test?**  
+Only partially. For **beginning** and **middle** perturbations, both shuffling and random replacements yielded very low changes (‑0.4 % to ‑7.1 %). For the **end** location, both tests produced a large drop (‑46.9 % vs. ‑47.0 %), but the magnitude of change for the less‑severe perturbations differed (shuffling ≈ ‑0.4 % vs. random ≈ ‑7 %). Hence, the metric behaves similarly for severe end‑perturbations but diverges for milder perturbations.
+
+---
+
+## 2. Suitability of **MAUVE‑RoBERTa‑Base** for **open‑ended text generation**
+
+### a. Strengths  
+- **Detects severe degradation**: When 10 consecutive tokens at the **end** are either shuffled or replaced with random tokens, the metric registers a substantial drop (≈ ‑47 %), classified as *low to moderate* change‑rate. This aligns with human intuition that such perturbations severely damage coherence and meaning.  
+
+### b. Weaknesses  
+- **Insensitivity to subtle perturbations**: For perturbations at the **beginning** or **middle**, the metric’s change‑rate is *very low* (‑0.4 % to ‑7.1 %). Human readers would still notice the incoherence introduced by shuffled or random token blocks, especially in the middle of a passage, yet the metric barely reflects this.  
+- **Location bias**: The metric reacts strongly only when the disruption occurs near the **end** of the text, suggesting an over‑reliance on tail‑distribution statistics rather than a holistic assessment of semantic integrity.  
+- **No high‑change‑rate categories**: None of the six perturbation variants reach the *high* (70‑89 %) or *very high* (90‑100 %) change‑rate thresholds that would indicate robust discrimination.
+
+### c. Recommendation  
+**No.** The metric exhibits high‑change‑rate behavior in **0** out of the 6 tested variants (the requirement is > 5). Consequently, it does not meet the stipulated criterion for recommending its use as a reliable proxy for human evaluation in open‑ended generation tasks.
+
+### d. Needed Improvements  
+1. **Increase sensitivity to local semantic disruptions** – incorporate token‑level or span‑level coherence checks so that shuffling or random insertion anywhere in the text yields a more pronounced score decline.  
+2. **Balance positional influence** – adjust the underlying distributional comparison to treat all positions equally, mitigating the current end‑bias.  
+3. **Calibrate change‑rate mapping** – refine the metric’s scaling so that modest but perceptible degradations (e.g., 5‑10 % drop) are classified as *low* rather than *very low*, providing clearer interpretability for practitioners.  
+4. **Validate against broader perturbation families** – extend evaluation to synonym substitution, grammatical errors, and content omission to ensure the metric captures a wide spectrum of human‑perceived quality loss.  
+
+*Even with these enhancements, MAUVE‑RoBERTa‑Base should be used alongside human judgments, as no automatic metric can fully replace nuanced human evaluation.*

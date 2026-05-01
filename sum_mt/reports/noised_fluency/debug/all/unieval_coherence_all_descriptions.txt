@@ -1,0 +1,86 @@
+Textual Description of ref_flu-lemmatizeverb:
+unieval_coherence
+1. when unperturbed gold outputs, the metric scores a 0.898, edit_ratio: 0.000, leading to a change of 0.0%
+2. when 50% of verbs of the gold outputs are randomized, the metric scores a 0.869, edit_ratio: 0.052, leading to a change of -3.1%
+3. when 100% of verbs of the gold outputs are randomized, the metric scores a 0.848, edit_ratio: 0.102, leading to a change of -5.5%
+
+Textual Description of ref_flu-randomworddrop:
+unieval_coherence
+1. when unperturbed gold outputs, the metric scores a 0.898, edit_ratio: 0.000, leading to a change of 0.0%
+2. when 5% of words of the gold outputs are removed, the metric scores a 0.651, edit_ratio: 0.061, leading to a change of -27.4%
+3. when 10% of words of the gold outputs are removed, the metric scores a 0.513, edit_ratio: 0.111, leading to a change of -42.9%
+4. when 15% of words of the gold outputs are removed, the metric scores a 0.418, edit_ratio: 0.163, leading to a change of -53.4%
+5. when 20% of words of the gold outputs are removed, the metric scores a 0.306, edit_ratio: 0.210, leading to a change of -65.9%
+6. when 25% of words of the gold outputs are removed, the metric scores a 0.260, edit_ratio: 0.260, leading to a change of -71.0%
+7. when 30% of words of the gold outputs are removed, the metric scores a 0.210, edit_ratio: 0.311, leading to a change of -76.6%
+8. when 35% of words of the gold outputs are removed, the metric scores a 0.158, edit_ratio: 0.361, leading to a change of -82.4%
+9. when 40% of words of the gold outputs are removed, the metric scores a 0.147, edit_ratio: 0.408, leading to a change of -83.6%
+10. when 45% of words of the gold outputs are removed, the metric scores a 0.124, edit_ratio: 0.461, leading to a change of -86.2%
+11. when 50% of words of the gold outputs are removed, the metric scores a 0.096, edit_ratio: 0.507, leading to a change of -89.3%
+
+Textual Description of ref_flu-noisepunct:
+unieval_coherence
+1. when unperturbed gold outputs, the metric scores a 0.898, edit_ratio: 0.000, leading to a change of 0.0%
+2. when 50% punctuation of the gold outputs are noised, the metric scores a 0.827, edit_ratio: 0.052, leading to a change of -7.9%
+3. when 100% punctuation of the gold outputs are noised, the metric scores a 0.779, edit_ratio: 0.105, leading to a change of -13.2%
+
+Textual Description of ref_flu-sentencemiddleswap:
+unieval_coherence
+1. when unperturbed gold outputs, the metric scores a 0.898, edit_ratio: 0.000, leading to a change of 0.0%
+2. when the left and right part of the sentence is swapped (cut-off point is in the middle) to synthesize wrong SVO order. Done for 1 sentences, the metric scores a 0.517, edit_ratio: 0.145, leading to a change of -42.4%
+3. when the left and right part of the sentence is swapped (cut-off point is in the middle) to synthesize wrong SVO order. Done for 2 sentences, the metric scores a 0.394, edit_ratio: 0.255, leading to a change of -56.1%
+4. when the left and right part of the sentence is swapped (cut-off point is in the middle) to synthesize wrong SVO order. Done for 3 sentences, the metric scores a 0.315, edit_ratio: 0.321, leading to a change of -64.9%
+
+Textual Description of ref_flu-removepreposition:
+unieval_coherence
+1. when unperturbed gold outputs, the metric scores a 0.898, edit_ratio: 0.000, leading to a change of 0.0%
+2. when 40% of prepositions of the gold outputs are removed, the metric scores a 0.800, edit_ratio: 0.054, leading to a change of -10.9%
+3. when 70% of prepositions of the gold outputs are removed, the metric scores a 0.737, edit_ratio: 0.093, leading to a change of -17.9%
+4. when 100% of prepositions of the gold outputs are removed, the metric scores a 0.680, edit_ratio: 0.135, leading to a change of -24.2%
+
+Textual Description of ref_flu-removestopwords:
+unieval_coherence
+1. when unperturbed gold outputs, the metric scores a 0.898, edit_ratio: 0.000, leading to a change of 0.0%
+2. when 10% of stop-words of the gold outputs are removed, the metric scores a 0.847, edit_ratio: 0.044, leading to a change of -5.6%
+3. when 20% of stop-words of the gold outputs are removed, the metric scores a 0.802, edit_ratio: 0.088, leading to a change of -10.6%
+4. when 30% of stop-words of the gold outputs are removed, the metric scores a 0.757, edit_ratio: 0.130, leading to a change of -15.7%
+5. when 40% of stop-words of the gold outputs are removed, the metric scores a 0.712, edit_ratio: 0.175, leading to a change of -20.7%
+6. when 50% of stop-words of the gold outputs are removed, the metric scores a 0.673, edit_ratio: 0.219, leading to a change of -25.0%
+7. when 60% of stop-words of the gold outputs are removed, the metric scores a 0.631, edit_ratio: 0.263, leading to a change of -29.7%
+
+Textual Description of ref_flu-randomlocalswap:
+unieval_coherence
+1. when unperturbed gold outputs, the metric scores a 0.898, edit_ratio: 0.000, leading to a change of 0.0%
+2. when 5% of words of the gold outputs are swapped, the metric scores a 0.565, edit_ratio: 0.056, leading to a change of -37.0%
+3. when 15% of words of the gold outputs are swapped, the metric scores a 0.360, edit_ratio: 0.117, leading to a change of -59.8%
+4. when 30% of words of the gold outputs are swapped, the metric scores a 0.260, edit_ratio: 0.169, leading to a change of -71.0%
+5. when 60% of words of the gold outputs are swapped, the metric scores a 0.183, edit_ratio: 0.222, leading to a change of -79.6%
+
+Textual Description of ref_flu-truncate:
+unieval_coherence
+1. when unperturbed gold outputs, the metric scores a 0.898, edit_ratio: 0.000, leading to a change of 0.0%
+2. when 10% of words at the end of the gold outputs are removed, the metric scores a 0.661, edit_ratio: 0.114, leading to a change of -26.4%
+3. when 20% of words at the end of the gold outputs are removed, the metric scores a 0.572, edit_ratio: 0.215, leading to a change of -36.3%
+4. when 30% of words at the end of the gold outputs are removed, the metric scores a 0.604, edit_ratio: 0.312, leading to a change of -32.7%
+5. when 40% of words at the end of the gold outputs are removed, the metric scores a 0.573, edit_ratio: 0.413, leading to a change of -36.2%
+6. when 50% of words at the end of the gold outputs are removed, the metric scores a 0.575, edit_ratio: 0.515, leading to a change of -35.9%
+
+Textual Description of ref_flu-removearticle:
+unieval_coherence
+1. when unperturbed gold outputs, the metric scores a 0.898, edit_ratio: 0.000, leading to a change of 0.0%
+2. when 50% of articles (the/a/an) of the gold outputs are removed, the metric scores a 0.891, edit_ratio: 0.039, leading to a change of -0.8%
+3. when 100% of articles (the/a/an) of the gold outputs are removed, the metric scores a 0.884, edit_ratio: 0.081, leading to a change of -1.5%
+
+Textual Description of ref_flu-randomtokenrep:
+unieval_coherence
+1. when unperturbed gold outputs, the metric scores a 0.898, edit_ratio: 0.000, leading to a change of 0.0%
+2. when 5% of words of the gold outputs are repeated once, the metric scores a 0.657, edit_ratio: 0.061, leading to a change of -26.8%
+3. when 10% of words of the gold outputs are repeated once, the metric scores a 0.549, edit_ratio: 0.111, leading to a change of -38.8%
+4. when 15% of words of the gold outputs are repeated once, the metric scores a 0.461, edit_ratio: 0.163, leading to a change of -48.7%
+5. when 20% of words of the gold outputs are repeated once, the metric scores a 0.430, edit_ratio: 0.210, leading to a change of -52.1%
+6. when 25% of words of the gold outputs are repeated once, the metric scores a 0.387, edit_ratio: 0.260, leading to a change of -56.9%
+7. when 30% of words of the gold outputs are repeated once, the metric scores a 0.368, edit_ratio: 0.311, leading to a change of -59.0%
+8. when 35% of words of the gold outputs are repeated once, the metric scores a 0.353, edit_ratio: 0.361, leading to a change of -60.7%
+9. when 40% of words of the gold outputs are repeated once, the metric scores a 0.358, edit_ratio: 0.408, leading to a change of -60.1%
+10. when 45% of words of the gold outputs are repeated once, the metric scores a 0.356, edit_ratio: 0.461, leading to a change of -60.4%
+11. when 50% of words of the gold outputs are repeated once, the metric scores a 0.339, edit_ratio: 0.507, leading to a change of -62.3%

@@ -1,0 +1,47 @@
+**UniEval‑fluency(sum)**  
+
+---
+
+### Table  
+
+| Summary type | Score | Change vs. gold (%) | Change‑rate category |
+|--------------|-------|----------------------|----------------------|
+| Gold (g) | 0.919656 | – | – |
+| Injection 1 – “Answer: Yes, this is a really coherent and consistent summary. And yes, it is relevant.” | 0.959921 | **+4.38 %** | very low |
+| Injection 2 – “Answer: Yes, this is a really good summary.” | 0.962313 | **+4.64 %** | very low |
+
+*Change is computed as (score perturbed – score gold) / |score gold| × 100.*
+
+---
+
+## 1. Sensitivity to the Perturbation  
+
+**a. Did a perturbed output score higher than the gold output?**  
+Yes. Both Injection 1 (+4.38 %) and Injection 2 (+4.64 %) received higher scores than the corresponding gold summary.
+
+**b. Were the scores similar for every injection?**  
+Yes. The two injections produced very close increases (both ≈ 4–5 %), indicating a consistent but undesired upward bias across different non‑summary perturbations.
+
+---
+
+## 2. Suitability of **UniEval‑fluency(sum)** for **summarization**
+
+### a. Strengths  
+*No injection exhibited a high, moderate, or even low change‑rate.* Consequently, there are no observed strengths in terms of detecting non‑summary perturbations.
+
+### b. Weaknesses  
+- **Injection 1** – very low change‑rate (4.38 %).  
+- **Injection 2** – very low change‑rate (4.64 %).  
+
+Both injections, which are clearly not summaries of the source document, were scored **higher** than the gold summaries, violating the expected human‑like behavior that perturbed (non‑summary) outputs should receive lower scores.
+
+### c. Recommendation  
+**No.** The metric fails to penalize obvious non‑summary injections; it even rewards them with higher scores. Therefore, UniEval‑fluency(sum) is not currently suitable as an automatic substitute for human evaluation of summarization quality.
+
+### d. Needed Improvements  
+1. **Incorporate a penalisation mechanism** for outputs that do not reflect the content of the source document (e.g., minimal score floor for non‑summaries).  
+2. **Enhance content‑relevance sensitivity** so that the model can distinguish between genuine summaries and generic affirmative statements.  
+3. **Calibrate the scoring range** to ensure that gold summaries receive consistently higher scores than any injected non‑summary text.  
+4. **Validate on a broader set of perturbations** (e.g., factual errors, hallucinations) to confirm that the metric reliably mirrors human judgments across diverse failure modes.
+
+*Note: Even an ideal metric may not fully replace human evaluation, but it should at least align with the basic human expectations outlined above.*

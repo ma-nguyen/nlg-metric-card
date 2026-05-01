@@ -1,0 +1,75 @@
+# Evaluation Metrics for Machine Translation
+## Table
+The table below contains the results of the tested evaluation metrics.
+
+| Metric | Perturbation Type | Variation | Score | Edit Ratio | Change |
+| --- | --- | --- | --- | --- | --- |
+| bert_score_f | lemmatize | 0% | 0.687 | 0.000 | 0.0% |
+| bert_score_f | lemmatize | 50% | 0.664 | 0.041 | -3.3% |
+| bert_score_f | lemmatize | 100% | 0.644 | 0.081 | -6.3% |
+| ... | ... | ... | ... | ... | ... |
+
+## Sensitivity to the Perturbation
+The sensitivity of each metric to each perturbation type is analyzed below.
+
+### bert_score_f
+* lemmatize: monotonous decrease - yes, superlinear decrease - no, change rate - moderate
+* randomworddrop: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+* noisepunct: monotonous decrease - yes, superlinear decrease - no, change rate - low
+* sentencemiddleswap: monotonous decrease - yes, superlinear decrease - no, change rate - low
+* removepreposition: monotonous decrease - yes, superlinear decrease - no, change rate - moderate
+* removestopwords: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+* randomlocalswap: monotonous decrease - yes, superlinear decrease - no, change rate - moderate
+* truncate: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+* removearticle: monotonous decrease - yes, superlinear decrease - no, change rate - low
+* randomtokenrep: monotonous decrease - yes, superlinear decrease - no, change rate - moderate
+
+### bart_score
+* lemmatize: monotonous decrease - yes, superlinear decrease - yes, change rate - moderate
+* randomworddrop: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+* noisepunct: monotonous decrease - yes, superlinear decrease - no, change rate - low
+* sentencemiddleswap: monotonous decrease - yes, superlinear decrease - no, change rate - low
+* removepreposition: monotonous decrease - yes, superlinear decrease - no, change rate - moderate
+* removestopwords: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+* randomlocalswap: monotonous decrease - yes, superlinear decrease - no, change rate - moderate
+* truncate: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+* removearticle: monotonous decrease - yes, superlinear decrease - no, change rate - low
+* randomtokenrep: monotonous decrease - yes, superlinear decrease - no, change rate - moderate
+
+### bleu
+* lemmatize: monotonous decrease - yes, superlinear decrease - yes, change rate - moderate
+* randomworddrop: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+* noisepunct: monotonous decrease - yes, superlinear decrease - no, change rate - low
+* sentencemiddleswap: monotonous decrease - yes, superlinear decrease - no, change rate - low
+* removepreposition: monotonous decrease - yes, superlinear decrease - no, change rate - moderate
+* removestopwords: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+* randomlocalswap: monotonous decrease - yes, superlinear decrease - no, change rate - moderate
+* truncate: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+* removearticle: monotonous decrease - yes, superlinear decrease - no, change rate - low
+* randomtokenrep: monotonous decrease - yes, superlinear decrease - no, change rate - moderate
+
+### bleurt
+* lemmatize: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+* randomworddrop: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+* noisepunct: monotonous decrease - yes, superlinear decrease - no, change rate - low
+* sentencemiddleswap: monotonous decrease - yes, superlinear decrease - no, change rate - low
+* removepreposition: monotonous decrease - yes, superlinear decrease - no, change rate - moderate
+* removestopwords: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+* randomlocalswap: monotonous decrease - yes, superlinear decrease - no, change rate - moderate
+* truncate: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+* removearticle: monotonous decrease - yes, superlinear decrease - no, change rate - low
+* randomtokenrep: monotonous decrease - yes, superlinear decrease - no, change rate - moderate
+
+## Recommendation
+The recommended metrics for each perturbation type are:
+
+* lemmatize: none
+* randomworddrop: bart_score, bleu, bleurt
+* noisepunct: none
+* sentencemiddleswap: bleurt
+* removepreposition: bart_score, bleu
+* removestopwords: bart_score, bleu, bleurt
+* randomlocalswap: none
+* truncate: bart_score, bleu, bleurt
+* removearticle: none
+* randomtokenrep: none

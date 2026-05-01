@@ -1,0 +1,91 @@
+**mauve‑roberta**
+
+---
+
+## Table  
+
+| Perturbation type | Variation (percent) | MAUVE‑roberta score | edit ratio | change vs. gold |
+|-------------------|---------------------|---------------------|------------|-----------------|
+| **Verb lemmatization** (randomized verbs) | 0 % (gold) | 0.969 | 0.000 | 0.0 % |
+| | 50 % | 0.938 | 0.045 | –3.2 % |
+| | 100 % | 0.625 | 0.090 | –35.5 % |
+| **Word removal** (random word deletions) | 5 % | 0.919 | 0.053 | –5.2 % |
+| | 10 % | 0.633 | 0.103 | –34.6 % |
+| | 15 % | 0.164 | 0.153 | –83.1 % |
+| | 20 % | 0.029 | 0.202 | –97.0 % |
+| | 25 % | 0.011 | 0.252 | –98.9 % |
+| | 30 % | 0.007 | 0.303 | –99.3 % |
+| | 35 % | 0.005 | 0.353 | –99.4 % |
+| | 40 % | 0.005 | 0.402 | –99.5 % |
+| | 45 % | 0.005 | 0.453 | –99.5 % |
+| | 50 % | 0.004 | 0.501 | –99.5 % |
+| **Punctuation noise** | 50 % | 0.379 | 0.056 | –60.9 % |
+| | 100 % | 0.026 | 0.111 | –97.3 % |
+| **Sentence‑middle swap** (swap left/right parts) | 1 sentence | 0.950 | 0.072 | –1.9 % |
+| | 2 sentences | 0.876 | 0.134 | –9.6 % |
+| | 3 sentences | 0.620 | 0.191 | –36.0 % |
+| **Preposition removal** | 40 % | 0.940 | 0.057 | –3.0 % |
+| | 70 % | 0.850 | 0.100 | –12.3 % |
+| | 100 % | 0.500 | 0.142 | –48.4 % |
+| **Stop‑word removal** | 10 % | 0.953 | 0.049 | –1.7 % |
+| | 20 % | 0.866 | 0.097 | –10.6 % |
+| | 30 % | 0.591 | 0.146 | –39.0 % |
+| | 40 % | 0.217 | 0.194 | –77.6 % |
+| | 50 % | 0.055 | 0.242 | –94.3 % |
+| | 60 % | 0.023 | 0.290 | –97.6 % |
+| **Random local swap** (word swaps) | 5 % | 0.831 | 0.047 | –14.3 % |
+| | 15 % | 0.032 | 0.109 | –96.7 % |
+| | 30 % | 0.006 | 0.164 | –99.4 % |
+| | 60 % | 0.004 | 0.216 | –99.6 % |
+| **Truncate (remove words at the end)** | 10 % | 0.777 | 0.103 | –19.8 % |
+| | 20 % | 0.712 | 0.203 | –26.5 % |
+| | 30 % | 0.645 | 0.303 | –33.4 % |
+| | 40 % | 0.471 | 0.403 | –51.4 % |
+| | 50 % | 0.289 | 0.504 | –70.2 % |
+| **Article removal** | 50 % | 0.957 | 0.053 | –1.2 % |
+| | 100 % | 0.883 | 0.105 | –8.8 % |
+| **Random token repetition** | 5 % | 0.941 | 0.053 | –2.8 % |
+| | 10 % | 0.823 | 0.103 | –15.1 % |
+| | 15 % | 0.438 | 0.153 | –54.8 % |
+| | 20 % | 0.128 | 0.202 | –86.8 % |
+| | 25 % | 0.030 | 0.252 | –96.9 % |
+| | 30 % | 0.012 | 0.303 | –98.7 % |
+| | 35 % | 0.008 | 0.353 | –99.2 % |
+| | 40 % | 0.006 | 0.402 | –99.4 % |
+| | 45 % | 0.005 | 0.453 | –99.5 % |
+| | 50 % | 0.005 | 0.501 | –99.5 % |
+
+---
+
+## 1. Sensitivity to the Perturbation  
+
+For each perturbation type we assess:
+
+* **Monotonous decrease** – does the score consistently drop as the variation grows?  
+* **Superlinear decrease** – does the magnitude of the drop increase with higher variation (i.e., later drops are larger than earlier ones)?  
+* **Change rate** – classified as **low**, **moderate**, or **high** according to the largest absolute change (‑25 %, ‑60 %, otherwise).
+
+| Perturbation | Monotonous decrease | Superlinear decrease | Change rate |
+|--------------|---------------------|----------------------|-------------|
+| Verb lemmatization | yes | yes | moderate |
+| Word removal | yes | yes | high |
+| Punctuation noise | yes | no | high |
+| Sentence‑middle swap | yes | yes | moderate |
+| Preposition removal | yes | yes | moderate |
+| Stop‑word removal | yes | yes | high |
+| Random local swap | yes | yes | high |
+| Truncate (end‑word removal) | yes | yes | high |
+| Article removal | yes | yes | low |
+| Random token repetition | yes | yes | high |
+
+*No data provided* for any intermediate variation levels that are not listed in the results.
+
+---
+
+## 2. Suitability of **mauve‑roberta** for **open‑ended text generation**
+
+A metric is deemed suitable when **most (> 7) perturbation tests** exhibit both a **high change rate** *and* a **superlinear decrease**.  
+
+From the analysis above, only **five** perturbation families (Word removal, Stop‑word removal, Random local swap, Truncate, Random token repetition) satisfy both conditions. The remaining families either have moderate/low change rates or lack a superlinear pattern.
+
+**Conclusion:** **mauve‑roberta is *not* recommended** as a primary automatic metric for evaluating open‑ended text generation, because it does not consistently produce strong, superlinear sensitivity across a sufficient number of perturbation types.

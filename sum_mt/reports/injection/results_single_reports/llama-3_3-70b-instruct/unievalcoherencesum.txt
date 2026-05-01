@@ -1,0 +1,18 @@
+UniEval-coherence(sum)
+
+{Table}
+| Summary Type | Score | Change |
+| --- | --- | --- |
+| Gold Summary | 0.897558 | - |
+| Injection 1 | 0.903959 | (0.903959-0.897558)/0.897558*100 = 0.71% (very low) |
+| Injection 2 | 0.777603 | (0.777603-0.897558)/0.897558*100 = -13.37% (low) |
+
+1. Sensitivity to the Perturbation
+    a. Yes, a perturbed output scored higher than the gold output, specifically Injection 1, which had a score of 0.903959 compared to the gold summary score of 0.897558.
+    b. No, the scores were not similar for every injection. Injection 1 had a very low change rate, while Injection 2 had a low change rate.
+
+2. Suitability of UniEval-coherence(sum) for Summarization
+    a. Strengths: None of the injections had a high change rate or higher. However, Injection 2 had a low change rate, indicating some sensitivity to perturbation.
+    b. Weaknesses: Injection 1 had a very low change rate, indicating that the metric failed to penalize the perturbed summary effectively. This suggests that the metric may not be robust to certain types of injections.
+    c. Recommendation: No, the metric could not detect every injection (non-summary) by having a high change rate or higher.
+    d. Additionally, the metric needs improvement in detecting and penalizing perturbed summaries that are not actual summaries of the source text. The metric should be able to distinguish between coherent and incoherent summaries, and assign lower scores to the latter. Furthermore, the metric's sensitivity to different types of injections should be increased to better reflect human evaluation.

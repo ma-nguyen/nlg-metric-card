@@ -1,0 +1,93 @@
+# mauve-gpt2
+
+## Table
+
+| Perturbation Type         | Monotonous Decrease | Superlinear Decrease | Change Rate |
+|---------------------------|---------------------|----------------------|-------------|
+| Verb Lemmatization        | yes                 | yes                  | moderate    |
+| Word Removal              | yes                 | yes                  | high        |
+| Punctuation Noise         | yes                 | yes                  | high        |
+| Sentence Middle Swap      | yes                 | yes                  | moderate    |
+| Preposition Removal       | yes                 | yes                  | high        |
+| Stop-word Removal         | yes                 | yes                  | high        |
+| Word Swap                 | yes                 | yes                  | high        |
+| Truncation (End Removal)  | yes                 | no                   | moderate    |
+| Article Removal           | yes                 | yes                  | moderate    |
+| Word Repetition           | yes                 | yes                  | high        |
+
+## 1. Sensitivity to the Perturbation
+
+**Verb Lemmatization**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes  
+- **Change rate**: moderate  
+  - 0% → 50%: -10.3%  
+  - 50% → 100%: -47.8%  
+
+**Word Removal**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes  
+- **Change rate**: high  
+  - 0% → 5%: -34.5%  
+  - 5% → 50%: -99.1%  
+
+**Punctuation Noise**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes  
+- **Change rate**: high  
+  - 0% → 50%: -98.6%  
+  - 50% → 100%: -99.4%  
+
+**Sentence Middle Swap**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes  
+- **Change rate**: moderate  
+  - 0% → 1 sentence: -12.5%  
+  - 1 sentence → 3 sentences: -66.7%  
+
+**Preposition Removal**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes  
+- **Change rate**: high  
+  - 0% → 40%: -13.0%  
+  - 40% → 100%: -72.0%  
+
+**Stop-word Removal**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes  
+- **Change rate**: high  
+  - 0% → 10%: -7.1%  
+  - 10% → 60%: -96.4%  
+
+**Word Swap**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes  
+- **Change rate**: high  
+  - 0% → 5%: -73.1%  
+  - 5% → 60%: -99.3%  
+
+**Truncation (End Removal)**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: no  
+- **Change rate**: moderate  
+  - 0% → 10%: -82.8%  
+  - 10% → 50%: -84.7%  
+
+**Article Removal**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes  
+- **Change rate**: moderate  
+  - 0% → 50%: -11.0%  
+  - 50% → 100%: -45.7%  
+
+**Word Repetition**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes  
+- **Change rate**: high  
+  - 0% → 5%: -31.2%  
+  - 5% → 50%: -99.0%  
+
+## 2. Suitability of mauve-gpt2 for open-ended text generation
+
+**Recommendation**: **Recommended**  
+- **Justification**: 7 out of 10 perturbation tests show **high change rate** and **superlinear decrease**, aligning with human evaluation's superlinear sensitivity to fluency errors. The metric demonstrates strong sensitivity to most perturbations, particularly for severe disruptions (e.g., word removal, punctuation noise, word repetition). Only 3 tests (sentence middle swap, truncation, article removal) show moderate change rates, but the majority of results meet the criteria for a suitable metric.

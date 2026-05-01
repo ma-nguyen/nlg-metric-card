@@ -1,0 +1,82 @@
+# unieval_relevance
+
+## Table
+
+| Perturbation Type | Variation | Score | Edit Ratio | Change (%) |
+|-------------------|-----------|-------|------------|------------|
+| Verb Lemmatization | 0.000 | 0.781 | 0.000 | 0.0 |
+| Verb Lemmatization | 0.500 | 0.726 | 0.052 | -7.0 |
+| Verb Lemmatization | 1.000 | 0.695 | 0.102 | -11.0 |
+| Word Removal | 0.000 | 0.781 | 0.000 | 0.0 |
+| Word Removal | 0.050 | 0.457 | 0.061 | -41.5 |
+| Word Removal | 0.100 | 0.277 | 0.111 | -64.5 |
+| Word Removal | 0.150 | 0.196 | 0.163 | -74.9 |
+| Word Removal | 0.200 | 0.123 | 0.210 | -84.2 |
+| Word Removal | 0.250 | 0.078 | 0.260 | -90.0 |
+| Word Removal | 0.300 | 0.050 | 0.311 | -93.6 |
+| Word Removal | 0.350 | 0.035 | 0.361 | -95.5 |
+| Word Removal | 0.400 | 0.030 | 0.408 | -96.2 |
+| Word Removal | 0.450 | 0.019 | 0.461 | -97.6 |
+| Word Removal | 0.500 | 0.015 | 0.507 | -98.0 |
+| Punctuation Noise | 0.000 | 0.781 | 0.000 | 0.0 |
+| Punctuation Noise | 0.500 | 0.648 | 0.052 | -17.1 |
+| Punctuation Noise | 1.000 | 0.573 | 0.105 | -26.6 |
+| Sentence Swap (SVO) | 0.000 | 0.781 | 0.000 | 0.0 |
+| Sentence Swap (SVO) | 1.000 | 0.303 | 0.145 | -61.2 |
+| Sentence Swap (SVO) | 2.000 | 0.185 | 0.255 | -76.4 |
+| Sentence Swap (SVO) | 3.000 | 0.118 | 0.321 | -84.9 |
+| Preposition Removal | 0.000 | 0.781 | 0.000 | 0.0 |
+| Preposition Removal | 0.400 | 0.625 | 0.054 | -20.0 |
+| Preposition Removal | 0.700 | 0.526 | 0.093 | -32.7 |
+| Preposition Removal | 1.000 | 0.437 | 0.135 | -44.1 |
+| Stop-word Removal | 0.000 | 0.781 | 0.000 | 0.0 |
+| Stop-word Removal | 0.100 | 0.695 | 0.044 | -11.1 |
+| Stop-word Removal | 0.200 | 0.623 | 0.088 | -20.2 |
+| Stop-word Removal | 0.300 | 0.551 | 0.130 | -29.4 |
+| Stop-word Removal | 0.400 | 0.492 | 0.175 | -37.1 |
+| Stop-word Removal | 0.500 | 0.431 | 0.219 | -44.8 |
+| Stop-word Removal | 0.600 | 0.372 | 0.263 | -52.4 |
+| Word Swap | 0.000 | 0.781 | 0.000 | 0.0 |
+| Word Swap | 0.050 | 0.319 | 0.056 | -59.2 |
+| Word Swap | 0.150 | 0.115 | 0.117 | -85.3 |
+| Word Swap | 0.300 | 0.038 | 0.169 | -95.1 |
+| Word Swap | 0.600 | 0.018 | 0.222 | -97.7 |
+| Truncation (End) | 0.000 | 0.781 | 0.000 | 0.0 |
+| Truncation (End) | 0.100 | 0.479 | 0.114 | -38.7 |
+| Truncation (End) | 0.200 | 0.374 | 0.215 | -52.1 |
+| Truncation (End) | 0.300 | 0.450 | 0.312 | -42.4 |
+| Truncation (End) | 0.400 | 0.394 | 0.413 | -49.5 |
+| Truncation (End) | 0.500 | 0.394 | 0.515 | -49.5 |
+| Article Removal | 0.000 | 0.781 | 0.000 | 0.0 |
+| Article Removal | 0.500 | 0.770 | 0.039 | -1.4 |
+| Article Removal | 1.000 | 0.764 | 0.081 | -2.2 |
+| Word Repetition | 0.000 | 0.781 | 0.000 | 0.0 |
+| Word Repetition | 0.050 | 0.481 | 0.061 | -38.5 |
+| Word Repetition | 0.100 | 0.359 | 0.111 | -54.1 |
+| Word Repetition | 0.150 | 0.249 | 0.163 | -68.2 |
+| Word Repetition | 0.200 | 0.208 | 0.210 | -73.3 |
+| Word Repetition | 0.250 | 0.169 | 0.260 | -78.3 |
+| Word Repetition | 0.300 | 0.142 | 0.311 | -81.8 |
+| Word Repetition | 0.350 | 0.128 | 0.361 | -83.7 |
+| Word Repetition | 0.400 | 0.125 | 0.408 | -83.9 |
+| Word Repetition | 0.450 | 0.119 | 0.461 | -84.8 |
+| Word Repetition | 0.500 | 0.103 | 0.507 | -86.8 |
+
+## 1. Sensitivity to the Perturbation
+
+| Perturbation Type | Monotonous Decrease | Superlinear Decrease | Change Rate |
+|-------------------|---------------------|----------------------|-------------|
+| Verb Lemmatization | yes | no | low |
+| Word Removal | yes | yes | high |
+| Punctuation Noise | yes | no | low |
+| Sentence Swap (SVO) | yes | yes | high |
+| Preposition Removal | yes | no | moderate |
+| Stop-word Removal | yes | no | moderate |
+| Word Swap | yes | yes | high |
+| Truncation (End) | yes | no | moderate |
+| Article Removal | yes | no | low |
+| Word Repetition | yes | yes | high |
+
+## 2. Suitability of unieval_relevance for summarization
+
+The unieval_relevance metric is **not recommended** for summarization evaluation. Only 4 out of 10 perturbation tests (Word Removal, Sentence Swap, Word Swap, Word Repetition) demonstrate both high change rates and superlinear decreases, falling short of the threshold of >7 required for recommendation.

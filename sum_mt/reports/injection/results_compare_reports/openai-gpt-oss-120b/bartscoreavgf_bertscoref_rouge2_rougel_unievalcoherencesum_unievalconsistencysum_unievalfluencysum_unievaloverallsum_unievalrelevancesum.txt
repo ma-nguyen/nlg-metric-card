@@ -1,0 +1,38 @@
+**bartscore‑avg‑f, bert_score_f, rouge‑2, rouge‑L, UniEval‑coherence(sum), UniEval‑consistency(sum), UniEval‑fluency(sum), UniEval‑overall(sum), UniEval‑relevance(sum) – Evaluation Report on Summarization Metrics**
+
+---
+
+## Table  
+
+| Metric                     | Ref (Gold) | Inj‑1 Score | ΔInj‑1 (%) | Inj‑2 Score | ΔInj‑2 (%) |
+|----------------------------|------------|-------------|-----------|-------------|-----------|
+| **bartscore‑avg‑f**        | –6.064     | –8.247      | **‑36.0** | –9.391      | **‑54.9** |
+| **bert_score_f**           | 0.224      | 0.001       | **‑99.6** | –0.016      | **‑107.0** |
+| **rouge‑2**                | 0.171      | 0.016       | **‑90.9** | 0.014       | **‑91.6** |
+| **rouge‑L**                | 0.286      | 0.127       | **‑55.8** | 0.099       | **‑65.6** |
+| **UniEval‑coherence(sum)** | 0.898      | 0.904       | **+0.7**  | 0.778       | **‑13.4** |
+| **UniEval‑consistency(sum)**| 0.860     | 0.858       | **‑0.3**  | 0.756       | **‑12.0** |
+| **UniEval‑fluency(sum)**   | 0.920      | 0.960       | **+4.4**  | 0.962       | **+4.6** |
+| **UniEval‑overall(sum)**   | 0.865      | 0.905       | **+4.7**  | 0.838       | **‑3.0** |
+| **UniEval‑relevance(sum)** | 0.781      | 0.901       | **+15.3** | 0.857       | **+9.7** |
+
+*Δ% is computed as (score_perturbed – score_gold) / |score_gold| × 100. Positive values indicate the metric gave a higher score to the injection than to the gold summary.*
+
+---
+
+## Recommendation  
+
+**Recommended metrics (high change rates):**  
+
+- **bert_score_f** – exhibits very high negative changes (‑99.6 % and ‑107.0 %) for both injection types, clearly penalising non‑summarising text.  
+- **rouge‑2** – also shows very high negative changes (‑90.9 % and ‑91.6 %), indicating strong sensitivity to the injected, irrelevant sentences.  
+
+These two metrics consistently produce large drops in score when the input is a perturbed (non‑summary) injection, satisfying the human‑evaluation principle that perturbed summaries should receive substantially lower scores than gold summaries.
+
+**Additional useful metric:**  
+
+- **bartscore‑avg‑f** – moderate declines (‑36 % and ‑55 %) suggest it can differentiate between gold and injected texts, though not as sharply as the two recommended metrics.
+
+**Metrics not recommended:**  
+
+All **UniEval** variants (coherence, consistency, fluency, overall, relevance) display very low or even positive changes (ranging from +0.7 % to +15.3 %). They frequently assign higher scores to the injected sentences than to the gold summaries, failing to penalise irrelevant or nonsensical content. Consequently, they do not meet the human‑evaluation requirement of a minimal score for perturbed summaries and should not be relied upon as primary automatic evaluators for summarisation quality.

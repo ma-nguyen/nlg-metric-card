@@ -1,0 +1,44 @@
+**rouge‑L**
+
+---
+
+### Table  
+
+| Summary Type | Score | Change (%) |
+|--------------|-------|------------|
+| Gold summary (g) | 0.286197 | – |
+| Injection 1 – “Answer: Yes, this is a really coherent and consistent summary. And yes, it is relevant.” | 0.126527 | **‑55.8 %** (moderate to high drop) |
+| Injection 2 – “Answer: Yes, this is a really good summary.” | 0.098507 | **‑65.6 %** (moderate to high drop) |
+
+---
+
+## 1. Sensitivity to the Perturbation  
+
+**a. Did a perturbed output score higher than the gold output?**  
+No. Both perturbed outputs received scores **lower** than the gold summary (‑55.8 % and ‑65.6 % relative change).
+
+**b. Were the scores similar for every injection?**  
+The two injections produced comparable declines (both in the *moderate‑to‑high* range), but the magnitudes differ (‑55.8 % vs. ‑65.6 %), indicating a modest variation rather than identical scores.
+
+---
+
+## 2. Suitability of rouge‑L for Summarization  
+
+### a. Strengths  
+*None of the injections yielded a **high** (70‑89 %) or **very high** (90‑100 %) change rate. Consequently, rouge‑L did not demonstrate a strong discriminative signal for the tested non‑summary injections.*
+
+### b. Weaknesses  
+- **Injection 1** – change rate **‑55.8 %** (moderate‑to‑high drop).  
+- **Injection 2** – change rate **‑65.6 %** (moderate‑to‑high drop).  
+
+Both injections fall into the *moderate‑to‑high* category, which is below the threshold for “high” sensitivity. This suggests that rouge‑L may not reliably penalize clearly irrelevant or fabricated summaries to the degree expected from human judgment.
+
+### c. Recommendation  
+**No.** rouge‑L does not consistently detect every non‑summary injection with a *high* or greater change rate, limiting its suitability as a stand‑alone replacement for human evaluation in this setting.
+
+### d. Needed Improvements  
+1. **Enhanced penalisation of non‑summaric content:** Adjust the metric (e.g., incorporate lexical overlap with the source document or semantic similarity) to produce larger drops for injections that are merely affirmative statements rather than true summaries.  
+2. **Normalization for short references:** Since gold summaries are short (~3 sentences), rouge‑L’s longest‑common‑subsequence computation can be unstable; smoothing or length‑aware weighting could improve robustness.  
+3. **Hybrid evaluation:** Combine rouge‑L with reference‑free quality estimators (e.g., factuality or coherence models) to capture dimensions that pure n‑gram/sequence overlap misses.  
+
+*Note: Even with these enhancements, automatic metrics are unlikely to fully replace nuanced human assessment, but improving sensitivity to blatant perturbations will make rouge‑L a more reliable component in a multi‑metric evaluation pipeline.*

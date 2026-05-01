@@ -1,0 +1,75 @@
+# unieval_coherence
+
+## Table
+
+| Perturbation Type | Variation | unieval_coherence Score | edit_ratio | Change |
+| --- | --- | --- | --- | --- |
+| Unperturbed | 0% | 0.898 | 0.000 | 0.0% |
+| Verb Lemmatization | 50% | 0.869 | 0.052 | -3.1% |
+| Verb Lemmatization | 100% | 0.848 | 0.102 | -5.5% |
+| Word Removal | 5% | 0.651 | 0.061 | -27.4% |
+| Word Removal | 10% | 0.513 | 0.111 | -42.9% |
+| Word Removal | 15% | 0.418 | 0.163 | -53.4% |
+| Word Removal | 20% | 0.306 | 0.210 | -65.9% |
+| Word Removal | 25% | 0.260 | 0.260 | -71.0% |
+| Word Removal | 30% | 0.210 | 0.311 | -76.6% |
+| Word Removal | 35% | 0.158 | 0.361 | -82.4% |
+| Word Removal | 40% | 0.147 | 0.408 | -83.6% |
+| Word Removal | 45% | 0.124 | 0.461 | -86.2% |
+| Word Removal | 50% | 0.096 | 0.507 | -89.3% |
+| Punctuation Noise | 50% | 0.827 | 0.052 | -7.9% |
+| Punctuation Noise | 100% | 0.779 | 0.105 | -13.2% |
+| Sentence Middle Swap | 1 sentence | 0.517 | 0.145 | -42.4% |
+| Sentence Middle Swap | 2 sentences | 0.394 | 0.255 | -56.1% |
+| Sentence Middle Swap | 3 sentences | 0.315 | 0.321 | -64.9% |
+| Preposition Removal | 40% | 0.800 | 0.054 | -10.9% |
+| Preposition Removal | 70% | 0.737 | 0.093 | -17.9% |
+| Preposition Removal | 100% | 0.680 | 0.135 | -24.2% |
+| Stopword Removal | 10% | 0.847 | 0.044 | -5.6% |
+| Stopword Removal | 20% | 0.802 | 0.088 | -10.6% |
+| Stopword Removal | 30% | 0.757 | 0.130 | -15.7% |
+| Stopword Removal | 40% | 0.712 | 0.175 | -20.7% |
+| Stopword Removal | 50% | 0.673 | 0.219 | -25.0% |
+| Stopword Removal | 60% | 0.631 | 0.263 | -29.7% |
+| Word Swap | 5% | 0.565 | 0.056 | -37.0% |
+| Word Swap | 15% | 0.360 | 0.117 | -59.8% |
+| Word Swap | 30% | 0.260 | 0.169 | -71.0% |
+| Word Swap | 60% | 0.183 | 0.222 | -79.6% |
+| Truncation | 10% | 0.661 | 0.114 | -26.4% |
+| Truncation | 20% | 0.572 | 0.215 | -36.3% |
+| Truncation | 30% | 0.604 | 0.312 | -32.7% |
+| Truncation | 40% | 0.573 | 0.413 | -36.2% |
+| Truncation | 50% | 0.575 | 0.515 | -35.9% |
+| Article Removal | 50% | 0.891 | 0.039 | -0.8% |
+| Article Removal | 100% | 0.884 | 0.081 | -1.5% |
+| Word Repetition | 5% | 0.657 | 0.061 | -26.8% |
+| Word Repetition | 10% | 0.549 | 0.111 | -38.8% |
+| Word Repetition | 15% | 0.461 | 0.163 | -48.7% |
+| Word Repetition | 20% | 0.430 | 0.210 | -52.1% |
+| Word Repetition | 25% | 0.387 | 0.260 | -56.9% |
+| Word Repetition | 30% | 0.368 | 0.311 | -59.0% |
+| Word Repetition | 35% | 0.353 | 0.361 | -60.7% |
+| Word Repetition | 40% | 0.358 | 0.408 | -60.1% |
+| Word Repetition | 45% | 0.356 | 0.461 | -60.4% |
+| Word Repetition | 50% | 0.339 | 0.507 | -62.3% |
+
+## 1. Sensitivity to the Perturbation
+
+The following table summarizes the sensitivity of unieval_coherence to each perturbation type:
+
+| Perturbation Type | Monotonous Decrease | Superlinear Decrease | Change Rate |
+| --- | --- | --- | --- |
+| Verb Lemmatization | yes | no | low |
+| Word Removal | yes | yes | high |
+| Punctuation Noise | yes | no | low |
+| Sentence Middle Swap | yes | yes | high |
+| Preposition Removal | yes | no | moderate |
+| Stopword Removal | yes | no | moderate |
+| Word Swap | yes | yes | high |
+| Truncation | yes | no | moderate |
+| Article Removal | yes | no | low |
+| Word Repetition | yes | yes | high |
+
+## 2. Suitability of unieval_coherence for summarization
+
+Based on the results, unieval_coherence is not recommended as a reasonable metric for the evaluation of summarization, since not most perturbation tests have a high change rate and superlinear decrease.

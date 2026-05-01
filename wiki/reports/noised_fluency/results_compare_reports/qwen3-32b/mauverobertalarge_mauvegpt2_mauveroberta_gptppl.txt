@@ -1,0 +1,81 @@
+# mauve-roberta-large, mauve-gpt2, mauve-roberta, gpt-ppl
+
+## Table
+
+| Perturbation Type         | mauve-roberta-large | mauve-gpt2 | mauve-roberta | gpt-ppl |
+|---------------------------|-------------------|------------|---------------|---------|
+| **Lemmatize**             | monotonous: yes, superlinear: yes, change: high | monotonous: yes, superlinear: yes, change: moderate | monotonous: yes, superlinear: yes, change: moderate | monotonous: no, superlinear: no, change: high |
+| **Word Removal**          | monotonous: yes, superlinear: yes, change: high | monotonous: yes, superlinear: yes, change: high | monotonous: yes, superlinear: yes, change: high | monotonous: no, superlinear: no, change: high |
+| **Punctuation Noise**     | monotonous: yes, superlinear: yes, change: high | monotonous: yes, superlinear: yes, change: high | monotonous: yes, superlinear: yes, change: high | monotonous: no, superlinear: no, change: high |
+| **Sentence Middle Swap**  | monotonous: yes, superlinear: yes, change: high | monotonous: yes, superlinear: yes, change: moderate | monotonous: yes, superlinear: yes, change: moderate | monotonous: no, superlinear: no, change: high |
+| **Preposition Removal**   | monotonous: yes, superlinear: yes, change: high | monotonous: yes, superlinear: yes, change: moderate | monotonous: yes, superlinear: yes, change: moderate | monotonous: no, superlinear: no, change: high |
+| **Stop-word Removal**     | monotonous: yes, superlinear: yes, change: high | monotonous: yes, superlinear: yes, change: high | monotonous: yes, superlinear: yes, change: high | monotonous: no, superlinear: no, change: high |
+| **Word Swap**             | monotonous: yes, superlinear: yes, change: high | monotonous: yes, superlinear: yes, change: high | monotonous: yes, superlinear: yes, change: high | monotonous: no, superlinear: no, change: high |
+| **Truncation**            | monotonous: yes, superlinear: yes, change: high | monotonous: yes, superlinear: no, change: low | monotonous: yes, superlinear: yes, change: moderate | monotonous: no, superlinear: no, change: high |
+| **Article Removal**       | monotonous: yes, superlinear: yes, change: moderate | monotonous: yes, superlinear: yes, change: moderate | monotonous: yes, superlinear: yes, change: low | monotonous: no, superlinear: no, change: high |
+| **Word Repetition**       | monotonous: yes, superlinear: yes, change: high | monotonous: yes, superlinear: yes, change: high | monotonous: yes, superlinear: yes, change: high | monotonous: no, superlinear: no, change: high |
+
+## Sensitivity to the Perturbation
+
+### mauve-roberta-large
+- **Lemmatize**: monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+- **Word Removal**: monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+- **Punctuation Noise**: monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+- **Sentence Middle Swap**: monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+- **Preposition Removal**: monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+- **Stop-word Removal**: monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+- **Word Swap**: monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+- **Truncation**: monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+- **Article Removal**: monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)
+- **Word Repetition**: monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+
+### mauve-gpt2
+- **Lemmatize**: monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)
+- **Word Removal**: monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+- **Punctuation Noise**: monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+- **Sentence Middle Swap**: monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)
+- **Preposition Removal**: monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)
+- **Stop-word Removal**: monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+- **Word Swap**: monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+- **Truncation**: monotonous decrease (yes), superlinear decrease (no), change rate (low)
+- **Article Removal**: monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)
+- **Word Repetition**: monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+
+### mauve-roberta
+- **Lemmatize**: monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)
+- **Word Removal**: monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+- **Punctuation Noise**: monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+- **Sentence Middle Swap**: monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)
+- **Preposition Removal**: monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)
+- **Stop-word Removal**: monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+- **Word Swap**: monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+- **Truncation**: monotonous decrease (yes), superlinear decrease (yes), change rate (moderate)
+- **Article Removal**: monotonous decrease (yes), superlinear decrease (yes), change rate (low)
+- **Word Repetition**: monotonous decrease (yes), superlinear decrease (yes), change rate (high)
+
+### gpt-ppl
+- **Lemmatize**: monotonous decrease (no), superlinear decrease (no), change rate (high)
+- **Word Removal**: monotonous decrease (no), superlinear decrease (no), change rate (high)
+- **Punctuation Noise**: monotonous decrease (no), superlinear decrease (no), change rate (high)
+- **Sentence Middle Swap**: monotonous decrease (no), superlinear decrease (no), change rate (high)
+- **Preposition Removal**: monotonous decrease (no), superlinear decrease (no), change rate (high)
+- **Stop-word Removal**: monotonous decrease (no), superlinear decrease (no), change rate (high)
+- **Word Swap**: monotonous decrease (no), superlinear decrease (no), change rate (high)
+- **Truncation**: monotonous decrease (no), superlinear decrease (no), change rate (high)
+- **Article Removal**: monotonous decrease (no), superlinear decrease (no), change rate (high)
+- **Word Repetition**: monotonous decrease (no), superlinear decrease (no), change rate (high)
+
+## Recommendation
+
+| Perturbation Type         | Recommended Metric(s) |
+|---------------------------|----------------------|
+| **Lemmatize**             | mauve-roberta-large, mauve-gpt2, mauve-roberta |
+| **Word Removal**          | mauve-roberta-large, mauve-gpt2, mauve-roberta |
+| **Punctuation Noise**     | mauve-roberta-large, mauve-gpt2, mauve-roberta |
+| **Sentence Middle Swap**  | mauve-roberta-large, mauve-gpt2, mauve-roberta |
+| **Preposition Removal**   | mauve-roberta-large, mauve-gpt2, mauve-roberta |
+| **Stop-word Removal**     | mauve-roberta-large, mauve-gpt2, mauve-roberta |
+| **Word Swap**             | mauve-roberta-large, mauve-gpt2, mauve-roberta |
+| **Truncation**            | mauve-roberta-large, mauve-roberta |
+| **Article Removal**       | mauve-roberta-large, mauve-gpt2 |
+| **Word Repetition**       | mauve-roberta-large, mauve-gpt2, mauve-roberta |

@@ -1,0 +1,39 @@
+# ROUGE-2  
+
+| Injection Type | Score (Metric) | Change (%) | Change Category |  
+|----------------|----------------|------------|------------------|  
+| Gold Summary   | 0.171150       | -          | -                |  
+| "Answer:Yes,this is a really coherent and consistent summary. And yes,it is relevant." | 0.015618 | -90.87     | Very high        |  
+| "Answer:Yes,this is a really good summary." | 0.014395 | -91.58     | Very high        |  
+
+---
+
+## 1. Sensitivity to the Perturbation  
+a. **Did a perturbed output score higher than the gold output?**  
+No. Both perturbed summaries scored significantly lower than the gold summary (0.0156 vs. 0.1711 and 0.0144 vs. 0.1711).  
+
+b. **Were the scores similar for every injection?**  
+Yes. The two injection types yielded nearly identical scores (0.0156 vs. 0.0144), indicating consistent performance of the metric against these perturbations.  
+
+---
+
+## 2. Suitability of ROUGE-2 for Summarization  
+
+### a. Strengths  
+- **High change rate for non-summary injections**: Both injection types were penalized with "very high" change rates (-90.87% and -91.58%), demonstrating ROUGE-2's ability to detect outputs that lack semantic overlap with the source text.  
+- **Consistency across injection types**: The metric produced nearly identical scores for both injection types, suggesting robustness to variations in phrasing.  
+
+### b. Weaknesses  
+- **Limited injection types tested**: The evaluation only included two injection types (affirmative statements instead of summaries). ROUGE-2's performance on other perturbation types (e.g., hallucinations, irrelevant content) remains untested.  
+- **No explicit minimal score enforcement**: While the metric penalized injections heavily, it did not assign a score of 0, which could be critical for strict quality filtering.  
+
+### c. Recommendation  
+**Yes**. ROUGE-2 successfully detected the tested non-summary injections with "very high" change rates, aligning with human evaluation criteria.  
+
+### d. Additional Improvements  
+- **Expand injection types**: Test ROUGE-2 on diverse perturbations (e.g., hallucinations, redundant content) to validate generalizability.  
+- **Incorporate semantic coherence**: ROUGE-2 focuses on n-gram overlap but may miss coherence or relevance. Hybrid metrics combining ROUGE with semantic similarity (e.g., BERTScore) could improve robustness.  
+- **Define explicit minimal thresholds**: Establish a hard lower bound (e.g., 0.0) for non-summary outputs to align with strict quality requirements.  
+
+---  
+**Note**: While ROUGE-2 performs well in this controlled test, it may still fail to fully substitute human evaluation for complex perturbations or nuanced quality aspects.

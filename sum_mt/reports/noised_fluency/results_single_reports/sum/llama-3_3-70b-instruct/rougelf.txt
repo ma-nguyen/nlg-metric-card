@@ -1,0 +1,73 @@
+# rougeL-f
+
+## Table
+
+| Perturbation Type | Variation | rougeL-f Score | edit_ratio | Change |
+| --- | --- | --- | --- | --- |
+| Unperturbed | 0 | 0.286 | 0.000 | 0.0% |
+| Verb Lemmatization | 50% | 0.285 | 0.052 | -0.5% |
+| Verb Lemmatization | 100% | 0.284 | 0.102 | -0.8% |
+| Word Removal | 5% | 0.282 | 0.061 | -1.6% |
+| Word Removal | 10% | 0.280 | 0.111 | -2.1% |
+| Word Removal | 15% | 0.274 | 0.163 | -4.1% |
+| Word Removal | 20% | 0.271 | 0.210 | -5.3% |
+| Word Removal | 25% | 0.267 | 0.260 | -6.8% |
+| Word Removal | 30% | 0.262 | 0.311 | -8.4% |
+| Word Removal | 35% | 0.258 | 0.361 | -10.0% |
+| Word Removal | 40% | 0.251 | 0.408 | -12.2% |
+| Word Removal | 45% | 0.243 | 0.461 | -14.9% |
+| Word Removal | 50% | 0.237 | 0.507 | -17.3% |
+| Punctuation Noise | 50% | 0.286 | 0.052 | 0.0% |
+| Punctuation Noise | 100% | 0.286 | 0.105 | 0.0% |
+| Sentence Middle Swap | 1 sentence | 0.277 | 0.145 | -3.3% |
+| Sentence Middle Swap | 2 sentences | 0.267 | 0.255 | -6.7% |
+| Sentence Middle Swap | 3 sentences | 0.259 | 0.321 | -9.5% |
+| Preposition Removal | 40% | 0.283 | 0.054 | -1.2% |
+| Preposition Removal | 70% | 0.279 | 0.093 | -2.5% |
+| Preposition Removal | 100% | 0.274 | 0.135 | -4.2% |
+| Stopword Removal | 10% | 0.283 | 0.044 | -1.1% |
+| Stopword Removal | 20% | 0.281 | 0.088 | -1.8% |
+| Stopword Removal | 30% | 0.278 | 0.130 | -2.9% |
+| Stopword Removal | 40% | 0.276 | 0.175 | -3.6% |
+| Stopword Removal | 50% | 0.272 | 0.219 | -5.0% |
+| Stopword Removal | 60% | 0.268 | 0.263 | -6.3% |
+| Word Swap | 5% | 0.280 | 0.056 | -2.2% |
+| Word Swap | 15% | 0.273 | 0.117 | -4.7% |
+| Word Swap | 30% | 0.266 | 0.169 | -7.2% |
+| Word Swap | 60% | 0.257 | 0.222 | -10.3% |
+| Truncation | 10% | 0.290 | 0.114 | 1.3% |
+| Truncation | 20% | 0.295 | 0.215 | 3.2% |
+| Truncation | 30% | 0.298 | 0.312 | 4.1% |
+| Truncation | 40% | 0.300 | 0.413 | 4.7% |
+| Truncation | 50% | 0.302 | 0.515 | 5.4% |
+| Article Removal | 50% | 0.280 | 0.039 | -2.3% |
+| Article Removal | 100% | 0.271 | 0.081 | -5.4% |
+| Word Repetition | 5% | 0.277 | 0.061 | -3.0% |
+| Word Repetition | 10% | 0.272 | 0.111 | -5.1% |
+| Word Repetition | 15% | 0.265 | 0.163 | -7.4% |
+| Word Repetition | 20% | 0.259 | 0.210 | -9.4% |
+| Word Repetition | 25% | 0.254 | 0.260 | -11.2% |
+| Word Repetition | 30% | 0.248 | 0.311 | -13.4% |
+| Word Repetition | 35% | 0.243 | 0.361 | -15.0% |
+| Word Repetition | 40% | 0.239 | 0.408 | -16.5% |
+| Word Repetition | 45% | 0.234 | 0.461 | -18.2% |
+| Word Repetition | 50% | 0.229 | 0.507 | -20.0% |
+
+## 1. Sensitivity to the Perturbation
+
+The sensitivity of rougeL-f to each perturbation type is analyzed as follows:
+
+* Verb Lemmatization: monotonous decrease - yes, superlinear decrease - no, change rate - low
+* Word Removal: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+* Punctuation Noise: monotonous decrease - no, superlinear decrease - no, change rate - low
+* Sentence Middle Swap: monotonous decrease - yes, superlinear decrease - yes, change rate - moderate
+* Preposition Removal: monotonous decrease - yes, superlinear decrease - no, change rate - low
+* Stopword Removal: monotonous decrease - yes, superlinear decrease - no, change rate - moderate
+* Word Swap: monotonous decrease - yes, superlinear decrease - no, change rate - moderate
+* Truncation: monotonous decrease - no, superlinear decrease - no, change rate - low
+* Article Removal: monotonous decrease - yes, superlinear decrease - no, change rate - low
+* Word Repetition: monotonous decrease - yes, superlinear decrease - yes, change rate - high
+
+## 2. Suitability of rougeL-f for summarization
+
+Based on the analysis, rougeL-f is not recommended for the evaluation of summarization, as most perturbation tests do not have a high change rate and superlinear decrease. Only Word Removal and Word Repetition have a high change rate, but not all tests exhibit superlinear decrease. Therefore, rougeL-f may not fully capture the nuances of human evaluation for summarization.

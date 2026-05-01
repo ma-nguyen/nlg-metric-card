@@ -1,0 +1,19 @@
+UniEval-fluency(sum)
+
+{Table}
+
+| Summary Type | Score | Change |
+| --- | --- | --- |
+| Gold Summary | 0.919656 | - |
+| Injection 1 | 0.959921 | (0.959921-0.919656)/0.919656*100 = 4.41% |
+| Injection 2 | 0.962313 | (0.962313-0.919656)/0.919656*100 = 4.67% |
+
+1. Sensitivity to the Perturbation
+    a. Yes, both perturbed outputs scored higher than the gold output. Specifically, Injection 1 and Injection 2 scored 0.959921 and 0.962313, respectively, which are higher than the gold summary score of 0.919656.
+    b. No, the scores were not similar for every injection. Although both injections scored higher than the gold summary, Injection 2 had a slightly higher score than Injection 1.
+
+2. Suitability of UniEval-fluency(sum) for summarization
+    a. Strengths: None of the injections had a high change rate or higher. However, it is worth noting that the metric did assign higher scores to the injections, which could indicate some ability to detect fluent text.
+    b. Weaknesses: Both Injection 1 and Injection 2 had very low change rates (4.41% and 4.67%, respectively). This suggests that the metric is not effective in penalizing perturbed summaries that are not actual summaries of the source text.
+    c. Recommendation: No, the metric could not detect every injection (non-summary) by having a high change rate or higher. In fact, the change rates were very low, indicating that the metric is not suitable for detecting non-summary text.
+    d. Additionally, the metric needs improvements in its ability to distinguish between actual summaries and non-summary text. The very low change rates suggest that the metric is not sensitive enough to perturbations that are not relevant to the source text. To improve, the metric could be fine-tuned to better capture the relationship between the source text and the summary, and to assign lower scores to perturbed summaries that are not relevant to the source text.

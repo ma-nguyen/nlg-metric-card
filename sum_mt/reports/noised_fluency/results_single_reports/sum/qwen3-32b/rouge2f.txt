@@ -1,0 +1,73 @@
+# ROUGE2-F  
+
+## {Table}  
+| Perturbation Type               | Monotonous Decrease | Superlinear Decrease | Change Rate |  
+|----------------------------------|---------------------|----------------------|-------------|  
+| Verb Lemmatization               | yes                 | no                   | low         |  
+| Word Removal                     | yes                 | yes                  | high        |  
+| Punctuation Noise                | no                  | no                   | low         |  
+| Sentence Middle Swap (SVO Order) | yes                 | no                   | low         |  
+| Preposition Removal              | yes                 | no                   | moderate    |  
+| Stop-word Removal                | yes                 | no                   | moderate    |  
+| Word Swap                        | yes                 | yes                  | high        |  
+| Truncate (End of Sentence)       | no                  | no                   | low         |  
+| Article Removal                  | yes                 | no                   | moderate    |  
+| Word Repetition                  | yes                 | no                   | moderate    |  
+
+---
+
+## 1. Sensitivity to the Perturbation  
+**Verb Lemmatization**  
+- **Monotonous decrease**: yes (scores decrease from 0.171 to 0.168 as variation increases).  
+- **Superlinear decrease**: no (score changes are -1.2% and -1.8%, nearly linear).  
+- **Change rate**: low (maximum change: -1.8%).  
+
+**Word Removal**  
+- **Monotonous decrease**: yes (scores decrease from 0.171 to 0.086 as removal increases).  
+- **Superlinear decrease**: yes (score changes increase from -6.3% to -49.6%).  
+- **Change rate**: high (maximum change: -49.6%).  
+
+**Punctuation Noise**  
+- **Monotonous decrease**: no (scores remain 0.171 at 50% and 100% variation).  
+- **Superlinear decrease**: no.  
+- **Change rate**: low (maximum change: 0.0%).  
+
+**Sentence Middle Swap (SVO Order)**  
+- **Monotonous decrease**: yes (scores decrease from 0.171 to 0.159 as swaps increase).  
+- **Superlinear decrease**: no (score changes are -2.2%, -5.1%, -7.1%, nearly linear).  
+- **Change rate**: low (maximum change: -7.1%).  
+
+**Preposition Removal**  
+- **Monotonous decrease**: yes (scores decrease from 0.171 to 0.150 as removal increases).  
+- **Superlinear decrease**: no (score changes increase slightly but remain sublinear).  
+- **Change rate**: moderate (maximum change: -12.4%).  
+
+**Stop-word Removal**  
+- **Monotonous decrease**: yes (scores decrease from 0.171 to 0.134 as removal increases).  
+- **Superlinear decrease**: no (score changes increase but remain sublinear).  
+- **Change rate**: moderate (maximum change: -21.6%).  
+
+**Word Swap**  
+- **Monotonous decrease**: yes (scores decrease from 0.171 to 0.087 as swaps increase).  
+- **Superlinear decrease**: yes (score changes increase from -11.4% to -49.1%).  
+- **Change rate**: high (maximum change: -49.1%).  
+
+**Truncate (End of Sentence)**  
+- **Monotonous decrease**: no (scores increase slightly at 30% and 40% removal).  
+- **Superlinear decrease**: no.  
+- **Change rate**: low (maximum change: +1.2%).  
+
+**Article Removal**  
+- **Monotonous decrease**: yes (scores decrease from 0.171 to 0.151 as removal increases).  
+- **Superlinear decrease**: no (score changes increase slightly but remain sublinear).  
+- **Change rate**: moderate (maximum change: -11.9%).  
+
+**Word Repetition**  
+- **Monotonous decrease**: yes (scores decrease from 0.171 to 0.135 as repetition increases).  
+- **Superlinear decrease**: no (score changes increase but remain sublinear).  
+- **Change rate**: moderate (maximum change: -21.1%).  
+
+---
+
+## 2. Suitability of ROUGE2-F for Summarization  
+ROUGE2-F is **not recommended** for summarization evaluation. Only **2 out of 10 perturbation tests** (Word Removal and Word Swap) exhibit **high change rates** and **superlinear decrease**, while the remaining 8 tests show **low or moderate sensitivity** to perturbations. This fails to align with human evaluation expectations, where perturbations should induce **disproportionately strong score drops** (superlinear decrease) for severe fluency errors. The metric’s limited sensitivity to most perturbations suggests it inadequately reflects human judgment of summary quality.

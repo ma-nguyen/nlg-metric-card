@@ -1,0 +1,96 @@
+**bert_score_f**
+
+---
+
+### Table  
+
+| Perturbation type | Variation (%) | Score | Edit ratio | Change vs. gold (%) |
+|-------------------|---------------|-------|------------|----------------------|
+| **Verb lemmatization** | 0 (gold) | 0.224 | 0.000 | 0.0 |
+| | 50 | 0.209 | 0.052 | –6.4 |
+| | 100 | 0.197 | 0.102 | –12.1 |
+| **Random word drop** | 5 | 0.199 | 0.061 | –11.0 |
+| | 10 | 0.182 | 0.111 | –18.6 |
+| | 15 | 0.164 | 0.163 | –26.5 |
+| | 20 | 0.146 | 0.210 | –34.6 |
+| | 25 | 0.131 | 0.260 | –41.5 |
+| | 30 | 0.115 | 0.311 | –48.5 |
+| | 35 | 0.099 | 0.361 | –55.8 |
+| | 40 | 0.082 | 0.408 | –63.1 |
+| | 45 | 0.065 | 0.461 | –70.9 |
+| | 50 | 0.054 | 0.507 | –75.8 |
+| **Punctuation noise** | 0 (gold) | 0.224 | 0.000 | 0.0 |
+| | 50 | 0.207 | 0.052 | –7.6 |
+| | 100 | 0.187 | 0.105 | –16.3 |
+| **Sentence‑middle swap** | 1 sentence | 0.197 | 0.145 | –12.1 |
+| | 2 sentences | 0.172 | 0.255 | –23.2 |
+| | 3 sentences | 0.152 | 0.321 | –32.0 |
+| **Preposition removal** | 40 | 0.206 | 0.054 | –8.1 |
+| | 70 | 0.193 | 0.093 | –13.9 |
+| | 100 | 0.179 | 0.135 | –20.1 |
+| **Stop‑word removal** | 10 | 0.211 | 0.044 | –5.6 |
+| | 20 | 0.200 | 0.088 | –10.4 |
+| | 30 | 0.190 | 0.130 | –14.8 |
+| | 40 | 0.181 | 0.175 | –19.2 |
+| | 50 | 0.170 | 0.219 | –24.1 |
+| | 60 | 0.159 | 0.263 | –28.7 |
+| **Random local swap** | 5 | 0.186 | 0.056 | –16.9 |
+| | 15 | 0.147 | 0.117 | –34.1 |
+| | 30 | 0.110 | 0.169 | –50.8 |
+| | 60 | 0.073 | 0.222 | –67.3 |
+| **Truncate (end‑word removal)** | 10 | 0.224 | 0.114 | +0.3 |
+| | 20 | 0.227 | 0.215 | +1.4 |
+| | 30 | 0.230 | 0.312 | +3.0 |
+| | 40 | 0.231 | 0.413 | +3.3 |
+| | 50 | 0.229 | 0.515 | +2.4 |
+| **Article removal** | 50 | 0.215 | 0.039 | –3.8 |
+| | 100 | 0.206 | 0.081 | –8.0 |
+| **Token repetition** | 5 | 0.201 | 0.061 | –10.0 |
+| | 10 | 0.183 | 0.111 | –18.0 |
+| | 15 | 0.167 | 0.163 | –25.4 |
+| | 20 | 0.152 | 0.210 | –32.2 |
+| | 25 | 0.136 | 0.260 | –39.3 |
+| | 30 | 0.122 | 0.311 | –45.4 |
+| | 35 | 0.108 | 0.361 | –51.6 |
+| | 40 | 0.096 | 0.408 | –57.2 |
+| | 45 | 0.082 | 0.461 | –63.3 |
+| | 50 | 0.069 | 0.507 | –69.1 |
+
+*All changes are computed relative to the unperturbed gold score (0.224).*
+
+---
+
+## 1. Sensitivity to the Perturbation  
+
+| Perturbation type | Monotonous decrease | Superlinear decrease | Change‑rate |
+|-------------------|---------------------|----------------------|-------------|
+| Verb lemmatization | **yes** | **no** | low |
+| Random word drop | **yes** | **no** | moderate |
+| Punctuation noise | **yes** | **yes** | low |
+| Sentence‑middle swap | **yes** | **no** | moderate |
+| Preposition removal | **yes** | **yes** | low |
+| Stop‑word removal | **yes** | **no** | moderate |
+| Random local swap | **yes** | **no** | moderate |
+| Truncate (end‑word removal) | **no** | **no** | low |
+| Article removal | **yes** | **no** | low |
+| Token repetition | **yes** | **no** | moderate |
+
+*Definitions applied*  
+
+* **Monotonous decrease** – the score never rises when the variation level increases.  
+* **Superlinear decrease** – the magnitude of the score drop grows with each increase in variation (i.e., incremental drops become larger).  
+* **Change‑rate** – based on the largest absolute percentage change observed for the perturbation:  
+  * low = ≤ 25 % drop,  
+  * moderate = ≤ 60 % drop,  
+  * high = > 60 % drop (or approaching the metric’s minimum).  
+
+---
+
+## 2. Suitability of **bert_score_f** for **summarization**
+
+A metric is deemed suitable when **most > 7** perturbation tests exhibit a **high change‑rate** *and* a **superlinear decrease**.  
+
+- Only **one** perturbation (punctuation noise) shows superlinear behaviour, and none reach a high change‑rate.  
+- The majority of tests either have low or moderate change‑rates and lack superlinear drops.
+
+**Conclusion:** *bert_score_f* is **not recommended** as a reliable automatic metric for summarization, because it does not react strongly enough—or in a superlinear fashion—to the severity of the perturbations that humans penalise heavily.

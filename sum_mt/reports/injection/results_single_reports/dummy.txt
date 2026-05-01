@@ -1,0 +1,32 @@
+# ROUGE-L  
+
+| Metric Type       | Score       | Change (%) | Change Rate Category       |  
+|--------------------|-------------|------------|----------------------------|  
+| Gold Summary (g)   | 0.286197    | -          | -                          |  
+| Injection 1 (p1)   | 0.126527    | -55.8      | Moderate to high           |  
+| Injection 2 (p2)   | 0.098507    | -65.6      | Moderate to high           |  
+
+## 1. Sensitivity to the Perturbation  
+a. **Did a perturbed output score higher than the gold output?**  
+No. Both perturbed summaries (p1: 0.126527, p2: 0.098507) scored lower than the gold summary (0.286197).  
+
+b. **Were the scores similar for every injection?**  
+No. The scores for the two injections differed significantly (p1: 0.126527 vs. p2: 0.098507), indicating variability in how ROUGE-L penalizes different injection types.  
+
+## 2. Suitability of ROUGE-L for Summarization  
+### a. Strengths  
+- **High change rate for both injections**: ROUGE-L achieved "moderate to high" change rates (55.8% and 65.6%) for the tested injections, indicating it can detect deviations from gold summaries.  
+- **Penalizes non-summaries**: The metric assigns significantly lower scores to injections that are not summaries (e.g., "Answer:Yes,this is a really good summary").  
+
+### b. Weaknesses  
+- **Injections not fully penalized to minimal scores**: While ROUGE-L reduces scores for injections, the perturbed outputs still receive non-negligible scores (e.g., p1: 0.126527, p2: 0.098507), suggesting it does not fully align with human expectations of minimal scoring for non-summaries.  
+- **Variability in injection handling**: The metric’s response to different injection types (e.g., p1 vs. p2) is inconsistent, which may affect reliability in real-world applications.  
+
+### c. Recommendation  
+**No.** ROUGE-L does not achieve a "very high" change rate (≥90%) for all injections, and its scores for non-summaries remain above the threshold for minimal penalization.  
+
+### d. Additional Improvements  
+- **Enhance sensitivity to non-summaries**: ROUGE-L should be modified to assign near-zero scores to outputs that are not summaries (e.g., standalone affirmations like "Yes, this is a good summary").  
+- **Address injection variability**: The metric’s performance on different injection types should be standardized to ensure consistent penalization across all non-summaries.  
+
+**Note**: While ROUGE-L demonstrates moderate sensitivity to perturbations, it cannot fully substitute human evaluation due to its reliance on n-gram overlap, which may overlook semantic coherence and relevance.

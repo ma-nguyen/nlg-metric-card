@@ -1,0 +1,83 @@
+# mauve-roberta-large  
+
+## Table  
+
+| Perturbation Type               | Monotonous Decrease | Superlinear Decrease | Change Rate |  
+|----------------------------------|---------------------|----------------------|-------------|  
+| Verb Lemmatization               | yes                 | no                   | high        |  
+| Word Removal                     | yes                 | yes                  | high        |  
+| Punctuation Noise                | yes                 | no                   | high        |  
+| SVO Sentence Swap                | yes                 | yes                  | high        |  
+| Preposition Removal              | yes                 | yes                  | high        |  
+| Stop-word Removal                | yes                 | yes                  | high        |  
+| Word Swap                        | yes                 | yes                  | high        |  
+| Truncation (End Removal)         | yes                 | yes                  | high        |  
+| Article Removal                  | yes                 | no                   | moderate    |  
+| Word Repetition                  | yes                 | yes                  | high        |  
+
+---
+
+## 1. Sensitivity to the Perturbation  
+
+**Verb Lemmatization**  
+- **Monotonous decrease**: Yes (score decreases from 0.971 to 0.244 as variation increases).  
+- **Superlinear decrease**: No (only two data points; insufficient to confirm superlinearity).  
+- **Change rate**: High (maximum score change: -74.9%).  
+
+**Word Removal**  
+- **Monotonous decrease**: Yes (score decreases from 0.710 to 0.005 as variation increases).  
+- **Superlinear decrease**: Yes (score changes increase from -26.9% to -99.5%).  
+- **Change rate**: High (maximum score change: -99.5%).  
+
+**Punctuation Noise**  
+- **Monotonous decrease**: Yes (score decreases from 0.089 to 0.009 as variation increases).  
+- **Superlinear decrease**: No (only two data points; insufficient to confirm superlinearity).  
+- **Change rate**: High (maximum score change: -99.0%).  
+
+**SVO Sentence Swap**  
+- **Monotonous decrease**: Yes (score decreases from 0.693 to 0.106 as variation increases).  
+- **Superlinear decrease**: Yes (score changes increase from -28.6% to -89.1%).  
+- **Change rate**: High (maximum score change: -89.1%).  
+
+**Preposition Removal**  
+- **Monotonous decrease**: Yes (score decreases from 0.868 to 0.085 as variation increases).  
+- **Superlinear decrease**: Yes (score changes increase from -10.6% to -91.2%).  
+- **Change rate**: High (maximum score change: -91.2%).  
+
+**Stop-word Removal**  
+- **Monotonous decrease**: Yes (score decreases from 0.905 to 0.020 as variation increases).  
+- **Superlinear decrease**: Yes (score changes increase from -6.7% to -98.0%).  
+- **Change rate**: High (maximum score change: -98.0%).  
+
+**Word Swap**  
+- **Monotonous decrease**: Yes (score decreases from 0.343 to 0.005 as variation increases).  
+- **Superlinear decrease**: Yes (score changes increase from -64.7% to -99.5%).  
+- **Change rate**: High (maximum score change: -99.5%).  
+
+**Truncation (End Removal)**  
+- **Monotonous decrease**: Yes (score decreases from 0.795 to 0.170 as variation increases).  
+- **Superlinear decrease**: Yes (score changes increase from -18.1% to -82.5%).  
+- **Change rate**: High (maximum score change: -82.5%).  
+
+**Article Removal**  
+- **Monotonous decrease**: Yes (score decreases from 0.910 to 0.444 as variation increases).  
+- **Superlinear decrease**: No (only two data points; insufficient to confirm superlinearity).  
+- **Change rate**: Moderate (maximum score change: -54.3%).  
+
+**Word Repetition**  
+- **Monotonous decrease**: Yes (score decreases from 0.761 to 0.005 as variation increases).  
+- **Superlinear decrease**: Yes (score changes increase from -21.6% to -99.5%).  
+- **Change rate**: High (maximum score change: -99.5%).  
+
+---
+
+## 2. Suitability of mauve-roberta-large for open-ended text generation  
+
+**Recommendation**: **Recommended**.  
+
+**Justification**:  
+- **High change rate**: 9 out of 10 perturbation tests exhibit a high change rate (maximum score drop ≥ -60%).  
+- **Superlinear decrease**: 7 out of 10 perturbation tests show superlinear decrease, aligning with human evaluation patterns where severe fluency errors are penalized disproportionately.  
+- **Monotonicity**: All perturbation tests demonstrate monotonous decrease, ensuring consistency in sensitivity to increasing perturbation severity.  
+
+The mauve-roberta-large metric aligns well with human evaluation criteria for open-ended text generation, particularly in capturing superlinear degradation in quality under severe perturbations.

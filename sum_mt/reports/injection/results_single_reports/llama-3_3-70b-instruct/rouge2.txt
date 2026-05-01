@@ -1,0 +1,18 @@
+Rouge-2
+
+{Table}
+| Summary Type | Score | Change |
+| --- | --- | --- |
+| Gold Summary | 0.171150 | - |
+| Injection 1 | 0.015618 | (0.015618-0.171150)/abs(0.171150)*100 = -90.86% |
+| Injection 2 | 0.014395 | (0.014395-0.171150)/abs(0.171150)*100 = -91.59% |
+
+1. Sensitivity to the Perturbation
+    a. No, none of the perturbed outputs scored higher than the gold output. Both injections scored lower than the gold summary.
+    b. No, the scores were not similar for every injection. Injection 1 scored 0.015618, while Injection 2 scored 0.014395, resulting in different change rates.
+
+2. Suitability of Rouge-2 for Summarization
+    a. Strengths: Both injections (Injection 1 and Injection 2) resulted in high change rates (very high: -90.86% and -91.59%, respectively), indicating that the metric is effective in detecting non-summary injections.
+    b. Weaknesses: None of the injections resulted in low change rates, but it is essential to note that the metric's performance may vary with different types of injections or summarization tasks.
+    c. Recommendation: Yes, the metric could detect every injection (non-summary) by having high change rates, indicating its suitability for summarization tasks.
+    d. Additionally, to improve the metric, it would be beneficial to test it with a more diverse set of injections and summarization tasks to ensure its robustness and generalizability. Furthermore, exploring ways to improve the metric's ability to distinguish between high-quality and low-quality summaries would be valuable.

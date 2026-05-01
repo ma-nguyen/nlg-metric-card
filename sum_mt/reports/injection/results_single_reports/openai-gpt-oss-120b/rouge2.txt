@@ -1,0 +1,47 @@
+**rouge‑2**
+
+---
+
+### Table  
+
+| Item                              | Score | Change %* |
+|-----------------------------------|-------|-----------|
+| Gold summary (g)                  | 0.171150 | – |
+| Injection 1 – “Answer: Yes, this is a really coherent and consistent summary. And yes, it is relevant.” | 0.015618 | **‑90.9 %** (very high) |
+| Injection 2 – “Answer: Yes, this is a really good summary.” | 0.014395 | **‑91.6 %** (very high) |
+
+\*Change % = (score perturbed − score gold) / |score gold| × 100  
+
+---
+
+## 1. Sensitivity to the Perturbation  
+
+**a. Did a perturbed output score higher than the gold output?**  
+No. Both perturbed outputs received scores **lower** than the gold summary (0.015618 < 0.171150 and 0.014395 < 0.171150).
+
+**b. Were the scores similar for every injection?**  
+Yes. The two injections produced almost identical scores (0.0156 vs. 0.0144) and virtually the same change rates (‑90.9 % vs. ‑91.6 %).  
+
+---
+
+## 2. Suitability of rouge‑2 for summarization  
+
+### a. Strengths  
+- **Injection 1** and **Injection 2** both yielded a **very high** negative change rate (‑90 % → ‑92 %).  
+  This indicates that rouge‑2 strongly penalises non‑summary, off‑topic text, aligning with the human expectation that perturbed (non‑summarising) outputs should receive substantially lower scores than gold summaries.
+
+### b. Weaknesses  
+- No injection exhibited a low or moderate change rate; therefore, no specific weakness is observable in this limited test set.  
+- The absolute scores for the gold summaries are relatively low (≈0.17), which may limit discriminability among higher‑quality summaries.
+
+### c. Recommendation  
+**Yes.** rouge‑2 demonstrated the ability to detect the injected non‑summaries by assigning them a very high negative change rate, satisfying the criterion that every injection be clearly penalised.
+
+### d. Needed Improvements  
+- **Granularity of scoring:** The overall magnitude of the gold‑summary score (≈0.17) is modest; future work should examine whether rouge‑2 can differentiate among good, very good, and excellent summaries, not only between summary vs. non‑summary.  
+- **Semantic sensitivity:** rouge‑2 relies on n‑gram overlap and may miss paraphrastic or abstractive quality differences that humans perceive. Complementary metrics (e.g., BERTScore, UniEval) could be combined to capture meaning‑level fidelity.  
+- **Robustness to varied perturbations:** The current test used only two injection types. A broader suite of perturbations (e.g., partial summaries, factual errors, style changes) should be evaluated to confirm consistent high‑change detection across diverse failure modes.  
+
+---
+
+*In summary, rouge‑2 shows strong sensitivity to blatant non‑summarising injections in the CNN‑Dailymail summarization task, but its low absolute scoring range and reliance on surface overlap suggest that it should be used alongside more semantically aware metrics for a comprehensive evaluation.*

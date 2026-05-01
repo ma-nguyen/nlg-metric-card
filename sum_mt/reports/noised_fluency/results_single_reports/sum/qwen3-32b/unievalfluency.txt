@@ -1,0 +1,75 @@
+# unieval_fluency
+
+## Table
+
+| Perturbation Type         | Monotonous Decrease | Superlinear Decrease | Change Rate |
+|---------------------------|---------------------|----------------------|-------------|
+| Verb Lemmatization        | yes                 | no                   | moderate    |
+| Word Removal              | yes                 | yes                  | high        |
+| Punctuation Noise         | yes                 | no                   | moderate    |
+| Sentence Middle Swap      | yes                 | yes                  | high        |
+| Preposition Removal       | yes                 | no                   | moderate    |
+| Stop-Word Removal         | yes                 | yes                  | moderate    |
+| Word Swapping             | yes                 | yes                  | high        |
+| Truncation (End Words)    | no                  | no                   | moderate    |
+| Article Removal           | yes                 | no                   | low         |
+| Word Repetition           | yes                 | yes                  | high        |
+
+## 1. Sensitivity to the Perturbation
+
+**Verb Lemmatization**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: no  
+- **Change rate**: moderate  
+
+**Word Removal**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes  
+- **Change rate**: high  
+
+**Punctuation Noise**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: no  
+- **Change rate**: moderate  
+
+**Sentence Middle Swap (SVO Order)**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes  
+- **Change rate**: high  
+
+**Preposition Removal**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: no  
+- **Change rate**: moderate  
+
+**Stop-Word Removal**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes  
+- **Change rate**: moderate  
+
+**Word Swapping**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes  
+- **Change rate**: high  
+
+**Truncation (End Words)**  
+- **Monotonous decrease**: no  
+- **Superlinear decrease**: no  
+- **Change rate**: moderate  
+
+**Article Removal**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: no  
+- **Change rate**: low  
+
+**Word Repetition**  
+- **Monotonous decrease**: yes  
+- **Superlinear decrease**: yes  
+- **Change rate**: high  
+
+---
+
+## 2. Suitability of unieval_fluency for summarization
+
+**Not recommended.**  
+While unieval_fluency demonstrates high sensitivity in 4 out of 10 perturbation tests (word removal, sentence middle swap, word swapping, word repetition) with both high change rates and superlinear decreases, it fails to meet the threshold of >7 tests with these properties. Additionally, 3 tests (punctuation noise, preposition removal, article removal) show only moderate or low sensitivity, and one test (truncation) lacks monotonous decrease entirely. The metric does not consistently align with human evaluation patterns, particularly in reflecting disproportionately strong penalties for severe fluency errors.

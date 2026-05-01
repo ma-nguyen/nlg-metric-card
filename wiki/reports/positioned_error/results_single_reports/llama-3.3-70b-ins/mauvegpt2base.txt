@@ -1,0 +1,42 @@
+### MAUVE-GPT2-base  
+
+**Table: Perturbation Test Results**  
+| Perturbation Type | Location | Perturbed Set Score | Gold Set Score | Change Rate |  
+|-------------------|----------|---------------------|----------------|-------------|  
+| Shuffling-test    | Beginning| 0.5459             | 0.9481         | -42.4%      |  
+| Shuffling-test    | Middle  | 0.8210             | 0.9481         | -13.4%      |  
+| Shuffling-test    | End     | 0.0183             | 0.9481         | -98.1%      |  
+| Random-test       | Beginning| 0.6381             | 0.9481         | -32.7%      |  
+| Random-test       | Middle  | 0.3447             | 0.9481         | -63.6%      |  
+| Random-test       | End     | 0.0074             | 0.9481         | -99.2%      |  
+
+---
+
+### 1. Sensitivity to the Perturbation  
+**a.** No perturbed output scored higher than the gold output. All perturbations resulted in lower scores.  
+**b.** Scores varied significantly by location. End perturbations caused the largest drops (‑98.1% for shuffling, ‑99.2% for random), while middle and beginning perturbations showed smaller changes (e.g., ‑13.4% for shuffling-middle).  
+**c.** Scores differed between perturbation types. Random replacements caused larger drops in the middle (‑63.6% vs. ‑13.4% for shuffling), while shuffling had a larger impact at the beginning (‑42.4% vs. ‑32.7% for random).  
+
+---
+
+### 2. Suitability of MAUVE-GPT2-base for Open-Ended Text Generation  
+**a. Strengths**  
+The metric exhibits **very high** sensitivity (90%-100% change rate) for:  
+- End-located perturbations (shuffling: ‑98.1%, random: ‑99.2%).  
+It shows **moderate-to-high** sensitivity (50%-69%) for:  
+- Middle-located random replacements (‑63.6%).  
+
+**b. Weaknesses**  
+The metric shows **low-to-moderate** sensitivity (30%-49%) for:  
+- Beginning-located perturbations (shuffling: ‑42.4%, random: ‑32.7%).  
+It shows **low** sensitivity (10%-29%) for:  
+- Middle-located shuffling (‑13.4%).  
+
+**c. Recommendation**  
+**No**. Only 3/6 perturbation variants (end-shuffling, end-random, middle-random) achieved ≥50% change rates, falling short of the >5 threshold.  
+
+**d. Improvements Needed**  
+Enhance sensitivity to:  
+1. **Beginning-located perturbations** (both types), where change rates were suboptimal (low-to-moderate).  
+2. **Middle-located shuffling**, which had the weakest response (low sensitivity).  
+Mechanisms to better capture semantic disruptions in early/mid-text regions are critical for robust open-ended generation evaluation.

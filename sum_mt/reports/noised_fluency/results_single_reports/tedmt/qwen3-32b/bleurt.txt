@@ -1,0 +1,83 @@
+# BLEURT
+
+## Table
+
+| Perturbation Type         | Monotonous Decrease | Superlinear Decrease | Change Rate |
+|---------------------------|---------------------|----------------------|-------------|
+| Verb Lemmatization        | yes                 | no                   | high        |
+| Word Removal              | yes                 | yes                  | high        |
+| Punctuation Noise         | yes                 | no                   | moderate    |
+| Sentence Middle Swap      | yes                 | no                   | moderate    |
+| Preposition Removal       | yes                 | yes                  | high        |
+| Stop-word Removal         | yes                 | yes                  | high        |
+| Word Swapping             | yes                 | yes                  | high        |
+| Truncate (End Words)      | yes                 | yes                  | high        |
+| Article Removal           | yes                 | no                   | moderate    |
+| Word Repetition           | yes                 | yes                  | high        |
+
+---
+
+## 1. Sensitivity to the Perturbation
+
+**Verb Lemmatization**  
+- **Monotonous decrease**: Yes  
+- **Superlinear decrease**: No  
+- **Change rate**: High (max change: -96.2%)  
+
+**Word Removal**  
+- **Monotonous decrease**: Yes  
+- **Superlinear decrease**: Yes  
+- **Change rate**: High (max change: -925.0%)  
+
+**Punctuation Noise**  
+- **Monotonous decrease**: Yes  
+- **Superlinear decrease**: No  
+- **Change rate**: Moderate (max change: -67.1%)  
+
+**Sentence Middle Swap**  
+- **Monotonous decrease**: Yes  
+- **Superlinear decrease**: No  
+- **Change rate**: Moderate (max change: -49.2%)  
+
+**Preposition Removal**  
+- **Monotonous decrease**: Yes  
+- **Superlinear decrease**: Yes  
+- **Change rate**: High (max change: -163.5%)  
+
+**Stop-word Removal**  
+- **Monotonous decrease**: Yes  
+- **Superlinear decrease**: Yes  
+- **Change rate**: High (max change: -470.3%)  
+
+**Word Swapping**  
+- **Monotonous decrease**: Yes  
+- **Superlinear decrease**: Yes  
+- **Change rate**: High (max change: -698.4%)  
+
+**Truncate (End Words)**  
+- **Monotonous decrease**: Yes  
+- **Superlinear decrease**: Yes  
+- **Change rate**: High (max change: -242.2%)  
+
+**Article Removal**  
+- **Monotonous decrease**: Yes  
+- **Superlinear decrease**: No  
+- **Change rate**: Moderate (max change: -60.3%)  
+
+**Word Repetition**  
+- **Monotonous decrease**: Yes  
+- **Superlinear decrease**: Yes  
+- **Change rate**: High (max change: -548.9%)  
+
+---
+
+## 2. Suitability of BLEURT for Machine Translation
+
+**Recommendation**: Not recommended.  
+
+**Analysis**:  
+- **High change rate** and **superlinear decrease** are observed in **6/10** perturbation tests (Word Removal, Preposition Removal, Stop-word Removal, Word Swapping, Truncate, Word Repetition).  
+- However, **4/10** tests (Verb Lemmatization, Punctuation Noise, Sentence Middle Swap, Article Removal) show **moderate or low sensitivity** and **no superlinear decrease**.  
+- Since the threshold for recommendation requires **>7 tests** to meet both criteria, BLEURT fails to align with human evaluation patterns in a sufficient number of cases.  
+
+**Conclusion**: BLEURT demonstrates strong sensitivity in some perturbation types but lacks consistent superlinear responsiveness across all critical fluency and accuracy dimensions in machine translation.

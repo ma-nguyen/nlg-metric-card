@@ -1,0 +1,6 @@
+metric=rouge-2
+Additional Information=The Metric scores from 0 (Minimum) to 1 (Maximum)
+
+ref=0.171150
+injection_1=0.015618
+injection_2=0.014395

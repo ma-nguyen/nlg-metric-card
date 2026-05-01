@@ -1,0 +1,79 @@
+# gpt-ppl
+
+## Table
+
+| Perturbation Type         | Monotonous Decrease | Superlinear Decrease | Change Rate |
+|---------------------------|---------------------|----------------------|-------------|
+| Verb Lemmatization        | yes                 | no                   | moderate    |
+| Word Removal              | yes                 | yes                  | high        |
+| Punctuation Noise         | yes                 | no                   | moderate    |
+| Sentence Middle Swap      | yes                 | no                   | moderate    |
+| Preposition Removal       | yes                 | yes                  | high        |
+| Stop-Word Removal         | yes                 | yes                  | high        |
+| Word Swapping             | yes                 | yes                  | high        |
+| Truncation (End Words)    | yes                 | no                   | low         |
+| Article Removal           | yes                 | no                   | moderate    |
+| Word Repetition           | yes                 | yes                  | high        |
+
+---
+
+## 1. Sensitivity to the Perturbation
+
+For each perturbation type, the attributes are determined as follows:
+
+- **Verb Lemmatization**:  
+  - Monotonous decrease: yes (scores increase with variation)  
+  - Superlinear decrease: no (rate of increase slows at 100% variation)  
+  - Change rate: moderate (max change: 54.5%)  
+
+- **Word Removal**:  
+  - Monotonous decrease: yes  
+  - Superlinear decrease: yes (rate of increase accelerates with higher variation)  
+  - Change rate: high (max change: 1181.8%)  
+
+- **Punctuation Noise**:  
+  - Monotonous decrease: yes  
+  - Superlinear decrease: no (rate of increase slows at 100% variation)  
+  - Change rate: moderate (max change: 53.3%)  
+
+- **Sentence Middle Swap**:  
+  - Monotonous decrease: yes  
+  - Superlinear decrease: no (rate of increase is linear)  
+  - Change rate: moderate (max change: 46.9%)  
+
+- **Preposition Removal**:  
+  - Monotonous decrease: yes  
+  - Superlinear decrease: yes (rate of increase accelerates with higher variation)  
+  - Change rate: high (max change: 190.8%)  
+
+- **Stop-Word Removal**:  
+  - Monotonous decrease: yes  
+  - Superlinear decrease: yes (rate of increase accelerates with higher variation)  
+  - Change rate: high (max change: 428.9%)  
+
+- **Word Swapping**:  
+  - Monotonous decrease: yes  
+  - Superlinear decrease: yes (rate of increase accelerates with higher variation)  
+  - Change rate: high (max change: 895.2%)  
+
+- **Truncation (End Words)**:  
+  - Monotonous decrease: yes  
+  - Superlinear decrease: no (rate of increase is linear)  
+  - Change rate: low (max change: 26.7%)  
+
+- **Article Removal**:  
+  - Monotonous decrease: yes  
+  - Superlinear decrease: no (rate of increase slows at 100% variation)  
+  - Change rate: moderate (max change: 67.1%)  
+
+- **Word Repetition**:  
+  - Monotonous decrease: yes  
+  - Superlinear decrease: yes (rate of increase accelerates with higher variation)  
+  - Change rate: high (max change: 162.8%)  
+
+---
+
+## 2. Suitability of gpt-ppl for open-ended text generation
+
+**Not recommended.**  
+Only 5 out of 10 perturbation tests exhibit both high change rate and superlinear decrease. The remaining 5 tests show either insufficient sensitivity (low/moderate change rate) or lack of superlinear response to perturbations. This fails to align with human evaluation expectations, which require disproportionately strong (superlinear) degradation in quality scores as perturbations increase.

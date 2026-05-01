@@ -1,0 +1,279 @@
+**mauve‑roberta‑large mauve‑gpt2 mauve‑roberta gpt‑ppl**
+
+---
+
+### Table  
+
+| Metric | Perturbation (type) | Variation | Score | Edit ratio | Change % (vs. gold) |
+|--------|--------------------|-----------|-------|------------|----------------------|
+| mauve‑roberta‑large | lemmatize (verb randomisation) | 0 % | 0.971 | 0.000 | 0.0 % |
+|  |  | 50 % | 0.865 | 0.045 | –10.9 % |
+|  |  | 100 % | 0.244 | 0.090 | –74.9 % |
+|  | random‑word‑drop (words removed) | 5 % | 0.710 | 0.053 | –26.9 % |
+|  |  | 10 % | 0.231 | 0.103 | –76.2 % |
+|  |  | 15 % | 0.052 | 0.153 | –94.7 % |
+|  |  | 20 % | 0.021 | 0.202 | –97.8 % |
+|  |  | 25 % | 0.011 | 0.252 | –98.9 % |
+|  |  | 30 % | 0.007 | 0.303 | –99.2 % |
+|  |  | 35 % | 0.006 | 0.353 | –99.3 % |
+|  |  | 40 % | 0.006 | 0.402 | –99.4 % |
+|  |  | 45 % | 0.005 | 0.453 | –99.5 % |
+|  |  | 50 % | 0.005 | 0.501 | –99.5 % |
+|  | noisepunct (punctuation noise) | 50 % | 0.089 | 0.056 | –90.8 % |
+|  |  | 100 % | 0.009 | 0.111 | –99.0 % |
+|  | sentencemiddleswap (SVO swap) | 1 sentence | 0.693 | 0.072 | –28.6 % |
+|  |  | 2 sentences | 0.292 | 0.134 | –69.9 % |
+|  |  | 3 sentences | 0.106 | 0.191 | –89.1 % |
+|  | removepreposition (preposition removal) | 40 % | 0.868 | 0.057 | –10.6 % |
+|  |  | 70 % | 0.446 | 0.100 | –54.1 % |
+|  |  | 100 % | 0.085 | 0.142 | –91.2 % |
+|  | removestopwords | 10 % | 0.905 | 0.049 | –6.7 % |
+|  |  | 20 % | 0.601 | 0.097 | –38.1 % |
+|  |  | 30 % | 0.192 | 0.146 | –80.2 % |
+|  |  | 40 % | 0.060 | 0.194 | –93.9 % |
+|  |  | 50 % | 0.027 | 0.242 | –97.2 % |
+|  |  | 60 % | 0.020 | 0.290 | –98.0 % |
+|  | randomlocalswap (local word swap) | 5 % | 0.343 | 0.047 | –64.7 % |
+|  |  | 15 % | 0.012 | 0.109 | –98.7 % |
+|  |  | 30 % | 0.005 | 0.164 | –99.4 % |
+|  |  | 60 % | 0.005 | 0.216 | –99.5 % |
+|  | truncate (end‑truncation) | 10 % | 0.795 | 0.103 | –18.1 % |
+|  |  | 20 % | 0.701 | 0.203 | –27.8 % |
+|  |  | 30 % | 0.526 | 0.303 | –45.8 % |
+|  |  | 40 % | 0.349 | 0.403 | –64.1 % |
+|  |  | 50 % | 0.170 | 0.504 | –82.5 % |
+|  | removearticle (article removal) | 50 % | 0.910 | 0.053 | –6.2 % |
+|  |  | 100 % | 0.444 | 0.105 | –54.3 % |
+|  | randomtokenrep (word repetition) | 5 % | 0.761 | 0.053 | –21.6 % |
+|  |  | 10 % | 0.186 | 0.103 | –80.8 % |
+|  |  | 15 % | 0.032 | 0.153 | –96.7 % |
+|  |  | 20 % | 0.011 | 0.202 | –98.9 % |
+|  |  | 25 % | 0.007 | 0.252 | –99.2 % |
+|  |  | 30 % | 0.006 | 0.353 | –99.4 % |
+|  |  | 35 % | 0.006 | 0.402 | –99.4 % |
+|  |  | 40 % | 0.005 | 0.453 | –99.5 % |
+|  |  | 45 % | 0.005 | 0.501 | –99.5 % |
+|  |  | 50 % | 0.005 | 0.501 | –99.5 % |
+| mauve‑gpt2 | lemmatize (verb randomisation) | 0 % | 0.955 | 0.000 | 0.0 % |
+|  |  | 50 % | 0.856 | 0.045 | –10.3 % |
+|  |  | 100 % | 0.499 | 0.090 | –47.8 % |
+|  | random‑word‑drop | 5 % | 0.626 | 0.053 | –34.5 % |
+|  |  | 10 % | 0.267 | 0.103 | –72.0 % |
+|  |  | 15 % | 0.098 | 0.153 | –89.7 % |
+|  |  | 20 % | 0.048 | 0.202 | –95.0 % |
+|  |  | 25 % | 0.027 | 0.252 | –97.1 % |
+|  |  | 30 % | 0.019 | 0.303 | –98.0 % |
+|  |  | 35 % | 0.014 | 0.353 | –98.6 % |
+|  |  | 40 % | 0.011 | 0.402 | –98.9 % |
+|  |  | 45 % | 0.010 | 0.453 | –98.9 % |
+|  |  | 50 % | 0.009 | 0.501 | –99.1 % |
+|  | noisepunct | 50 % | 0.014 | 0.056 | –98.6 % |
+|  |  | 100 % | 0.006 | 0.111 | –99.4 % |
+|  | sentencemiddleswap | 1 sentence | 0.835 | 0.072 | –12.5 % |
+|  |  | 2 sentences | 0.528 | 0.134 | –44.7 % |
+|  |  | 3 sentences | 0.318 | 0.191 | –66.7 % |
+|  | removepreposition | 40 % | 0.831 | 0.057 | –13.0 % |
+|  |  | 70 % | 0.558 | 0.100 | –41.6 % |
+|  |  | 100 % | 0.267 | 0.142 | –72.0 % |
+|  | removestopwords | 10 % | 0.887 | 0.049 | –7.1 % |
+|  |  | 20 % | 0.637 | 0.097 | –33.3 % |
+|  |  | 30 % | 0.308 | 0.146 | –67.7 % |
+|  |  | 40 % | 0.140 | 0.194 | –85.4 % |
+|  |  | 50 % | 0.064 | 0.242 | –93.3 % |
+|  |  | 60 % | 0.035 | 0.290 | –96.4 % |
+|  | randomlocalswap | 5 % | 0.257 | 0.047 | –73.1 % |
+|  |  | 15 % | 0.026 | 0.109 | –97.2 % |
+|  |  | 30 % | 0.010 | 0.164 | –99.0 % |
+|  |  | 60 % | 0.007 | 0.216 | –99.3 % |
+|  | truncate (end‑truncation) | 10 % | 0.164 | 0.103 | –82.8 % |
+|  |  | 20 % | 0.171 | 0.203 | –82.1 % |
+|  |  | 30 % | 0.179 | 0.303 | –81.3 % |
+|  |  | 40 % | 0.162 | 0.403 | –83.0 % |
+|  |  | 50 % | 0.146 | 0.504 | –84.7 % |
+|  | removearticle | 50 % | 0.850 | 0.053 | –11.0 % |
+|  |  | 100 % | 0.518 | 0.105 | –45.7 % |
+|  | randomtokenrep | 5 % | 0.657 | 0.053 | –31.2 % |
+|  |  | 10 % | 0.321 | 0.103 | –66.4 % |
+|  |  | 15 % | 0.140 | 0.153 | –85.3 % |
+|  |  | 20 % | 0.070 | 0.202 | –92.6 % |
+|  |  | 25 % | 0.036 | 0.252 | –96.2 % |
+|  |  | 30 % | 0.023 | 0.303 | –97.6 % |
+|  |  | 35 % | 0.018 | 0.353 | –98.1 % |
+|  |  | 40 % | 0.013 | 0.402 | –98.6 % |
+|  |  | 45 % | 0.011 | 0.453 | –98.8 % |
+|  |  | 50 % | 0.010 | 0.501 | –99.0 % |
+| mauve‑roberta | lemmatize (verb randomisation) | 0 % | 0.969 | 0.000 | 0.0 % |
+|  |  | 50 % | 0.938 | 0.045 | –3.2 % |
+|  |  | 100 % | 0.625 | 0.090 | –35.5 % |
+|  | random‑word‑drop | 5 % | 0.919 | 0.053 | –5.2 % |
+|  |  | 10 % | 0.633 | 0.103 | –34.6 % |
+|  |  | 15 % | 0.164 | 0.153 | –83.1 % |
+|  |  | 20 % | 0.029 | 0.202 | –97.0 % |
+|  |  | 25 % | 0.011 | 0.252 | –98.9 % |
+|  |  | 30 % | 0.007 | 0.303 | –99.3 % |
+|  |  | 35 % | 0.005 | 0.353 | –99.4 % |
+|  |  | 40 % | 0.005 | 0.403 | –99.5 % |
+|  |  | 45 % | 0.005 | 0.453 | –99.5 % |
+|  |  | 50 % | 0.004 | 0.501 | –99.5 % |
+|  | noisepunct | 50 % | 0.379 | 0.056 | –60.9 % |
+|  |  | 100 % | 0.026 | 0.111 | –97.3 % |
+|  | sentencemiddleswap | 1 sentence | 0.950 | 0.072 | –1.9 % |
+|  |  | 2 sentences | 0.876 | 0.134 | –9.6 % |
+|  |  | 3 sentences | 0.620 | 0.191 | –36.0 % |
+|  | removepreposition | 40 % | 0.940 | 0.057 | –3.0 % |
+|  |  | 70 % | 0.850 | 0.100 | –12.3 % |
+|  |  | 100 % | 0.500 | 0.142 | –48.4 % |
+|  | removestopwords | 10 % | 0.953 | 0.049 | –1.7 % |
+|  |  | 20 % | 0.866 | 0.097 | –10.6 % |
+|  |  | 30 % | 0.591 | 0.146 | –39.0 % |
+|  |  | 40 % | 0.217 | 0.194 | –77.6 % |
+|  |  | 50 % | 0.055 | 0.242 | –94.3 % |
+|  |  | 60 % | 0.023 | 0.290 | –97.6 % |
+|  | randomlocalswap | 5 % | 0.831 | 0.047 | –14.3 % |
+|  |  | 15 % | 0.032 | 0.109 | –96.7 % |
+|  |  | 30 % | 0.006 | 0.164 | –99.4 % |
+|  |  | 60 % | 0.004 | 0.216 | –99.6 % |
+|  | truncate (end‑truncation) | 10 % | 0.777 | 0.103 | –19.8 % |
+|  |  | 20 % | 0.712 | 0.203 | –26.5 % |
+|  |  | 30 % | 0.645 | 0.303 | –33.4 % |
+|  |  | 40 % | 0.471 | 0.403 | –51.4 % |
+|  |  | 50 % | 0.289 | 0.504 | –70.2 % |
+|  | removearticle | 50 % | 0.957 | 0.053 | –1.2 % |
+|  |  | 100 % | 0.883 | 0.105 | –8.8 % |
+|  | randomtokenrep | 5 % | 0.941 | 0.053 | –2.8 % |
+|  |  | 10 % | 0.823 | 0.103 | –15.1 % |
+|  |  | 15 % | 0.438 | 0.153 | –54.8 % |
+|  |  | 20 % | 0.128 | 0.202 | –86.8 % |
+|  |  | 25 % | 0.030 | 0.252 | –96.9 % |
+|  |  | 30 % | 0.012 | 0.303 | –98.7 % |
+|  |  | 35 % | 0.008 | 0.353 | –99.2 % |
+|  |  | 40 % | 0.006 | 0.402 | –99.4 % |
+|  |  | 45 % | 0.005 | 0.453 | –99.5 % |
+|  |  | 50 % | 0.005 | 0.501 | –99.5 % |
+| gpt‑ppl | verb randomisation | 0 % | 35.061 | 0.000 | 0.0 % |
+|  |  | 50 % | 45.070 | 0.045 | +28.5 % |
+|  |  | 100 % | 54.162 | 0.090 | +54.5 % |
+|  | random‑word‑drop | 5 % | 49.705 | 0.053 | +41.8 % |
+|  |  | 10 % | 67.718 | 0.103 | +93.1 % |
+|  |  | 15 % | 90.429 | 0.153 | +157.9 % |
+|  |  | 20 % | 118.294 | 0.202 | +237.4 % |
+|  |  | 25 % | 151.725 | 0.252 | +332.7 % |
+|  |  | 30 % | 193.484 | 0.303 | +451.9 % |
+|  |  | 35 % | 242.347 | 0.353 | +591.2 % |
+|  |  | 40 % | 298.804 | 0.402 | +752.2 % |
+|  |  | 45 % | 368.450 | 0.453 | +950.9 % |
+|  |  | 50 % | 449.392 | 0.501 | +1181.8 % |
+|  | noisepunct | 50 % | 47.126 | 0.056 | +34.4 % |
+|  |  | 100 % | 53.763 | 0.111 | +53.3 % |
+|  | sentencemiddleswap | 1 sentence | 40.336 | 0.072 | +15.0 % |
+|  |  | 2 sentences | 45.783 | 0.134 | +30.6 % |
+|  |  | 3 sentences | 51.513 | 0.191 | +46.9 % |
+|  | removepreposition | 40 % | 54.507 | 0.057 | +55.5 % |
+|  |  | 70 % | 75.026 | 0.100 | +114.0 % |
+|  |  | 100 % | 101.970 | 0.142 | +190.8 % |
+|  | removestopwords | 10 % | 48.132 | 0.049 | +37.3 % |
+|  |  | 20 % | 64.839 | 0.097 | +84.9 % |
+|  |  | 30 % | 85.984 | 0.146 | +145.2 % |
+|  |  | 40 % | 112.432 | 0.194 | +220.7 % |
+|  |  | 50 % | 145.318 | 0.242 | +314.5 % |
+|  |  | 60 % | 185.419 | 0.290 | +428.9 % |
+|  | randomlocalswap | 5 % | 62.121 | 0.047 | +77.2 % |
+|  |  | 15 % | 124.144 | 0.109 | +254.1 % |
+|  |  | 30 % | 217.731 | 0.164 | +521.0 % |
+|  |  | 60 % | 348.935 | 0.216 | +895.2 % |
+|  | truncate (end‑truncation) | 10 % | 37.092 | 0.103 | +5.8 % |
+|  |  | 20 % | 38.284 | 0.203 | +9.2 % |
+|  |  | 30 % | 39.707 | 0.303 | +13.3 % |
+|  |  | 40 % | 41.669 | 0.403 | +18.8 % |
+|  |  | 50 % | 44.405 | 0.504 | +26.7 % |
+|  | removearticle | 50 % | 46.498 | 0.053 | +32.6 % |
+|  |  | 100 % | 58.569 | 0.105 | +67.1 % |
+|  | randomtokenrep | 5 % | 44.139 | 0.053 | +25.9 % |
+|  |  | 10 % | 52.832 | 0.103 | +50.7 % |
+|  |  | 15 % | 61.100 | 0.153 | +74.3 % |
+|  |  | 20 % | 68.776 | 0.202 | +96.2 % |
+|  |  | 25 % | 75.442 | 0.252 | +115.2 % |
+|  |  | 30 % | 80.975 | 0.303 | +131.0 % |
+|  |  | 35 % | 85.598 | 0.353 | +144.1 % |
+|  |  | 40 % | 88.707 | 0.402 | +153.0 % |
+|  |  | 45 % | 91.154 | 0.453 | +160.0 % |
+|  |  | 50 % | 92.151 | 0.501 | +162.8 % |
+
+---
+
+### 1. Sensitivity to the Perturbation  
+
+For each metric the three attributes are reported per perturbation type.
+
+| Metric | Perturbation | Monotonous decrease | Superlinear decrease | Change‑rate |
+|--------|--------------|---------------------|----------------------|-------------|
+| **mauve‑roberta‑large** | lemmatize | yes | yes | high |
+|  | random‑word‑drop | yes | no | high |
+|  | noisepunct | yes | no | high |
+|  | sentencemiddleswap | yes | no | high |
+|  | removepreposition | yes | no | high |
+|  | removestopwords | yes | no | high |
+|  | randomlocalswap | yes | no | high |
+|  | truncate | yes | yes | high |
+|  | removearticle | yes | no | moderate |
+|  | randomtokenrep | yes | no | high |
+| **mauve‑gpt2** | lemmatize | yes | no | moderate |
+|  | random‑word‑drop | yes | no | high |
+|  | noisepunct | yes | no | high |
+|  | sentencemiddleswap | yes | no | high |
+|  | removepreposition | yes | yes | high |
+|  | removestopwords | yes | no | high |
+|  | randomlocalswap | yes | no | high |
+|  | truncate | yes | no | high |
+|  | removearticle | yes | no | moderate |
+|  | randomtokenrep | yes | no | high |
+| **mauve‑roberta** | lemmatize | yes | no | moderate |
+|  | random‑word‑drop | yes | no | high |
+|  | noisepunct | yes | no | high |
+|  | sentencemiddleswap | yes | yes | moderate |
+|  | removepreposition | yes | yes | moderate |
+|  | removestopwords | yes | no | high |
+|  | randomlocalswap | yes | no | high |
+|  | truncate | yes | yes | high |
+|  | removearticle | yes | no | moderate |
+|  | randomtokenrep | yes | no | high |
+| **gpt‑ppl** | lemmatize | **no** | **no** | high |
+|  | random‑word‑drop | **no** | **no** | high |
+|  | noisepunct | **no** | **no** | high |
+|  | sentencemiddleswap | **no** | **no** | high |
+|  | removepreposition | **no** | **no** | high |
+|  | removestopwords | **no** | **no** | high |
+|  | randomlocalswap | **no** | **no** | high |
+|  | truncate | **no** | **no** | high |
+|  | removearticle | **no** | **no** | high |
+|  | randomtokenrep | **no** | **no** | high |
+
+*Notes on the attribute determination*  
+
+* **Monotonous decrease** – the score strictly falls (or, for GPT‑PPL, strictly rises) as the variation grows. All listed perturbations satisfy this except GPT‑PPL, where the metric rises, i.e. it does **not** decrease.  
+* **Superlinear decrease** – the absolute drop between successive variation levels grows. This holds only where the incremental drops are strictly increasing (e.g., lemmatize for mauve‑roberta‑large, truncate for mauve‑roberta‑large, sentencemiddleswap & removepreposition for mauve‑roberta, and removepreposition for mauve‑gpt2).  
+* **Change‑rate** – based on the largest absolute change:  
+  * *low* ≤ 25 % (none of the metrics reach only low).  
+  * *moderate* ≤ 60 % (e.g., lemmatize for mauve‑roberta‑large, lemmatize for mauve‑gpt2, lemmatize for mauve‑roberta, sentencemiddleswap & removepreposition for mauve‑roberta).  
+  * *high* > 60 % (the majority of cases).
+
+---
+
+### Recommendation  
+
+A metric is recommended for a perturbation type only when it shows **high** change‑rate **and** **superlinear** decrease.
+
+| Perturbation | Recommended metric |
+|--------------|--------------------|
+| lemmatize | mauve‑roberta‑large |
+| random‑word‑drop | none |
+| noisepunct | none |
+| sentencemiddleswap | none |
+| removepreposition | mauve‑gpt2 |
+| removestopwords | none |
+| randomlocalswap | none |
+| truncate | mauve‑roberta‑large, mauve‑roberta |
+| removearticle | none |
+| randomtokenrep | none |
+
+*No metric satisfies both conditions for the remaining perturbations; consequently, no recommendation is made for them.*

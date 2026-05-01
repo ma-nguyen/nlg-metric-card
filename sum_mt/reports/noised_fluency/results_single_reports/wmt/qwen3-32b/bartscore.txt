@@ -1,0 +1,97 @@
+# BARTScore  
+
+| Perturbation Type | Variation | BARTScore | Edit Ratio | Change (%) |
+|--------------------|-----------|-----------|------------|------------|
+| Verb Lemmatization | 0%        | -3.812    | 0.000      | 0.0%       |
+| Verb Lemmatization | 50%       | -3.942    | 0.041      | -3.4%      |
+| Verb Lemmatization | 100%      | -4.072    | 0.081      | -6.8%      |
+| Word Removal       | 0%        | -3.812    | 0.000      | 0.0%       |
+| Word Removal       | 5%        | -4.261    | 0.085      | -11.8%     |
+| Word Removal       | 10%       | -4.492    | 0.131      | -17.9%     |
+| Word Removal       | 15%       | -4.785    | 0.185      | -25.6%     |
+| Word Removal       | 20%       | -5.039    | 0.229      | -32.2%     |
+| Word Removal       | 25%       | -5.304    | 0.276      | -39.2%     |
+| Word Removal       | 30%       | -5.706    | 0.333      | -49.7%     |
+| Word Removal       | 35%       | -6.044    | 0.385      | -58.6%     |
+| Word Removal       | 40%       | -6.399    | 0.428      | -67.9%     |
+| Word Removal       | 45%       | -6.904    | 0.486      | -81.1%     |
+| Word Removal       | 55%       | -7.930    | 0.584      | -108.1%    |
+| Punctuation Noise  | 0%        | -3.812    | 0.000      | 0.0%       |
+| Punctuation Noise  | 50%       | -4.032    | 0.049      | -5.8%      |
+| Punctuation Noise  | 100%      | -4.240    | 0.099      | -11.3%     |
+| Sentence Swap      | 0%        | -3.812    | 0.000      | 0.0%       |
+| Sentence Swap      | 100%      | -4.716    | 0.474      | -23.7%     |
+| Preposition Removal| 0%        | -3.812    | 0.000      | 0.0%       |
+| Preposition Removal| 40%       | -4.095    | 0.058      | -7.4%      |
+| Preposition Removal| 70%       | -4.324    | 0.102      | -13.5%     |
+| Preposition Removal| 100%      | -4.568    | 0.145      | -19.8%     |
+| Stop-Word Removal  | 0%        | -3.812    | 0.000      | 0.0%       |
+| Stop-Word Removal  | 10%       | -4.015    | 0.052      | -5.3%      |
+| Stop-Word Removal  | 20%       | -4.233    | 0.104      | -11.1%     |
+| Stop-Word Removal  | 30%       | -4.464    | 0.158      | -17.1%     |
+| Stop-Word Removal  | 40%       | -4.709    | 0.212      | -23.5%     |
+| Stop-Word Removal  | 50%       | -4.959    | 0.264      | -30.1%     |
+| Stop-Word Removal  | 60%       | -5.231    | 0.316      | -37.2%     |
+| Word Swap          | 0%        | -3.812    | 0.000      | 0.0%       |
+| Word Swap          | 5%        | -4.480    | 0.083      | -17.5%     |
+| Word Swap          | 15%       | -4.955    | 0.138      | -30.0%     |
+| Word Swap          | 30%       | -5.347    | 0.179      | -40.3%     |
+| Word Swap          | 60%       | -5.753    | 0.224      | -50.9%     |
+| Truncate End       | 0%        | -3.812    | 0.000      | 0.0%       |
+| Truncate End       | 10%       | -4.154    | 0.120      | -9.0%      |
+| Truncate End       | 20%       | -4.411    | 0.241      | -15.7%     |
+| Truncate End       | 30%       | -4.662    | 0.340      | -22.3%     |
+| Truncate End       | 40%       | -5.038    | 0.442      | -32.2%     |
+| Truncate End       | 50%       | -5.734    | 0.555      | -50.4%     |
+| Article Removal    | 0%        | -3.812    | 0.000      | 0.0%       |
+| Article Removal    | 50%       | -4.057    | 0.062      | -6.5%      |
+| Article Removal    | 100%      | -4.322    | 0.126      | -13.4%     |
+| Word Repetition    | 0%        | -3.812    | 0.000      | 0.0%       |
+| Word Repetition    | 5%        | -4.086    | 0.085      | -7.2%      |
+| Word Repetition    | 10%       | -4.243    | 0.131      | -11.3%     |
+| Word Repetition    | 15%       | -4.403    | 0.185      | -15.5%     |
+| Word Repetition    | 20%       | -4.543    | 0.229      | -19.2%     |
+| Word Repetition    | 25%       | -4.677    | 0.276      | -22.7%     |
+| Word Repetition    | 30%       | -4.817    | 0.333      | -26.4%     |
+| Word Repetition    | 35%       | -4.955    | 0.385      | -30.0%     |
+| Word Repetition    | 40%       | -5.058    | 0.428      | -32.7%     |
+| Word Repetition    | 45%       | -5.194    | 0.486      | -36.3%     |
+| Word Repetition    | 55%       | -5.405    | 0.584      | -41.8%     |
+
+---
+
+## 1. Sensitivity to the Perturbation  
+
+| Perturbation Type       | Monotonous Decrease | Superlinear Decrease | Change Rate |
+|-------------------------|---------------------|----------------------|-------------|
+| Verb Lemmatization      | Yes                 | No                   | Low         |
+| Word Removal            | Yes                 | Yes                  | High        |
+| Punctuation Noise       | Yes                 | No                   | Low         |
+| Sentence Swap           | Yes                 | No                   | Low         |
+| Preposition Removal     | Yes                 | No                   | Low         |
+| Stop-Word Removal       | Yes                 | No                   | Moderate    |
+| Word Swap               | Yes                 | No                   | Moderate    |
+| Truncate End            | Yes                 | Yes                  | Moderate    |
+| Article Removal         | Yes                 | No                   | Low         |
+| Word Repetition         | Yes                 | No                   | Moderate    |
+
+**Analysis:**  
+- **Monotonous Decrease:** All perturbation types show a consistent decrease in BARTScore as perturbation increases.  
+- **Superlinear Decrease:** Only "Word Removal" and "Truncate End" exhibit superlinear decreases (accelerating score drops with higher perturbation).  
+- **Change Rate:**  
+  - **High:** "Word Removal" (max change: -108.1%).  
+  - **Moderate:** "Stop-Word Removal" (-37.2%), "Word Swap" (-50.9%), "Truncate End" (-50.4%), "Word Repetition" (-41.8%).  
+  - **Low:** "Verb Lemmatization" (-6.8%), "Punctuation Noise" (-11.3%), "Sentence Swap" (-23.7%), "Preposition Removal" (-19.8%), "Article Removal" (-13.4%).  
+
+---
+
+## 2. Suitability of BARTScore for Machine Translation  
+
+**Recommendation:** **Not Recommended**  
+
+**Rationale:**  
+- Only **2 out of 10 perturbation tests** ("Word Removal" and "Truncate End") exhibit **superlinear decreases**, which aligns with human evaluation's disproportionate penalty for severe errors.  
+- **High change rates** are observed in only **1 test** ("Word Removal"), while most tests show **low or moderate sensitivity**.  
+- BARTScore fails to consistently reflect the **superlinear human penalty** for perturbations, particularly for critical fluency errors (e.g., word removal, truncation).  
+
+**Conclusion:** BARTScore demonstrates limited sensitivity to perturbations in machine translation, particularly in capturing the severity of fluency degradation. It is not a robust substitute for human evaluation in this context.

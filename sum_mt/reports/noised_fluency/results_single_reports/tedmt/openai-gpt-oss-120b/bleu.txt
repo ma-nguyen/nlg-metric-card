@@ -1,0 +1,99 @@
+**bleu**
+
+---
+
+## Table  
+
+| Perturbation Type | Variation (%) / Description | BLEU Score | Edit Ratio | Change vs. Gold |
+|-------------------|-----------------------------|------------|------------|-----------------|
+| **Verb lemmatization** | 0 % (gold) | 23.819 | 0.000 | 0.0 % |
+| | 50 % verbs randomized | 22.931 | 0.034 | –3.7 % |
+| | 100 % verbs randomized | 22.109 | 0.065 | –7.2 % |
+| **Random word drop** | 0 % (gold) | 23.819 | 0.000 | 0.0 % |
+| | 5 % words removed | 22.030 | 0.056 | –7.5 % |
+| | 10 % words removed | 20.464 | 0.105 | –14.1 % |
+| | 15 % words removed | 18.516 | 0.156 | –22.3 % |
+| | 20 % words removed | 16.363 | 0.205 | –31.3 % |
+| | 25 % words removed | 14.576 | 0.254 | –38.8 % |
+| | 30 % words removed | 12.514 | 0.306 | –47.5 % |
+| | 35 % words removed | 10.695 | 0.356 | –55.1 % |
+| | 40 % words removed | 8.852  | 0.405 | –62.8 % |
+| | 45 % words removed | 7.237  | 0.456 | –69.6 % |
+| | 55 % words removed | 4.490  | 0.556 | –81.1 % |
+| **Noise punctuation** | 0 % (gold) | 23.819 | 0.000 | 0.0 % |
+| | 50 % punctuation noised | 20.301 | 0.073 | –14.8 % |
+| | 100 % punctuation noised | 16.707 | 0.145 | –29.9 % |
+| **Sentence‑middle swap** | 0 % (gold) | 23.819 | 0.000 | 0.0 % |
+| | SVO order swapped (single case) | 22.652 | 0.073 | –4.9 % |
+| **Remove prepositions** | 0 % (gold) | 23.819 | 0.000 | 0.0 % |
+| | 40 % prepositions removed | 22.719 | 0.041 | –4.6 % |
+| | 70 % prepositions removed | 21.570 | 0.072 | –9.4 % |
+| | 100 % prepositions removed | 20.436 | 0.104 | –14.2 % |
+| **Remove stop‑words** | 0 % (gold) | 23.819 | 0.000 | 0.0 % |
+| | 10 % stop‑words removed | 22.147 | 0.069 | –7.0 % |
+| | 20 % stop‑words removed | 20.180 | 0.139 | –15.3 % |
+| | 30 % stop‑words removed | 17.984 | 0.208 | –24.5 % |
+| | 40 % stop‑words removed | 15.478 | 0.278 | –35.0 % |
+| | 50 % stop‑words removed | 13.032 | 0.346 | –45.3 % |
+| | 60 % stop‑words removed | 10.837 | 0.412 | –54.5 % |
+| **Random local swap** | 0 % (gold) | 23.819 | 0.000 | 0.0 % |
+| | 5 % words swapped | 21.053 | 0.050 | –11.6 % |
+| | 15 % words swapped | 17.473 | 0.111 | –26.6 % |
+| | 30 % words swapped | 14.252 | 0.165 | –40.2 % |
+| | 60 % words swapped | 10.748 | 0.217 | –54.9 % |
+| **Truncate (end‑word removal)** | 0 % (gold) | 23.819 | 0.000 | 0.0 % |
+| | 10 % words removed | 23.151 | 0.105 | –2.8 % |
+| | 20 % words removed | 20.975 | 0.206 | –11.9 % |
+| | 30 % words removed | 18.239 | 0.305 | –23.4 % |
+| | 40 % words removed | 14.770 | 0.406 | –38.0 % |
+| | 50 % words removed | 10.536 | 0.508 | –55.8 % |
+| **Remove articles** | 0 % (gold) | 23.819 | 0.000 | 0.0 % |
+| | 50 % articles removed | 22.288 | 0.040 | –6.4 % |
+| | 100 % articles removed | 20.621 | 0.080 | –13.4 % |
+| **Random token repeat** | 0 % (gold) | 23.819 | 0.000 | 0.0 % |
+| | 5 % words repeated | 22.217 | 0.056 | –6.7 % |
+| | 10 % words repeated | 20.915 | 0.105 | –12.2 % |
+| | 15 % words repeated | 19.675 | 0.156 | –17.4 % |
+| | 20 % words repeated | 18.590 | 0.205 | –22.0 % |
+| | 25 % words repeated | 17.599 | 0.254 | –26.1 % |
+| | 30 % words repeated | 16.537 | 0.306 | –30.6 % |
+| | 35 % words repeated | 15.827 | 0.356 | –33.6 % |
+| | 40 % words repeated | 14.962 | 0.405 | –37.2 % |
+| | 45 % words repeated | 14.360 | 0.456 | –39.7 % |
+| | 55 % words repeated | 13.131 | 0.556 | –44.9 % |
+
+---
+
+## 1. Sensitivity to the Perturbation  
+
+| Perturbation Type | Monotonous decrease | Super‑linear decrease | Change‑rate |
+|-------------------|---------------------|-----------------------|-------------|
+| Verb lemmatization | yes | no | low |
+| Random word drop | yes | no | high |
+| Noise punctuation | yes | yes | low |
+| Sentence‑middle swap | yes | no* | low |
+| Remove prepositions | yes | no | low |
+| Remove stop‑words | yes | no | moderate |
+| Random local swap | yes | no | moderate |
+| Truncate (end‑word removal) | yes | yes | moderate |
+| Remove articles | yes | yes | low |
+| Random token repeat | yes | no | moderate |
+
+\*Only a single perturbed level is available; super‑linear behaviour cannot be established, therefore marked **no**.
+
+**Explanation of attributes**
+
+* **Monotonous decrease** – All listed perturbations show a non‑increasing BLEU score as the variation level grows.
+* **Super‑linear decrease** – Detected when the magnitude of score loss grows with each successive variation step (e.g., Noise punctuation, Truncate, Remove articles).  
+* **Change‑rate** – Determined from the largest absolute percentage drop within each perturbation set:  
+  * *low* (≤ 25 % drop), *moderate* (≤ 60 % drop), *high* (> 60 % drop).  
+
+---
+
+## 2. Suitability of **bleu** for **machine translation**
+
+To be considered a reasonable metric, a majority (> 7) of perturbation tests must exhibit **high** change‑rate **and** super‑linear decrease.  
+
+Only the *Random word drop* test shows a high change‑rate, and it does **not** display super‑linear behaviour. The remaining tests either have low/moderate change‑rates or lack super‑linear decline. Consequently, **bleu** does **not** meet the recommended criteria for machine‑translation evaluation under the presented perturbation framework.  
+
+**Recommendation:** **Not recommended**.
