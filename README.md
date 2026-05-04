@@ -14,7 +14,7 @@ extending the paper  [On the Blind Spots of Model-Based Evaluation Metrics for T
 └── wiki/                       # Open-Ended Generation tests
 ```
 
-This project runs blind spot tests across three NLP tasks and automatically generates **metric cards** — LLM-written reports that analyse test results and provide in-depth insight into each metric's validity. To evaluate the usability of the automatically generated **metric cards** as pre-wrtitten metric cards, participants are tasked to create metric cards and evaluate those.  
+This project runs blind spot tests across three NLP tasks and automatically generates **metric cards** — LLM-written reports that analyse test results and provide in-depth insight into each metric's validity. To evaluate the usability of the automatically generated **metric cards** as pre-written metric cards, participants are tasked to create metric cards and evaluate those.  
 
 ---
 
