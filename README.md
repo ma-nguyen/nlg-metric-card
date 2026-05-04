@@ -9,11 +9,12 @@ extending the paper  [On the Blind Spots of Model-Based Evaluation Metrics for T
 
 ```
 .
-├── sum_mt/       # Machine Translation (MT/) and Summarization (SUM/)
-└── wiki/         # Open-Ended Generation tests
+├── MetricCard_CreationAndEval/ # Metric Card Creation + Evaluation Setup and Results   
+├── sum_mt/                     # Machine Translation (MT/) and Summarization (SUM/)
+└── wiki/                       # Open-Ended Generation tests
 ```
 
-This project runs blind spot tests across three NLP tasks and automatically generates **metric cards** — LLM-written reports that analyse test results and provide in-depth insight into each metric's validity.
+This project runs blind spot tests across three NLP tasks and automatically generates **metric cards** — LLM-written reports that analyse test results and provide in-depth insight into each metric's validity. To evaluate the usability of the automatically generated **metric cards** as pre-wrtitten metric cards, participants are tasked to create metric cards and evaluate those.  
 
 ---
 
