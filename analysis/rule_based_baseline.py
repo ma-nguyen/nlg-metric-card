@@ -1,7 +1,6 @@
 """Rule-based (non-LLM) metric-card baseline.
 
-Responds to EMNLP reviewer JF13 (W2 / Suggestion 1): a deterministic
-template generator that derives card content purely from the score
+A deterministic template generator that derives card content purely from the score
 tables by applying the documented threshold rules, with no LLM.
 Its agreement with the lead author's v1 reference quantifies how much
 of the LLM coverage in Table 2 is deterministic extraction.

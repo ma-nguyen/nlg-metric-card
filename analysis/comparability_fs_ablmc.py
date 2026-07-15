@@ -1,8 +1,5 @@
 """Comparability of ROUGE-L (FS) vs. BARTScore-avg-f (ABLMC) as authoring tasks.
-
-Responds to EMNLP reviewer TVpE (W2): the creation study confounds the
-FS/ABLMC condition with the metric (FS cards were always written for
-ROUGE-L, ABLMC cards for BARTScore-avg-f). This script quantifies, post
+This script quantifies, post
 hoc, how comparable the two authoring tasks were:
 
   1. Deterministic card content derived from the two score tables

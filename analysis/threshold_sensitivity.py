@@ -1,9 +1,6 @@
 """Threshold sensitivity check for the metric-card content rules.
 
-Responds to EMNLP reviewer JF13 (Suggestion 2): the card content
-depends on two hand-picked cutoffs — the >=70% high-change-rate
-threshold and the <10% similarity cutoff — plus the noised-fluency
-change-class boundaries (25/60). This script recomputes the
+Recomputes the
 deterministic card content (analysis/rule_based_baseline.py) under a
 grid of alternative cutoffs and reports
 
