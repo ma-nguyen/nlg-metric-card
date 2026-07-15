@@ -1,0 +1,24 @@
+{
+  "data": {
+    "structure": 3,
+    "precision": 4,
+    "understandability": 4,
+    "objectivity": 4,
+    "usefulness": 4,
+    "language": 4,
+    "factual_accuracy": 4,
+    "rationale": {
+      "structure": "The card flows as continuous prose without headings or sections, which makes it less navigable though still logically ordered.",
+      "precision": "Most claims are clear and tied to numbers, though the phrase 'moderate to high change rates' is slightly ambiguous given the 70% threshold.",
+      "understandability": "The reasoning is easy to follow and the comparison between injections and gold is clearly explained.",
+      "objectivity": "The card acknowledges that the metric does react to injections but ultimately judges it unsuitable, presenting a fairly balanced view.",
+      "usefulness": "It provides a clear verdict and concrete suggestions for improvement, offering useful insight into the metric's behavior.",
+      "language": "Generally grammatical with only minor awkward phrasings like 'similar, but a minimally better scores'.",
+      "factual_accuracy": "Numbers and direction of change are reported correctly, though calling -65.6% only 'moderate to high' understates that it is close to the 70% threshold."
+    }
+  },
+  "raw": "{\"structure\":3,\"precision\":4,\"understandability\":4,\"objectivity\":4,\"usefulness\":4,\"language\":4,\"factual_accuracy\":4,\"rationale\":{\"structure\":\"The card flows as continuous prose without headings or sections, which makes it less navigable though still logically ordered.\",\"precision\":\"Most claims are clear and tied to numbers, though the phrase 'moderate to high change rates' is slightly ambiguous given the 70% threshold.\",\"understandability\":\"The reasoning is easy to follow and the comparison between injections and gold is clearly explained.\",\"objectivity\":\"The card acknowledges that the metric does react to injections but ultimately judges it unsuitable, presenting a fairly balanced view.\",\"usefulness\":\"It provides a clear verdict and concrete suggestions for improvement, offering useful insight into the metric's behavior.\",\"language\":\"Generally grammatical with only minor awkward phrasings like 'similar, but a minimally better scores'.\",\"factual_accuracy\":\"Numbers and direction of change are reported correctly, though calling -65.6% only 'moderate to high' understates that it is close to the 70% threshold.\"}}",
+  "model": "claude-opus-4-7",
+  "seed": 1,
+  "provider": "anthropic"
+}

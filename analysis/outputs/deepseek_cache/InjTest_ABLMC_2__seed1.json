@@ -1,0 +1,23 @@
+{
+  "data": {
+    "structure": 4,
+    "precision": 4,
+    "understandability": 4,
+    "objectivity": 4,
+    "usefulness": 4,
+    "language": 5,
+    "factual_accuracy": 5,
+    "rationale": {
+      "structure": "Clear sections with headings and subheadings, but could benefit from a brief summary at the start.",
+      "precision": "Most statements are unambiguous, though 'somewhat sensitive' could be more precise.",
+      "understandability": "Concepts are explained clearly, making it easy to follow.",
+      "objectivity": "Balanced discussion of strengths and weaknesses, with no overstatement.",
+      "usefulness": "Provides actionable insights and specific recommendations for improvement.",
+      "language": "Grammatically correct and well-written with no errors.",
+      "factual_accuracy": "All numbers and percentages match the test results table exactly."
+    }
+  },
+  "raw": "{\n  \"structure\": 4,\n  \"precision\": 4,\n  \"understandability\": 4,\n  \"objectivity\": 4,\n  \"usefulness\": 4,\n  \"language\": 5,\n  \"factual_accuracy\": 5,\n  \"rationale\": {\n    \"structure\": \"Clear sections with headings and subheadings, but could benefit from a brief summary at the start.\",\n    \"precision\": \"Most statements are unambiguous, though 'somewhat sensitive' could be more precise.\",\n    \"understandability\": \"Concepts are explained clearly, making it easy to follow.\",\n    \"objectivity\": \"Balanced discussion of strengths and weaknesses, with no overstatement.\",\n    \"usefulness\": \"Provides actionable insights and specific recommendations for improvement.\",\n    \"language\": \"Grammatically correct and well-written with no errors.\",\n    \"factual_accuracy\": \"All numbers and percentages match the test results table exactly.\"\n  }\n}",
+  "model": "deepseek-chat",
+  "seed": 1
+}

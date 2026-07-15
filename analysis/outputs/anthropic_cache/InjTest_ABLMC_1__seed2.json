@@ -1,0 +1,24 @@
+{
+  "data": {
+    "structure": 4,
+    "precision": 4,
+    "understandability": 4,
+    "objectivity": 5,
+    "usefulness": 4,
+    "language": 3,
+    "factual_accuracy": 3,
+    "rationale": {
+      "structure": "Clear sections (Sensitivity, Suitability with Strengths/Weaknesses, Recommendation, Improvements) make the card easy to navigate.",
+      "precision": "Most claims are specific with numeric backing, though the '346%' typo introduces ambiguity.",
+      "understandability": "The reasoning is generally easy to follow and well-explained.",
+      "objectivity": "Balances strengths and weaknesses fairly and gives a justified negative recommendation.",
+      "usefulness": "Offers concrete improvement suggestions, though some (e.g., calibration to 0-1) are tangential to the injection robustness question.",
+      "language": "Generally fluent but contains errors like 'Interjection', '346%' typo, and minor awkward phrasing.",
+      "factual_accuracy": "Numbers mostly match the table, but '346%' is a clear error (should be 36%) and labeling 36% as 'low-to-moderate' while 54.9% as 'moderate-to-high' is inconsistent with neither reaching the 70% threshold."
+    }
+  },
+  "raw": "{\"structure\":4,\"precision\":4,\"understandability\":4,\"objectivity\":5,\"usefulness\":4,\"language\":3,\"factual_accuracy\":3,\"rationale\":{\"structure\":\"Clear sections (Sensitivity, Suitability with Strengths/Weaknesses, Recommendation, Improvements) make the card easy to navigate.\",\"precision\":\"Most claims are specific with numeric backing, though the '346%' typo introduces ambiguity.\",\"understandability\":\"The reasoning is generally easy to follow and well-explained.\",\"objectivity\":\"Balances strengths and weaknesses fairly and gives a justified negative recommendation.\",\"usefulness\":\"Offers concrete improvement suggestions, though some (e.g., calibration to 0-1) are tangential to the injection robustness question.\",\"language\":\"Generally fluent but contains errors like 'Interjection', '346%' typo, and minor awkward phrasing.\",\"factual_accuracy\":\"Numbers mostly match the table, but '346%' is a clear error (should be 36%) and labeling 36% as 'low-to-moderate' while 54.9% as 'moderate-to-high' is inconsistent with neither reaching the 70% threshold.\"}}",
+  "model": "claude-opus-4-7",
+  "seed": 2,
+  "provider": "anthropic"
+}

@@ -1,0 +1,24 @@
+{
+  "data": {
+    "structure": 3,
+    "precision": 3,
+    "understandability": 4,
+    "objectivity": 3,
+    "usefulness": 2,
+    "language": 4,
+    "factual_accuracy": 3,
+    "rationale": {
+      "structure": "The card uses paragraphs but lacks formatting elements like bolding or bullet points to enhance readability.",
+      "precision": "The card contradicts itself by stating the metric was sensitive but then claiming it cannot make clear distinctions.",
+      "understandability": "The text is generally easy to follow, though the logical contradictions cause some confusion.",
+      "objectivity": "The evaluation is overly harsh, dismissing the metric entirely despite it halving the scores for injections.",
+      "usefulness": "The recommendation to calibrate the metric's scale is impractical and shows a misunderstanding of how ROUGE-L works.",
+      "language": "The text is mostly well-written, with only minor grammatical errors like 'a minimally better scores'.",
+      "factual_accuracy": "While the numbers are reported correctly, describing a drop of over 50% as 'very close' is an inaccurate interpretation."
+    }
+  },
+  "raw": "{\n  \"structure\": 3,\n  \"precision\": 3,\n  \"understandability\": 4,\n  \"objectivity\": 3,\n  \"usefulness\": 2,\n  \"language\": 4,\n  \"factual_accuracy\": 3,\n  \"rationale\": {\n    \"structure\": \"The card uses paragraphs but lacks formatting elements like bolding or bullet points to enhance readability.\",\n    \"precision\": \"The card contradicts itself by stating the metric was sensitive but then claiming it cannot make clear distinctions.\",\n    \"understandability\": \"The text is generally easy to follow, though the logical contradictions cause some confusion.\",\n    \"objectivity\": \"The evaluation is overly harsh, dismissing the metric entirely despite it halving the scores for injections.\",\n    \"usefulness\": \"The recommendation to calibrate the metric's scale is impractical and shows a misunderstanding of how ROUGE-L works.\",\n    \"language\": \"The text is mostly well-written, with only minor grammatical errors like 'a minimally better scores'.\",\n    \"factual_accuracy\": \"While the numbers are reported correctly, describing a drop of over 50% as 'very close' is an inaccurate interpretation.\"\n  }\n}",
+  "model": "gemini-3.1-pro-preview",
+  "seed": 1,
+  "provider": "gemini"
+}

@@ -1,0 +1,43 @@
+# Condition: ABLMC
+# Metric: BARTScore-avg-f
+# Source: InjTest_ABLMC_2.docx
+
+## Test results table
+Gold	Injection 1	Injection 2
+-6.064	-8.247 (-36.0%)	-9.391 (-54.9%)
+
+## Participant metric card
+bartscore-avg-f
+
+---
+
+## 1. Sensitivity to the Perturbation  
+
+a. Did a perturbed output score higher than the gold output?  
+No. Both perturbed outputs received lower scores than the gold summary (-8.247 and -9.391 vs. -6.064). 
+
+b. Were the scores similar for every injection?  
+No. The two injections produced noticeably different penalties: Injection 1 lowered the score by ≈ 36 %, whereas Injection 2 lowered it by ≈ 55 %. Thus, the metric is somewhat sensitive across the two perturbations, with the shorter injection being penalized stronger.
+
+---
+
+## 2. Suitability of bartscore-avg-f for summarization
+
+### a. Strengths  
+- Injection 2 achieved a moderate-to-high change (-54.9 %, 50 %-69 % category). This indicates that the metric can assign a substantially lower score when the perturbation is a short, non-informative statement (“Yes, this is a really good summary.”).
+
+### b. Weaknesses  
+- Injection 1 produced only a low-to-moderate change (-36.0 %, 30 %-49 % category), suggesting limited discrimination for a longer but still non-summary injection.  
+- Neither injection reached the high (70 %-89 %) or very high (90 %-100 %) change-rate thresholds that would be desirable for reliable detection of non-summaries.  
+- The metric assigns negative scores to both gold and perturbed texts, which can complicate interpretation and comparison across datasets.
+
+### c. Recommendation  
+Overall, the metric is not recommended for scoring the quality of the summary. The metric does not consistently detect every non-summary injection with a high (≥ 70 %) change rate. While it penalises some injections strongly (e.g., Injection 2), it fails to do so uniformly.
+
+### d. Needed Improvements  
+1. Calibration of Score Range – Shift the scoring scale to a non-negative range (e.g., 0–1,) to make absolute differences more interpretable.  
+2. Enhanced Sensitivity – Increase the penalty for generic, off-topic statements so that all non-summaries trigger at least a high change-rate (≥ 70 %).  
+3. Injection Length – Evaluate which approach would be preferred for evaluating injections of different lengths. Either ensure that longer but irrelevant injections (like Injection 1) receive stronger penalties than short irrelevant ones (like Injection 2) or penalize shorter and longer injections on a comparable scale.
+4. Correlation Analysis – Conduct a larger-scale correlation study with human judgments to fine-tune the metric’s weighting of relevance, coherence, and factuality.  
+
+Even with these enhancements, bartscore-avg-f should be regarded as a complementary tool rather than a full replacement for human evaluation.

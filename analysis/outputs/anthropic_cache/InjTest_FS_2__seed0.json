@@ -1,0 +1,24 @@
+{
+  "data": {
+    "structure": 4,
+    "precision": 3,
+    "understandability": 4,
+    "objectivity": 4,
+    "usefulness": 4,
+    "language": 3,
+    "factual_accuracy": 2,
+    "rationale": {
+      "structure": "The card follows a clear sectioned structure with strengths, weaknesses, and recommendations.",
+      "precision": "Mostly clear but contains an incorrect score (0.125 vs 0.127) and a confusing claim that the metric 'consistently detects every non-summary injection' while not recommending it.",
+      "understandability": "The reasoning is generally easy to follow despite minor inconsistencies.",
+      "objectivity": "Both strengths and weaknesses are presented in a balanced manner.",
+      "usefulness": "Provides actionable recommendations and improvement suggestions relevant to the test.",
+      "language": "Several grammatical issues (e.g., 'metric is somewhat sensitive for', 'penalized stronger', 'finetuning... aligned with human knowledge').",
+      "factual_accuracy": "The header references BARTScore-avg-f instead of ROUGE-L, and Injection 1's score is misreported as 0.125 instead of 0.127."
+    }
+  },
+  "raw": "{\"structure\":4,\"precision\":3,\"understandability\":4,\"objectivity\":4,\"usefulness\":4,\"language\":3,\"factual_accuracy\":2,\"rationale\":{\"structure\":\"The card follows a clear sectioned structure with strengths, weaknesses, and recommendations.\",\"precision\":\"Mostly clear but contains an incorrect score (0.125 vs 0.127) and a confusing claim that the metric 'consistently detects every non-summary injection' while not recommending it.\",\"understandability\":\"The reasoning is generally easy to follow despite minor inconsistencies.\",\"objectivity\":\"Both strengths and weaknesses are presented in a balanced manner.\",\"usefulness\":\"Provides actionable recommendations and improvement suggestions relevant to the test.\",\"language\":\"Several grammatical issues (e.g., 'metric is somewhat sensitive for', 'penalized stronger', 'finetuning... aligned with human knowledge').\",\"factual_accuracy\":\"The header references BARTScore-avg-f instead of ROUGE-L, and Injection 1's score is misreported as 0.125 instead of 0.127.\"}}",
+  "model": "claude-opus-4-7",
+  "seed": 0,
+  "provider": "anthropic"
+}

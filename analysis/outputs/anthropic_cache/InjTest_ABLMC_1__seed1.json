@@ -1,0 +1,24 @@
+{
+  "data": {
+    "structure": 4,
+    "precision": 4,
+    "understandability": 4,
+    "objectivity": 5,
+    "usefulness": 4,
+    "language": 3,
+    "factual_accuracy": 3,
+    "rationale": {
+      "structure": "The card is logically organized with clear sections for sensitivity, strengths/weaknesses, recommendation, and improvements.",
+      "precision": "Most claims are specific and unambiguous, though the '346%' typo introduces confusion.",
+      "understandability": "The reasoning is generally easy to follow with clear thresholds and interpretation.",
+      "objectivity": "Both strengths and weaknesses are clearly acknowledged and balanced.",
+      "usefulness": "Provides actionable recommendations and useful interpretation, though some suggestions (e.g., score range calibration) are tangential to the injection test.",
+      "language": "Contains typos ('Interjection', '346%') and minor grammatical issues that detract from quality.",
+      "factual_accuracy": "The 36% and 54.9% figures match the table, but the '346%' figure for Injection 1 is a clear error contradicting the table."
+    }
+  },
+  "raw": "{\"structure\":4,\"precision\":4,\"understandability\":4,\"objectivity\":5,\"usefulness\":4,\"language\":3,\"factual_accuracy\":3,\"rationale\":{\"structure\":\"The card is logically organized with clear sections for sensitivity, strengths/weaknesses, recommendation, and improvements.\",\"precision\":\"Most claims are specific and unambiguous, though the '346%' typo introduces confusion.\",\"understandability\":\"The reasoning is generally easy to follow with clear thresholds and interpretation.\",\"objectivity\":\"Both strengths and weaknesses are clearly acknowledged and balanced.\",\"usefulness\":\"Provides actionable recommendations and useful interpretation, though some suggestions (e.g., score range calibration) are tangential to the injection test.\",\"language\":\"Contains typos ('Interjection', '346%') and minor grammatical issues that detract from quality.\",\"factual_accuracy\":\"The 36% and 54.9% figures match the table, but the '346%' figure for Injection 1 is a clear error contradicting the table.\"}}",
+  "model": "claude-opus-4-7",
+  "seed": 1,
+  "provider": "anthropic"
+}

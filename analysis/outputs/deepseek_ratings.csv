@@ -1,0 +1,169 @@
+card_file,card_id,condition,seed,dimension,score,rationale
+InjTest_ABLMC_1.txt,1,ABLMC,0,Structure,4,"Clear sections with headings, but some formatting inconsistencies (e.g., 'Strengths' and 'Weaknesses' not aligned)."
+InjTest_ABLMC_1.txt,1,ABLMC,0,Precision,4,"Mostly unambiguous, but 'moderate-to-high change' for 54.9% could be more precise."
+InjTest_ABLMC_1.txt,1,ABLMC,0,Understandability,4,"Easy to follow, though the term 'interjection' is used inconsistently."
+InjTest_ABLMC_1.txt,1,ABLMC,0,Objectivity,5,"Balanced presentation of strengths and weaknesses, with no overstatement."
+InjTest_ABLMC_1.txt,1,ABLMC,0,Usefulness,4,"Provides actionable insights and recommendations, though some suggestions are generic."
+InjTest_ABLMC_1.txt,1,ABLMC,0,Language,5,Grammatically correct and well-written.
+InjTest_ABLMC_1.txt,1,ABLMC,0,Factual Accuracy,3,"States Injection 1 change rate as 346% instead of 36.0%, a critical error."
+InjTest_ABLMC_1.txt,1,ABLMC,1,Structure,4,"The card is logically organized with clear sections, but the 'Sensitivity' section could be more concise."
+InjTest_ABLMC_1.txt,1,ABLMC,1,Precision,4,"Most statements are clear, but 'low-to-moderate change' for 36% is ambiguous without a defined threshold."
+InjTest_ABLMC_1.txt,1,ABLMC,1,Understandability,4,"The card is easy to follow, though the negative score explanation may confuse some readers."
+InjTest_ABLMC_1.txt,1,ABLMC,1,Objectivity,5,"The card balances strengths and weaknesses, and acknowledges limitations without overstating."
+InjTest_ABLMC_1.txt,1,ABLMC,1,Usefulness,4,"Provides actionable insights and recommendations, but the correlation analysis suggestion is vague."
+InjTest_ABLMC_1.txt,1,ABLMC,1,Language,5,Grammatically correct and professionally written with no errors.
+InjTest_ABLMC_1.txt,1,ABLMC,1,Factual Accuracy,3,"The change rate for Injection 1 is stated as 346% instead of 36%, a critical factual error."
+InjTest_ABLMC_1.txt,1,ABLMC,2,Structure,4,"Clear sections with headings, but the 'Sensitivity' section could be more logically ordered."
+InjTest_ABLMC_1.txt,1,ABLMC,2,Precision,4,"Mostly unambiguous, but 'low-to-moderate change' for 36% is vague."
+InjTest_ABLMC_1.txt,1,ABLMC,2,Understandability,4,"Easy to follow, though the change rate for Injection 1 is misstated."
+InjTest_ABLMC_1.txt,1,ABLMC,2,Objectivity,5,"Balanced, discussing both strengths and weaknesses."
+InjTest_ABLMC_1.txt,1,ABLMC,2,Usefulness,4,"Provides actionable recommendations, but the misstated change rate reduces insight."
+InjTest_ABLMC_1.txt,1,ABLMC,2,Language,5,Grammatically correct and well-written.
+InjTest_ABLMC_1.txt,1,ABLMC,2,Factual Accuracy,3,"States Injection 1 change rate as 346% instead of 36%, a critical error."
+InjTest_ABLMC_2.txt,2,ABLMC,0,Structure,4,"Clear sections with headings and subheadings, but could benefit from more concise formatting."
+InjTest_ABLMC_2.txt,2,ABLMC,0,Precision,4,"Most statements are unambiguous, though 'somewhat sensitive' could be more precise."
+InjTest_ABLMC_2.txt,2,ABLMC,0,Understandability,4,Easy to follow with clear explanations of scores and categories.
+InjTest_ABLMC_2.txt,2,ABLMC,0,Objectivity,4,"Balanced presentation of strengths and weaknesses, with no overstatement."
+InjTest_ABLMC_2.txt,2,ABLMC,0,Usefulness,4,Provides actionable insights and specific recommendations for improvement.
+InjTest_ABLMC_2.txt,2,ABLMC,0,Language,5,Grammatically correct and well-written with no errors.
+InjTest_ABLMC_2.txt,2,ABLMC,0,Factual Accuracy,5,All numerical values and percentages match the test results table exactly.
+InjTest_ABLMC_2.txt,2,ABLMC,1,Structure,4,"Clear sections with headings and subheadings, but could benefit from a brief summary at the start."
+InjTest_ABLMC_2.txt,2,ABLMC,1,Precision,4,"Most statements are unambiguous, though 'somewhat sensitive' could be more precise."
+InjTest_ABLMC_2.txt,2,ABLMC,1,Understandability,4,"Concepts are explained clearly, making it easy to follow."
+InjTest_ABLMC_2.txt,2,ABLMC,1,Objectivity,4,"Balanced discussion of strengths and weaknesses, with no overstatement."
+InjTest_ABLMC_2.txt,2,ABLMC,1,Usefulness,4,Provides actionable insights and specific recommendations for improvement.
+InjTest_ABLMC_2.txt,2,ABLMC,1,Language,5,Grammatically correct and well-written with no errors.
+InjTest_ABLMC_2.txt,2,ABLMC,1,Factual Accuracy,5,All numbers and percentages match the test results table exactly.
+InjTest_ABLMC_2.txt,2,ABLMC,2,Structure,4,"Clear sections with headings and subheadings, but could benefit from more concise formatting."
+InjTest_ABLMC_2.txt,2,ABLMC,2,Precision,4,"Most statements are unambiguous, though 'somewhat sensitive' could be more precise."
+InjTest_ABLMC_2.txt,2,ABLMC,2,Understandability,4,Easy to follow with clear explanations of scores and percentages.
+InjTest_ABLMC_2.txt,2,ABLMC,2,Objectivity,5,"Balanced discussion of strengths and weaknesses, with no overstatement."
+InjTest_ABLMC_2.txt,2,ABLMC,2,Usefulness,4,Provides actionable insights and recommendations for improvement.
+InjTest_ABLMC_2.txt,2,ABLMC,2,Language,5,Grammatically correct and well-written with no errors.
+InjTest_ABLMC_2.txt,2,ABLMC,2,Factual Accuracy,5,All numbers and percentages match the test results table exactly.
+InjTest_ABLMC_3.txt,4,ABLMC,0,Structure,4,"The card is logically organized with clear sections and bullet points, though the repetition of content between the two parts slightly reduces clarity."
+InjTest_ABLMC_3.txt,4,ABLMC,0,Precision,4,"The card provides specific percentages and categories, but the term 'somewhat similar' is ambiguous."
+InjTest_ABLMC_3.txt,4,ABLMC,0,Understandability,4,The card is easy to follow with clear explanations of the results and implications.
+InjTest_ABLMC_3.txt,4,ABLMC,0,Objectivity,5,"The card balances strengths and weaknesses, acknowledging both the metric's partial success and its limitations."
+InjTest_ABLMC_3.txt,4,ABLMC,0,Usefulness,4,"The card offers actionable recommendations for improvement, though the insights are somewhat generic."
+InjTest_ABLMC_3.txt,4,ABLMC,0,Language,5,The language is grammatically correct and professionally written.
+InjTest_ABLMC_3.txt,4,ABLMC,0,Factual Accuracy,5,All numerical values and percentages match the test results table exactly.
+InjTest_ABLMC_3.txt,4,ABLMC,1,Structure,4,"The card is logically organized with clear sections and bullet points, though the repetition of content between the two parts slightly reduces clarity."
+InjTest_ABLMC_3.txt,4,ABLMC,1,Precision,4,"The card provides specific percentages and categories, but the term 'somewhat similar' is ambiguous."
+InjTest_ABLMC_3.txt,4,ABLMC,1,Understandability,4,The card is easy to follow with clear explanations of the results and implications.
+InjTest_ABLMC_3.txt,4,ABLMC,1,Objectivity,5,"The card balances strengths and weaknesses, acknowledging both the metric's partial success and its limitations."
+InjTest_ABLMC_3.txt,4,ABLMC,1,Usefulness,4,"The card offers actionable recommendations for improvement, though the insights are somewhat generic."
+InjTest_ABLMC_3.txt,4,ABLMC,1,Language,5,The language is grammatically correct and professionally written.
+InjTest_ABLMC_3.txt,4,ABLMC,1,Factual Accuracy,5,All numerical values and percentages match the test results table exactly.
+InjTest_ABLMC_3.txt,4,ABLMC,2,Structure,4,"The card is logically organized with clear sections and bullet points, though the repetition of content between the two parts slightly reduces clarity."
+InjTest_ABLMC_3.txt,4,ABLMC,2,Precision,4,"The card provides specific percentages and categories, but the term 'somewhat similar' is ambiguous."
+InjTest_ABLMC_3.txt,4,ABLMC,2,Understandability,4,The card is easy to follow with clear explanations of the results and implications.
+InjTest_ABLMC_3.txt,4,ABLMC,2,Objectivity,5,"The card balances strengths and weaknesses, acknowledging both the metric's partial success and its limitations."
+InjTest_ABLMC_3.txt,4,ABLMC,2,Usefulness,4,"The card offers actionable recommendations for improvement, though the insights are somewhat generic."
+InjTest_ABLMC_3.txt,4,ABLMC,2,Language,5,The language is grammatically correct and professionally written.
+InjTest_ABLMC_3.txt,4,ABLMC,2,Factual Accuracy,5,All numerical values and percentages match the test results table exactly.
+InjTest_ABLMC_4.txt,5,ABLMC,0,Structure,4,"Clear sections with headings, but some redundancy between the two parts."
+InjTest_ABLMC_4.txt,5,ABLMC,0,Precision,3,"Some terms like 'low-to-moderate change' are defined, but 'moderately short injections' is vague."
+InjTest_ABLMC_4.txt,5,ABLMC,0,Understandability,4,"Generally easy to follow, though the second part's wording is slightly less clear."
+InjTest_ABLMC_4.txt,5,ABLMC,0,Objectivity,4,"Acknowledges both strengths and weaknesses, but the recommendation is somewhat harsh."
+InjTest_ABLMC_4.txt,5,ABLMC,0,Usefulness,3,"Provides insights into sensitivity and length dependence, but improvements are generic."
+InjTest_ABLMC_4.txt,5,ABLMC,0,Language,3,Minor grammatical issues and informal phrasing in the second part.
+InjTest_ABLMC_4.txt,5,ABLMC,0,Factual Accuracy,4,"Correctly reports scores and change rates, but misstates Injection 1's change class as 30-49% (actually 36% is within that range)."
+InjTest_ABLMC_4.txt,5,ABLMC,1,Structure,4,"Clear sections with headings, but some redundancy between the two parts."
+InjTest_ABLMC_4.txt,5,ABLMC,1,Precision,3,"Some terms like 'low-to-moderate change' are defined, but 'moderately short injections' is vague."
+InjTest_ABLMC_4.txt,5,ABLMC,1,Understandability,4,"Generally easy to follow, though the second part's wording is slightly less clear."
+InjTest_ABLMC_4.txt,5,ABLMC,1,Objectivity,4,"Acknowledges both strengths and weaknesses, but the recommendation is somewhat harsh."
+InjTest_ABLMC_4.txt,5,ABLMC,1,Usefulness,3,"Provides insights into sensitivity and length dependence, but improvements are generic."
+InjTest_ABLMC_4.txt,5,ABLMC,1,Language,3,Minor grammatical issues and informal phrasing in the second part.
+InjTest_ABLMC_4.txt,5,ABLMC,1,Factual Accuracy,4,"Correctly reports scores and change rates, but misstates Injection 1's change class as 30-49% (actually 36% is within that range)."
+InjTest_ABLMC_4.txt,5,ABLMC,2,Structure,4,"Clear sections with headings, but some redundancy between the two parts."
+InjTest_ABLMC_4.txt,5,ABLMC,2,Precision,3,"Some terms like 'low-to-moderate change' are defined, but 'moderately short injections' is vague."
+InjTest_ABLMC_4.txt,5,ABLMC,2,Understandability,4,"Generally easy to follow, though the second part's wording is slightly less clear."
+InjTest_ABLMC_4.txt,5,ABLMC,2,Objectivity,4,"Acknowledges both strengths and weaknesses, but the recommendation is somewhat harsh."
+InjTest_ABLMC_4.txt,5,ABLMC,2,Usefulness,3,"Provides insights into sensitivity and weaknesses, but improvements are generic."
+InjTest_ABLMC_4.txt,5,ABLMC,2,Language,3,Minor grammatical issues and informal phrasing in the second part.
+InjTest_ABLMC_4.txt,5,ABLMC,2,Factual Accuracy,4,"Correctly reports scores and change rates, but misstates the word count difference (7 words vs actual 5)."
+InjTest_FS_1.txt,3,FS,0,Structure,3,The card has clear sections but lacks a clear separation between strengths/weaknesses and recommendation.
+InjTest_FS_1.txt,3,FS,0,Precision,3,The term 'moderate to high change rate' is ambiguous; the exact percentages are given but interpretation is vague.
+InjTest_FS_1.txt,3,FS,0,Understandability,3,The reasoning is somewhat clear but the recommendation logic is confusing due to contradictory statements.
+InjTest_FS_1.txt,3,FS,0,Objectivity,4,"The card acknowledges both strengths and weaknesses, and suggests a revision of conditions."
+InjTest_FS_1.txt,3,FS,0,Usefulness,3,Provides some insight but the recommendation is unclear and the suggestion about gold value is not fully actionable.
+InjTest_FS_1.txt,3,FS,0,Language,3,"Minor grammatical issues and awkward phrasing ('if the metric is being recommended', 'Needed Improvements' heading)."
+InjTest_FS_1.txt,3,FS,0,Factual Accuracy,4,"The numbers match the table, but the claim that 'no injection reached a high change rate ≥70%' is correct, though the recommendation contradicts the rule of thumb."
+InjTest_FS_1.txt,3,FS,1,Structure,3,The card has clear sections but lacks a clear separation between strengths/weaknesses and recommendation.
+InjTest_FS_1.txt,3,FS,1,Precision,3,The term 'moderate to high change rate' is ambiguous; the exact percentages are given but interpretation is vague.
+InjTest_FS_1.txt,3,FS,1,Understandability,3,The reasoning is somewhat clear but the recommendation logic is confusing due to contradictory statements.
+InjTest_FS_1.txt,3,FS,1,Objectivity,4,"The card acknowledges both strengths and weaknesses, and suggests a revision of conditions."
+InjTest_FS_1.txt,3,FS,1,Usefulness,3,Provides some insight but the recommendation is unclear and the suggestion about gold value is not fully actionable.
+InjTest_FS_1.txt,3,FS,1,Language,3,"Minor grammatical issues and awkward phrasing ('if the metric is being recommended', 'Needed Improvements' heading)."
+InjTest_FS_1.txt,3,FS,1,Factual Accuracy,4,"The numbers match the table, but the claim that 'no injection reached a high change rate ≥70%' is correct, though the recommendation contradicts the rule of thumb."
+InjTest_FS_1.txt,3,FS,2,Structure,3,The card has clear sections but lacks a clear separation between strengths/weaknesses and recommendation.
+InjTest_FS_1.txt,3,FS,2,Precision,3,The term 'moderate to high change rate' is ambiguous; the exact percentages are given but interpretation is vague.
+InjTest_FS_1.txt,3,FS,2,Understandability,3,The reasoning is somewhat clear but the recommendation logic is confusing due to contradictory statements.
+InjTest_FS_1.txt,3,FS,2,Objectivity,4,"The card acknowledges both strengths and weaknesses, and suggests a revision of conditions."
+InjTest_FS_1.txt,3,FS,2,Usefulness,3,Provides some insight but the recommendation is unclear and the suggestion about gold value is not fully actionable.
+InjTest_FS_1.txt,3,FS,2,Language,3,"Minor grammatical issues and awkward phrasing ('if the metric is being recommended', 'Needed Improvements' heading)."
+InjTest_FS_1.txt,3,FS,2,Factual Accuracy,4,"The numbers match the table, but the claim that 'no injection reached a high change rate ≥70%' is correct, though the recommendation contradicts the rule of thumb."
+InjTest_FS_2.txt,6,FS,0,Structure,3,The card has clear sections but lacks a clear separation between the injection test analysis and the metric suitability discussion.
+InjTest_FS_2.txt,6,FS,0,Precision,3,"Some statements are ambiguous, e.g., 'somewhat sensitive' and 'moderate-to-high change' without clear thresholds."
+InjTest_FS_2.txt,6,FS,0,Understandability,3,"The card is generally understandable but contains minor inconsistencies (e.g., 'bartscore-avg-f' in title vs. ROUGE-L)."
+InjTest_FS_2.txt,6,FS,0,Objectivity,4,"The card acknowledges both strengths and weaknesses, providing a balanced view."
+InjTest_FS_2.txt,6,FS,0,Usefulness,3,The card offers some insights but the recommendation is not fully justified given the change rates are actually high (55.8% and 65.6%).
+InjTest_FS_2.txt,6,FS,0,Language,3,There are minor grammatical issues and a typo ('bartscore-avg-f' instead of ROUGE-L).
+InjTest_FS_2.txt,6,FS,0,Factual Accuracy,2,"The card misstates the injection 1 score as 0.125 instead of 0.127, and incorrectly categorizes change rates as moderate-to-high (50-69%) when 65.6% is close to high (≥70%)."
+InjTest_FS_2.txt,6,FS,1,Structure,3,The card has clear sections but lacks a clear separation between the injection test analysis and the metric suitability discussion.
+InjTest_FS_2.txt,6,FS,1,Precision,3,"Some statements are ambiguous, e.g., 'somewhat sensitive' and 'moderate-to-high change' without clear thresholds."
+InjTest_FS_2.txt,6,FS,1,Understandability,3,"The card is generally understandable but contains minor inconsistencies (e.g., 'bartscore-avg-f' in title vs. ROUGE-L)."
+InjTest_FS_2.txt,6,FS,1,Objectivity,4,"The card acknowledges both strengths and weaknesses, providing a balanced view."
+InjTest_FS_2.txt,6,FS,1,Usefulness,3,The card offers some insights but the recommendation is not fully justified given the change rates are actually high (55.8% and 65.6%).
+InjTest_FS_2.txt,6,FS,1,Language,3,There are minor grammatical issues and a typo ('bartscore-avg-f' instead of ROUGE-L).
+InjTest_FS_2.txt,6,FS,1,Factual Accuracy,2,"The card misstates the injection 1 score as 0.125 instead of 0.127, and incorrectly categorizes change rates as moderate-to-high (50-69%) when 65.6% is close to high (≥70%)."
+InjTest_FS_2.txt,6,FS,2,Structure,3,The card has clear sections but lacks a clear separation between the injection test analysis and the metric suitability discussion.
+InjTest_FS_2.txt,6,FS,2,Precision,3,"Some statements are ambiguous, e.g., 'somewhat sensitive' and 'moderate-to-high change' without clear thresholds."
+InjTest_FS_2.txt,6,FS,2,Understandability,3,"The card is generally understandable but contains minor inconsistencies (e.g., 'bartscore-avg-f' in title vs. ROUGE-L)."
+InjTest_FS_2.txt,6,FS,2,Objectivity,4,"The card acknowledges both strengths and weaknesses, providing a balanced view."
+InjTest_FS_2.txt,6,FS,2,Usefulness,3,The card offers some insights but the recommendation is not fully justified given the change rates are actually high (55.8% and 65.6%).
+InjTest_FS_2.txt,6,FS,2,Language,3,There are minor grammatical issues and a typo ('bartscore-avg-f' instead of ROUGE-L).
+InjTest_FS_2.txt,6,FS,2,Factual Accuracy,2,"The card misstates the injection 1 score as 0.125 instead of 0.127, and incorrectly categorizes change rates as moderate-to-high (50-69%) when 65.6% is close to high (≥70%)."
+InjTest_FS_3.txt,7,FS,0,Structure,3,The card has a clear flow but lacks section headings or bullet points to enhance readability.
+InjTest_FS_3.txt,7,FS,0,Precision,3,The description of change rates as 'moderate to high' is ambiguous; the rule of thumb defines high as >=70%.
+InjTest_FS_3.txt,7,FS,0,Understandability,4,The text is generally clear and easy to follow.
+InjTest_FS_3.txt,7,FS,0,Objectivity,4,"The card acknowledges both the metric's sensitivity and its limitations, but the recommendation is one-sided."
+InjTest_FS_3.txt,7,FS,0,Usefulness,3,The card provides insights into the metric's performance but the suggestion for improvement is vague.
+InjTest_FS_3.txt,7,FS,0,Language,4,The language is grammatically correct and semantically appropriate.
+InjTest_FS_3.txt,7,FS,0,Factual Accuracy,4,"The scores and change rates are correctly reported, but the interpretation of change rates as 'moderate to high' is slightly off given the 70% threshold."
+InjTest_FS_3.txt,7,FS,1,Structure,4,"The card has a clear flow from results to interpretation to recommendation, but lacks section headings."
+InjTest_FS_3.txt,7,FS,1,Precision,3,The phrase 'moderate to high change rates' is ambiguous given the rule of thumb that high is >=70%.
+InjTest_FS_3.txt,7,FS,1,Understandability,4,The text is easy to follow and explains the findings in plain language.
+InjTest_FS_3.txt,7,FS,1,Objectivity,4,The card acknowledges both the metric's sensitivity to perturbations and its failure to meet the high change-rate threshold.
+InjTest_FS_3.txt,7,FS,1,Usefulness,3,"The recommendation not to use the metric is clear, but the suggestion for calibration is vague and not actionable."
+InjTest_FS_3.txt,7,FS,1,Language,4,"The writing is grammatically correct and clear, with minor redundancy."
+InjTest_FS_3.txt,7,FS,1,Factual Accuracy,4,"The scores and change rates are correctly reported, but the statement 'very close' may be misleading as the gold score is notably higher."
+InjTest_FS_3.txt,7,FS,2,Structure,4,"The card has a clear flow from results to interpretation to recommendation, but lacks section headings."
+InjTest_FS_3.txt,7,FS,2,Precision,3,The phrase 'moderate to high change rates' is ambiguous given the rule of thumb that high is >=70%.
+InjTest_FS_3.txt,7,FS,2,Understandability,4,The text is easy to follow and explains the findings in plain language.
+InjTest_FS_3.txt,7,FS,2,Objectivity,4,The card acknowledges both the metric's sensitivity to perturbations and its failure to meet the high change-rate threshold.
+InjTest_FS_3.txt,7,FS,2,Usefulness,3,"The recommendation not to use the metric is clear, but the suggestion for calibration is vague and not actionable."
+InjTest_FS_3.txt,7,FS,2,Language,4,"The writing is grammatically correct and clear, with minor redundancy."
+InjTest_FS_3.txt,7,FS,2,Factual Accuracy,4,"The scores and change rates are correctly reported, but the statement 'very close' may be misleading as the gold score is notably higher."
+InjTest_FS_4.txt,8,FS,0,Structure,2,"The card lacks clear sections and uses informal bullet points, making it hard to follow."
+InjTest_FS_4.txt,8,FS,0,Precision,2,Phrases like 'punished both injections moderate' and 'closeness of both scores' are ambiguous.
+InjTest_FS_4.txt,8,FS,0,Understandability,2,Grammatical errors and unclear phrasing reduce ease of understanding.
+InjTest_FS_4.txt,8,FS,0,Objectivity,3,"Acknowledges both strengths and a potential attack vector, but leans positive without strong evidence."
+InjTest_FS_4.txt,8,FS,0,Usefulness,3,Provides some insight into metric behavior but lacks actionable recommendations.
+InjTest_FS_4.txt,8,FS,0,Language,2,"Contains multiple grammatical errors and awkward phrasing (e.g., 'if shows that')."
+InjTest_FS_4.txt,8,FS,0,Factual Accuracy,3,"Correctly states injections scored lower than gold, but misinterprets percentages (44.2% vs 55.8% drop)."
+InjTest_FS_4.txt,8,FS,1,Structure,2,"The card lacks clear sections and uses informal bullet points, making it hard to follow."
+InjTest_FS_4.txt,8,FS,1,Precision,2,Phrases like 'punished both injections moderate' and 'closeness of both scores' are ambiguous.
+InjTest_FS_4.txt,8,FS,1,Understandability,2,Grammatical errors and unclear phrasing reduce ease of understanding.
+InjTest_FS_4.txt,8,FS,1,Objectivity,3,"Acknowledges both strengths and a potential attack vector, but leans positive without strong evidence."
+InjTest_FS_4.txt,8,FS,1,Usefulness,3,Provides some insight into metric behavior but lacks actionable recommendations.
+InjTest_FS_4.txt,8,FS,1,Language,2,"Contains multiple grammatical errors and awkward phrasing (e.g., 'if shows that')."
+InjTest_FS_4.txt,8,FS,1,Factual Accuracy,3,"Correctly states injections scored lower than gold, but misinterprets percentages (44.2% vs 55.8% drop)."
+InjTest_FS_4.txt,8,FS,2,Structure,2,"The card lacks clear sections and uses informal bullet points, making it hard to follow."
+InjTest_FS_4.txt,8,FS,2,Precision,2,Phrases like 'punished both injections moderate' and 'closeness of both scores' are ambiguous.
+InjTest_FS_4.txt,8,FS,2,Understandability,2,Grammatical errors and unclear phrasing reduce ease of understanding.
+InjTest_FS_4.txt,8,FS,2,Objectivity,3,"Acknowledges both strengths and a potential attack vector, but leans positive without strong evidence."
+InjTest_FS_4.txt,8,FS,2,Usefulness,3,Provides some insight into metric behavior but lacks actionable recommendations.
+InjTest_FS_4.txt,8,FS,2,Language,2,"Contains multiple grammatical errors and awkward phrasing (e.g., 'if shows that')."
+InjTest_FS_4.txt,8,FS,2,Factual Accuracy,3,"Correctly states injections scored lower than gold, but misinterprets percentages (44.2% vs 55.8% drop)."

@@ -1,0 +1,169 @@
+provider,card_id,condition,dimension,judge_mean,judge_std,human_mean
+anthropic,1,ABLMC,Factual Accuracy,2.6666666666666665,0.5773502691896258,3.5
+anthropic,1,ABLMC,Language,3.0,0.0,3.5
+anthropic,1,ABLMC,Objectivity,5.0,0.0,4.0
+anthropic,1,ABLMC,Precision,3.6666666666666665,0.5773502691896258,3.5
+anthropic,1,ABLMC,Structure,4.0,0.0,5.0
+anthropic,1,ABLMC,Understandability,4.0,0.0,3.0
+anthropic,1,ABLMC,Usefulness,4.0,0.0,3.5
+anthropic,2,ABLMC,Factual Accuracy,5.0,0.0,3.0
+anthropic,2,ABLMC,Language,4.0,0.0,2.5
+anthropic,2,ABLMC,Objectivity,5.0,0.0,3.0
+anthropic,2,ABLMC,Precision,4.0,0.0,2.0
+anthropic,2,ABLMC,Structure,5.0,0.0,4.0
+anthropic,2,ABLMC,Understandability,5.0,0.0,3.5
+anthropic,2,ABLMC,Usefulness,5.0,0.0,2.5
+anthropic,3,FS,Factual Accuracy,4.0,0.0,4.5
+anthropic,3,FS,Language,3.0,0.0,3.0
+anthropic,3,FS,Objectivity,3.3333333333333335,0.5773502691896258,2.0
+anthropic,3,FS,Precision,2.3333333333333335,0.5773502691896258,3.5
+anthropic,3,FS,Structure,3.3333333333333335,0.5773502691896258,4.0
+anthropic,3,FS,Understandability,3.0,0.0,3.5
+anthropic,3,FS,Usefulness,3.0,0.0,2.5
+anthropic,4,ABLMC,Factual Accuracy,5.0,0.0,4.5
+anthropic,4,ABLMC,Language,4.666666666666667,0.5773502691896258,4.5
+anthropic,4,ABLMC,Objectivity,5.0,0.0,4.0
+anthropic,4,ABLMC,Precision,4.0,0.0,3.5
+anthropic,4,ABLMC,Structure,4.0,0.0,4.5
+anthropic,4,ABLMC,Understandability,5.0,0.0,3.0
+anthropic,4,ABLMC,Usefulness,4.0,0.0,3.0
+anthropic,5,ABLMC,Factual Accuracy,4.0,0.0,4.5
+anthropic,5,ABLMC,Language,2.3333333333333335,0.5773502691896258,4.5
+anthropic,5,ABLMC,Objectivity,4.0,0.0,3.0
+anthropic,5,ABLMC,Precision,3.0,0.0,3.5
+anthropic,5,ABLMC,Structure,3.6666666666666665,0.5773502691896258,2.5
+anthropic,5,ABLMC,Understandability,3.0,0.0,3.0
+anthropic,5,ABLMC,Usefulness,3.0,0.0,3.5
+anthropic,6,FS,Factual Accuracy,2.0,0.0,4.0
+anthropic,6,FS,Language,3.0,0.0,2.0
+anthropic,6,FS,Objectivity,4.0,0.0,3.5
+anthropic,6,FS,Precision,3.0,0.0,3.0
+anthropic,6,FS,Structure,4.0,0.0,3.0
+anthropic,6,FS,Understandability,4.0,0.0,2.5
+anthropic,6,FS,Usefulness,3.6666666666666665,0.5773502691896257,2.0
+anthropic,7,FS,Factual Accuracy,4.0,0.0,4.5
+anthropic,7,FS,Language,3.6666666666666665,0.5773502691896257,4.0
+anthropic,7,FS,Objectivity,3.6666666666666665,0.5773502691896257,3.5
+anthropic,7,FS,Precision,3.3333333333333335,0.5773502691896258,3.5
+anthropic,7,FS,Structure,3.0,0.0,4.5
+anthropic,7,FS,Understandability,4.0,0.0,4.5
+anthropic,7,FS,Usefulness,3.3333333333333335,0.5773502691896258,3.0
+anthropic,8,FS,Factual Accuracy,2.0,0.0,3.0
+anthropic,8,FS,Language,2.0,0.0,4.5
+anthropic,8,FS,Objectivity,3.6666666666666665,0.5773502691896258,4.0
+anthropic,8,FS,Precision,3.0,0.0,3.0
+anthropic,8,FS,Structure,2.0,0.0,3.5
+anthropic,8,FS,Understandability,3.0,0.0,3.0
+anthropic,8,FS,Usefulness,3.0,0.0,3.0
+deepseek,1,ABLMC,Factual Accuracy,3.0,0.0,3.5
+deepseek,1,ABLMC,Language,5.0,0.0,3.5
+deepseek,1,ABLMC,Objectivity,5.0,0.0,4.0
+deepseek,1,ABLMC,Precision,4.0,0.0,3.5
+deepseek,1,ABLMC,Structure,4.0,0.0,5.0
+deepseek,1,ABLMC,Understandability,4.0,0.0,3.0
+deepseek,1,ABLMC,Usefulness,4.0,0.0,3.5
+deepseek,2,ABLMC,Factual Accuracy,5.0,0.0,3.0
+deepseek,2,ABLMC,Language,5.0,0.0,2.5
+deepseek,2,ABLMC,Objectivity,4.333333333333333,0.5773502691896258,3.0
+deepseek,2,ABLMC,Precision,4.0,0.0,2.0
+deepseek,2,ABLMC,Structure,4.0,0.0,4.0
+deepseek,2,ABLMC,Understandability,4.0,0.0,3.5
+deepseek,2,ABLMC,Usefulness,4.0,0.0,2.5
+deepseek,3,FS,Factual Accuracy,4.0,0.0,4.5
+deepseek,3,FS,Language,3.0,0.0,3.0
+deepseek,3,FS,Objectivity,4.0,0.0,2.0
+deepseek,3,FS,Precision,3.0,0.0,3.5
+deepseek,3,FS,Structure,3.0,0.0,4.0
+deepseek,3,FS,Understandability,3.0,0.0,3.5
+deepseek,3,FS,Usefulness,3.0,0.0,2.5
+deepseek,4,ABLMC,Factual Accuracy,5.0,0.0,4.5
+deepseek,4,ABLMC,Language,5.0,0.0,4.5
+deepseek,4,ABLMC,Objectivity,5.0,0.0,4.0
+deepseek,4,ABLMC,Precision,4.0,0.0,3.5
+deepseek,4,ABLMC,Structure,4.0,0.0,4.5
+deepseek,4,ABLMC,Understandability,4.0,0.0,3.0
+deepseek,4,ABLMC,Usefulness,4.0,0.0,3.0
+deepseek,5,ABLMC,Factual Accuracy,4.0,0.0,4.5
+deepseek,5,ABLMC,Language,3.0,0.0,4.5
+deepseek,5,ABLMC,Objectivity,4.0,0.0,3.0
+deepseek,5,ABLMC,Precision,3.0,0.0,3.5
+deepseek,5,ABLMC,Structure,4.0,0.0,2.5
+deepseek,5,ABLMC,Understandability,4.0,0.0,3.0
+deepseek,5,ABLMC,Usefulness,3.0,0.0,3.5
+deepseek,6,FS,Factual Accuracy,2.0,0.0,4.0
+deepseek,6,FS,Language,3.0,0.0,2.0
+deepseek,6,FS,Objectivity,4.0,0.0,3.5
+deepseek,6,FS,Precision,3.0,0.0,3.0
+deepseek,6,FS,Structure,3.0,0.0,3.0
+deepseek,6,FS,Understandability,3.0,0.0,2.5
+deepseek,6,FS,Usefulness,3.0,0.0,2.0
+deepseek,7,FS,Factual Accuracy,4.0,0.0,4.5
+deepseek,7,FS,Language,4.0,0.0,4.0
+deepseek,7,FS,Objectivity,4.0,0.0,3.5
+deepseek,7,FS,Precision,3.0,0.0,3.5
+deepseek,7,FS,Structure,3.6666666666666665,0.5773502691896258,4.5
+deepseek,7,FS,Understandability,4.0,0.0,4.5
+deepseek,7,FS,Usefulness,3.0,0.0,3.0
+deepseek,8,FS,Factual Accuracy,3.0,0.0,3.0
+deepseek,8,FS,Language,2.0,0.0,4.5
+deepseek,8,FS,Objectivity,3.0,0.0,4.0
+deepseek,8,FS,Precision,2.0,0.0,3.0
+deepseek,8,FS,Structure,2.0,0.0,3.5
+deepseek,8,FS,Understandability,2.0,0.0,3.0
+deepseek,8,FS,Usefulness,3.0,0.0,3.0
+gemini,1,ABLMC,Factual Accuracy,3.0,0.0,3.5
+gemini,1,ABLMC,Language,4.0,0.0,3.5
+gemini,1,ABLMC,Objectivity,5.0,0.0,4.0
+gemini,1,ABLMC,Precision,4.0,0.0,3.5
+gemini,1,ABLMC,Structure,5.0,0.0,5.0
+gemini,1,ABLMC,Understandability,5.0,0.0,3.0
+gemini,1,ABLMC,Usefulness,5.0,0.0,3.5
+gemini,2,ABLMC,Factual Accuracy,5.0,0.0,3.0
+gemini,2,ABLMC,Language,5.0,0.0,2.5
+gemini,2,ABLMC,Objectivity,5.0,0.0,3.0
+gemini,2,ABLMC,Precision,5.0,0.0,2.0
+gemini,2,ABLMC,Structure,5.0,0.0,4.0
+gemini,2,ABLMC,Understandability,5.0,0.0,3.5
+gemini,2,ABLMC,Usefulness,5.0,0.0,2.5
+gemini,3,FS,Factual Accuracy,2.0,0.0,4.5
+gemini,3,FS,Language,4.0,0.0,3.0
+gemini,3,FS,Objectivity,3.3333333333333335,0.5773502691896258,2.0
+gemini,3,FS,Precision,2.0,0.0,3.5
+gemini,3,FS,Structure,4.0,0.0,4.0
+gemini,3,FS,Understandability,2.0,0.0,3.5
+gemini,3,FS,Usefulness,2.3333333333333335,0.5773502691896258,2.5
+gemini,4,ABLMC,Factual Accuracy,5.0,0.0,4.5
+gemini,4,ABLMC,Language,5.0,0.0,4.5
+gemini,4,ABLMC,Objectivity,5.0,0.0,4.0
+gemini,4,ABLMC,Precision,5.0,0.0,3.5
+gemini,4,ABLMC,Structure,4.0,0.0,4.5
+gemini,4,ABLMC,Understandability,5.0,0.0,3.0
+gemini,4,ABLMC,Usefulness,5.0,0.0,3.0
+gemini,5,ABLMC,Factual Accuracy,5.0,0.0,4.5
+gemini,5,ABLMC,Language,3.6666666666666665,0.5773502691896257,4.5
+gemini,5,ABLMC,Objectivity,5.0,0.0,3.0
+gemini,5,ABLMC,Precision,4.0,0.0,3.5
+gemini,5,ABLMC,Structure,3.6666666666666665,0.5773502691896257,2.5
+gemini,5,ABLMC,Understandability,4.0,0.0,3.0
+gemini,5,ABLMC,Usefulness,4.666666666666667,0.5773502691896258,3.5
+gemini,6,FS,Factual Accuracy,2.6666666666666665,0.5773502691896258,4.0
+gemini,6,FS,Language,5.0,0.0,2.0
+gemini,6,FS,Objectivity,5.0,0.0,3.5
+gemini,6,FS,Precision,4.0,0.0,3.0
+gemini,6,FS,Structure,5.0,0.0,3.0
+gemini,6,FS,Understandability,5.0,0.0,2.5
+gemini,6,FS,Usefulness,4.0,0.0,2.0
+gemini,7,FS,Factual Accuracy,3.0,0.0,4.5
+gemini,7,FS,Language,4.0,0.0,4.0
+gemini,7,FS,Objectivity,3.3333333333333335,0.5773502691896258,3.5
+gemini,7,FS,Precision,3.0,0.0,3.5
+gemini,7,FS,Structure,3.0,0.0,4.5
+gemini,7,FS,Understandability,4.0,0.0,4.5
+gemini,7,FS,Usefulness,2.3333333333333335,0.5773502691896258,3.0
+gemini,8,FS,Factual Accuracy,3.0,0.0,3.0
+gemini,8,FS,Language,2.0,0.0,4.5
+gemini,8,FS,Objectivity,2.3333333333333335,0.5773502691896258,4.0
+gemini,8,FS,Precision,2.0,0.0,3.0
+gemini,8,FS,Structure,2.0,0.0,3.5
+gemini,8,FS,Understandability,2.0,0.0,3.0
+gemini,8,FS,Usefulness,2.0,0.0,3.0

@@ -1,0 +1,24 @@
+{
+  "data": {
+    "structure": 5,
+    "precision": 4,
+    "understandability": 5,
+    "objectivity": 5,
+    "usefulness": 4,
+    "language": 5,
+    "factual_accuracy": 2,
+    "rationale": {
+      "structure": "The metric card is logically structured with clear headings and bullet points.",
+      "precision": "The explanations are mostly clear, though the incorrect metric name introduces some ambiguity.",
+      "understandability": "The text is easy to read and the arguments are straightforward to grasp.",
+      "objectivity": "The card presents a balanced view by discussing both strengths and weaknesses.",
+      "usefulness": "The insights are generally useful and align with the rule of thumb, but the wrong metric name detracts from its utility.",
+      "language": "The language is grammatically correct and flows well.",
+      "factual_accuracy": "The card incorrectly names the metric as bartscore-avg-f instead of ROUGE-L and misquotes the Injection 1 score as 0.125 instead of 0.127."
+    }
+  },
+  "raw": "{\n  \"structure\": 5,\n  \"precision\": 4,\n  \"understandability\": 5,\n  \"objectivity\": 5,\n  \"usefulness\": 4,\n  \"language\": 5,\n  \"factual_accuracy\": 2,\n  \"rationale\": {\n    \"structure\": \"The metric card is logically structured with clear headings and bullet points.\",\n    \"precision\": \"The explanations are mostly clear, though the incorrect metric name introduces some ambiguity.\",\n    \"understandability\": \"The text is easy to read and the arguments are straightforward to grasp.\",\n    \"objectivity\": \"The card presents a balanced view by discussing both strengths and weaknesses.\",\n    \"usefulness\": \"The insights are generally useful and align with the rule of thumb, but the wrong metric name detracts from its utility.\",\n    \"language\": \"The language is grammatically correct and flows well.\",\n    \"factual_accuracy\": \"The card incorrectly names the metric as bartscore-avg-f instead of ROUGE-L and misquotes the Injection 1 score as 0.125 instead of 0.127.\"\n  }\n}",
+  "model": "gemini-3.1-pro-preview",
+  "seed": 0,
+  "provider": "gemini"
+}

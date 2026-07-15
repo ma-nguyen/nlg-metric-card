@@ -1,0 +1,169 @@
+card_file,card_id,condition,provider,model,seed,dimension,score,rationale
+InjTest_ABLMC_1.txt,1,ABLMC,gemini,gemini-3.1-pro-preview,0,Structure,5,The metric card is logically organized with clear headings and bullet points that facilitate reading.
+InjTest_ABLMC_1.txt,1,ABLMC,gemini,gemini-3.1-pro-preview,0,Precision,4,"The card is generally precise, though a typo in a percentage slightly detracts from its exactness."
+InjTest_ABLMC_1.txt,1,ABLMC,gemini,gemini-3.1-pro-preview,0,Understandability,5,"The explanations are clear, straightforward, and easy to grasp."
+InjTest_ABLMC_1.txt,1,ABLMC,gemini,gemini-3.1-pro-preview,0,Objectivity,5,The author presents a balanced view by explicitly detailing both strengths and weaknesses.
+InjTest_ABLMC_1.txt,1,ABLMC,gemini,gemini-3.1-pro-preview,0,Usefulness,5,The card offers valuable insights into the metric's sensitivity to injection length and provides actionable recommendations.
+InjTest_ABLMC_1.txt,1,ABLMC,gemini,gemini-3.1-pro-preview,0,Language,4,"The text is mostly well-written, with only minor errors such as using 'interjections' instead of 'injections'."
+InjTest_ABLMC_1.txt,1,ABLMC,gemini,gemini-3.1-pro-preview,0,Factual Accuracy,3,"The card contains a significant typo stating a '346%' change rate for Injection 1, contradicting the table's 36.0%."
+InjTest_ABLMC_1.txt,1,ABLMC,gemini,gemini-3.1-pro-preview,1,Structure,5,The metric card is logically structured with clear headings and sections that enable easy understanding.
+InjTest_ABLMC_1.txt,1,ABLMC,gemini,gemini-3.1-pro-preview,1,Precision,4,"The evaluation is mostly precise, though a typo in the weaknesses section slightly detracts from its exactness."
+InjTest_ABLMC_1.txt,1,ABLMC,gemini,gemini-3.1-pro-preview,1,Understandability,5,The text is highly readable and the core arguments are easily grasped by the reader.
+InjTest_ABLMC_1.txt,1,ABLMC,gemini,gemini-3.1-pro-preview,1,Objectivity,5,The author provides a balanced assessment by explicitly detailing both the strengths and weaknesses of the metric.
+InjTest_ABLMC_1.txt,1,ABLMC,gemini,gemini-3.1-pro-preview,1,Usefulness,5,The card offers actionable recommendations and valuable insights into the metric's behavior under perturbation.
+InjTest_ABLMC_1.txt,1,ABLMC,gemini,gemini-3.1-pro-preview,1,Language,4,"The writing is grammatically sound, with only minor vocabulary slips such as using interjections instead of injections."
+InjTest_ABLMC_1.txt,1,ABLMC,gemini,gemini-3.1-pro-preview,1,Factual Accuracy,3,"The card incorrectly cites a 346 percent change rate for Injection 1 in the weaknesses section, contradicting both the table and its own earlier correct statement."
+InjTest_ABLMC_1.txt,1,ABLMC,gemini,gemini-3.1-pro-preview,2,Structure,5,The metric card is logically organized with clear headings and bullet points that facilitate reading.
+InjTest_ABLMC_1.txt,1,ABLMC,gemini,gemini-3.1-pro-preview,2,Precision,4,"The card is generally precise, though a typo in a percentage slightly detracts from its exactness."
+InjTest_ABLMC_1.txt,1,ABLMC,gemini,gemini-3.1-pro-preview,2,Understandability,5,"The explanations are clear, straightforward, and easy to grasp."
+InjTest_ABLMC_1.txt,1,ABLMC,gemini,gemini-3.1-pro-preview,2,Objectivity,5,The author presents a balanced view by explicitly detailing both strengths and weaknesses.
+InjTest_ABLMC_1.txt,1,ABLMC,gemini,gemini-3.1-pro-preview,2,Usefulness,5,The card offers valuable insights into the metric's sensitivity to injection length and provides actionable recommendations.
+InjTest_ABLMC_1.txt,1,ABLMC,gemini,gemini-3.1-pro-preview,2,Language,4,"The text is mostly well-written, with only minor errors such as using 'interjections' instead of 'injections'."
+InjTest_ABLMC_1.txt,1,ABLMC,gemini,gemini-3.1-pro-preview,2,Factual Accuracy,3,"The card contains a significant typo stating a '346%' change rate for Injection 1, contradicting the table's 36.0%."
+InjTest_ABLMC_2.txt,2,ABLMC,gemini,gemini-3.1-pro-preview,0,Structure,5,The metric card is logically organized with clear headings and bullet points that facilitate easy reading.
+InjTest_ABLMC_2.txt,2,ABLMC,gemini,gemini-3.1-pro-preview,0,Precision,5,"The card provides unambiguous interpretations, citing specific percentages and score changes."
+InjTest_ABLMC_2.txt,2,ABLMC,gemini,gemini-3.1-pro-preview,0,Understandability,5,"The explanations are clear, making the metric's behavior and limitations easy to grasp."
+InjTest_ABLMC_2.txt,2,ABLMC,gemini,gemini-3.1-pro-preview,0,Objectivity,5,"The card balances strengths and weaknesses, acknowledging the metric's partial sensitivity while noting its limitations."
+InjTest_ABLMC_2.txt,2,ABLMC,gemini,gemini-3.1-pro-preview,0,Usefulness,5,The insights and recommendations are highly actionable and relevant to the metric's performance on the test.
+InjTest_ABLMC_2.txt,2,ABLMC,gemini,gemini-3.1-pro-preview,0,Language,5,"The text is well-written, grammatically correct, and uses appropriate terminology."
+InjTest_ABLMC_2.txt,2,ABLMC,gemini,gemini-3.1-pro-preview,0,Factual Accuracy,5,All numbers and percentages perfectly match the provided test results table.
+InjTest_ABLMC_2.txt,2,ABLMC,gemini,gemini-3.1-pro-preview,1,Structure,5,The metric card is logically organized with clear headings and bullet points that facilitate easy reading.
+InjTest_ABLMC_2.txt,2,ABLMC,gemini,gemini-3.1-pro-preview,1,Precision,5,"The card provides unambiguous interpretations, citing specific percentages and score changes."
+InjTest_ABLMC_2.txt,2,ABLMC,gemini,gemini-3.1-pro-preview,1,Understandability,5,"The explanations are clear, making the metric's behavior and limitations easy to grasp."
+InjTest_ABLMC_2.txt,2,ABLMC,gemini,gemini-3.1-pro-preview,1,Objectivity,5,"The card balances strengths and weaknesses, acknowledging the metric's partial sensitivity while noting its limitations."
+InjTest_ABLMC_2.txt,2,ABLMC,gemini,gemini-3.1-pro-preview,1,Usefulness,5,The insights and recommendations are highly actionable and relevant to the metric's performance on the test.
+InjTest_ABLMC_2.txt,2,ABLMC,gemini,gemini-3.1-pro-preview,1,Language,5,"The text is well-written, grammatically correct, and uses appropriate terminology."
+InjTest_ABLMC_2.txt,2,ABLMC,gemini,gemini-3.1-pro-preview,1,Factual Accuracy,5,All numbers and percentages perfectly match the provided test results table.
+InjTest_ABLMC_2.txt,2,ABLMC,gemini,gemini-3.1-pro-preview,2,Structure,5,The metric card is logically organized with clear headings and bullet points that facilitate easy reading.
+InjTest_ABLMC_2.txt,2,ABLMC,gemini,gemini-3.1-pro-preview,2,Precision,5,"The card provides unambiguous interpretations, citing specific percentages and score changes."
+InjTest_ABLMC_2.txt,2,ABLMC,gemini,gemini-3.1-pro-preview,2,Understandability,5,"The explanations are clear, making the metric's behavior and limitations easy to grasp."
+InjTest_ABLMC_2.txt,2,ABLMC,gemini,gemini-3.1-pro-preview,2,Objectivity,5,"The card balances strengths and weaknesses, acknowledging the metric's partial sensitivity while noting its limitations."
+InjTest_ABLMC_2.txt,2,ABLMC,gemini,gemini-3.1-pro-preview,2,Usefulness,5,The insights and recommendations are highly actionable and relevant to the metric's performance on the test.
+InjTest_ABLMC_2.txt,2,ABLMC,gemini,gemini-3.1-pro-preview,2,Language,5,"The text is well-written, grammatically correct, and uses appropriate terminology."
+InjTest_ABLMC_2.txt,2,ABLMC,gemini,gemini-3.1-pro-preview,2,Factual Accuracy,5,All numbers and percentages perfectly match the provided test results table.
+InjTest_ABLMC_3.txt,4,ABLMC,gemini,gemini-3.1-pro-preview,0,Structure,4,"The card is well-organized with clear headings and bullet points, though it includes a redundant prose summary at the end."
+InjTest_ABLMC_3.txt,4,ABLMC,gemini,gemini-3.1-pro-preview,0,Precision,5,"The evaluation provides exact scores and percentages, leaving no ambiguity in its assessment."
+InjTest_ABLMC_3.txt,4,ABLMC,gemini,gemini-3.1-pro-preview,0,Understandability,5,"The text is highly readable, and the author's logic is very easy to follow."
+InjTest_ABLMC_3.txt,4,ABLMC,gemini,gemini-3.1-pro-preview,0,Objectivity,5,The author fairly balances the metric's partial success on one injection with its failure to reach the desired threshold on the other.
+InjTest_ABLMC_3.txt,4,ABLMC,gemini,gemini-3.1-pro-preview,0,Usefulness,5,"The card offers deep insights and highly actionable, specific recommendations for improving the metric."
+InjTest_ABLMC_3.txt,4,ABLMC,gemini,gemini-3.1-pro-preview,0,Language,5,"The grammar, spelling, and semantics are excellent throughout the text."
+InjTest_ABLMC_3.txt,4,ABLMC,gemini,gemini-3.1-pro-preview,0,Factual Accuracy,5,All scores and percentage changes cited perfectly match the provided test results table.
+InjTest_ABLMC_3.txt,4,ABLMC,gemini,gemini-3.1-pro-preview,1,Structure,4,"The card includes both a highly structured outline and a prose summary, which is slightly redundant but overall very well-organized and easy to follow."
+InjTest_ABLMC_3.txt,4,ABLMC,gemini,gemini-3.1-pro-preview,1,Precision,5,"The analysis is highly precise, clearly defining the change-rate thresholds and specific score differences."
+InjTest_ABLMC_3.txt,4,ABLMC,gemini,gemini-3.1-pro-preview,1,Understandability,5,"The text is extremely clear, making the metric's behavior and the author's conclusions easy to comprehend."
+InjTest_ABLMC_3.txt,4,ABLMC,gemini,gemini-3.1-pro-preview,1,Objectivity,5,"The author presents a balanced view, acknowledging the metric's partial success on Injection 2 alongside its failure on Injection 1."
+InjTest_ABLMC_3.txt,4,ABLMC,gemini,gemini-3.1-pro-preview,1,Usefulness,5,"The insights and detailed, actionable recommendations for improvement make this card highly valuable."
+InjTest_ABLMC_3.txt,4,ABLMC,gemini,gemini-3.1-pro-preview,1,Language,5,"The writing is grammatically correct, professional, and semantically precise."
+InjTest_ABLMC_3.txt,4,ABLMC,gemini,gemini-3.1-pro-preview,1,Factual Accuracy,5,"All scores, percentages, and comparisons accurately reflect the provided test results table."
+InjTest_ABLMC_3.txt,4,ABLMC,gemini,gemini-3.1-pro-preview,2,Structure,4,"The card includes both a highly structured outline and a prose summary, which is slightly redundant but overall very well-organized and easy to follow."
+InjTest_ABLMC_3.txt,4,ABLMC,gemini,gemini-3.1-pro-preview,2,Precision,5,"The analysis is highly precise, clearly defining the change-rate thresholds and specific score differences."
+InjTest_ABLMC_3.txt,4,ABLMC,gemini,gemini-3.1-pro-preview,2,Understandability,5,"The text is extremely clear, making the metric's behavior and the author's conclusions easy to comprehend."
+InjTest_ABLMC_3.txt,4,ABLMC,gemini,gemini-3.1-pro-preview,2,Objectivity,5,"The author presents a balanced view, acknowledging the metric's partial success on Injection 2 alongside its failure on Injection 1."
+InjTest_ABLMC_3.txt,4,ABLMC,gemini,gemini-3.1-pro-preview,2,Usefulness,5,"The insights and detailed, actionable recommendations for improvement make this card highly valuable."
+InjTest_ABLMC_3.txt,4,ABLMC,gemini,gemini-3.1-pro-preview,2,Language,5,"The writing is grammatically correct, professional, and semantically precise."
+InjTest_ABLMC_3.txt,4,ABLMC,gemini,gemini-3.1-pro-preview,2,Factual Accuracy,5,"All scores, percentages, and comparisons accurately reflect the provided test results table."
+InjTest_ABLMC_4.txt,5,ABLMC,gemini,gemini-3.1-pro-preview,0,Structure,4,"The card is well-organized with clear headings and bullet points, though the inclusion of what appears to be a draft at the end slightly detracts from the overall flow."
+InjTest_ABLMC_4.txt,5,ABLMC,gemini,gemini-3.1-pro-preview,0,Precision,4,"The evaluation provides specific scores and percentages, clearly distinguishing the metric's performance on different injections."
+InjTest_ABLMC_4.txt,5,ABLMC,gemini,gemini-3.1-pro-preview,0,Understandability,4,"The explanations are straightforward and easy to grasp, making the metric's behavior clear to the reader despite the duplicated sections."
+InjTest_ABLMC_4.txt,5,ABLMC,gemini,gemini-3.1-pro-preview,0,Objectivity,5,"The card presents a balanced view, highlighting both the metric's ability to detect short injections and its vulnerability to longer ones."
+InjTest_ABLMC_4.txt,5,ABLMC,gemini,gemini-3.1-pro-preview,0,Usefulness,5,The insights regarding the metric's length dependence and the interpretability of negative scores are highly valuable for users.
+InjTest_ABLMC_4.txt,5,ABLMC,gemini,gemini-3.1-pro-preview,0,Language,4,"The primary text is well-written, though the appended draft contains minor typos such as 'moderatly' and 'beeing'."
+InjTest_ABLMC_4.txt,5,ABLMC,gemini,gemini-3.1-pro-preview,0,Factual Accuracy,5,"All scores, percentages, and word count differences accurately reflect the provided test results and injection texts."
+InjTest_ABLMC_4.txt,5,ABLMC,gemini,gemini-3.1-pro-preview,1,Structure,4,"The card is well-organized with clear headings and bullet points, though the inclusion of what appears to be a draft at the end slightly detracts from the overall flow."
+InjTest_ABLMC_4.txt,5,ABLMC,gemini,gemini-3.1-pro-preview,1,Precision,4,"The evaluation provides specific scores and percentages, clearly distinguishing the metric's performance on different injections."
+InjTest_ABLMC_4.txt,5,ABLMC,gemini,gemini-3.1-pro-preview,1,Understandability,4,"The explanations are straightforward and easy to grasp, making the metric's behavior clear to the reader despite the duplicated sections."
+InjTest_ABLMC_4.txt,5,ABLMC,gemini,gemini-3.1-pro-preview,1,Objectivity,5,"The card presents a balanced view, highlighting both the metric's ability to detect short injections and its vulnerability to longer ones."
+InjTest_ABLMC_4.txt,5,ABLMC,gemini,gemini-3.1-pro-preview,1,Usefulness,5,The insights regarding the metric's length dependence and the interpretability of negative scores are highly valuable for users.
+InjTest_ABLMC_4.txt,5,ABLMC,gemini,gemini-3.1-pro-preview,1,Language,4,"The primary text is well-written, though the appended draft contains minor typos such as 'moderatly' and 'beeing'."
+InjTest_ABLMC_4.txt,5,ABLMC,gemini,gemini-3.1-pro-preview,1,Factual Accuracy,5,"All scores, percentages, and word count differences accurately reflect the provided test results and injection texts."
+InjTest_ABLMC_4.txt,5,ABLMC,gemini,gemini-3.1-pro-preview,2,Structure,3,The inclusion of two separate drafts or versions of the evaluation makes the overall structure confusing and redundant.
+InjTest_ABLMC_4.txt,5,ABLMC,gemini,gemini-3.1-pro-preview,2,Precision,4,"The first section provides exact figures and clear categories, though the second section relies on approximations."
+InjTest_ABLMC_4.txt,5,ABLMC,gemini,gemini-3.1-pro-preview,2,Understandability,4,"The arguments are generally clear and easy to follow, despite the presence of duplicate content."
+InjTest_ABLMC_4.txt,5,ABLMC,gemini,gemini-3.1-pro-preview,2,Objectivity,5,"The card presents a balanced view, accurately identifying both the metric's ability to penalize short injections and its failure with longer ones."
+InjTest_ABLMC_4.txt,5,ABLMC,gemini,gemini-3.1-pro-preview,2,Usefulness,4,The insights regarding the metric's sensitivity to injection length and the interpretability of negative scores are highly valuable.
+InjTest_ABLMC_4.txt,5,ABLMC,gemini,gemini-3.1-pro-preview,2,Language,3,"While the first section is well-written, the second section contains several spelling and grammatical errors such as 'Stengths' and 'beeing'."
+InjTest_ABLMC_4.txt,5,ABLMC,gemini,gemini-3.1-pro-preview,2,Factual Accuracy,5,"All claims, including the word count differences and percentage changes, accurately reflect the provided test results."
+InjTest_FS_1.txt,3,FS,gemini,gemini-3.1-pro-preview,0,Structure,4,The card is well-organized with clear headings and sections that logically separate the analysis.
+InjTest_FS_1.txt,3,FS,gemini,gemini-3.1-pro-preview,0,Precision,2,"The card contains contradictory statements, incorrectly listing the failure to reach the 70% drop threshold as a strength and the moderate change rates as a weakness."
+InjTest_FS_1.txt,3,FS,gemini,gemini-3.1-pro-preview,0,Understandability,2,The flipped logic regarding what constitutes a strength versus a weakness makes the card's overall conclusions confusing to follow.
+InjTest_FS_1.txt,3,FS,gemini,gemini-3.1-pro-preview,0,Objectivity,4,"The author maintains a balanced tone and provides a thoughtful, objective critique of the evaluation criteria itself."
+InjTest_FS_1.txt,3,FS,gemini,gemini-3.1-pro-preview,0,Usefulness,3,"While the flipped logic is problematic, the insight that a 70% drop is mathematically difficult when the gold score is already low is highly valuable."
+InjTest_FS_1.txt,3,FS,gemini,gemini-3.1-pro-preview,0,Language,4,"The language is generally clear and grammatically correct, with only minor awkward phrasing in the final section."
+InjTest_FS_1.txt,3,FS,gemini,gemini-3.1-pro-preview,0,Factual Accuracy,2,"Although the author accurately reports the numbers from the table, they fundamentally misinterpret the rule of thumb by swapping the definitions of strengths and weaknesses."
+InjTest_FS_1.txt,3,FS,gemini,gemini-3.1-pro-preview,1,Structure,4,The card is well-organized with clear headings and sections that separate the analysis.
+InjTest_FS_1.txt,3,FS,gemini,gemini-3.1-pro-preview,1,Precision,2,"The card contains contradictory statements regarding whether a high change rate is a strength or a weakness, leading to significant ambiguity."
+InjTest_FS_1.txt,3,FS,gemini,gemini-3.1-pro-preview,1,Understandability,2,The conflicting interpretations of the change rate make it difficult for the reader to grasp the metric's actual performance.
+InjTest_FS_1.txt,3,FS,gemini,gemini-3.1-pro-preview,1,Objectivity,3,"The author attempts to provide a balanced view by listing both strengths and weaknesses, even though the underlying logic is flawed."
+InjTest_FS_1.txt,3,FS,gemini,gemini-3.1-pro-preview,1,Usefulness,2,The insights are severely compromised by the author's misunderstanding of the change rate and contradictory recommendations.
+InjTest_FS_1.txt,3,FS,gemini,gemini-3.1-pro-preview,1,Language,4,"The text is generally well-written and grammatically correct, with only minor awkward phrasing."
+InjTest_FS_1.txt,3,FS,gemini,gemini-3.1-pro-preview,1,Factual Accuracy,2,"The author misinterprets the change rate, incorrectly listing a lack of a high change rate as a strength while simultaneously using it as a reason not to recommend the metric."
+InjTest_FS_1.txt,3,FS,gemini,gemini-3.1-pro-preview,2,Structure,4,The card is well-organized with clear headings and sections that separate the analysis.
+InjTest_FS_1.txt,3,FS,gemini,gemini-3.1-pro-preview,2,Precision,2,"The card contains contradictory statements regarding whether a high change rate is a strength or a weakness, leading to significant ambiguity."
+InjTest_FS_1.txt,3,FS,gemini,gemini-3.1-pro-preview,2,Understandability,2,The conflicting interpretations of the change rate make it difficult for the reader to grasp the metric's actual performance.
+InjTest_FS_1.txt,3,FS,gemini,gemini-3.1-pro-preview,2,Objectivity,3,"The author attempts to provide a balanced view by listing both strengths and weaknesses, even though the underlying logic is flawed."
+InjTest_FS_1.txt,3,FS,gemini,gemini-3.1-pro-preview,2,Usefulness,2,The insights are severely compromised by the author's misunderstanding of the change rate and contradictory recommendations.
+InjTest_FS_1.txt,3,FS,gemini,gemini-3.1-pro-preview,2,Language,4,"The text is generally well-written and grammatically correct, with only minor awkward phrasing."
+InjTest_FS_1.txt,3,FS,gemini,gemini-3.1-pro-preview,2,Factual Accuracy,2,"The author misinterprets the change rate, incorrectly listing a lack of a high change rate as a strength while simultaneously using it as a reason not to recommend the metric."
+InjTest_FS_2.txt,6,FS,gemini,gemini-3.1-pro-preview,0,Structure,5,The metric card is logically structured with clear headings and bullet points.
+InjTest_FS_2.txt,6,FS,gemini,gemini-3.1-pro-preview,0,Precision,4,"The explanations are mostly clear, though the incorrect metric name introduces some ambiguity."
+InjTest_FS_2.txt,6,FS,gemini,gemini-3.1-pro-preview,0,Understandability,5,The text is easy to read and the arguments are straightforward to grasp.
+InjTest_FS_2.txt,6,FS,gemini,gemini-3.1-pro-preview,0,Objectivity,5,The card presents a balanced view by discussing both strengths and weaknesses.
+InjTest_FS_2.txt,6,FS,gemini,gemini-3.1-pro-preview,0,Usefulness,4,"The insights are generally useful and align with the rule of thumb, but the wrong metric name detracts from its utility."
+InjTest_FS_2.txt,6,FS,gemini,gemini-3.1-pro-preview,0,Language,5,The language is grammatically correct and flows well.
+InjTest_FS_2.txt,6,FS,gemini,gemini-3.1-pro-preview,0,Factual Accuracy,2,The card incorrectly names the metric as bartscore-avg-f instead of ROUGE-L and misquotes the Injection 1 score as 0.125 instead of 0.127.
+InjTest_FS_2.txt,6,FS,gemini,gemini-3.1-pro-preview,1,Structure,5,"The card is well-organized with clear headings, subheadings, and bullet points that facilitate reading."
+InjTest_FS_2.txt,6,FS,gemini,gemini-3.1-pro-preview,1,Precision,4,"The explanations are mostly precise, although the incorrect metric name in a heading introduces slight ambiguity."
+InjTest_FS_2.txt,6,FS,gemini,gemini-3.1-pro-preview,1,Understandability,5,"The text is straightforward, making the insights and conclusions very easy to comprehend."
+InjTest_FS_2.txt,6,FS,gemini,gemini-3.1-pro-preview,1,Objectivity,5,The author presents a balanced view by clearly outlining both the strengths and weaknesses of the metric.
+InjTest_FS_2.txt,6,FS,gemini,gemini-3.1-pro-preview,1,Usefulness,4,The card provides practical recommendations and actionable areas for improvement based on the test results.
+InjTest_FS_2.txt,6,FS,gemini,gemini-3.1-pro-preview,1,Language,5,The writing is grammatically correct and uses appropriate vocabulary throughout.
+InjTest_FS_2.txt,6,FS,gemini,gemini-3.1-pro-preview,1,Factual Accuracy,3,The card incorrectly refers to the metric as bartscore-avg-f instead of ROUGE-L and misstates the Injection 1 score as 0.125 instead of 0.127.
+InjTest_FS_2.txt,6,FS,gemini,gemini-3.1-pro-preview,2,Structure,5,"The card is well-organized with clear headings, subheadings, and bullet points that facilitate reading."
+InjTest_FS_2.txt,6,FS,gemini,gemini-3.1-pro-preview,2,Precision,4,"The explanations are mostly precise, although the incorrect metric name in a heading introduces slight ambiguity."
+InjTest_FS_2.txt,6,FS,gemini,gemini-3.1-pro-preview,2,Understandability,5,"The text is straightforward, making the insights and conclusions very easy to comprehend."
+InjTest_FS_2.txt,6,FS,gemini,gemini-3.1-pro-preview,2,Objectivity,5,The author presents a balanced view by clearly outlining both the strengths and weaknesses of the metric.
+InjTest_FS_2.txt,6,FS,gemini,gemini-3.1-pro-preview,2,Usefulness,4,The card provides practical recommendations and actionable areas for improvement based on the test results.
+InjTest_FS_2.txt,6,FS,gemini,gemini-3.1-pro-preview,2,Language,5,The writing is grammatically correct and uses appropriate vocabulary throughout.
+InjTest_FS_2.txt,6,FS,gemini,gemini-3.1-pro-preview,2,Factual Accuracy,3,The card incorrectly refers to the metric as bartscore-avg-f instead of ROUGE-L and misstates the Injection 1 score as 0.125 instead of 0.127.
+InjTest_FS_3.txt,7,FS,gemini,gemini-3.1-pro-preview,0,Structure,3,The text is divided into paragraphs but lacks clear headings or bullet points to enhance readability.
+InjTest_FS_3.txt,7,FS,gemini,gemini-3.1-pro-preview,0,Precision,3,The card uses somewhat vague terms like 'minimally better' for a noticeable difference and 'moderate to high' for the change rates.
+InjTest_FS_3.txt,7,FS,gemini,gemini-3.1-pro-preview,0,Understandability,4,The writing is generally clear and easy to follow despite some minor grammatical issues.
+InjTest_FS_3.txt,7,FS,gemini,gemini-3.1-pro-preview,0,Objectivity,4,"The author presents both the fact that injections scored lower and the failure to meet the 70% threshold, maintaining a balanced view."
+InjTest_FS_3.txt,7,FS,gemini,gemini-3.1-pro-preview,0,Usefulness,3,The suggestion to calibrate the metric's scale is not practically applicable to an n-gram overlap metric like ROUGE-L.
+InjTest_FS_3.txt,7,FS,gemini,gemini-3.1-pro-preview,0,Language,4,"There are minor grammatical errors, such as 'a minimally better scores'."
+InjTest_FS_3.txt,7,FS,gemini,gemini-3.1-pro-preview,0,Factual Accuracy,3,"While the numbers are correct, the claim that scores of 0.286 and 0.127 'appear very close' is inaccurate as the injection score is less than half of the gold score."
+InjTest_FS_3.txt,7,FS,gemini,gemini-3.1-pro-preview,1,Structure,3,The card uses paragraphs but lacks formatting elements like bolding or bullet points to enhance readability.
+InjTest_FS_3.txt,7,FS,gemini,gemini-3.1-pro-preview,1,Precision,3,The card contradicts itself by stating the metric was sensitive but then claiming it cannot make clear distinctions.
+InjTest_FS_3.txt,7,FS,gemini,gemini-3.1-pro-preview,1,Understandability,4,"The text is generally easy to follow, though the logical contradictions cause some confusion."
+InjTest_FS_3.txt,7,FS,gemini,gemini-3.1-pro-preview,1,Objectivity,3,"The evaluation is overly harsh, dismissing the metric entirely despite it halving the scores for injections."
+InjTest_FS_3.txt,7,FS,gemini,gemini-3.1-pro-preview,1,Usefulness,2,The recommendation to calibrate the metric's scale is impractical and shows a misunderstanding of how ROUGE-L works.
+InjTest_FS_3.txt,7,FS,gemini,gemini-3.1-pro-preview,1,Language,4,"The text is mostly well-written, with only minor grammatical errors like 'a minimally better scores'."
+InjTest_FS_3.txt,7,FS,gemini,gemini-3.1-pro-preview,1,Factual Accuracy,3,"While the numbers are reported correctly, describing a drop of over 50% as 'very close' is an inaccurate interpretation."
+InjTest_FS_3.txt,7,FS,gemini,gemini-3.1-pro-preview,2,Structure,3,The card uses paragraphs but lacks formatting elements like bolding or bullet points to enhance readability.
+InjTest_FS_3.txt,7,FS,gemini,gemini-3.1-pro-preview,2,Precision,3,The card contradicts itself by stating the metric was sensitive but then claiming it cannot make clear distinctions.
+InjTest_FS_3.txt,7,FS,gemini,gemini-3.1-pro-preview,2,Understandability,4,"The text is generally easy to follow, though the logical contradictions cause some confusion."
+InjTest_FS_3.txt,7,FS,gemini,gemini-3.1-pro-preview,2,Objectivity,3,"The evaluation is overly harsh, dismissing the metric entirely despite it halving the scores for injections."
+InjTest_FS_3.txt,7,FS,gemini,gemini-3.1-pro-preview,2,Usefulness,2,The recommendation to calibrate the metric's scale is impractical and shows a misunderstanding of how ROUGE-L works.
+InjTest_FS_3.txt,7,FS,gemini,gemini-3.1-pro-preview,2,Language,4,"The text is mostly well-written, with only minor grammatical errors like 'a minimally better scores'."
+InjTest_FS_3.txt,7,FS,gemini,gemini-3.1-pro-preview,2,Factual Accuracy,3,"While the numbers are reported correctly, describing a drop of over 50% as 'very close' is an inaccurate interpretation."
+InjTest_FS_4.txt,8,FS,gemini,gemini-3.1-pro-preview,0,Structure,2,"The inclusion of irrelevant metadata like start and end times, along with a lack of clear headings, detracts from the organization."
+InjTest_FS_4.txt,8,FS,gemini,gemini-3.1-pro-preview,0,Precision,2,"The card makes contradictory claims, such as stating the metric punished the injections equally while also noting it identified one more easily."
+InjTest_FS_4.txt,8,FS,gemini,gemini-3.1-pro-preview,0,Understandability,2,"Frequent grammatical errors and convoluted, contradictory reasoning make the text difficult to follow."
+InjTest_FS_4.txt,8,FS,gemini,gemini-3.1-pro-preview,0,Objectivity,3,"The author attempts to present a balanced view by discussing both injections, but the contradictory statements undermine the analysis."
+InjTest_FS_4.txt,8,FS,gemini,gemini-3.1-pro-preview,0,Usefulness,2,The insights are largely speculative and fail to apply the provided rule of thumb regarding the 70% threshold for robustness.
+InjTest_FS_4.txt,8,FS,gemini,gemini-3.1-pro-preview,0,Language,2,"The text contains numerous spelling and grammatical errors, such as 'even thou', 'an summarization', and 'if shows'."
+InjTest_FS_4.txt,8,FS,gemini,gemini-3.1-pro-preview,0,Factual Accuracy,3,"While the percentage calculations are correct, the conclusion that the metric is very capable ignores the study's rule of thumb that a robust change rate should be at least 70%."
+InjTest_FS_4.txt,8,FS,gemini,gemini-3.1-pro-preview,1,Structure,2,"The inclusion of start and end times is unnecessary, and the lack of clear headings or formatting makes the text poorly structured."
+InjTest_FS_4.txt,8,FS,gemini,gemini-3.1-pro-preview,1,Precision,2,"The card contains contradictory statements, such as claiming the metric punished the injections equally right after stating it identified one more easily."
+InjTest_FS_4.txt,8,FS,gemini,gemini-3.1-pro-preview,1,Understandability,2,Convoluted sentences and poor phrasing make the author's arguments difficult to follow and grasp.
+InjTest_FS_4.txt,8,FS,gemini,gemini-3.1-pro-preview,1,Objectivity,2,The author overstates the metric's robustness by calling it very capable despite the change rates falling below the 70% threshold.
+InjTest_FS_4.txt,8,FS,gemini,gemini-3.1-pro-preview,1,Usefulness,2,"The insights are limited by speculative reasoning regarding length and sentiment, and the contradictory conclusions reduce overall value."
+InjTest_FS_4.txt,8,FS,gemini,gemini-3.1-pro-preview,1,Language,2,"There are numerous grammatical and spelling errors, such as 'even thou', 'higher then', and 'an summarization'."
+InjTest_FS_4.txt,8,FS,gemini,gemini-3.1-pro-preview,1,Factual Accuracy,3,"While the percentage calculations are correct, the interpretation that the metric is highly capable contradicts the provided rule of thumb for robustness."
+InjTest_FS_4.txt,8,FS,gemini,gemini-3.1-pro-preview,2,Structure,2,"The inclusion of start and end times is unnecessary, and the lack of clear headings or formatting makes the text poorly structured."
+InjTest_FS_4.txt,8,FS,gemini,gemini-3.1-pro-preview,2,Precision,2,"The card contains contradictory statements, such as claiming the metric punished the injections equally right after stating it identified one more easily."
+InjTest_FS_4.txt,8,FS,gemini,gemini-3.1-pro-preview,2,Understandability,2,Convoluted sentences and poor phrasing make the author's arguments difficult to follow and grasp.
+InjTest_FS_4.txt,8,FS,gemini,gemini-3.1-pro-preview,2,Objectivity,2,The author overstates the metric's robustness by calling it very capable despite the change rates falling below the 70% threshold.
+InjTest_FS_4.txt,8,FS,gemini,gemini-3.1-pro-preview,2,Usefulness,2,"The insights are limited by speculative reasoning regarding length and sentiment, and the contradictory conclusions reduce overall value."
+InjTest_FS_4.txt,8,FS,gemini,gemini-3.1-pro-preview,2,Language,2,"There are numerous grammatical and spelling errors, such as 'even thou', 'higher then', and 'an summarization'."
+InjTest_FS_4.txt,8,FS,gemini,gemini-3.1-pro-preview,2,Factual Accuracy,3,"While the percentage calculations are correct, the interpretation that the metric is highly capable contradicts the provided rule of thumb for robustness."

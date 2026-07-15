@@ -1,0 +1,43 @@
+provider,condition,dimension,human_mean,judge_mean
+anthropic,ABLMC,Factual Accuracy,3.875,4.166666666666666
+anthropic,ABLMC,Language,3.75,3.5
+anthropic,ABLMC,Objectivity,3.5,4.75
+anthropic,ABLMC,Precision,3.125,3.6666666666666665
+anthropic,ABLMC,Structure,4.0,4.166666666666667
+anthropic,ABLMC,Understandability,3.125,4.25
+anthropic,ABLMC,Usefulness,3.125,4.0
+anthropic,FS,Factual Accuracy,4.0,3.0
+anthropic,FS,Language,3.375,2.9166666666666665
+anthropic,FS,Objectivity,3.25,3.666666666666667
+anthropic,FS,Precision,3.25,2.916666666666667
+anthropic,FS,Structure,3.75,3.0833333333333335
+anthropic,FS,Understandability,3.375,3.5
+anthropic,FS,Usefulness,2.625,3.25
+deepseek,ABLMC,Factual Accuracy,3.875,4.25
+deepseek,ABLMC,Language,3.75,4.5
+deepseek,ABLMC,Objectivity,3.5,4.583333333333333
+deepseek,ABLMC,Precision,3.125,3.75
+deepseek,ABLMC,Structure,4.0,4.0
+deepseek,ABLMC,Understandability,3.125,4.0
+deepseek,ABLMC,Usefulness,3.125,3.75
+deepseek,FS,Factual Accuracy,4.0,3.25
+deepseek,FS,Language,3.375,3.0
+deepseek,FS,Objectivity,3.25,3.75
+deepseek,FS,Precision,3.25,2.75
+deepseek,FS,Structure,3.75,2.9166666666666665
+deepseek,FS,Understandability,3.375,3.0
+deepseek,FS,Usefulness,2.625,3.0
+gemini,ABLMC,Factual Accuracy,3.875,4.5
+gemini,ABLMC,Language,3.75,4.416666666666667
+gemini,ABLMC,Objectivity,3.5,5.0
+gemini,ABLMC,Precision,3.125,4.5
+gemini,ABLMC,Structure,4.0,4.416666666666667
+gemini,ABLMC,Understandability,3.125,4.75
+gemini,ABLMC,Usefulness,3.125,4.916666666666667
+gemini,FS,Factual Accuracy,4.0,2.6666666666666665
+gemini,FS,Language,3.375,3.75
+gemini,FS,Objectivity,3.25,3.5
+gemini,FS,Precision,3.25,2.75
+gemini,FS,Structure,3.75,3.5
+gemini,FS,Understandability,3.375,3.25
+gemini,FS,Usefulness,2.625,2.666666666666667

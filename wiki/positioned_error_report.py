@@ -209,9 +209,15 @@ def save_report(file_path, content):
 
 # === MAIN ===
 if __name__ == "__main__":
-    API_URL = "https://chat-ai.academiccloud.de/v1/chat/completions"
-    API_KEY = "99a0aa3518ee41d994be433c896f736c"
-    MODEL = "qwen3-32b"
+    # API configuration comes from the environment; see README.
+    API_URL = os.environ.get(
+        "METRICX_API_URL",
+        "https://chat-ai.academiccloud.de/v1/chat/completions")
+    API_KEY = os.environ.get("METRICX_API_KEY")
+    if not API_KEY:
+        sys.exit("Error: set the METRICX_API_KEY environment variable "
+                 "(API key for the LLM endpoint).")
+    MODEL = os.environ.get("METRICX_MODEL", "qwen3-32b")
 
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     TEMPLATE_DIR = os.path.join(BASE_DIR, "reports", "positioned_error", "prompt_templates")

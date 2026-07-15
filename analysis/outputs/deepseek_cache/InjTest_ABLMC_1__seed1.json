@@ -1,0 +1,23 @@
+{
+  "data": {
+    "structure": 4,
+    "precision": 4,
+    "understandability": 4,
+    "objectivity": 5,
+    "usefulness": 4,
+    "language": 5,
+    "factual_accuracy": 3,
+    "rationale": {
+      "structure": "The card is logically organized with clear sections, but the 'Sensitivity' section could be more concise.",
+      "precision": "Most statements are clear, but 'low-to-moderate change' for 36% is ambiguous without a defined threshold.",
+      "understandability": "The card is easy to follow, though the negative score explanation may confuse some readers.",
+      "objectivity": "The card balances strengths and weaknesses, and acknowledges limitations without overstating.",
+      "usefulness": "Provides actionable insights and recommendations, but the correlation analysis suggestion is vague.",
+      "language": "Grammatically correct and professionally written with no errors.",
+      "factual_accuracy": "The change rate for Injection 1 is stated as 346% instead of 36%, a critical factual error."
+    }
+  },
+  "raw": "{\n  \"structure\": 4,\n  \"precision\": 4,\n  \"understandability\": 4,\n  \"objectivity\": 5,\n  \"usefulness\": 4,\n  \"language\": 5,\n  \"factual_accuracy\": 3,\n  \"rationale\": {\n    \"structure\": \"The card is logically organized with clear sections, but the 'Sensitivity' section could be more concise.\",\n    \"precision\": \"Most statements are clear, but 'low-to-moderate change' for 36% is ambiguous without a defined threshold.\",\n    \"understandability\": \"The card is easy to follow, though the negative score explanation may confuse some readers.\",\n    \"objectivity\": \"The card balances strengths and weaknesses, and acknowledges limitations without overstating.\",\n    \"usefulness\": \"Provides actionable insights and recommendations, but the correlation analysis suggestion is vague.\",\n    \"language\": \"Grammatically correct and professionally written with no errors.\",\n    \"factual_accuracy\": \"The change rate for Injection 1 is stated as 346% instead of 36%, a critical factual error.\"\n  }\n}",
+  "model": "deepseek-chat",
+  "seed": 1
+}

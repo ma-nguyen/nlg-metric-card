@@ -1,0 +1,76 @@
+# Condition: ABLMC
+# Metric: BARTScore-avg-f
+# Source: InjTest_ABLMC_4.docx
+
+## Test results table
+Gold	Injection 1	Injection 2
+-6.064	-8.247 (-36.0%)	-9.391 (-54.9%)
+
+## Participant metric card
+bartscore-avg-f
+
+---
+
+## 1. Sensitivity to the Perturbation 
+
+a. Did a perturbed output score higher than the gold output? 
+No. Both perturbed outputs received lower scores than the gold summary (-8.247265 and -9.390858 vs. -6.063610).
+
+b. Were the scores similar for every injection? 
+No. The two injections produced noticeably different penalties: Injection 1 lowered the score by ≈ 36 %, whereas Injection 2 lowered it by ≈ 55 %. Thus, the metric is not uniformly sensitive across the two perturbations.
+
+---
+
+## 2. Suitability of bartscore-avg-f for summarization
+
+### a. Strengths 
+- Injection 2 yielded a moderate-to-high change (-54.9 %, 50 %-69 % category). This indicates that the metric can assign a substantially lower score when the perturbation is a short, non-informative statement (“Yes, this is a really good summary.”).
+
+### b. Weaknesses 
+- Injection 1 produced only a low-to-moderate change (-36.0 %, 30 %-49 % category), suggesting limited discrimination for a longer but still non-summary injection. 
+- Neither injection reached the high (70 %-89 %) or very high (90 %-100 %) change-rate thresholds that would be desirable for reliable detection of non-summaries. 
+- The metric assigns negative scores to both gold and perturbed texts, which can complicate interpretation and comparison across datasets.
+
+### c. Recommendation 
+No. The metric does not consistently detect every non-summary injection with a high (≥ 70 %) change rate. While it penalises some injections strongly (e.g., Injection 2), it fails to do so uniformly.
+
+### d. Needed Improvements 
+1. Calibration of Score Range – Shift the scoring scale to a non-negative range (e.g., 0–1) to make absolute differences more interpretable. 
+2. Enhanced Sensitivity – Increase the penalty for generic, off-topic statements so that all non-summaries trigger at least a high change-rate (≥ 70 %). 
+3. Robustness to Injection Length – Ensure that longer but irrelevant injections (like Injection 1) receive penalties comparable to short, irrelevant ones. 
+4. Correlation Analysis – Conduct a larger-scale correlation study with human judgments to fine-tune the metric’s weighting of relevance, coherence, and factuality. 
+
+Even with these enhancements, bartscore-avg-f should be regarded as a complementary tool rather than a full replacement for human evaluation.
+
+
+
+
+
+
+
+
+
+Start time: 17:00
+End time: 17:34
+Metric-Card of BARTScore-avg-f on CNNDM
+
+1) Sensitivity to the perturbation:
+The Metric has low to moderate sensitivity. None of the provided Injection performed better than the baseline.
+While the scores are not equal they only have a difference of ~1
+
+2) Suitability
+Stengths:
+The metric identifies moderatly short injections. Injection2 gets identified with 54.9% change-rate.
+Therefore short injection yield a moderate or even high chance of beeing identified.
+
+Weakness:
+The difference of 7 Words compared between injection1 and 2 resulting in a  change-rate difference (abs.) of ~20% for injection1 suggests a limit on the feasibility of this method. Injections like injection1 only get identified with a low to moderate change-rate class.
+
+Recommendation:
+While this metric can identify shorter injection, the change-rate difference of 7 Words and ~20% does not put much faith in this metric, identifying longer or special designed injections.
+
+Improvements:
+change negative values to positive,
+Report 1/change-rate – contribution of score based on baseline,
+test metric on longer and special designed injections,
+make metric less length dependent.

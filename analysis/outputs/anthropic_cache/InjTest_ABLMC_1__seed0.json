@@ -1,0 +1,24 @@
+{
+  "data": {
+    "structure": 4,
+    "precision": 3,
+    "understandability": 4,
+    "objectivity": 5,
+    "usefulness": 4,
+    "language": 3,
+    "factual_accuracy": 2,
+    "rationale": {
+      "structure": "The card is organized into clear sections (sensitivity, strengths/weaknesses, recommendation, improvements) that aid navigation.",
+      "precision": "Most claims are specific with numbers, but the typo '346%' creates ambiguity about the actual Injection 1 change rate.",
+      "understandability": "The reasoning is generally easy to follow despite a few awkward phrasings and the typo.",
+      "objectivity": "The card balances strengths and weaknesses well and gives a fair recommendation.",
+      "usefulness": "It offers actionable improvement suggestions and applies the 70% threshold meaningfully.",
+      "language": "Several typos and inconsistent terms ('interjections' vs 'injections', '346%') reduce linguistic quality.",
+      "factual_accuracy": "The '346%' figure contradicts the table's -36.0%, and labeling 54.9% as 'moderate-to-high' while still below the 70% threshold is acceptable, but the typo is a clear factual error."
+    }
+  },
+  "raw": "{\"structure\":4,\"precision\":3,\"understandability\":4,\"objectivity\":5,\"usefulness\":4,\"language\":3,\"factual_accuracy\":2,\"rationale\":{\"structure\":\"The card is organized into clear sections (sensitivity, strengths/weaknesses, recommendation, improvements) that aid navigation.\",\"precision\":\"Most claims are specific with numbers, but the typo '346%' creates ambiguity about the actual Injection 1 change rate.\",\"understandability\":\"The reasoning is generally easy to follow despite a few awkward phrasings and the typo.\",\"objectivity\":\"The card balances strengths and weaknesses well and gives a fair recommendation.\",\"usefulness\":\"It offers actionable improvement suggestions and applies the 70% threshold meaningfully.\",\"language\":\"Several typos and inconsistent terms ('interjections' vs 'injections', '346%') reduce linguistic quality.\",\"factual_accuracy\":\"The '346%' figure contradicts the table's -36.0%, and labeling 54.9% as 'moderate-to-high' while still below the 70% threshold is acceptable, but the typo is a clear factual error.\"}}",
+  "model": "claude-opus-4-7",
+  "seed": 0,
+  "provider": "anthropic"
+}

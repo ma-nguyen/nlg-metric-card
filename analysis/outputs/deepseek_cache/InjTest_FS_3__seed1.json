@@ -1,0 +1,23 @@
+{
+  "data": {
+    "structure": 4,
+    "precision": 3,
+    "understandability": 4,
+    "objectivity": 4,
+    "usefulness": 3,
+    "language": 4,
+    "factual_accuracy": 4,
+    "rationale": {
+      "structure": "The card has a clear flow from results to interpretation to recommendation, but lacks section headings.",
+      "precision": "The phrase 'moderate to high change rates' is ambiguous given the rule of thumb that high is >=70%.",
+      "understandability": "The text is easy to follow and explains the findings in plain language.",
+      "objectivity": "The card acknowledges both the metric's sensitivity to perturbations and its failure to meet the high change-rate threshold.",
+      "usefulness": "The recommendation not to use the metric is clear, but the suggestion for calibration is vague and not actionable.",
+      "language": "The writing is grammatically correct and clear, with minor redundancy.",
+      "factual_accuracy": "The scores and change rates are correctly reported, but the statement 'very close' may be misleading as the gold score is notably higher."
+    }
+  },
+  "raw": "{\n  \"structure\": 4,\n  \"precision\": 3,\n  \"understandability\": 4,\n  \"objectivity\": 4,\n  \"usefulness\": 3,\n  \"language\": 4,\n  \"factual_accuracy\": 4,\n  \"rationale\": {\n    \"structure\": \"The card has a clear flow from results to interpretation to recommendation, but lacks section headings.\",\n    \"precision\": \"The phrase 'moderate to high change rates' is ambiguous given the rule of thumb that high is >=70%.\",\n    \"understandability\": \"The text is easy to follow and explains the findings in plain language.\",\n    \"objectivity\": \"The card acknowledges both the metric's sensitivity to perturbations and its failure to meet the high change-rate threshold.\",\n    \"usefulness\": \"The recommendation not to use the metric is clear, but the suggestion for calibration is vague and not actionable.\",\n    \"language\": \"The writing is grammatically correct and clear, with minor redundancy.\",\n    \"factual_accuracy\": \"The scores and change rates are correctly reported, but the statement 'very close' may be misleading as the gold score is notably higher.\"\n  }\n}",
+  "model": "deepseek-chat",
+  "seed": 1
+}

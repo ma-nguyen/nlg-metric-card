@@ -1,0 +1,24 @@
+{
+  "data": {
+    "structure": 4,
+    "precision": 4,
+    "understandability": 5,
+    "objectivity": 5,
+    "usefulness": 4,
+    "language": 5,
+    "factual_accuracy": 5,
+    "rationale": {
+      "structure": "The card flows logically from observation to interpretation to recommendation, though it lacks explicit headers in the final summary section.",
+      "precision": "Numbers and thresholds are stated clearly with specific percentages and category labels.",
+      "understandability": "The prose is clear and easy to follow for a reader familiar with the test setup.",
+      "objectivity": "Both strengths (penalizing Injection 2) and weaknesses (insufficient change rate, negative scale) are acknowledged in a balanced way.",
+      "usefulness": "Provides a clear recommendation and concrete improvement suggestions, though some suggestions (like rescaling) are more cosmetic than diagnostic.",
+      "language": "Grammatically correct and semantically coherent throughout.",
+      "factual_accuracy": "Scores, percentages, and category classifications match the table exactly."
+    }
+  },
+  "raw": "{\"structure\":4,\"precision\":4,\"understandability\":5,\"objectivity\":5,\"usefulness\":4,\"language\":5,\"factual_accuracy\":5,\"rationale\":{\"structure\":\"The card flows logically from observation to interpretation to recommendation, though it lacks explicit headers in the final summary section.\",\"precision\":\"Numbers and thresholds are stated clearly with specific percentages and category labels.\",\"understandability\":\"The prose is clear and easy to follow for a reader familiar with the test setup.\",\"objectivity\":\"Both strengths (penalizing Injection 2) and weaknesses (insufficient change rate, negative scale) are acknowledged in a balanced way.\",\"usefulness\":\"Provides a clear recommendation and concrete improvement suggestions, though some suggestions (like rescaling) are more cosmetic than diagnostic.\",\"language\":\"Grammatically correct and semantically coherent throughout.\",\"factual_accuracy\":\"Scores, percentages, and category classifications match the table exactly.\"}}",
+  "model": "claude-opus-4-7",
+  "seed": 0,
+  "provider": "anthropic"
+}

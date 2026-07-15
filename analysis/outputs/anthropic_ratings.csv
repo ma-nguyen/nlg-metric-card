@@ -1,0 +1,169 @@
+card_file,card_id,condition,provider,model,seed,dimension,score,rationale
+InjTest_ABLMC_1.txt,1,ABLMC,anthropic,claude-opus-4-7,0,Structure,4,"The card is organized into clear sections (sensitivity, strengths/weaknesses, recommendation, improvements) that aid navigation."
+InjTest_ABLMC_1.txt,1,ABLMC,anthropic,claude-opus-4-7,0,Precision,3,"Most claims are specific with numbers, but the typo '346%' creates ambiguity about the actual Injection 1 change rate."
+InjTest_ABLMC_1.txt,1,ABLMC,anthropic,claude-opus-4-7,0,Understandability,4,The reasoning is generally easy to follow despite a few awkward phrasings and the typo.
+InjTest_ABLMC_1.txt,1,ABLMC,anthropic,claude-opus-4-7,0,Objectivity,5,The card balances strengths and weaknesses well and gives a fair recommendation.
+InjTest_ABLMC_1.txt,1,ABLMC,anthropic,claude-opus-4-7,0,Usefulness,4,It offers actionable improvement suggestions and applies the 70% threshold meaningfully.
+InjTest_ABLMC_1.txt,1,ABLMC,anthropic,claude-opus-4-7,0,Language,3,"Several typos and inconsistent terms ('interjections' vs 'injections', '346%') reduce linguistic quality."
+InjTest_ABLMC_1.txt,1,ABLMC,anthropic,claude-opus-4-7,0,Factual Accuracy,2,"The '346%' figure contradicts the table's -36.0%, and labeling 54.9% as 'moderate-to-high' while still below the 70% threshold is acceptable, but the typo is a clear factual error."
+InjTest_ABLMC_1.txt,1,ABLMC,anthropic,claude-opus-4-7,1,Structure,4,"The card is logically organized with clear sections for sensitivity, strengths/weaknesses, recommendation, and improvements."
+InjTest_ABLMC_1.txt,1,ABLMC,anthropic,claude-opus-4-7,1,Precision,4,"Most claims are specific and unambiguous, though the '346%' typo introduces confusion."
+InjTest_ABLMC_1.txt,1,ABLMC,anthropic,claude-opus-4-7,1,Understandability,4,The reasoning is generally easy to follow with clear thresholds and interpretation.
+InjTest_ABLMC_1.txt,1,ABLMC,anthropic,claude-opus-4-7,1,Objectivity,5,Both strengths and weaknesses are clearly acknowledged and balanced.
+InjTest_ABLMC_1.txt,1,ABLMC,anthropic,claude-opus-4-7,1,Usefulness,4,"Provides actionable recommendations and useful interpretation, though some suggestions (e.g., score range calibration) are tangential to the injection test."
+InjTest_ABLMC_1.txt,1,ABLMC,anthropic,claude-opus-4-7,1,Language,3,"Contains typos ('Interjection', '346%') and minor grammatical issues that detract from quality."
+InjTest_ABLMC_1.txt,1,ABLMC,anthropic,claude-opus-4-7,1,Factual Accuracy,3,"The 36% and 54.9% figures match the table, but the '346%' figure for Injection 1 is a clear error contradicting the table."
+InjTest_ABLMC_1.txt,1,ABLMC,anthropic,claude-opus-4-7,2,Structure,4,"Clear sections (Sensitivity, Suitability with Strengths/Weaknesses, Recommendation, Improvements) make the card easy to navigate."
+InjTest_ABLMC_1.txt,1,ABLMC,anthropic,claude-opus-4-7,2,Precision,4,"Most claims are specific with numeric backing, though the '346%' typo introduces ambiguity."
+InjTest_ABLMC_1.txt,1,ABLMC,anthropic,claude-opus-4-7,2,Understandability,4,The reasoning is generally easy to follow and well-explained.
+InjTest_ABLMC_1.txt,1,ABLMC,anthropic,claude-opus-4-7,2,Objectivity,5,Balances strengths and weaknesses fairly and gives a justified negative recommendation.
+InjTest_ABLMC_1.txt,1,ABLMC,anthropic,claude-opus-4-7,2,Usefulness,4,"Offers concrete improvement suggestions, though some (e.g., calibration to 0-1) are tangential to the injection robustness question."
+InjTest_ABLMC_1.txt,1,ABLMC,anthropic,claude-opus-4-7,2,Language,3,"Generally fluent but contains errors like 'Interjection', '346%' typo, and minor awkward phrasing."
+InjTest_ABLMC_1.txt,1,ABLMC,anthropic,claude-opus-4-7,2,Factual Accuracy,3,"Numbers mostly match the table, but '346%' is a clear error (should be 36%) and labeling 36% as 'low-to-moderate' while 54.9% as 'moderate-to-high' is inconsistent with neither reaching the 70% threshold."
+InjTest_ABLMC_2.txt,2,ABLMC,anthropic,claude-opus-4-7,0,Structure,5,"Clear hierarchical organization with labeled sections, subsections, and numbered recommendations."
+InjTest_ABLMC_2.txt,2,ABLMC,anthropic,claude-opus-4-7,0,Precision,4,"Mostly precise with specific percentages and categories, though 'somewhat sensitive' is slightly vague."
+InjTest_ABLMC_2.txt,2,ABLMC,anthropic,claude-opus-4-7,0,Understandability,5,The card is easy to follow with clear explanations and concrete examples.
+InjTest_ABLMC_2.txt,2,ABLMC,anthropic,claude-opus-4-7,0,Objectivity,5,"Balanced view presenting both strengths (Injection 2 penalty) and weaknesses (insufficient change rate, interpretability)."
+InjTest_ABLMC_2.txt,2,ABLMC,anthropic,claude-opus-4-7,0,Usefulness,5,Provides actionable insights and concrete recommendations for improvement.
+InjTest_ABLMC_2.txt,2,ABLMC,anthropic,claude-opus-4-7,0,Language,4,"Generally well-written with minor issues like 'penalized stronger' and a stray comma in '0–1,)'."
+InjTest_ABLMC_2.txt,2,ABLMC,anthropic,claude-opus-4-7,0,Factual Accuracy,5,Numbers and category classifications align correctly with the table values.
+InjTest_ABLMC_2.txt,2,ABLMC,anthropic,claude-opus-4-7,1,Structure,5,"Clear hierarchical sections with headings, sub-points, and a numbered improvements list make the card easy to navigate."
+InjTest_ABLMC_2.txt,2,ABLMC,anthropic,claude-opus-4-7,1,Precision,4,"Most claims are specific with numeric values, though the change-rate categories (e.g., 50-69%) are introduced without prior definition."
+InjTest_ABLMC_2.txt,2,ABLMC,anthropic,claude-opus-4-7,1,Understandability,5,"The reasoning is easy to follow, with concrete examples and clear explanations of each finding."
+InjTest_ABLMC_2.txt,2,ABLMC,anthropic,claude-opus-4-7,1,Objectivity,5,"Balances strengths and weaknesses, acknowledging where the metric works and where it fails."
+InjTest_ABLMC_2.txt,2,ABLMC,anthropic,claude-opus-4-7,1,Usefulness,5,Provides actionable recommendations and insightful observations linking injection length to score differences.
+InjTest_ABLMC_2.txt,2,ABLMC,anthropic,claude-opus-4-7,1,Language,4,"Generally well written, with minor issues like a stray comma ('0–1,)') and slightly awkward phrasing ('penalized stronger')."
+InjTest_ABLMC_2.txt,2,ABLMC,anthropic,claude-opus-4-7,1,Factual Accuracy,5,"The reported scores and percentage changes match the table exactly, and conclusions follow correctly from them."
+InjTest_ABLMC_2.txt,2,ABLMC,anthropic,claude-opus-4-7,2,Structure,5,"Clear hierarchical structure with well-labeled sections covering sensitivity, strengths, weaknesses, recommendation, and improvements."
+InjTest_ABLMC_2.txt,2,ABLMC,anthropic,claude-opus-4-7,2,Precision,4,"Mostly precise with specific numbers and categories, though the claim 'shorter injection penalized stronger' is slightly confusingly worded."
+InjTest_ABLMC_2.txt,2,ABLMC,anthropic,claude-opus-4-7,2,Understandability,5,Easy to follow with clear explanations and concrete examples.
+InjTest_ABLMC_2.txt,2,ABLMC,anthropic,claude-opus-4-7,2,Objectivity,5,Balanced presentation acknowledging both the metric's correct directional behavior and its insufficient change rates.
+InjTest_ABLMC_2.txt,2,ABLMC,anthropic,claude-opus-4-7,2,Usefulness,5,Provides actionable recommendations and clear interpretation of the results relative to the 70% threshold.
+InjTest_ABLMC_2.txt,2,ABLMC,anthropic,claude-opus-4-7,2,Language,4,"Generally well-written with minor issues like the awkward phrasing 'penalized stronger' and a stray comma in '0–1,)'."
+InjTest_ABLMC_2.txt,2,ABLMC,anthropic,claude-opus-4-7,2,Factual Accuracy,5,Numbers and percentage categories accurately reflect the table; correctly identifies that injections scored lower than gold.
+InjTest_ABLMC_3.txt,4,ABLMC,anthropic,claude-opus-4-7,0,Structure,4,"The card flows logically from observation to interpretation to recommendation, though it lacks explicit headers in the final summary section."
+InjTest_ABLMC_3.txt,4,ABLMC,anthropic,claude-opus-4-7,0,Precision,4,Numbers and thresholds are stated clearly with specific percentages and category labels.
+InjTest_ABLMC_3.txt,4,ABLMC,anthropic,claude-opus-4-7,0,Understandability,5,The prose is clear and easy to follow for a reader familiar with the test setup.
+InjTest_ABLMC_3.txt,4,ABLMC,anthropic,claude-opus-4-7,0,Objectivity,5,"Both strengths (penalizing Injection 2) and weaknesses (insufficient change rate, negative scale) are acknowledged in a balanced way."
+InjTest_ABLMC_3.txt,4,ABLMC,anthropic,claude-opus-4-7,0,Usefulness,4,"Provides a clear recommendation and concrete improvement suggestions, though some suggestions (like rescaling) are more cosmetic than diagnostic."
+InjTest_ABLMC_3.txt,4,ABLMC,anthropic,claude-opus-4-7,0,Language,5,Grammatically correct and semantically coherent throughout.
+InjTest_ABLMC_3.txt,4,ABLMC,anthropic,claude-opus-4-7,0,Factual Accuracy,5,"Scores, percentages, and category classifications match the table exactly."
+InjTest_ABLMC_3.txt,4,ABLMC,anthropic,claude-opus-4-7,1,Structure,4,"The card flows logically from observation to evaluation to recommendations, though it lacks explicit headings in the final narrative version."
+InjTest_ABLMC_3.txt,4,ABLMC,anthropic,claude-opus-4-7,1,Precision,4,"Numbers and thresholds are stated clearly, though the phrase 'somewhat similar in absolute numbers' is slightly vague."
+InjTest_ABLMC_3.txt,4,ABLMC,anthropic,claude-opus-4-7,1,Understandability,5,"The text is easy to follow, with clear reasoning and well-explained conclusions."
+InjTest_ABLMC_3.txt,4,ABLMC,anthropic,claude-opus-4-7,1,Objectivity,5,"Both strengths (Injection 2 penalty) and weaknesses (inconsistent sensitivity, negative scale) are acknowledged in a balanced manner."
+InjTest_ABLMC_3.txt,4,ABLMC,anthropic,claude-opus-4-7,1,Usefulness,4,"Provides actionable insights and concrete improvement suggestions, useful for understanding the metric's limitations."
+InjTest_ABLMC_3.txt,4,ABLMC,anthropic,claude-opus-4-7,1,Language,5,Grammar and phrasing are correct and fluent throughout.
+InjTest_ABLMC_3.txt,4,ABLMC,anthropic,claude-opus-4-7,1,Factual Accuracy,5,"All reported numbers (-6.064, -8.247/-36%, -9.391/-54.9%) match the table exactly with no contradictions."
+InjTest_ABLMC_3.txt,4,ABLMC,anthropic,claude-opus-4-7,2,Structure,4,"The card has clear logical flow from observations to recommendation to improvements, though it lacks explicit headings in the final prose version."
+InjTest_ABLMC_3.txt,4,ABLMC,anthropic,claude-opus-4-7,2,Precision,4,"Numbers and thresholds are stated unambiguously, with clear references to change-rate categories."
+InjTest_ABLMC_3.txt,4,ABLMC,anthropic,claude-opus-4-7,2,Understandability,5,"The text is easy to follow and well-paced, with concrete examples and percentages."
+InjTest_ABLMC_3.txt,4,ABLMC,anthropic,claude-opus-4-7,2,Objectivity,5,"Both strengths (penalizes Injection 2) and weaknesses (no injection reaches 70%, negative scores) are acknowledged."
+InjTest_ABLMC_3.txt,4,ABLMC,anthropic,claude-opus-4-7,2,Usefulness,4,"Provides actionable improvement suggestions and a clear recommendation, though some suggestions (e.g., calibrating to 0-1) are somewhat generic."
+InjTest_ABLMC_3.txt,4,ABLMC,anthropic,claude-opus-4-7,2,Language,4,"Generally fluent and grammatically correct, with minor awkward phrasing like 'Scores were somewhat similar in absolute numbers'."
+InjTest_ABLMC_3.txt,4,ABLMC,anthropic,claude-opus-4-7,2,Factual Accuracy,5,"All cited numbers (-6.064, -8.247/-36%, -9.391/-54.9%) match the table accurately."
+InjTest_ABLMC_4.txt,5,ABLMC,anthropic,claude-opus-4-7,0,Structure,3,"The card has a recognizable structure with sections, but the duplicated/extra notes (start/end time, second draft) at the bottom create confusion."
+InjTest_ABLMC_4.txt,5,ABLMC,anthropic,claude-opus-4-7,0,Precision,3,"Most claims are clear, but some statements like 'difference of ~1' and '7 Words' are vague or unsupported."
+InjTest_ABLMC_4.txt,5,ABLMC,anthropic,claude-opus-4-7,0,Understandability,3,Generally understandable but the appended second version and informal notes hurt clarity.
+InjTest_ABLMC_4.txt,5,ABLMC,anthropic,claude-opus-4-7,0,Objectivity,4,Acknowledges both a strength (Injection 2 penalty) and several weaknesses in a balanced way.
+InjTest_ABLMC_4.txt,5,ABLMC,anthropic,claude-opus-4-7,0,Usefulness,3,"Provides reasonable insights and improvement suggestions, though some recommendations (e.g., 1/change-rate) are unclear."
+InjTest_ABLMC_4.txt,5,ABLMC,anthropic,claude-opus-4-7,0,Language,2,"Multiple grammatical errors, typos ('Stengths', 'moderatly', 'beeing'), and awkward phrasing throughout."
+InjTest_ABLMC_4.txt,5,ABLMC,anthropic,claude-opus-4-7,0,Factual Accuracy,4,"Numbers and change-rate categories largely match the table, though the '7 Words' claim is not directly supported by the table."
+InjTest_ABLMC_4.txt,5,ABLMC,anthropic,claude-opus-4-7,1,Structure,4,"The card follows the expected sections with headings, though the second half (after the timestamps) is a less organized duplicate that disrupts flow."
+InjTest_ABLMC_4.txt,5,ABLMC,anthropic,claude-opus-4-7,1,Precision,3,"Most claims are specific with numbers, but some statements like 'difference of ~1' and '7 Words' are vague or unexplained."
+InjTest_ABLMC_4.txt,5,ABLMC,anthropic,claude-opus-4-7,1,Understandability,3,"The first part is clear, but the appended second draft introduces redundancy and awkward phrasing that hinders comprehension."
+InjTest_ABLMC_4.txt,5,ABLMC,anthropic,claude-opus-4-7,1,Objectivity,4,"Both strengths and weaknesses are discussed, providing a balanced view of the metric's behavior."
+InjTest_ABLMC_4.txt,5,ABLMC,anthropic,claude-opus-4-7,1,Usefulness,3,"Provides reasonable insights and improvement suggestions, though some recommendations (e.g., '1/change-rate') are unclear in value."
+InjTest_ABLMC_4.txt,5,ABLMC,anthropic,claude-opus-4-7,1,Language,3,"Several typos and grammatical issues ('Stengths', 'moderatly', 'beeing', 'special designed') reduce linguistic quality."
+InjTest_ABLMC_4.txt,5,ABLMC,anthropic,claude-opus-4-7,1,Factual Accuracy,4,"Numerical values and change-rate categories align with the table, though the '~1' raw-score difference is imprecise (actual differences are ~2.2 and ~3.3)."
+InjTest_ABLMC_4.txt,5,ABLMC,anthropic,claude-opus-4-7,2,Structure,4,"The card follows the expected sections but appends a second, less organized draft after the main one which disrupts flow."
+InjTest_ABLMC_4.txt,5,ABLMC,anthropic,claude-opus-4-7,2,Precision,3,"Most claims are specific with numeric backing, but the duplicated second draft introduces ambiguous statements like 'difference of ~1'."
+InjTest_ABLMC_4.txt,5,ABLMC,anthropic,claude-opus-4-7,2,Understandability,3,"The first part is clear, but the appended notes contain awkward phrasing that hinders easy comprehension."
+InjTest_ABLMC_4.txt,5,ABLMC,anthropic,claude-opus-4-7,2,Objectivity,4,Both strengths and weaknesses are presented in a balanced manner with reasonable caveats.
+InjTest_ABLMC_4.txt,5,ABLMC,anthropic,claude-opus-4-7,2,Usefulness,3,"Provides useful interpretation and recommendations, though some improvement suggestions (e.g., 1/change-rate) are vague."
+InjTest_ABLMC_4.txt,5,ABLMC,anthropic,claude-opus-4-7,2,Language,2,"Numerous typos and grammatical errors appear in the second draft ('Stengths', 'beeing', 'moderatly')."
+InjTest_ABLMC_4.txt,5,ABLMC,anthropic,claude-opus-4-7,2,Factual Accuracy,4,Numbers and change-rate categories match the table; the claim of '~1' difference is loose but not contradictory.
+InjTest_FS_1.txt,3,FS,anthropic,claude-opus-4-7,0,Structure,3,"The card uses headers and sections but the Strengths/Weaknesses/Recommendation labels are not visually separated, reducing clarity."
+InjTest_FS_1.txt,3,FS,anthropic,claude-opus-4-7,0,Precision,2,"The reasoning is somewhat ambiguous, especially the 'Needed Improvements' section, which is confusingly worded about thresholds."
+InjTest_FS_1.txt,3,FS,anthropic,claude-opus-4-7,0,Understandability,3,The main numerical findings are graspable but the recommendation logic and improvement suggestion are hard to follow.
+InjTest_FS_1.txt,3,FS,anthropic,claude-opus-4-7,0,Objectivity,3,"The card lists both strengths and weaknesses but the strength is essentially just a restatement of failing the threshold, showing limited balance."
+InjTest_FS_1.txt,3,FS,anthropic,claude-opus-4-7,0,Usefulness,3,"It provides a clear verdict and raises a valid concern about gold-value-relative thresholds, but lacks deeper insight into ROUGE-L's behavior."
+InjTest_FS_1.txt,3,FS,anthropic,claude-opus-4-7,0,Language,3,"Generally understandable but contains awkward phrasing and minor grammatical issues (e.g., 'if the conditions should be set')."
+InjTest_FS_1.txt,3,FS,anthropic,claude-opus-4-7,0,Factual Accuracy,4,Scores and percentages match the table; minor issue is calling 55.8% 'moderate to high' which is interpretive but not contradictory.
+InjTest_FS_1.txt,3,FS,anthropic,claude-opus-4-7,1,Structure,4,"The card uses clear sections (Sensitivity, Strengths, Weaknesses, Recommendation, Improvements) which aid navigation, though formatting is slightly cramped."
+InjTest_FS_1.txt,3,FS,anthropic,claude-opus-4-7,1,Precision,3,"The reasoning is somewhat ambiguous, especially the final paragraph about revising 'conditions' based on gold value, which is unclear."
+InjTest_FS_1.txt,3,FS,anthropic,claude-opus-4-7,1,Understandability,3,Most points are graspable but the closing improvement section is confusingly worded and hard to follow.
+InjTest_FS_1.txt,3,FS,anthropic,claude-opus-4-7,1,Objectivity,4,"Both strengths and weaknesses are noted, and the author reflects critically on the threshold rule itself."
+InjTest_FS_1.txt,3,FS,anthropic,claude-opus-4-7,1,Usefulness,3,"Provides a recommendation and a thoughtful caveat about gold-value baselines, though the analysis is fairly shallow."
+InjTest_FS_1.txt,3,FS,anthropic,claude-opus-4-7,1,Language,3,"Several grammatical awkwardnesses and run-on phrasing reduce clarity, though meaning is generally recoverable."
+InjTest_FS_1.txt,3,FS,anthropic,claude-opus-4-7,1,Factual Accuracy,4,"Numbers and change rates match the table; minor inconsistency in calling 55.8% 'moderate to high' while the strength claim says no injection reached ≥70%, which is internally consistent."
+InjTest_FS_1.txt,3,FS,anthropic,claude-opus-4-7,2,Structure,3,Uses headers and labeled subsections but the Strengths/Weaknesses/Recommendation lines are run together without clear formatting.
+InjTest_FS_1.txt,3,FS,anthropic,claude-opus-4-7,2,Precision,2,"The recommendation logic is confusing — it states the metric detects most injections yet recommends against it, with unclear reasoning."
+InjTest_FS_1.txt,3,FS,anthropic,claude-opus-4-7,2,Understandability,3,Generally readable but the 'Needed Improvements' paragraph is convoluted and hard to follow.
+InjTest_FS_1.txt,3,FS,anthropic,claude-opus-4-7,2,Objectivity,3,"Acknowledges that injections are detected (lower scores) while noting threshold not met, providing some balance."
+InjTest_FS_1.txt,3,FS,anthropic,claude-opus-4-7,2,Usefulness,3,"Offers a meaningful critique about threshold calibration relative to gold values, which is insightful, though somewhat muddled."
+InjTest_FS_1.txt,3,FS,anthropic,claude-opus-4-7,2,Language,3,Mostly grammatical but contains awkward phrasing and run-on sentences in the improvements section.
+InjTest_FS_1.txt,3,FS,anthropic,claude-opus-4-7,2,Factual Accuracy,4,"Numbers and change rates match the table, though calling 55.8% 'moderate to high' is a subjective interpretation."
+InjTest_FS_2.txt,6,FS,anthropic,claude-opus-4-7,0,Structure,4,"The card follows a clear sectioned structure with strengths, weaknesses, and recommendations."
+InjTest_FS_2.txt,6,FS,anthropic,claude-opus-4-7,0,Precision,3,Mostly clear but contains an incorrect score (0.125 vs 0.127) and a confusing claim that the metric 'consistently detects every non-summary injection' while not recommending it.
+InjTest_FS_2.txt,6,FS,anthropic,claude-opus-4-7,0,Understandability,4,The reasoning is generally easy to follow despite minor inconsistencies.
+InjTest_FS_2.txt,6,FS,anthropic,claude-opus-4-7,0,Objectivity,4,Both strengths and weaknesses are presented in a balanced manner.
+InjTest_FS_2.txt,6,FS,anthropic,claude-opus-4-7,0,Usefulness,4,Provides actionable recommendations and improvement suggestions relevant to the test.
+InjTest_FS_2.txt,6,FS,anthropic,claude-opus-4-7,0,Language,3,"Several grammatical issues (e.g., 'metric is somewhat sensitive for', 'penalized stronger', 'finetuning... aligned with human knowledge')."
+InjTest_FS_2.txt,6,FS,anthropic,claude-opus-4-7,0,Factual Accuracy,2,"The header references BARTScore-avg-f instead of ROUGE-L, and Injection 1's score is misreported as 0.125 instead of 0.127."
+InjTest_FS_2.txt,6,FS,anthropic,claude-opus-4-7,1,Structure,4,Clear sectioned format with headings makes the card easy to navigate.
+InjTest_FS_2.txt,6,FS,anthropic,claude-opus-4-7,1,Precision,3,"Mostly precise but introduces an undefined 'category' (50-69%) and references the wrong metric name, creating ambiguity."
+InjTest_FS_2.txt,6,FS,anthropic,claude-opus-4-7,1,Understandability,4,The reasoning and recommendations are easy to follow despite minor inconsistencies.
+InjTest_FS_2.txt,6,FS,anthropic,claude-opus-4-7,1,Objectivity,4,Both strengths and weaknesses are presented in a balanced way.
+InjTest_FS_2.txt,6,FS,anthropic,claude-opus-4-7,1,Usefulness,4,Provides actionable recommendations and clear interpretation of the change rates.
+InjTest_FS_2.txt,6,FS,anthropic,claude-opus-4-7,1,Language,3,Generally readable but contains awkward phrasing like 'sensitive for' and 'penalized stronger'.
+InjTest_FS_2.txt,6,FS,anthropic,claude-opus-4-7,1,Factual Accuracy,2,Misreports Injection 1 as 0.125 instead of 0.127 and labels the section as bartscore-avg-f instead of ROUGE-L.
+InjTest_FS_2.txt,6,FS,anthropic,claude-opus-4-7,2,Structure,4,"The card follows a clear sectioned structure with headers for sensitivity, strengths, weaknesses, recommendation, and improvements."
+InjTest_FS_2.txt,6,FS,anthropic,claude-opus-4-7,2,Precision,3,"Mostly clear but the heading mentions bartscore-avg-f instead of ROUGE-L, creating ambiguity about which metric is discussed."
+InjTest_FS_2.txt,6,FS,anthropic,claude-opus-4-7,2,Understandability,4,The reasoning and conclusions are easy to follow despite some minor errors.
+InjTest_FS_2.txt,6,FS,anthropic,claude-opus-4-7,2,Objectivity,4,Both strengths and weaknesses are discussed in a balanced manner.
+InjTest_FS_2.txt,6,FS,anthropic,claude-opus-4-7,2,Usefulness,3,"Provides reasonable insights and recommendations, though the bartscore mislabel and the vague 'human-in-the-loop' suggestion limit utility."
+InjTest_FS_2.txt,6,FS,anthropic,claude-opus-4-7,2,Language,3,"Generally readable but contains grammatical issues ('sensitive for', 'penalized stronger', awkward phrasing)."
+InjTest_FS_2.txt,6,FS,anthropic,claude-opus-4-7,2,Factual Accuracy,2,"Reports Injection 1 as 0.125 instead of 0.127, and the section heading misnames the metric as bartscore-avg-f instead of ROUGE-L."
+InjTest_FS_3.txt,7,FS,anthropic,claude-opus-4-7,0,Structure,3,The card flows as three paragraphs but lacks headings or clear sections separating findings from recommendations.
+InjTest_FS_3.txt,7,FS,anthropic,claude-opus-4-7,0,Precision,3,The terminology around 'moderate to high change rates' is somewhat ambiguous and doesn't clearly tie to the 70% threshold criterion.
+InjTest_FS_3.txt,7,FS,anthropic,claude-opus-4-7,0,Understandability,4,The text is generally easy to follow and conveys the main findings clearly.
+InjTest_FS_3.txt,7,FS,anthropic,claude-opus-4-7,0,Objectivity,4,"The card acknowledges the metric's sensitivity while noting it falls short of the threshold, presenting a balanced view."
+InjTest_FS_3.txt,7,FS,anthropic,claude-opus-4-7,0,Usefulness,3,"It provides a verdict and improvement suggestions, though the recommendations are somewhat generic and don't deeply analyze ROUGE-L specifically."
+InjTest_FS_3.txt,7,FS,anthropic,claude-opus-4-7,0,Language,4,"Mostly correct grammar with minor awkward phrasing like 'similar, but a minimally better scores'."
+InjTest_FS_3.txt,7,FS,anthropic,claude-opus-4-7,0,Factual Accuracy,4,"Numbers are reported correctly, though calling -55.8% 'moderate to high' is debatable and Injection 1 having higher score than Injection 2 is correctly noted."
+InjTest_FS_3.txt,7,FS,anthropic,claude-opus-4-7,1,Structure,3,"The card flows as continuous prose without headings or sections, which makes it less navigable though still logically ordered."
+InjTest_FS_3.txt,7,FS,anthropic,claude-opus-4-7,1,Precision,4,"Most claims are clear and tied to numbers, though the phrase 'moderate to high change rates' is slightly ambiguous given the 70% threshold."
+InjTest_FS_3.txt,7,FS,anthropic,claude-opus-4-7,1,Understandability,4,The reasoning is easy to follow and the comparison between injections and gold is clearly explained.
+InjTest_FS_3.txt,7,FS,anthropic,claude-opus-4-7,1,Objectivity,4,"The card acknowledges that the metric does react to injections but ultimately judges it unsuitable, presenting a fairly balanced view."
+InjTest_FS_3.txt,7,FS,anthropic,claude-opus-4-7,1,Usefulness,4,"It provides a clear verdict and concrete suggestions for improvement, offering useful insight into the metric's behavior."
+InjTest_FS_3.txt,7,FS,anthropic,claude-opus-4-7,1,Language,4,"Generally grammatical with only minor awkward phrasings like 'similar, but a minimally better scores'."
+InjTest_FS_3.txt,7,FS,anthropic,claude-opus-4-7,1,Factual Accuracy,4,"Numbers and direction of change are reported correctly, though calling -65.6% only 'moderate to high' understates that it is close to the 70% threshold."
+InjTest_FS_3.txt,7,FS,anthropic,claude-opus-4-7,2,Structure,3,"The card flows in paragraphs without clear sections, but follows a logical order from observation to recommendation."
+InjTest_FS_3.txt,7,FS,anthropic,claude-opus-4-7,2,Precision,3,"The interpretation is mostly clear, though phrasing like 'moderate to high change rates' and 'minimally better' is somewhat ambiguous."
+InjTest_FS_3.txt,7,FS,anthropic,claude-opus-4-7,2,Understandability,4,The text is generally easy to follow and conveys the main findings clearly.
+InjTest_FS_3.txt,7,FS,anthropic,claude-opus-4-7,2,Objectivity,3,"It mostly emphasizes weaknesses; strengths (correct directionality, sensitivity to injections) are only briefly acknowledged."
+InjTest_FS_3.txt,7,FS,anthropic,claude-opus-4-7,2,Usefulness,3,"It offers a verdict and improvement suggestions, but the calibration recommendation is vague and not tightly linked to ROUGE-L's mechanics."
+InjTest_FS_3.txt,7,FS,anthropic,claude-opus-4-7,2,Language,3,"Grammar is mostly correct with minor awkward phrasing such as 'producing similar, but a minimally better scores'."
+InjTest_FS_3.txt,7,FS,anthropic,claude-opus-4-7,2,Factual Accuracy,4,"Numbers are reported correctly; however, claiming neither injection reached the >=70% threshold is accurate, though calling -65.6% only 'moderate to high' slightly understates it."
+InjTest_FS_4.txt,8,FS,anthropic,claude-opus-4-7,0,Structure,2,The card lacks clear sections or headings and reads as loosely organized paragraphs with timestamps at the top.
+InjTest_FS_4.txt,8,FS,anthropic,claude-opus-4-7,0,Precision,3,"Most claims are reasonably specific (percentages given), though some sentences are vague about what 'punished moderately' or 'equally' means."
+InjTest_FS_4.txt,8,FS,anthropic,claude-opus-4-7,0,Understandability,3,The main points are graspable but several sentences are convoluted and require re-reading.
+InjTest_FS_4.txt,8,FS,anthropic,claude-opus-4-7,0,Objectivity,3,"It acknowledges both the metric's robustness and a potential attack vector, providing some balance."
+InjTest_FS_4.txt,8,FS,anthropic,claude-opus-4-7,0,Usefulness,3,It offers a basic interpretation and a useful suggestion for follow-up tests with longer injections.
+InjTest_FS_4.txt,8,FS,anthropic,claude-opus-4-7,0,Language,2,"Multiple grammatical errors and typos ('then' vs 'than', 'if shows', 'an summarization', 'thou') hurt readability."
+InjTest_FS_4.txt,8,FS,anthropic,claude-opus-4-7,0,Factual Accuracy,2,"Contains a contradiction: it says both were 'punished equally' but the table shows a clear ~10pp gap, and Injection1 scoring higher than Injection2 means it was punished less, not 'identified more easily'—the directionality is muddled."
+InjTest_FS_4.txt,8,FS,anthropic,claude-opus-4-7,1,Structure,2,The card lacks clear sections or headings and reads as loosely connected paragraphs with timestamps at the top.
+InjTest_FS_4.txt,8,FS,anthropic,claude-opus-4-7,1,Precision,3,"Key claims are conveyed but some statements are ambiguous (e.g., 'punished them equally' contradicts earlier differentiation)."
+InjTest_FS_4.txt,8,FS,anthropic,claude-opus-4-7,1,Understandability,3,The main points can be grasped despite awkward phrasing and some unclear sentences.
+InjTest_FS_4.txt,8,FS,anthropic,claude-opus-4-7,1,Objectivity,4,"The card balances strengths (robustness) with potential weaknesses (attack vector, need for longer injection tests)."
+InjTest_FS_4.txt,8,FS,anthropic,claude-opus-4-7,1,Usefulness,3,"It offers some useful observations about non-reliance on length and suggests further testing, but lacks depth and a clear change-rate verdict against the 70% threshold."
+InjTest_FS_4.txt,8,FS,anthropic,claude-opus-4-7,1,Language,2,"Multiple grammatical errors, typos, and awkward constructions ('thou' for 'though', 'if shows', 'an summarization')."
+InjTest_FS_4.txt,8,FS,anthropic,claude-opus-4-7,1,Factual Accuracy,2,"Percentages relative to gold are roughly correct, but the claim that the metric 'punished them equally' contradicts the table showing a notable -55.8% vs -65.6% difference, and neither drop meets the 70% robustness threshold."
+InjTest_FS_4.txt,8,FS,anthropic,claude-opus-4-7,2,Structure,2,The card lacks clear sections or headings; it is a loose sequence of paragraphs with timestamps at the top.
+InjTest_FS_4.txt,8,FS,anthropic,claude-opus-4-7,2,Precision,3,"Claims are mostly understandable but some statements (e.g., 'punished them equally') are ambiguous given the actual score gap."
+InjTest_FS_4.txt,8,FS,anthropic,claude-opus-4-7,2,Understandability,3,"The main points come across despite awkward phrasing, but the reader must work to parse some sentences."
+InjTest_FS_4.txt,8,FS,anthropic,claude-opus-4-7,2,Objectivity,4,"The author acknowledges both the metric's robustness and a potential attack vector, providing reasonable balance."
+InjTest_FS_4.txt,8,FS,anthropic,claude-opus-4-7,2,Usefulness,3,"Offers some insights and a suggestion for follow-up testing, but lacks deeper analysis of why the metric behaves this way."
+InjTest_FS_4.txt,8,FS,anthropic,claude-opus-4-7,2,Language,2,"Numerous grammar and spelling issues (e.g., 'thou' for 'though', 'an summarization', 'if shows', 'punished both injections moderate')."
+InjTest_FS_4.txt,8,FS,anthropic,claude-opus-4-7,2,Factual Accuracy,2,Contradicts itself by saying injections were 'punished equally' when drops are 55.8% vs 65.6%; also 'high change-rate >=70%' threshold not met but card calls metric 'very capable'.

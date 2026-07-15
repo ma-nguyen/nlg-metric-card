@@ -1,0 +1,22 @@
+# Condition: FS
+# Metric: ROUGE-L
+# Source: InjTest_FS_4.docx
+
+## Test results table
+Gold	Injection 1	Injection 2
+0.286	0.127 (-55.8%)	0.099 (-65.6%)
+
+## Participant metric card
+Start time: 16:33
+end time: 17:00
+Rouge-L evaluation on CNNDM-summarization:
+None of the Injections outperformed the baseline(gold-label). Injection1 scored highest with 44.2% of the baseline-score and Injection2 with 34.4%.
+
+The metric punished both injections moderate. But identified Injection2 more easily as an injection instead of an summarization. As stated beforehand both injections did not fool the metric easily, but Injection1 still scored higher then injection2.
+The metric identified both injections as such and punished them equally, because of the closeness of both scores if shows that the metric does not simply rely on summarization length, as long as the injection is short or sentiment about its relevancy or goodness. Also the injection did not convey the same amount of information as one would expect from an summarization
+
+Still even thou the score of both injections are close, there is an difference. This might result in an attack vector – resulting in fooling this metric.
+
+The metric is very capable of identifying injections.
+
+Because of the shortness if the injection, tests on longer, more elaborate injections might be valuable

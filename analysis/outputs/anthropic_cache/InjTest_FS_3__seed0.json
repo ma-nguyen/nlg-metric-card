@@ -1,0 +1,24 @@
+{
+  "data": {
+    "structure": 3,
+    "precision": 3,
+    "understandability": 4,
+    "objectivity": 4,
+    "usefulness": 3,
+    "language": 4,
+    "factual_accuracy": 4,
+    "rationale": {
+      "structure": "The card flows as three paragraphs but lacks headings or clear sections separating findings from recommendations.",
+      "precision": "The terminology around 'moderate to high change rates' is somewhat ambiguous and doesn't clearly tie to the 70% threshold criterion.",
+      "understandability": "The text is generally easy to follow and conveys the main findings clearly.",
+      "objectivity": "The card acknowledges the metric's sensitivity while noting it falls short of the threshold, presenting a balanced view.",
+      "usefulness": "It provides a verdict and improvement suggestions, though the recommendations are somewhat generic and don't deeply analyze ROUGE-L specifically.",
+      "language": "Mostly correct grammar with minor awkward phrasing like 'similar, but a minimally better scores'.",
+      "factual_accuracy": "Numbers are reported correctly, though calling -55.8% 'moderate to high' is debatable and Injection 1 having higher score than Injection 2 is correctly noted."
+    }
+  },
+  "raw": "{\"structure\":3,\"precision\":3,\"understandability\":4,\"objectivity\":4,\"usefulness\":3,\"language\":4,\"factual_accuracy\":4,\"rationale\":{\"structure\":\"The card flows as three paragraphs but lacks headings or clear sections separating findings from recommendations.\",\"precision\":\"The terminology around 'moderate to high change rates' is somewhat ambiguous and doesn't clearly tie to the 70% threshold criterion.\",\"understandability\":\"The text is generally easy to follow and conveys the main findings clearly.\",\"objectivity\":\"The card acknowledges the metric's sensitivity while noting it falls short of the threshold, presenting a balanced view.\",\"usefulness\":\"It provides a verdict and improvement suggestions, though the recommendations are somewhat generic and don't deeply analyze ROUGE-L specifically.\",\"language\":\"Mostly correct grammar with minor awkward phrasing like 'similar, but a minimally better scores'.\",\"factual_accuracy\":\"Numbers are reported correctly, though calling -55.8% 'moderate to high' is debatable and Injection 1 having higher score than Injection 2 is correctly noted.\"}}",
+  "model": "claude-opus-4-7",
+  "seed": 0,
+  "provider": "anthropic"
+}

@@ -1,0 +1,24 @@
+{
+  "data": {
+    "structure": 4,
+    "precision": 4,
+    "understandability": 5,
+    "objectivity": 5,
+    "usefulness": 4,
+    "language": 4,
+    "factual_accuracy": 5,
+    "rationale": {
+      "structure": "The card has clear logical flow from observations to recommendation to improvements, though it lacks explicit headings in the final prose version.",
+      "precision": "Numbers and thresholds are stated unambiguously, with clear references to change-rate categories.",
+      "understandability": "The text is easy to follow and well-paced, with concrete examples and percentages.",
+      "objectivity": "Both strengths (penalizes Injection 2) and weaknesses (no injection reaches 70%, negative scores) are acknowledged.",
+      "usefulness": "Provides actionable improvement suggestions and a clear recommendation, though some suggestions (e.g., calibrating to 0-1) are somewhat generic.",
+      "language": "Generally fluent and grammatically correct, with minor awkward phrasing like 'Scores were somewhat similar in absolute numbers'.",
+      "factual_accuracy": "All cited numbers (-6.064, -8.247/-36%, -9.391/-54.9%) match the table accurately."
+    }
+  },
+  "raw": "{\"structure\":4,\"precision\":4,\"understandability\":5,\"objectivity\":5,\"usefulness\":4,\"language\":4,\"factual_accuracy\":5,\"rationale\":{\"structure\":\"The card has clear logical flow from observations to recommendation to improvements, though it lacks explicit headings in the final prose version.\",\"precision\":\"Numbers and thresholds are stated unambiguously, with clear references to change-rate categories.\",\"understandability\":\"The text is easy to follow and well-paced, with concrete examples and percentages.\",\"objectivity\":\"Both strengths (penalizes Injection 2) and weaknesses (no injection reaches 70%, negative scores) are acknowledged.\",\"usefulness\":\"Provides actionable improvement suggestions and a clear recommendation, though some suggestions (e.g., calibrating to 0-1) are somewhat generic.\",\"language\":\"Generally fluent and grammatically correct, with minor awkward phrasing like 'Scores were somewhat similar in absolute numbers'.\",\"factual_accuracy\":\"All cited numbers (-6.064, -8.247/-36%, -9.391/-54.9%) match the table accurately.\"}}",
+  "model": "claude-opus-4-7",
+  "seed": 2,
+  "provider": "anthropic"
+}

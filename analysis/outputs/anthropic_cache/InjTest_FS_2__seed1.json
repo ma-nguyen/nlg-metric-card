@@ -1,0 +1,24 @@
+{
+  "data": {
+    "structure": 4,
+    "precision": 3,
+    "understandability": 4,
+    "objectivity": 4,
+    "usefulness": 4,
+    "language": 3,
+    "factual_accuracy": 2,
+    "rationale": {
+      "structure": "Clear sectioned format with headings makes the card easy to navigate.",
+      "precision": "Mostly precise but introduces an undefined 'category' (50-69%) and references the wrong metric name, creating ambiguity.",
+      "understandability": "The reasoning and recommendations are easy to follow despite minor inconsistencies.",
+      "objectivity": "Both strengths and weaknesses are presented in a balanced way.",
+      "usefulness": "Provides actionable recommendations and clear interpretation of the change rates.",
+      "language": "Generally readable but contains awkward phrasing like 'sensitive for' and 'penalized stronger'.",
+      "factual_accuracy": "Misreports Injection 1 as 0.125 instead of 0.127 and labels the section as bartscore-avg-f instead of ROUGE-L."
+    }
+  },
+  "raw": "{\"structure\":4,\"precision\":3,\"understandability\":4,\"objectivity\":4,\"usefulness\":4,\"language\":3,\"factual_accuracy\":2,\"rationale\":{\"structure\":\"Clear sectioned format with headings makes the card easy to navigate.\",\"precision\":\"Mostly precise but introduces an undefined 'category' (50-69%) and references the wrong metric name, creating ambiguity.\",\"understandability\":\"The reasoning and recommendations are easy to follow despite minor inconsistencies.\",\"objectivity\":\"Both strengths and weaknesses are presented in a balanced way.\",\"usefulness\":\"Provides actionable recommendations and clear interpretation of the change rates.\",\"language\":\"Generally readable but contains awkward phrasing like 'sensitive for' and 'penalized stronger'.\",\"factual_accuracy\":\"Misreports Injection 1 as 0.125 instead of 0.127 and labels the section as bartscore-avg-f instead of ROUGE-L.\"}}",
+  "model": "claude-opus-4-7",
+  "seed": 1,
+  "provider": "anthropic"
+}

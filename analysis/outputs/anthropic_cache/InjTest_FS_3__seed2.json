@@ -1,0 +1,24 @@
+{
+  "data": {
+    "structure": 3,
+    "precision": 3,
+    "understandability": 4,
+    "objectivity": 3,
+    "usefulness": 3,
+    "language": 3,
+    "factual_accuracy": 4,
+    "rationale": {
+      "structure": "The card flows in paragraphs without clear sections, but follows a logical order from observation to recommendation.",
+      "precision": "The interpretation is mostly clear, though phrasing like 'moderate to high change rates' and 'minimally better' is somewhat ambiguous.",
+      "understandability": "The text is generally easy to follow and conveys the main findings clearly.",
+      "objectivity": "It mostly emphasizes weaknesses; strengths (correct directionality, sensitivity to injections) are only briefly acknowledged.",
+      "usefulness": "It offers a verdict and improvement suggestions, but the calibration recommendation is vague and not tightly linked to ROUGE-L's mechanics.",
+      "language": "Grammar is mostly correct with minor awkward phrasing such as 'producing similar, but a minimally better scores'.",
+      "factual_accuracy": "Numbers are reported correctly; however, claiming neither injection reached the >=70% threshold is accurate, though calling -65.6% only 'moderate to high' slightly understates it."
+    }
+  },
+  "raw": "{\"structure\":3,\"precision\":3,\"understandability\":4,\"objectivity\":3,\"usefulness\":3,\"language\":3,\"factual_accuracy\":4,\"rationale\":{\"structure\":\"The card flows in paragraphs without clear sections, but follows a logical order from observation to recommendation.\",\"precision\":\"The interpretation is mostly clear, though phrasing like 'moderate to high change rates' and 'minimally better' is somewhat ambiguous.\",\"understandability\":\"The text is generally easy to follow and conveys the main findings clearly.\",\"objectivity\":\"It mostly emphasizes weaknesses; strengths (correct directionality, sensitivity to injections) are only briefly acknowledged.\",\"usefulness\":\"It offers a verdict and improvement suggestions, but the calibration recommendation is vague and not tightly linked to ROUGE-L's mechanics.\",\"language\":\"Grammar is mostly correct with minor awkward phrasing such as 'producing similar, but a minimally better scores'.\",\"factual_accuracy\":\"Numbers are reported correctly; however, claiming neither injection reached the >=70% threshold is accurate, though calling -65.6% only 'moderate to high' slightly understates it.\"}}",
+  "model": "claude-opus-4-7",
+  "seed": 2,
+  "provider": "anthropic"
+}

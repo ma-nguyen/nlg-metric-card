@@ -1,0 +1,113 @@
+annotator,timestamp,card_id,dimension,score,condition,metric,source_file
+A1,26.04.2026 15:37:37,3,Structure,4,FS,ROUGE-L,InjTest_FS_1.docx
+A1,26.04.2026 15:37:37,3,Precision,4,FS,ROUGE-L,InjTest_FS_1.docx
+A1,26.04.2026 15:37:37,3,Understandability,4,FS,ROUGE-L,InjTest_FS_1.docx
+A1,26.04.2026 15:37:37,3,Objectivity,2,FS,ROUGE-L,InjTest_FS_1.docx
+A1,26.04.2026 15:37:37,3,Usefulness,2,FS,ROUGE-L,InjTest_FS_1.docx
+A1,26.04.2026 15:37:37,3,Language,4,FS,ROUGE-L,InjTest_FS_1.docx
+A1,26.04.2026 15:37:37,3,Factual Accuracy,5,FS,ROUGE-L,InjTest_FS_1.docx
+A1,26.04.2026 15:37:37,6,Factual Accuracy,4,FS,ROUGE-L,InjTest_FS_2.docx
+A1,26.04.2026 15:37:37,6,Understandability,3,FS,ROUGE-L,InjTest_FS_2.docx
+A1,26.04.2026 15:37:37,6,Objectivity,4,FS,ROUGE-L,InjTest_FS_2.docx
+A1,26.04.2026 15:37:37,6,Precision,4,FS,ROUGE-L,InjTest_FS_2.docx
+A1,26.04.2026 15:37:37,6,Usefulness,2,FS,ROUGE-L,InjTest_FS_2.docx
+A1,26.04.2026 15:37:37,6,Structure,3,FS,ROUGE-L,InjTest_FS_2.docx
+A1,26.04.2026 15:37:37,6,Language,2,FS,ROUGE-L,InjTest_FS_2.docx
+A1,26.04.2026 15:37:37,7,Language,5,FS,ROUGE-L,InjTest_FS_3.docx
+A1,26.04.2026 15:37:37,7,Usefulness,2,FS,ROUGE-L,InjTest_FS_3.docx
+A1,26.04.2026 15:37:37,7,Factual Accuracy,5,FS,ROUGE-L,InjTest_FS_3.docx
+A1,26.04.2026 15:37:37,7,Understandability,5,FS,ROUGE-L,InjTest_FS_3.docx
+A1,26.04.2026 15:37:37,7,Structure,4,FS,ROUGE-L,InjTest_FS_3.docx
+A1,26.04.2026 15:37:37,7,Objectivity,3,FS,ROUGE-L,InjTest_FS_3.docx
+A1,26.04.2026 15:37:37,7,Precision,4,FS,ROUGE-L,InjTest_FS_3.docx
+A1,26.04.2026 15:37:37,8,Precision,3,FS,ROUGE-L,InjTest_FS_4.docx
+A1,26.04.2026 15:37:37,8,Language,5,FS,ROUGE-L,InjTest_FS_4.docx
+A1,26.04.2026 15:37:37,8,Structure,2,FS,ROUGE-L,InjTest_FS_4.docx
+A1,26.04.2026 15:37:37,8,Understandability,2,FS,ROUGE-L,InjTest_FS_4.docx
+A1,26.04.2026 15:37:37,8,Usefulness,2,FS,ROUGE-L,InjTest_FS_4.docx
+A1,26.04.2026 15:37:37,8,Objectivity,4,FS,ROUGE-L,InjTest_FS_4.docx
+A1,26.04.2026 15:37:37,8,Factual Accuracy,3,FS,ROUGE-L,InjTest_FS_4.docx
+A1,26.04.2026 15:37:37,1,Objectivity,4,ABLMC,BARTScore-avg-f,InjTest_ABLMC_1.docx
+A1,26.04.2026 15:37:37,1,Understandability,3,ABLMC,BARTScore-avg-f,InjTest_ABLMC_1.docx
+A1,26.04.2026 15:37:37,1,Factual Accuracy,5,ABLMC,BARTScore-avg-f,InjTest_ABLMC_1.docx
+A1,26.04.2026 15:37:37,1,Usefulness,3,ABLMC,BARTScore-avg-f,InjTest_ABLMC_1.docx
+A1,26.04.2026 15:37:37,1,Structure,5,ABLMC,BARTScore-avg-f,InjTest_ABLMC_1.docx
+A1,26.04.2026 15:37:37,1,Precision,5,ABLMC,BARTScore-avg-f,InjTest_ABLMC_1.docx
+A1,26.04.2026 15:37:37,1,Language,4,ABLMC,BARTScore-avg-f,InjTest_ABLMC_1.docx
+A1,26.04.2026 15:37:37,2,Understandability,4,ABLMC,BARTScore-avg-f,InjTest_ABLMC_2.docx
+A1,26.04.2026 15:37:37,2,Usefulness,2,ABLMC,BARTScore-avg-f,InjTest_ABLMC_2.docx
+A1,26.04.2026 15:37:37,2,Structure,4,ABLMC,BARTScore-avg-f,InjTest_ABLMC_2.docx
+A1,26.04.2026 15:37:37,2,Factual Accuracy,3,ABLMC,BARTScore-avg-f,InjTest_ABLMC_2.docx
+A1,26.04.2026 15:37:37,2,Precision,2,ABLMC,BARTScore-avg-f,InjTest_ABLMC_2.docx
+A1,26.04.2026 15:37:37,2,Objectivity,3,ABLMC,BARTScore-avg-f,InjTest_ABLMC_2.docx
+A1,26.04.2026 15:37:37,2,Language,3,ABLMC,BARTScore-avg-f,InjTest_ABLMC_2.docx
+A1,26.04.2026 15:37:37,4,Structure,4,ABLMC,BARTScore-avg-f,InjTest_ABLMC_3.docx
+A1,26.04.2026 15:37:37,4,Language,5,ABLMC,BARTScore-avg-f,InjTest_ABLMC_3.docx
+A1,26.04.2026 15:37:37,4,Usefulness,3,ABLMC,BARTScore-avg-f,InjTest_ABLMC_3.docx
+A1,26.04.2026 15:37:37,4,Factual Accuracy,5,ABLMC,BARTScore-avg-f,InjTest_ABLMC_3.docx
+A1,26.04.2026 15:37:37,4,Understandability,2,ABLMC,BARTScore-avg-f,InjTest_ABLMC_3.docx
+A1,26.04.2026 15:37:37,4,Precision,4,ABLMC,BARTScore-avg-f,InjTest_ABLMC_3.docx
+A1,26.04.2026 15:37:37,4,Objectivity,4,ABLMC,BARTScore-avg-f,InjTest_ABLMC_3.docx
+A1,26.04.2026 15:37:37,5,Objectivity,2,ABLMC,BARTScore-avg-f,InjTest_ABLMC_4.docx
+A1,26.04.2026 15:37:37,5,Structure,2,ABLMC,BARTScore-avg-f,InjTest_ABLMC_4.docx
+A1,26.04.2026 15:37:37,5,Factual Accuracy,5,ABLMC,BARTScore-avg-f,InjTest_ABLMC_4.docx
+A1,26.04.2026 15:37:37,5,Usefulness,3,ABLMC,BARTScore-avg-f,InjTest_ABLMC_4.docx
+A1,26.04.2026 15:37:37,5,Precision,4,ABLMC,BARTScore-avg-f,InjTest_ABLMC_4.docx
+A1,26.04.2026 15:37:37,5,Understandability,2,ABLMC,BARTScore-avg-f,InjTest_ABLMC_4.docx
+A1,26.04.2026 15:37:37,5,Language,5,ABLMC,BARTScore-avg-f,InjTest_ABLMC_4.docx
+A2,28.04.2026 18:08:38,3,Structure,4,FS,ROUGE-L,InjTest_FS_1.docx
+A2,28.04.2026 18:08:38,3,Precision,3,FS,ROUGE-L,InjTest_FS_1.docx
+A2,28.04.2026 18:08:38,3,Understandability,3,FS,ROUGE-L,InjTest_FS_1.docx
+A2,28.04.2026 18:08:38,3,Objectivity,2,FS,ROUGE-L,InjTest_FS_1.docx
+A2,28.04.2026 18:08:38,3,Usefulness,3,FS,ROUGE-L,InjTest_FS_1.docx
+A2,28.04.2026 18:08:38,3,Language,2,FS,ROUGE-L,InjTest_FS_1.docx
+A2,28.04.2026 18:08:38,3,Factual Accuracy,4,FS,ROUGE-L,InjTest_FS_1.docx
+A2,28.04.2026 18:08:38,6,Factual Accuracy,4,FS,ROUGE-L,InjTest_FS_2.docx
+A2,28.04.2026 18:08:38,6,Understandability,2,FS,ROUGE-L,InjTest_FS_2.docx
+A2,28.04.2026 18:08:38,6,Objectivity,3,FS,ROUGE-L,InjTest_FS_2.docx
+A2,28.04.2026 18:08:38,6,Precision,2,FS,ROUGE-L,InjTest_FS_2.docx
+A2,28.04.2026 18:08:38,6,Usefulness,2,FS,ROUGE-L,InjTest_FS_2.docx
+A2,28.04.2026 18:08:38,6,Structure,3,FS,ROUGE-L,InjTest_FS_2.docx
+A2,28.04.2026 18:08:38,6,Language,2,FS,ROUGE-L,InjTest_FS_2.docx
+A2,28.04.2026 18:08:38,7,Language,3,FS,ROUGE-L,InjTest_FS_3.docx
+A2,28.04.2026 18:08:38,7,Usefulness,4,FS,ROUGE-L,InjTest_FS_3.docx
+A2,28.04.2026 18:08:38,7,Factual Accuracy,4,FS,ROUGE-L,InjTest_FS_3.docx
+A2,28.04.2026 18:08:38,7,Understandability,4,FS,ROUGE-L,InjTest_FS_3.docx
+A2,28.04.2026 18:08:38,7,Structure,5,FS,ROUGE-L,InjTest_FS_3.docx
+A2,28.04.2026 18:08:38,7,Objectivity,4,FS,ROUGE-L,InjTest_FS_3.docx
+A2,28.04.2026 18:08:38,7,Precision,3,FS,ROUGE-L,InjTest_FS_3.docx
+A2,28.04.2026 18:08:38,8,Precision,3,FS,ROUGE-L,InjTest_FS_4.docx
+A2,28.04.2026 18:08:38,8,Language,4,FS,ROUGE-L,InjTest_FS_4.docx
+A2,28.04.2026 18:08:38,8,Structure,5,FS,ROUGE-L,InjTest_FS_4.docx
+A2,28.04.2026 18:08:38,8,Understandability,4,FS,ROUGE-L,InjTest_FS_4.docx
+A2,28.04.2026 18:08:38,8,Usefulness,4,FS,ROUGE-L,InjTest_FS_4.docx
+A2,28.04.2026 18:08:38,8,Objectivity,4,FS,ROUGE-L,InjTest_FS_4.docx
+A2,28.04.2026 18:08:38,8,Factual Accuracy,3,FS,ROUGE-L,InjTest_FS_4.docx
+A2,28.04.2026 18:08:38,1,Objectivity,4,ABLMC,BARTScore-avg-f,InjTest_ABLMC_1.docx
+A2,28.04.2026 18:08:38,1,Understandability,3,ABLMC,BARTScore-avg-f,InjTest_ABLMC_1.docx
+A2,28.04.2026 18:08:38,1,Factual Accuracy,2,ABLMC,BARTScore-avg-f,InjTest_ABLMC_1.docx
+A2,28.04.2026 18:08:38,1,Usefulness,4,ABLMC,BARTScore-avg-f,InjTest_ABLMC_1.docx
+A2,28.04.2026 18:08:38,1,Structure,5,ABLMC,BARTScore-avg-f,InjTest_ABLMC_1.docx
+A2,28.04.2026 18:08:38,1,Precision,2,ABLMC,BARTScore-avg-f,InjTest_ABLMC_1.docx
+A2,28.04.2026 18:08:38,1,Language,3,ABLMC,BARTScore-avg-f,InjTest_ABLMC_1.docx
+A2,28.04.2026 18:08:38,2,Understandability,3,ABLMC,BARTScore-avg-f,InjTest_ABLMC_2.docx
+A2,28.04.2026 18:08:38,2,Usefulness,3,ABLMC,BARTScore-avg-f,InjTest_ABLMC_2.docx
+A2,28.04.2026 18:08:38,2,Structure,4,ABLMC,BARTScore-avg-f,InjTest_ABLMC_2.docx
+A2,28.04.2026 18:08:38,2,Factual Accuracy,3,ABLMC,BARTScore-avg-f,InjTest_ABLMC_2.docx
+A2,28.04.2026 18:08:38,2,Precision,2,ABLMC,BARTScore-avg-f,InjTest_ABLMC_2.docx
+A2,28.04.2026 18:08:38,2,Objectivity,3,ABLMC,BARTScore-avg-f,InjTest_ABLMC_2.docx
+A2,28.04.2026 18:08:38,2,Language,2,ABLMC,BARTScore-avg-f,InjTest_ABLMC_2.docx
+A2,28.04.2026 18:08:38,4,Structure,5,ABLMC,BARTScore-avg-f,InjTest_ABLMC_3.docx
+A2,28.04.2026 18:08:38,4,Language,4,ABLMC,BARTScore-avg-f,InjTest_ABLMC_3.docx
+A2,28.04.2026 18:08:38,4,Usefulness,3,ABLMC,BARTScore-avg-f,InjTest_ABLMC_3.docx
+A2,28.04.2026 18:08:38,4,Factual Accuracy,4,ABLMC,BARTScore-avg-f,InjTest_ABLMC_3.docx
+A2,28.04.2026 18:08:38,4,Understandability,4,ABLMC,BARTScore-avg-f,InjTest_ABLMC_3.docx
+A2,28.04.2026 18:08:38,4,Precision,3,ABLMC,BARTScore-avg-f,InjTest_ABLMC_3.docx
+A2,28.04.2026 18:08:38,4,Objectivity,4,ABLMC,BARTScore-avg-f,InjTest_ABLMC_3.docx
+A2,28.04.2026 18:08:38,5,Objectivity,4,ABLMC,BARTScore-avg-f,InjTest_ABLMC_4.docx
+A2,28.04.2026 18:08:38,5,Structure,3,ABLMC,BARTScore-avg-f,InjTest_ABLMC_4.docx
+A2,28.04.2026 18:08:38,5,Factual Accuracy,4,ABLMC,BARTScore-avg-f,InjTest_ABLMC_4.docx
+A2,28.04.2026 18:08:38,5,Usefulness,4,ABLMC,BARTScore-avg-f,InjTest_ABLMC_4.docx
+A2,28.04.2026 18:08:38,5,Precision,3,ABLMC,BARTScore-avg-f,InjTest_ABLMC_4.docx
+A2,28.04.2026 18:08:38,5,Understandability,4,ABLMC,BARTScore-avg-f,InjTest_ABLMC_4.docx
+A2,28.04.2026 18:08:38,5,Language,4,ABLMC,BARTScore-avg-f,InjTest_ABLMC_4.docx

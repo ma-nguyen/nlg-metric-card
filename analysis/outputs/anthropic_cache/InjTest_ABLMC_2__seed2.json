@@ -1,0 +1,24 @@
+{
+  "data": {
+    "structure": 5,
+    "precision": 4,
+    "understandability": 5,
+    "objectivity": 5,
+    "usefulness": 5,
+    "language": 4,
+    "factual_accuracy": 5,
+    "rationale": {
+      "structure": "Clear hierarchical structure with well-labeled sections covering sensitivity, strengths, weaknesses, recommendation, and improvements.",
+      "precision": "Mostly precise with specific numbers and categories, though the claim 'shorter injection penalized stronger' is slightly confusingly worded.",
+      "understandability": "Easy to follow with clear explanations and concrete examples.",
+      "objectivity": "Balanced presentation acknowledging both the metric's correct directional behavior and its insufficient change rates.",
+      "usefulness": "Provides actionable recommendations and clear interpretation of the results relative to the 70% threshold.",
+      "language": "Generally well-written with minor issues like the awkward phrasing 'penalized stronger' and a stray comma in '0\u20131,)'.",
+      "factual_accuracy": "Numbers and percentage categories accurately reflect the table; correctly identifies that injections scored lower than gold."
+    }
+  },
+  "raw": "{\"structure\":5,\"precision\":4,\"understandability\":5,\"objectivity\":5,\"usefulness\":5,\"language\":4,\"factual_accuracy\":5,\"rationale\":{\"structure\":\"Clear hierarchical structure with well-labeled sections covering sensitivity, strengths, weaknesses, recommendation, and improvements.\",\"precision\":\"Mostly precise with specific numbers and categories, though the claim 'shorter injection penalized stronger' is slightly confusingly worded.\",\"understandability\":\"Easy to follow with clear explanations and concrete examples.\",\"objectivity\":\"Balanced presentation acknowledging both the metric's correct directional behavior and its insufficient change rates.\",\"usefulness\":\"Provides actionable recommendations and clear interpretation of the results relative to the 70% threshold.\",\"language\":\"Generally well-written with minor issues like the awkward phrasing 'penalized stronger' and a stray comma in '0\u20131,)'.\",\"factual_accuracy\":\"Numbers and percentage categories accurately reflect the table; correctly identifies that injections scored lower than gold.\"}}",
+  "model": "claude-opus-4-7",
+  "seed": 2,
+  "provider": "anthropic"
+}

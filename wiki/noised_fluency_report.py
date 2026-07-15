@@ -326,9 +326,15 @@ def save_report(file_path, content):
 
 
 if __name__ == "__main__":
-    API_URL = "https://chat-ai.academiccloud.de/v1/chat/completions"
-    API_KEY = "b09e46c556aff90c2c5ad5a3f34e35e3"
-    MODEL = "openai-gpt-oss-120b"
+    # API configuration comes from the environment; see README.
+    API_URL = os.environ.get(
+        "METRICX_API_URL",
+        "https://chat-ai.academiccloud.de/v1/chat/completions")
+    API_KEY = os.environ.get("METRICX_API_KEY")
+    if not API_KEY:
+        sys.exit("Error: set the METRICX_API_KEY environment variable "
+                 "(API key for the LLM endpoint).")
+    MODEL = os.environ.get("METRICX_MODEL", "openai-gpt-oss-120b")
 
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     TEMPLATE_DIR = os.path.join(BASE_DIR, "reports", "noised_fluency", "prompt_templates")

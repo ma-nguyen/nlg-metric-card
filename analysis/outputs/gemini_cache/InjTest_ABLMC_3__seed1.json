@@ -1,0 +1,24 @@
+{
+  "data": {
+    "structure": 4,
+    "precision": 5,
+    "understandability": 5,
+    "objectivity": 5,
+    "usefulness": 5,
+    "language": 5,
+    "factual_accuracy": 5,
+    "rationale": {
+      "structure": "The card includes both a highly structured outline and a prose summary, which is slightly redundant but overall very well-organized and easy to follow.",
+      "precision": "The analysis is highly precise, clearly defining the change-rate thresholds and specific score differences.",
+      "understandability": "The text is extremely clear, making the metric's behavior and the author's conclusions easy to comprehend.",
+      "objectivity": "The author presents a balanced view, acknowledging the metric's partial success on Injection 2 alongside its failure on Injection 1.",
+      "usefulness": "The insights and detailed, actionable recommendations for improvement make this card highly valuable.",
+      "language": "The writing is grammatically correct, professional, and semantically precise.",
+      "factual_accuracy": "All scores, percentages, and comparisons accurately reflect the provided test results table."
+    }
+  },
+  "raw": "{\n  \"structure\": 4,\n  \"precision\": 5,\n  \"understandability\": 5,\n  \"objectivity\": 5,\n  \"usefulness\": 5,\n  \"language\": 5,\n  \"factual_accuracy\": 5,\n  \"rationale\": {\n    \"structure\": \"The card includes both a highly structured outline and a prose summary, which is slightly redundant but overall very well-organized and easy to follow.\",\n    \"precision\": \"The analysis is highly precise, clearly defining the change-rate thresholds and specific score differences.\",\n    \"understandability\": \"The text is extremely clear, making the metric's behavior and the author's conclusions easy to comprehend.\",\n    \"objectivity\": \"The author presents a balanced view, acknowledging the metric's partial success on Injection 2 alongside its failure on Injection 1.\",\n    \"usefulness\": \"The insights and detailed, actionable recommendations for improvement make this card highly valuable.\",\n    \"language\": \"The writing is grammatically correct, professional, and semantically precise.\",\n    \"factual_accuracy\": \"All scores, percentages, and comparisons accurately reflect the provided test results table.\"\n  }\n}",
+  "model": "gemini-3.1-pro-preview",
+  "seed": 1,
+  "provider": "gemini"
+}

@@ -1,0 +1,12 @@
+# Condition: FS
+# Metric: ROUGE-L
+# Source: InjTest_FS_3.docx
+
+## Test results table
+Gold	Injection 1	Injection 2
+0.286	0.127 (-55.8%)	0.099 (-65.6%)
+
+## Participant metric card
+The Rouge-L metric was used to score both gold summary data (Gold) and two perturbed summaries (Injections 1 and 2). The metric was sensitive to the perturbation, none of the injections scored higher than the Gold data with a score of 0.286. The scores were also somewhat similar for both injections, with Injection 1 (0.127) producing similar, but a minimally better scores than Injection 2 (0.099).
+The metric had no high change rates for either of the injections, instead producing only scores with moderate to high change rates for both injections (-55.8% for Injection 1, -65.6% for Injection 2). Thus, the metric should not be recommended for this task, being unable to make clear distinctions between the gold data and the perturbed summaries (injections).
+In order to make this metric suitable for the given task, necessary changes would need to be implemented to improve clear distinction between gold data and injections. For example, the metric’s scale could be calibrated in a more fine-grained way that enhances sensitivity, since scores on gold data and perturbed summaries appear very close. Perturbed summaries should be penalised higher in a way that would produce higher change rates for irrelevant outputs.

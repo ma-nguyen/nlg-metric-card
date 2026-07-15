@@ -1,0 +1,24 @@
+{
+  "data": {
+    "structure": 5,
+    "precision": 4,
+    "understandability": 5,
+    "objectivity": 5,
+    "usefulness": 5,
+    "language": 4,
+    "factual_accuracy": 5,
+    "rationale": {
+      "structure": "Clear hierarchical organization with labeled sections, subsections, and numbered recommendations.",
+      "precision": "Mostly precise with specific percentages and categories, though 'somewhat sensitive' is slightly vague.",
+      "understandability": "The card is easy to follow with clear explanations and concrete examples.",
+      "objectivity": "Balanced view presenting both strengths (Injection 2 penalty) and weaknesses (insufficient change rate, interpretability).",
+      "usefulness": "Provides actionable insights and concrete recommendations for improvement.",
+      "language": "Generally well-written with minor issues like 'penalized stronger' and a stray comma in '0\u20131,)'.",
+      "factual_accuracy": "Numbers and category classifications align correctly with the table values."
+    }
+  },
+  "raw": "{\"structure\":5,\"precision\":4,\"understandability\":5,\"objectivity\":5,\"usefulness\":5,\"language\":4,\"factual_accuracy\":5,\"rationale\":{\"structure\":\"Clear hierarchical organization with labeled sections, subsections, and numbered recommendations.\",\"precision\":\"Mostly precise with specific percentages and categories, though 'somewhat sensitive' is slightly vague.\",\"understandability\":\"The card is easy to follow with clear explanations and concrete examples.\",\"objectivity\":\"Balanced view presenting both strengths (Injection 2 penalty) and weaknesses (insufficient change rate, interpretability).\",\"usefulness\":\"Provides actionable insights and concrete recommendations for improvement.\",\"language\":\"Generally well-written with minor issues like 'penalized stronger' and a stray comma in '0\u20131,)'.\",\"factual_accuracy\":\"Numbers and category classifications align correctly with the table values.\"}}",
+  "model": "claude-opus-4-7",
+  "seed": 0,
+  "provider": "anthropic"
+}

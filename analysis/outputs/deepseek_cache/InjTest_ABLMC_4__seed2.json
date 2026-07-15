@@ -1,0 +1,23 @@
+{
+  "data": {
+    "structure": 4,
+    "precision": 3,
+    "understandability": 4,
+    "objectivity": 4,
+    "usefulness": 3,
+    "language": 3,
+    "factual_accuracy": 4,
+    "rationale": {
+      "structure": "Clear sections with headings, but some redundancy between the two parts.",
+      "precision": "Some terms like 'low-to-moderate change' are defined, but 'moderately short injections' is vague.",
+      "understandability": "Generally easy to follow, though the second part's wording is slightly less clear.",
+      "objectivity": "Acknowledges both strengths and weaknesses, but the recommendation is somewhat harsh.",
+      "usefulness": "Provides insights into sensitivity and weaknesses, but improvements are generic.",
+      "language": "Minor grammatical issues and informal phrasing in the second part.",
+      "factual_accuracy": "Correctly reports scores and change rates, but misstates the word count difference (7 words vs actual 5)."
+    }
+  },
+  "raw": "{\n  \"structure\": 4,\n  \"precision\": 3,\n  \"understandability\": 4,\n  \"objectivity\": 4,\n  \"usefulness\": 3,\n  \"language\": 3,\n  \"factual_accuracy\": 4,\n  \"rationale\": {\n    \"structure\": \"Clear sections with headings, but some redundancy between the two parts.\",\n    \"precision\": \"Some terms like 'low-to-moderate change' are defined, but 'moderately short injections' is vague.\",\n    \"understandability\": \"Generally easy to follow, though the second part's wording is slightly less clear.\",\n    \"objectivity\": \"Acknowledges both strengths and weaknesses, but the recommendation is somewhat harsh.\",\n    \"usefulness\": \"Provides insights into sensitivity and weaknesses, but improvements are generic.\",\n    \"language\": \"Minor grammatical issues and informal phrasing in the second part.\",\n    \"factual_accuracy\": \"Correctly reports scores and change rates, but misstates the word count difference (7 words vs actual 5).\"\n  }\n}",
+  "model": "deepseek-chat",
+  "seed": 2
+}

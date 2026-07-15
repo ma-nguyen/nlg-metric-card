@@ -1,0 +1,33 @@
+# Condition: FS
+# Metric: ROUGE-L
+# Source: InjTest_FS_2.docx
+
+## Test results table
+Gold	Injection 1	Injection 2
+0.286	0.127 (-55.8%)	0.099 (-65.6%)
+
+## Participant metric card
+## 1. Sensitivity to the Perturbation  
+
+a. Did a perturbed output score higher than the gold output?
+No, the perturbed outputs for both injections achieved lower scores than the gold summary, namely 0.125 and 0.099 vs. 0.286.
+
+b. Were the scores similar for every injection?  
+The scores were different, depending on the injection. The longer injection 1 received a slightly lower penalty than the shorter injection 2, -55.8% and -65.6% respectively. Thus, the metric is somewhat sensitive for the two perturbations, with the shorter injection being penalized stronger.
+
+## 2. Suitability of bartscore-avg-f for summarization
+
+### a. Strengths  
+- Both injections achieved a moderate-to-high change, falling under 50-69% category, which might indicate that the metric effectively penalizes non-informative statements.
+
+- The metric is on a positive scale (0-1), which can be easily interpreted.
+
+### b. Weaknesses
+- None of the injections showed a high or a very high change in the metric score, which may suggest that the metric still needs improvement for reliable detection of non-summary injections.
+
+### c. Recommendation  
+Overall, the metric is not recommended for scoring the quality of the summary. Even though the metric consistently detects every non-summary injection, the change rate is only moderate to high (50-69%).
+
+### d. Needed Improvements  
+1. Off-topic sensitivity: increase the penalty for non-summary statements so that injections could achieve a higher change-rate, corresponding to 70% and higher.
+2. Human in the loop: It may be helpful to include finetuning of the metric according to human perception, so that the metric would be more aligned with human knowledge.

@@ -1,0 +1,24 @@
+{
+  "data": {
+    "structure": 5,
+    "precision": 4,
+    "understandability": 5,
+    "objectivity": 5,
+    "usefulness": 5,
+    "language": 4,
+    "factual_accuracy": 3,
+    "rationale": {
+      "structure": "The metric card is logically organized with clear headings and bullet points that facilitate reading.",
+      "precision": "The card is generally precise, though a typo in a percentage slightly detracts from its exactness.",
+      "understandability": "The explanations are clear, straightforward, and easy to grasp.",
+      "objectivity": "The author presents a balanced view by explicitly detailing both strengths and weaknesses.",
+      "usefulness": "The card offers valuable insights into the metric's sensitivity to injection length and provides actionable recommendations.",
+      "language": "The text is mostly well-written, with only minor errors such as using 'interjections' instead of 'injections'.",
+      "factual_accuracy": "The card contains a significant typo stating a '346%' change rate for Injection 1, contradicting the table's 36.0%."
+    }
+  },
+  "raw": "{\n  \"structure\": 5,\n  \"precision\": 4,\n  \"understandability\": 5,\n  \"objectivity\": 5,\n  \"usefulness\": 5,\n  \"language\": 4,\n  \"factual_accuracy\": 3,\n  \"rationale\": {\n    \"structure\": \"The metric card is logically organized with clear headings and bullet points that facilitate reading.\",\n    \"precision\": \"The card is generally precise, though a typo in a percentage slightly detracts from its exactness.\",\n    \"understandability\": \"The explanations are clear, straightforward, and easy to grasp.\",\n    \"objectivity\": \"The author presents a balanced view by explicitly detailing both strengths and weaknesses.\",\n    \"usefulness\": \"The card offers valuable insights into the metric's sensitivity to injection length and provides actionable recommendations.\",\n    \"language\": \"The text is mostly well-written, with only minor errors such as using 'interjections' instead of 'injections'.\",\n    \"factual_accuracy\": \"The card contains a significant typo stating a '346%' change rate for Injection 1, contradicting the table's 36.0%.\"\n  }\n}",
+  "model": "gemini-3.1-pro-preview",
+  "seed": 2,
+  "provider": "gemini"
+}

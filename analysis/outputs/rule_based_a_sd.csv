@@ -1,0 +1,9 @@
+dimension,a_RB
+Retrieval (pos*),1.0
+Conclusion (pos* single),1.0
+Conclusion (pos* compare),1.0
+"Conclusion (single, fluency)",0.9502
+"Conclusion (compare, fluency)",0.8812
+Human Likeness (pos*),1.0
+Reduced Guidance (pos*),1.0
+Consistency (pos*),0.0

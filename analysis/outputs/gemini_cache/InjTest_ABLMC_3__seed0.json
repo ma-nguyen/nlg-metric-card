@@ -1,0 +1,24 @@
+{
+  "data": {
+    "structure": 4,
+    "precision": 5,
+    "understandability": 5,
+    "objectivity": 5,
+    "usefulness": 5,
+    "language": 5,
+    "factual_accuracy": 5,
+    "rationale": {
+      "structure": "The card is well-organized with clear headings and bullet points, though it includes a redundant prose summary at the end.",
+      "precision": "The evaluation provides exact scores and percentages, leaving no ambiguity in its assessment.",
+      "understandability": "The text is highly readable, and the author's logic is very easy to follow.",
+      "objectivity": "The author fairly balances the metric's partial success on one injection with its failure to reach the desired threshold on the other.",
+      "usefulness": "The card offers deep insights and highly actionable, specific recommendations for improving the metric.",
+      "language": "The grammar, spelling, and semantics are excellent throughout the text.",
+      "factual_accuracy": "All scores and percentage changes cited perfectly match the provided test results table."
+    }
+  },
+  "raw": "{\n  \"structure\": 4,\n  \"precision\": 5,\n  \"understandability\": 5,\n  \"objectivity\": 5,\n  \"usefulness\": 5,\n  \"language\": 5,\n  \"factual_accuracy\": 5,\n  \"rationale\": {\n    \"structure\": \"The card is well-organized with clear headings and bullet points, though it includes a redundant prose summary at the end.\",\n    \"precision\": \"The evaluation provides exact scores and percentages, leaving no ambiguity in its assessment.\",\n    \"understandability\": \"The text is highly readable, and the author's logic is very easy to follow.\",\n    \"objectivity\": \"The author fairly balances the metric's partial success on one injection with its failure to reach the desired threshold on the other.\",\n    \"usefulness\": \"The card offers deep insights and highly actionable, specific recommendations for improving the metric.\",\n    \"language\": \"The grammar, spelling, and semantics are excellent throughout the text.\",\n    \"factual_accuracy\": \"All scores and percentage changes cited perfectly match the provided test results table.\"\n  }\n}",
+  "model": "gemini-3.1-pro-preview",
+  "seed": 0,
+  "provider": "gemini"
+}

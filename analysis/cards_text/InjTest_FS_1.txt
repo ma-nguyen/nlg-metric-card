@@ -1,0 +1,20 @@
+# Condition: FS
+# Metric: ROUGE-L
+# Source: InjTest_FS_1.docx
+
+## Test results table
+Gold	Injection 1	Injection 2
+0.286	0.127 (-55.8%)	0.099 (-65.6%)
+
+## Participant metric card
+ROUGE-L
+
+1. Sensitivity to the Perturbation
+None of the perturbed outputs scored higher than the gold output: While the gold output reached 28.6%, Injection 1 output reached 12.7% and Injection 2 9.9%. From these numbers it can also be concluded that both Injections achieve a rather similar score.
+
+2. Suitability of ROUGE-L for Summarization
+Strengths No Injection reached a high change rate ≥70%.
+Weaknesses Both Injection 1 and Injection 2 reach a moderate to high change rate with 55.8% and 65.6% respectively.
+Recommendation This metric is not recommended as neither Injection reaches a high change rate of ≥70%.
+Needed Improvements
+The conditions, if the metric is being recommended, should be revised. Given the conditions, this metric would not be recommended even though it does detect most of the injections. It should be revised if the conditions should be set based on the gold value. Because if the gold value itself is already low, it is difficult for the metric itself to score even lower. And – as known – a value of 100% is nearly impossible.

@@ -1,0 +1,24 @@
+{
+  "data": {
+    "structure": 5,
+    "precision": 4,
+    "understandability": 5,
+    "objectivity": 5,
+    "usefulness": 5,
+    "language": 4,
+    "factual_accuracy": 5,
+    "rationale": {
+      "structure": "Clear hierarchical sections with headings, sub-points, and a numbered improvements list make the card easy to navigate.",
+      "precision": "Most claims are specific with numeric values, though the change-rate categories (e.g., 50-69%) are introduced without prior definition.",
+      "understandability": "The reasoning is easy to follow, with concrete examples and clear explanations of each finding.",
+      "objectivity": "Balances strengths and weaknesses, acknowledging where the metric works and where it fails.",
+      "usefulness": "Provides actionable recommendations and insightful observations linking injection length to score differences.",
+      "language": "Generally well written, with minor issues like a stray comma ('0\u20131,)') and slightly awkward phrasing ('penalized stronger').",
+      "factual_accuracy": "The reported scores and percentage changes match the table exactly, and conclusions follow correctly from them."
+    }
+  },
+  "raw": "{\"structure\":5,\"precision\":4,\"understandability\":5,\"objectivity\":5,\"usefulness\":5,\"language\":4,\"factual_accuracy\":5,\"rationale\":{\"structure\":\"Clear hierarchical sections with headings, sub-points, and a numbered improvements list make the card easy to navigate.\",\"precision\":\"Most claims are specific with numeric values, though the change-rate categories (e.g., 50-69%) are introduced without prior definition.\",\"understandability\":\"The reasoning is easy to follow, with concrete examples and clear explanations of each finding.\",\"objectivity\":\"Balances strengths and weaknesses, acknowledging where the metric works and where it fails.\",\"usefulness\":\"Provides actionable recommendations and insightful observations linking injection length to score differences.\",\"language\":\"Generally well written, with minor issues like a stray comma ('0\u20131,)') and slightly awkward phrasing ('penalized stronger').\",\"factual_accuracy\":\"The reported scores and percentage changes match the table exactly, and conclusions follow correctly from them.\"}}",
+  "model": "claude-opus-4-7",
+  "seed": 1,
+  "provider": "anthropic"
+}

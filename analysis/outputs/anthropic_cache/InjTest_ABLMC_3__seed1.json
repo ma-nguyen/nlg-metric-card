@@ -1,0 +1,24 @@
+{
+  "data": {
+    "structure": 4,
+    "precision": 4,
+    "understandability": 5,
+    "objectivity": 5,
+    "usefulness": 4,
+    "language": 5,
+    "factual_accuracy": 5,
+    "rationale": {
+      "structure": "The card flows logically from observation to evaluation to recommendations, though it lacks explicit headings in the final narrative version.",
+      "precision": "Numbers and thresholds are stated clearly, though the phrase 'somewhat similar in absolute numbers' is slightly vague.",
+      "understandability": "The text is easy to follow, with clear reasoning and well-explained conclusions.",
+      "objectivity": "Both strengths (Injection 2 penalty) and weaknesses (inconsistent sensitivity, negative scale) are acknowledged in a balanced manner.",
+      "usefulness": "Provides actionable insights and concrete improvement suggestions, useful for understanding the metric's limitations.",
+      "language": "Grammar and phrasing are correct and fluent throughout.",
+      "factual_accuracy": "All reported numbers (-6.064, -8.247/-36%, -9.391/-54.9%) match the table exactly with no contradictions."
+    }
+  },
+  "raw": "{\"structure\":4,\"precision\":4,\"understandability\":5,\"objectivity\":5,\"usefulness\":4,\"language\":5,\"factual_accuracy\":5,\"rationale\":{\"structure\":\"The card flows logically from observation to evaluation to recommendations, though it lacks explicit headings in the final narrative version.\",\"precision\":\"Numbers and thresholds are stated clearly, though the phrase 'somewhat similar in absolute numbers' is slightly vague.\",\"understandability\":\"The text is easy to follow, with clear reasoning and well-explained conclusions.\",\"objectivity\":\"Both strengths (Injection 2 penalty) and weaknesses (inconsistent sensitivity, negative scale) are acknowledged in a balanced manner.\",\"usefulness\":\"Provides actionable insights and concrete improvement suggestions, useful for understanding the metric's limitations.\",\"language\":\"Grammar and phrasing are correct and fluent throughout.\",\"factual_accuracy\":\"All reported numbers (-6.064, -8.247/-36%, -9.391/-54.9%) match the table exactly with no contradictions.\"}}",
+  "model": "claude-opus-4-7",
+  "seed": 1,
+  "provider": "anthropic"
+}

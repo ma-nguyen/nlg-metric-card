@@ -1,0 +1,23 @@
+{
+  "data": {
+    "structure": 2,
+    "precision": 2,
+    "understandability": 2,
+    "objectivity": 3,
+    "usefulness": 3,
+    "language": 2,
+    "factual_accuracy": 3,
+    "rationale": {
+      "structure": "The card lacks clear sections and uses informal bullet points, making it hard to follow.",
+      "precision": "Phrases like 'punished both injections moderate' and 'closeness of both scores' are ambiguous.",
+      "understandability": "Grammatical errors and unclear phrasing reduce ease of understanding.",
+      "objectivity": "Acknowledges both strengths and a potential attack vector, but leans positive without strong evidence.",
+      "usefulness": "Provides some insight into metric behavior but lacks actionable recommendations.",
+      "language": "Contains multiple grammatical errors and awkward phrasing (e.g., 'if shows that').",
+      "factual_accuracy": "Correctly states injections scored lower than gold, but misinterprets percentages (44.2% vs 55.8% drop)."
+    }
+  },
+  "raw": "{\n  \"structure\": 2,\n  \"precision\": 2,\n  \"understandability\": 2,\n  \"objectivity\": 3,\n  \"usefulness\": 3,\n  \"language\": 2,\n  \"factual_accuracy\": 3,\n  \"rationale\": {\n    \"structure\": \"The card lacks clear sections and uses informal bullet points, making it hard to follow.\",\n    \"precision\": \"Phrases like 'punished both injections moderate' and 'closeness of both scores' are ambiguous.\",\n    \"understandability\": \"Grammatical errors and unclear phrasing reduce ease of understanding.\",\n    \"objectivity\": \"Acknowledges both strengths and a potential attack vector, but leans positive without strong evidence.\",\n    \"usefulness\": \"Provides some insight into metric behavior but lacks actionable recommendations.\",\n    \"language\": \"Contains multiple grammatical errors and awkward phrasing (e.g., 'if shows that').\",\n    \"factual_accuracy\": \"Correctly states injections scored lower than gold, but misinterprets percentages (44.2% vs 55.8% drop).\"\n  }\n}",
+  "model": "deepseek-chat",
+  "seed": 1
+}

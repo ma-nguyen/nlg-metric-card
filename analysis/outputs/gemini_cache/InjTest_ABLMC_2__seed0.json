@@ -1,0 +1,24 @@
+{
+  "data": {
+    "structure": 5,
+    "precision": 5,
+    "understandability": 5,
+    "objectivity": 5,
+    "usefulness": 5,
+    "language": 5,
+    "factual_accuracy": 5,
+    "rationale": {
+      "structure": "The metric card is logically organized with clear headings and bullet points that facilitate easy reading.",
+      "precision": "The card provides unambiguous interpretations, citing specific percentages and score changes.",
+      "understandability": "The explanations are clear, making the metric's behavior and limitations easy to grasp.",
+      "objectivity": "The card balances strengths and weaknesses, acknowledging the metric's partial sensitivity while noting its limitations.",
+      "usefulness": "The insights and recommendations are highly actionable and relevant to the metric's performance on the test.",
+      "language": "The text is well-written, grammatically correct, and uses appropriate terminology.",
+      "factual_accuracy": "All numbers and percentages perfectly match the provided test results table."
+    }
+  },
+  "raw": "{\n  \"structure\": 5,\n  \"precision\": 5,\n  \"understandability\": 5,\n  \"objectivity\": 5,\n  \"usefulness\": 5,\n  \"language\": 5,\n  \"factual_accuracy\": 5,\n  \"rationale\": {\n    \"structure\": \"The metric card is logically organized with clear headings and bullet points that facilitate easy reading.\",\n    \"precision\": \"The card provides unambiguous interpretations, citing specific percentages and score changes.\",\n    \"understandability\": \"The explanations are clear, making the metric's behavior and limitations easy to grasp.\",\n    \"objectivity\": \"The card balances strengths and weaknesses, acknowledging the metric's partial sensitivity while noting its limitations.\",\n    \"usefulness\": \"The insights and recommendations are highly actionable and relevant to the metric's performance on the test.\",\n    \"language\": \"The text is well-written, grammatically correct, and uses appropriate terminology.\",\n    \"factual_accuracy\": \"All numbers and percentages perfectly match the provided test results table.\"\n  }\n}",
+  "model": "gemini-3.1-pro-preview",
+  "seed": 0,
+  "provider": "gemini"
+}

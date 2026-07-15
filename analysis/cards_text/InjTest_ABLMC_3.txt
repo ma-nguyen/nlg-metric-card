@@ -1,0 +1,52 @@
+# Condition: ABLMC
+# Metric: BARTScore-avg-f
+# Source: InjTest_ABLMC_3.docx
+
+## Test results table
+Gold	Injection 1	Injection 2
+-6.064	-8.247 (-36.0%)	-9.391 (-54.9%)
+
+## Participant metric card
+bartscore-avg-f
+
+---
+
+## 1. Sensitivity to the Perturbation  
+
+a. Did a perturbed output score higher than the gold output?  
+No. Both perturbed outputs received lower scores than the gold summary (-8.247265 and -9.390858 vs. -6.063610).
+
+b. Were the scores similar for every injection?  
+No. The two injections produced noticeably different penalties: Injection 1 lowered the score by ≈ 36 %, whereas Injection 2 lowered it by ≈ 55 %. Thus, the metric is not uniformly sensitive across the two perturbations.
+
+---
+
+## 2. Suitability of bartscore-avg-f for summarization
+
+### a. Strengths  
+- Injection 2 yielded a moderate-to-high change (-54.9 %, 50 %-69 % category). This indicates that the metric can assign a substantially lower score when the perturbation is a short, non-informative statement (“Yes, this is a really good summary.”).
+
+### b. Weaknesses  
+- Injection 1 produced only a low-to-moderate change (-36.0 %, 30 %-49 % category), suggesting limited discrimination for a longer but still non-summary injection.  
+- Neither injection reached the high (70 %-89 %) or very high (90 %-100 %) change-rate thresholds that would be desirable for reliable detection of non-summaries.  
+- The metric assigns negative scores to both gold and perturbed texts, which can complicate interpretation and comparison across datasets.
+
+### c. Recommendation  
+No. The metric does not consistently detect every non-summary injection with a high (≥ 70 %) change rate. While it penalises some injections strongly (e.g., Injection 2), it fails to do so uniformly.
+
+### d. Needed Improvements  
+1. Calibration of Score Range – Shift the scoring scale to a non-negative range (e.g., 0–1) to make absolute differences more interpretable.  
+2. Enhanced Sensitivity – Increase the penalty for generic, off-topic statements so that all non-summaries trigger at least a high change-rate (≥ 70 %).  
+3. Robustness to Injection Length – Ensure that longer but irrelevant injections (like Injection 1) receive penalties comparable to short, irrelevant ones.  
+4. Correlation Analysis – Conduct a larger-scale correlation study with human judgments to fine-tune the metric’s weighting of relevance, coherence, and factuality.  
+
+Even with these enhancements, bartscore-avg-f should be regarded as a complementary tool rather than a full replacement for human evaluation.
+
+
+BARTScore-avg-f Metric Card:
+
+Both injections scored lower than the gold data (-6.064). Scores were somewhat similar in absolute numbers, however do not compare similarly to the scores on gold data. Injection 1 lowered the score to -8.247 (-36% change rate from the gold data), whereas a perturbed text with Injection 2 scored -9.391 (-54.9%).
+
+Thus, Injection 2 yielded a moderate-to-high change, which indicates that the metric can assign a lower score when the injection is a short, non-informative statement. Injection 1 produced only a low-to-moderate change, suggesting limited discrimination for a longer but still non-summary injection. Neither injection reached the high or very high change rate thresholds that would be desirable for reliable detection of non-summaries. Therefore, the metric does not consistently detect every non-summary injection and cannot be recommended. While it penalises some injections strongly (e.g., Injection 2), it fails to do so uniformly. Furthermore, the metric assigns negative scores to both gold data and injections, which can complicate interpretation and comparison across datasets.
+
+To improve the metric, the scoring scale should be shifted to a non-negative range (e.g., 0-1) to make absolute differences more interpretable. Penalties for generic, off-topic statements should be increased so that all non-summaries trigger at least a high change-rate (≥ 70 %).  It should also be ensured that longer but irrelevant injections (like Injection 1) receive penalties comparable to short, irrelevant ones.  Finally, a larger-scale correlation study with human judgments should be considered to fine-tune the metric’s weighting of relevance, coherence, and factuality.

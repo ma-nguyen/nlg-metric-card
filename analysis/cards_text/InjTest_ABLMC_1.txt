@@ -1,0 +1,31 @@
+# Condition: ABLMC
+# Metric: BARTScore-avg-f
+# Source: InjTest_ABLMC_1.docx
+
+## Test results table
+Gold	Injection 1	Injection 2
+-6.064	-8.247 (-36.0%)	-9.391 (-54.9%)
+
+## Participant metric card
+BARTScore-avg-f
+
+1. Sensitivity to the Perturbation
+Both perturbed outputs received lower scores than the gold summary (-8.247265 and -9.390858 vs. -6.063610).
+Furthermore, the two interjections produced different penalties: Interjection 1 lowered the score by 36%, whereas Injection 2 lowered it by 54.9%. Thus, the metric is not uniformly sensitive across the two perturbations.
+
+2. Suitability of BARTScore-avg-f for summarization
+
+Strengths  With a change rate of 54.9%, Injection 2 yielded a moderate-to-high change. This indicates that the metric can assign a substantially lower score when the perturbation is a short, non-informative statement (“Yes, this is a really good summary.”).
+
+Weaknesses  With a change rate of 346%, Injection 1 produced a low-to-moderate change, suggesting limited discrimination for a longer but still non-summary injection.
+Neither injection reached a high or very high change-rate thresholds that would be desirable for reliable detection of non-summaries.  
+Furthermore, the used metric assigns negative scores to both gold and perturbed texts, which can complicate interpretation and comparison across datasets.
+
+Recommendation  
+No. The metric does not consistently detect every non-summary injection with a high (≥ 70 %) change rate. While it penalises some injections strongly (e.g., Injection 2), it fails to do so uniformly.
+
+Needed Improvements  
+1. Calibration of Score Range: The scoring scale should be shifted to a non-negative range. Preferably to one that ranges between 0 and 1 for better interpretation.
+2. Enhanced Sensitivity: Increase the penalty for generic, off-topic statements so that all non-summaries trigger at least a high change-rate (≥ 70 %).  
+3. Robustness to Injection Length: Ensure that longer but irrelevant injections (like Injection 1) receive penalties comparable to short, irrelevant ones.  
+4. Correlation Analysis: Conduct a larger-scale correlation study with human judgments to fine-tune the metric’s weighting of relevance, coherence, and factuality.
