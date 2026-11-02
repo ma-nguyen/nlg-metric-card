@@ -1,6 +1,6 @@
 # Metric Cards Make Blind Spots Legible
 
-This repository contains the code base and results of the paper **"[...]"**, 
+This repository contains the code base and results of the paper **[Metric Cards Make Blind Spots Legible](https://2026.inlgmeeting.org/static/proceedings/long/watermarked_pdfs/20.pdf)**, 
 extending the paper  [On the Blind Spots of Model-Based Evaluation Metrics for Text Generation](https://aclanthology.org/2023.acl-long.674.pdf) with three contributions: **interpreting the findings within LLM evaluation and development**, **automatically generating LLM-based metric cards** and **evaluating the usability of LLM-based metric cards**. 
 
 ---
